@@ -12,6 +12,10 @@
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
 
+
+-- [[ Awesome modules ]]
+local apps = require("apps")
+
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
@@ -46,11 +50,6 @@ end)
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
--- This is used later as the default terminal and editor to run.
-terminal = "wezterm"
-editor = os.getenv("EDITOR") or "nvim"
-editor_cmd = terminal .. " -e " .. editor
-
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
 -- If you do not like this or do not have such a key,
@@ -63,14 +62,14 @@ modkey = "Mod4"
 -- Create a launcher widget and a main menu
 myawesomemenu = {
    { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
-   { "manual", terminal .. " -e man awesome" },
-   { "edit config", editor_cmd .. " " .. awesome.conffile },
+   { "manual", apps.terminal .. " -e man awesome" },
+   { "edit config", apps.terminal .. " -e  " .. apps.editor .. " " .. awesome.conffile },
    { "restart", awesome.restart },
    { "quit", function() awesome.quit() end },
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal }
+                                    { "open terminal", apps.terminal }
                                   }
                         })
 
@@ -78,7 +77,7 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
 
 -- Menubar configuration
-menubar.utils.terminal = terminal -- Set the terminal for applications that require it
+menubar.utils.terminal = apps.terminal -- Set the terminal for applications that require it
 -- }}}
 
 -- {{{ Tag layout
@@ -221,7 +220,7 @@ awful.keyboard.append_global_keybindings({
                   }
               end,
               {description = "lua execute prompt", group = "awesome"}),
-    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
+    awful.key({ modkey,           }, "Return", function () awful.spawn(apps.terminal) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),
