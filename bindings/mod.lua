@@ -4,8 +4,7 @@ return {
   super = "Mod4",
   ctrl  = "Control",
 
-
-
+  -- Mouse buttons
   leftclick     = 1,
   midclick      = 2,
   rightclick    = 3,
