@@ -17,46 +17,41 @@ require("signals")
 local apps = require("apps")
 local mod  = require("bindings.mod")
 
--- Standard awesome library
-local gears = require("gears")
-local awful = require("awful")
+local awful = require("awful") -- Standard awesome library
 require("awful.autofocus")
--- Widget and layout library
-local wibox = require("wibox")
--- Theme handling library
-local beautiful = require("beautiful")
--- Declarative object management
+local gears = require("gears")
+local wibox = require("wibox") -- Widget and layout library
+local beautiful = require("beautiful")-- Theme handling library
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
--- Enable hotkeys help widget for VIM and other apps
--- when client with a matching name is opened:
-require("awful.hotkeys_popup.keys")
+require("awful.hotkeys_popup.keys") -- Enable hotkeys help widget for VIM and other appsk
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
--- {{{ Menu
+--
+-- [[ Menu ]]
+--
 -- Create a launcher widget and a main menu
-myawesomemenu = {
+local myawesomemenu = {
   { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
   { "manual", apps.terminal .. " -e man awesome" },
-  { "edit config", apps.editor .. " " .. awesome.conffile },
+  { "edit config", apps.terminal .. " -e " .. apps.editor .. " " .. awesome.conffile },
   { "restart", awesome.restart },
   { "quit", function() awesome.quit() end },
 }
 
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-  { "open terminal", apps.terminal }
-}
+mymainmenu = awful.menu({
+  items = {
+    { "awesome", myawesomemenu, beautiful.awesome_icon },
+    { "open terminal", apps.terminal }
+  }
 })
-
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-  menu = mymainmenu })
 
 -- Menubar configuration
 menubar.utils.terminal = apps.terminal -- Set the terminal for applications that require it
--- }}}
+
 
 -- {{{ Tag layout
 -- Table of layouts to cover with awful.layout.inc, order matters.
