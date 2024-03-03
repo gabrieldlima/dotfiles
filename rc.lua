@@ -10,6 +10,7 @@
 --
 -- [[ Awesome modules ]]
 --
+require("themes")
 require("bindings")
 require("rules")
 require("signals")
@@ -19,16 +20,11 @@ local mod  = require("bindings.mod")
 
 local awful = require("awful") -- Standard awesome library
 require("awful.autofocus")
-local gears = require("gears")
 local wibox = require("wibox") -- Widget and layout library
-local beautiful = require("beautiful")-- Theme handling library
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.hotkeys_popup.keys") -- Enable hotkeys help widget for VIM and other appsk
 
--- {{{ Variable definitions
--- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 --
 -- [[ Menu ]]
@@ -44,7 +40,7 @@ local myawesomemenu = {
 
 mymainmenu = awful.menu({
   items = {
-    { "awesome", myawesomemenu, beautiful.awesome_icon },
+    { "awesome", myawesomemenu },
     { "open terminal", apps.terminal }
   }
 })
@@ -81,8 +77,8 @@ end)
 -- [[ Wibar ]]
 --
 screen.connect_signal("request::desktop_decoration", function(s)
-  -- Each screen has its own tag table.
-  awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+  -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+  awful.tag({ "一", "二", "三", "四", "五", "六", "七", "八", "九", "〇" }, s, awful.layout.layouts[1])
 
   -- Create a taglist widget
   s.taglist_widget = awful.widget.taglist {
