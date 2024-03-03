@@ -3,5 +3,5 @@ return {
   terminal = "wezterm",
   browser  = "brave",
   launcher = "rofi -show drun",
-  editor   = os.getenv("EDITOR") or "nvim",
+  editor   = "nvim",
 }
