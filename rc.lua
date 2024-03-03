@@ -33,7 +33,6 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 -- Declarative object management
-local ruled = require("ruled")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
@@ -184,25 +183,6 @@ screen.connect_signal("request::desktop_decoration", function(s)
       },
     }
   }
-end)
-
--- }}}
-
--- {{{ Notifications
-
-ruled.notification.connect_signal('request::rules', function()
-  -- All notifications will match this rule.
-  ruled.notification.append_rule {
-    rule       = { },
-    properties = {
-      screen           = awful.screen.preferred,
-      implicit_timeout = 5,
-    }
-  }
-end)
-
-naughty.connect_signal("request::display", function(n)
-  naughty.layout.box { notification = n }
 end)
 
 -- }}}

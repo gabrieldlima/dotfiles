@@ -19,7 +19,7 @@ ruled.client.connect_signal("request::rules", function()
 
   -- Qutebrowser
   ruled.client.append_rule {
-    rule       = { class = "wezterm" },
+    rule       = { class = "qutebrowser" },
     properties = { screen = 1, tag = "2" }
   }
 end)
