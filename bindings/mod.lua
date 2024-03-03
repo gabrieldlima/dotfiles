@@ -3,6 +3,7 @@ return {
   alt   = "Mod1",
   super = "Mod4",
   ctrl  = "Control",
+  shift = "Shift",
 
   -- Mouse buttons
   leftclick     = 1,
