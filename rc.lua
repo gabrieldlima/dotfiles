@@ -77,91 +77,103 @@ end)
 -- }}}
 
 
--- {{{ Wibar
-
--- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
-
--- Create a textclock widget
-mytextclock = wibox.widget.textclock()
-
+--
+-- [[ Wibar ]]
+--
 screen.connect_signal("request::desktop_decoration", function(s)
   -- Each screen has its own tag table.
   awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
-  -- Create a promptbox for each screen
-  s.mypromptbox = awful.widget.prompt()
-
-  -- Create an imagebox widget which will contain an icon indicating which layout we're using.
-  -- We need one layoutbox per screen.
-  s.mylayoutbox = awful.widget.layoutbox {
-    screen  = s,
-    buttons = {
-      awful.button({ }, 1, function () awful.layout.inc( 1) end),
-      awful.button({ }, 3, function () awful.layout.inc(-1) end),
-      awful.button({ }, 4, function () awful.layout.inc(-1) end),
-      awful.button({ }, 5, function () awful.layout.inc( 1) end),
-    }
-  }
-
   -- Create a taglist widget
-  s.mytaglist = awful.widget.taglist {
+  s.taglist_widget = awful.widget.taglist {
     screen  = s,
     filter  = awful.widget.taglist.filter.all,
     buttons = {
-      awful.button({ }, 1, function(t) t:view_only() end),
-      awful.button({ mod.super }, 1, function(t)
-        if client.focus then
-          client.focus:move_to_tag(t)
+      awful.button(
+        {}, mod.leftclick,
+        function(t) t:view_only() end
+      ),
+      awful.button(
+        { mod.super }, mod.leftclick,
+        function(t)
+          if client.focus then
+            client.focus:move_to_tag(t)
+          end
         end
-      end),
-      awful.button({ }, 3, awful.tag.viewtoggle),
-      awful.button({ mod.super }, 3, function(t)
-        if client.focus then
-          client.focus:toggle_tag(t)
+      ),
+      awful.button(
+        {}, mod.rightclick,
+        awful.tag.viewtoggle
+      ),
+      awful.button(
+        { mod.super }, mod.rightclick,
+        function(t)
+          if client.focus then
+            client.focus:toggle_tag(t)
+          end
         end
-      end),
-      awful.button({ }, 4, function(t) awful.tag.viewprev(t.screen) end),
-      awful.button({ }, 5, function(t) awful.tag.viewnext(t.screen) end),
+      ),
+      awful.button(
+        {}, mod.scrollup,
+        function(t) awful.tag.viewprev(t.screen) end
+      ),
+      awful.button(
+        {}, mod.scrolldowm,
+        function(t) awful.tag.viewnext(t.screen) end
+      ),
     }
   }
 
   -- Create a tasklist widget
-  s.mytasklist = awful.widget.tasklist {
+  s.tasklist_widget = awful.widget.tasklist {
     screen  = s,
-    filter  = awful.widget.tasklist.filter.currenttags,
+    filter  = awful.widget.tasklist.filter.focused,
+  }
+
+  -- Create a textclock widget
+  s.textclock_widget = wibox.widget {
+    format = "%a %b %d %I:%M %p ",
+    widget = wibox.widget.textclock
+  }
+
+  -- Create a layoutbox widget
+  s.layoutbox_widget = awful.widget.layoutbox {
+    screen  = s,
     buttons = {
-      awful.button({ }, 1, function (c)
-        c:activate { context = "tasklist", action = "toggle_minimization" }
-      end),
-      awful.button({ }, 3, function() awful.menu.client_list { theme = { width = 250 } } end),
-      awful.button({ }, 4, function() awful.client.focus.byidx(-1) end),
-      awful.button({ }, 5, function() awful.client.focus.byidx( 1) end),
+      awful.button(
+        {}, mod.leftclick,
+        function () awful.layout.inc( 1) end
+      ),
+      awful.button(
+        {}, mod.rightclick,
+        function () awful.layout.inc(-1) end
+      ),
     }
   }
 
   -- Create the wibox
-  s.mywibox = awful.wibar {
+  s.wibox = awful.wibar {
     position = "top",
     screen   = s,
     widget   = {
       layout = wibox.layout.align.horizontal,
-      { -- Left widgets
+
+      -- Left widgets
+      {
         layout = wibox.layout.fixed.horizontal,
-        mylauncher,
-        s.mytaglist,
-        s.mypromptbox,
+        s.taglist_widget,
       },
-      s.mytasklist, -- Middle widget
-      { -- Right widgets
+
+      -- Center widgets
+      s.tasklist_widget,
+
+      -- Left widgets
+      {
         layout = wibox.layout.fixed.horizontal,
-        mykeyboardlayout,
         wibox.widget.systray(),
-        mytextclock,
-        s.mylayoutbox,
+        s.textclock_widget,
+        s.layoutbox_widget,
       },
     }
   }
 end)
-
--- }}}
