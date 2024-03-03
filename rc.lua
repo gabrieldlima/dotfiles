@@ -12,6 +12,7 @@
 --
 require("bindings")
 require("rules")
+require("signals")
 
 local apps = require("apps")
 local mod  = require("bindings.mod")
@@ -30,26 +31,12 @@ require("awful.autofocus")
 local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
--- Notification library
-local naughty = require("naughty")
 -- Declarative object management
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
-
--- {{{ Error handling
--- Check if awesome encountered an error during startup and fell back to
--- another config (This code will only ever execute for the fallback config)
-naughty.connect_signal("request::display_error", function(message, startup)
-  naughty.notification {
-    urgency = "critical",
-    title   = "Oops, an error happened"..(startup and " during startup!" or "!"),
-    message = message
-  }
-end)
--- }}}
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
@@ -186,8 +173,3 @@ screen.connect_signal("request::desktop_decoration", function(s)
 end)
 
 -- }}}
-
--- Enable sloppy focus, so that focus follows mouse.
-client.connect_signal("mouse::enter", function(c)
-  c:activate { context = "mouse_enter", raise = false }
-end)
