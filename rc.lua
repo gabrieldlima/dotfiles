@@ -25,6 +25,7 @@ local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.hotkeys_popup.keys") -- Enable hotkeys help widget for VIM and other appsk
 
+local home = "/home/gabriel/"
 
 --
 -- [[ Menu ]]
@@ -79,6 +80,17 @@ end)
 screen.connect_signal("request::desktop_decoration", function(s)
   -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
   awful.tag({ "一", "二", "三", "四", "五", "六", "七", "八", "九", "〇" }, s, awful.layout.layouts[1])
+
+  -- Create a imagebox with Nix logo
+  local nixos_logo = wibox.widget {
+    image = home .. ".config/awesome/assets/nix.svg",
+    valign = "center",
+    halign = "center",
+    forced_height = 26,
+    forced_width = 26,
+    resize = true,
+    widget = wibox.widget.imagebox,
+  }
 
   -- Create a taglist widget
   s.taglist_widget = awful.widget.taglist {
@@ -157,6 +169,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
       -- Left widgets
       {
         layout = wibox.layout.fixed.horizontal,
+        nixos_logo,
         s.taglist_widget,
       },
 
