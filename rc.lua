@@ -14,6 +14,7 @@ require("themes")
 require("bindings")
 require("rules")
 require("signals")
+require("autostart")
 
 local apps = require("apps")
 local mod  = require("bindings.mod")
@@ -186,14 +187,3 @@ screen.connect_signal("request::desktop_decoration", function(s)
     }
   }
 end)
-
-
---
--- [[ Autostart applications ]]
---
-local wallpapers_path = "/home/gabriel/Pictures/Wallpapers/"
-
-awful.spawn("picom", false)
-awful.spawn("openrgb -d 0 -m off", false)
-awful.spawn("openrgb -d 1 -m off", false)
-awful.spawn("xwallpaper --stretch " .. wallpapers_path .. "wallpaper.jpg", false)
