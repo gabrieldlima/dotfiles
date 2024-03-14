@@ -192,22 +192,23 @@ theme.hotkeys_border_color = catppuccin_mocha.lavender
 --
 -- [[ layout ]]
 --
--- theme.layout_cornernw = nil
--- theme.layout_cornerne = nil
--- theme.layout_cornersw = nil
--- theme.layout_cornerse = nil
--- theme.layout_fairh = nil
--- theme.layout_fairv = nil
--- theme.layout_floating = nil
--- theme.layout_magnifier = nil
--- theme.layout_max = nil
--- theme.layout_fullscreen = nil
--- theme.layout_spiral = nil
--- theme.layout_dwindle = nil
--- theme.layout_tile = nil
--- theme.layout_tiletop = nil
--- theme.layout_tilebottom = nil
--- theme.layout_tileleft = nil
+local icons_path = os.getenv("HOME") .. "/.config/awesome/themes/icons/layouts/"
+theme.layout_fairh      = icons_path .. "fairhw.png"
+theme.layout_fairv      = icons_path .. "fairvw.png"
+theme.layout_floating   = icons_path .. "floatingw.png"
+theme.layout_magnifier  = icons_path .. "magnifierw.png"
+theme.layout_max        = icons_path .. "maxw.png"
+theme.layout_fullscreen = icons_path .. "fullscreenw.png"
+theme.layout_tilebottom = icons_path .. "tilebottomw.png"
+theme.layout_tileleft   = icons_path .. "tileleftw.png"
+theme.layout_tile       = icons_path .. "tilew.png"
+theme.layout_tiletop    = icons_path .. "tiletopw.png"
+theme.layout_spiral     = icons_path .. "spiralw.png"
+theme.layout_dwindle    = icons_path .. "dwindlew.png"
+theme.layout_cornernw   = icons_path .. "cornernww.png"
+theme.layout_cornerne   = icons_path .. "cornernew.png"
+theme.layout_cornersw   = icons_path .. "cornersww.png"
+theme.layout_cornerse   = icons_path .. "cornersew.png"
 
 --
 -- [[ layoutlist ]]
