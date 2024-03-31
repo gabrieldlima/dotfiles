@@ -22,4 +22,10 @@ ruled.client.connect_signal("request::rules", function()
     rule       = { class = "qutebrowser" },
     properties = { screen = 1, tag = "2" }
   }
+
+  -- Steam
+  ruled.client.append_rule {
+    rule       = { class = "steam" },
+    properties = { screen = 1, tag = "9" }
+  }
 end)
