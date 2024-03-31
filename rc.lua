@@ -18,10 +18,11 @@ require("bindings")
 require("rules")
 require("signals")
 require("ui")
-require("autostart")
 require("awful.autofocus")
 require("awful.hotkeys_popup.keys")
 
+-- Autostart script
+require("awful").spawn.with_shell("/home/gabriel/.config/awesome/config/autostart.sh")
 
 -- Garbage collection
 require("gears").timer {

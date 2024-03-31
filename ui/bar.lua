@@ -3,7 +3,7 @@ local wibox = require("wibox")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
-local apps = require("apps")
+local apps = require("config.apps")
 local mod  = require("bindings.mod")
 
 local home = "/home/gabriel/"

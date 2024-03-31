@@ -1,6 +1,6 @@
 local awful         = require("awful")
 local mod           = require("bindings.mod")
-local apps          = require("apps")
+local apps          = require("config.apps")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
 -- General Awesome keys
