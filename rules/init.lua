@@ -26,6 +26,6 @@ ruled.client.connect_signal("request::rules", function()
   -- Steam
   ruled.client.append_rule {
     rule       = { class = "steam" },
-    properties = { screen = 1, tag = "9" }
+    properties = { screen = 1, tag = "9", floating = true }
   }
 end)
