@@ -3,7 +3,8 @@ local user = {
   name = "Gabriel Lima",
 
   -- Config
-  font = "FiraCode Nerd Font Bold 10"
+  font = "FiraCode Nerd Font Bold 10",
+  theme = "catppuccin_mocha",
 }
 
 return user
