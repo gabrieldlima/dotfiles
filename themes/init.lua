@@ -1,4 +1,3 @@
 local beautiful = require("beautiful")
 
-local home = "/home/gabriel/"
-beautiful.init(home .. ".config/awesome/themes/theme.lua")
+beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/theme.lua")
