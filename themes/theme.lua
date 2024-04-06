@@ -1,8 +1,5 @@
 local user = require("config.user")
 
-local xresources    = require("beautiful.xresources")
-local dpi           = xresources.apply_dpi
-
 local font = user.font
 
 local catppuccin_mocha = {
@@ -39,7 +36,7 @@ local theme = {}
 --
 -- [[ Default variables ]]
 --
-theme.useless_gap = dpi(5)
+theme.useless_gap = 5
 theme.font = font
 theme.bg_normal = catppuccin_mocha.crust
 -- theme.bg_focus = nil
@@ -71,7 +68,7 @@ theme.border_color_normal = catppuccin_mocha.crust
 -- theme.border_color_fullscreen_normal = nil
 -- theme.border_color_fullscreen_urgent = nil
 -- theme.border_color_fullscreen_new = nil
-theme.border_width = dpi(2)
+theme.border_width = 2
 -- theme.border_width_floating = nil
 -- theme.border_width_maximized = nil
 -- theme.border_width_normal = nil
@@ -176,7 +173,7 @@ theme.border_width = dpi(2)
 --
 -- theme.hotkeys_bg = nil
 -- theme.hotkeys_fg = nil
-theme.hotkeys_border_width = dpi(2)
+theme.hotkeys_border_width = 2
 theme.hotkeys_border_color = catppuccin_mocha.lavender
 -- theme.hotkeys_shape = nil
 -- theme.hotkeys_modifiers_fg = nil
