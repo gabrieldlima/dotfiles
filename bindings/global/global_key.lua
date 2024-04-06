@@ -2,6 +2,7 @@ local awful         = require("awful")
 local mod           = require("bindings.mod")
 local apps          = require("config.apps")
 local hotkeys_popup = require("awful.hotkeys_popup")
+local menubar       = require("menubar")
 
 -- General Awesome keys
 awful.keyboard.append_global_keybindings({
@@ -31,7 +32,7 @@ awful.keyboard.append_global_keybindings({
   ),
   awful.key(
     { mod.super }, "p",
-    function() awful.spawn(apps.launcher, false) end,
+    function() menubar.show() end,
     { description = "show the dmenu", group = "launcher" }
   ),
   awful.key(
