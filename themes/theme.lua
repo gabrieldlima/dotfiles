@@ -1,7 +1,9 @@
+local user = require("config.user")
+
 local xresources    = require("beautiful.xresources")
 local dpi           = xresources.apply_dpi
 
-local font = "FiraCode Nerd Font Bold 10"
+local font = user.font
 
 local catppuccin_mocha = {
   rosewater = "#f5e0dc",
