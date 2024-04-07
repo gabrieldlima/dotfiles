@@ -1,7 +1,9 @@
 -- NOTE: https://awesomewm.org/apidoc/documentation/06-appearance.md.html
+local gears                    = require("gears")
 local user                     = require("config.user")
 local colorscheme              = require("themes.colorsheme")
 local layout_path              = os.getenv("HOME") .. "/.config/awesome/assets/icons/layouts/"
+local titlebar_path            = os.getenv("HOME") .. "/.config/awesome/assets/icons/titlebar/"
 
 local theme                    = {}
 
@@ -68,5 +70,29 @@ theme.layout_cornernw          = layout_path .. "cornernww.png"
 theme.layout_cornerne          = layout_path .. "cornernew.png"
 theme.layout_cornersw          = layout_path .. "cornersww.png"
 theme.layout_cornerse          = layout_path .. "cornersew.png"
+
+-------------------------------------------------------------------------------
+-- titlebar
+-------------------------------------------------------------------------------
+-- Close Button
+theme.titlebar_close_button_normal                    = gears.color.recolor_image(titlebar_path .. "button.png", "#7f849c")
+theme.titlebar_close_button_focus                     = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.red)
+theme.titlebar_close_button_focus_hover               = titlebar_path .. "button_close.png"
+-- Minimize Button
+theme.titlebar_minimize_button_normal                 = gears.color.recolor_image(titlebar_path .. "button.png", "#7f849c")
+theme.titlebar_minimize_button_focus                  = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.yellow)
+theme.titlebar_minimize_button_focus_hover            = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.yellow) -- TODO: titlebar_path .. "button_minimize.png"
+-- Maximized Button
+theme.titlebar_maximized_button_normal_inactive       = gears.color.recolor_image(titlebar_path .. "button.png", "#7f849c")
+theme.titlebar_maximized_button_focus_inactive        = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.green)
+theme.titlebar_maximized_button_normal_active         = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.green)
+theme.titlebar_maximized_button_focus_active          = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.green)
+theme.titlebar_maximized_button_normal_inactive_hover = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.green)
+theme.titlebar_maximized_button_focus_inactive_hover  = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.green)
+theme.titlebar_maximized_button_normal_active_hover   = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.green)
+theme.titlebar_maximized_button_focus_active_hover    = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.green)
+-- Colors
+theme.titlebar_bg                                     = colorscheme.background
+theme.titlebar_bg_focus                               = colorscheme.background
 
 return theme

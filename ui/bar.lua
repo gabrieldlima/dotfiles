@@ -62,12 +62,6 @@ screen.connect_signal("request::desktop_decoration", function(s)
     }
   }
 
-  -- Create a tasklist widget
-  s.tasklist_widget = awful.widget.tasklist {
-    screen  = s,
-    filter  = awful.widget.tasklist.filter.focused,
-  }
-
   -- Create a textclock widget
   s.textclock_widget = wibox.widget {
     format = "%a %b %d %I:%M %p ",
@@ -104,9 +98,11 @@ screen.connect_signal("request::desktop_decoration", function(s)
       },
 
       -- Center widgets
-      s.tasklist_widget,
+      {
+        layout = wibox.layout.fixed.horizontal,
+      },
 
-      -- Left widgets
+      -- Right widgets
       {
         layout = wibox.layout.fixed.horizontal,
         wibox.widget.systray(),
