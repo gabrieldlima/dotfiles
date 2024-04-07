@@ -1,34 +1,9 @@
 local awful = require("awful")
 local wibox = require("wibox")
-local menubar = require("menubar")
-local hotkeys_popup = require("awful.hotkeys_popup")
-
-local apps = require("config.apps")
 local mod  = require("bindings.mod")
 
 local home = "/home/gabriel/"
 
---
--- [[ Menu ]]
---
--- Create a launcher widget and a main menu
-local myawesomemenu = {
-  { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
-  { "manual", apps.terminal .. " -e man awesome" },
-  { "edit config", apps.terminal .. " -e " .. apps.editor .. " " .. awesome.conffile },
-  { "restart", awesome.restart },
-  { "quit", function() awesome.quit() end },
-}
-
-mymainmenu = awful.menu({
-  items = {
-    { "awesome", myawesomemenu },
-    { "open terminal", apps.terminal }
-  }
-})
-
--- Menubar configuration
-menubar.utils.terminal = apps.terminal -- Set the terminal for applications that require it
 --
 -- [[ Wibar ]]
 --
