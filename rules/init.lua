@@ -20,6 +20,7 @@ ruled.client.connect_signal("request::rules", function()
   -- Add titlebars to normal clients and dialogs
   ruled.client.append_rule {
     id         = "titlebars",
+    except_any = { class = { "steam", "obsidian" } },
     rule_any   = { type = { "normal", "dialog" } },
     properties = { titlebars_enabled = true }
   }
@@ -33,6 +34,6 @@ ruled.client.connect_signal("request::rules", function()
   -- Steam
   ruled.client.append_rule {
     rule       = { class = "steam" },
-    properties = { screen = 1, tag = "9", floating = true }
+    properties = { screen = 1, tag = "9", floating = true, placement = awful.placement.centered }
   }
 end)
