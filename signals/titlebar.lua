@@ -34,8 +34,6 @@ client.connect_signal("request::titlebars", function(c)
 
     -- Right
     {
-      awful.titlebar.widget.minimizebutton(c),
-      awful.titlebar.widget.maximizedbutton(c),
       awful.titlebar.widget.closebutton(c),
       layout = wibox.layout.fixed.horizontal()
     },

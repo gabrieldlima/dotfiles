@@ -74,25 +74,11 @@ theme.layout_cornerse          = layout_path .. "cornersew.png"
 -------------------------------------------------------------------------------
 -- titlebar
 -------------------------------------------------------------------------------
+theme.titlebar_bg                                     = colorscheme.background
+theme.titlebar_bg_focus                               = colorscheme.background
 -- Close Button
 theme.titlebar_close_button_normal                    = gears.color.recolor_image(titlebar_path .. "button.png", "#7f849c")
 theme.titlebar_close_button_focus                     = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.red)
 theme.titlebar_close_button_focus_hover               = titlebar_path .. "button_close.png"
--- Minimize Button
-theme.titlebar_minimize_button_normal                 = gears.color.recolor_image(titlebar_path .. "button.png", "#7f849c")
-theme.titlebar_minimize_button_focus                  = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.yellow)
-theme.titlebar_minimize_button_focus_hover            = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.yellow) -- TODO: titlebar_path .. "button_minimize.png"
--- Maximized Button
-theme.titlebar_maximized_button_normal_inactive       = gears.color.recolor_image(titlebar_path .. "button.png", "#7f849c")
-theme.titlebar_maximized_button_focus_inactive        = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.green)
-theme.titlebar_maximized_button_normal_active         = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.green)
-theme.titlebar_maximized_button_focus_active          = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.green)
-theme.titlebar_maximized_button_normal_inactive_hover = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.green)
-theme.titlebar_maximized_button_focus_inactive_hover  = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.green)
-theme.titlebar_maximized_button_normal_active_hover   = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.green)
-theme.titlebar_maximized_button_focus_active_hover    = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.green)
--- Colors
-theme.titlebar_bg                                     = colorscheme.background
-theme.titlebar_bg_focus                               = colorscheme.background
 
 return theme
