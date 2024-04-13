@@ -1,6 +1,10 @@
-local awful = require("awful")
-local wibox = require("wibox")
-local mod   = require("bindings.mod")
+local awful       = require("awful")
+local wibox       = require("wibox")
+local mod         = require("bindings.mod")
+local helpers     = require("helpers")
+local colorscheme = require("themes.colorsheme")
+
+local awesome = helpers.textbox(colorscheme.foreground, "FiraCode Nerd Font Bold 12", " ")
 
 client.connect_signal("request::titlebars", function(c)
   local buttons = {
@@ -17,7 +21,7 @@ client.connect_signal("request::titlebars", function(c)
   awful.titlebar(c).widget = {
     -- Left
     {
-      awful.titlebar.widget.iconwidget(c),
+      helpers.margin(awesome, 5, 5, 5, 5),
       buttons = buttons,
       layout  = wibox.layout.fixed.horizontal
     },
