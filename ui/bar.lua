@@ -25,7 +25,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
   -- Create a taglist widget
   s.taglist_widget = awful.widget.taglist {
     screen  = s,
-    filter  = awful.widget.taglist.filter.all,
+    filter  = awful.widget.taglist.filter.noempty,
     buttons = {
       awful.button(
         {}, mod.leftclick,
