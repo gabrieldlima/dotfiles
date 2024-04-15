@@ -31,6 +31,12 @@ ruled.client.connect_signal("request::rules", function()
     properties = { screen = 1, tag = "2" }
   }
 
+  -- Obsidian
+  ruled.client.append_rule {
+    rule       = { class = "obsidian" },
+    properties = { screen = 1, tag = "3", fullscreen = true }
+  }
+
   -- Steam
   ruled.client.append_rule {
     rule       = { class = "steam" },
