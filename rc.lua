@@ -22,7 +22,9 @@ require("awful.autofocus")
 require("awful.hotkeys_popup.keys")
 
 -- Autostart script
-require("awful").spawn.with_shell("/home/gabriel/.config/awesome/config/autostart.sh")
+require("awful").spawn.with_shell(os.getenv("HOME") .. "/.config/awesome/config/autostart.sh")
+require("awful").spawn("openrgb -d 0 -m static -c 0000FF", false)
+require("awful").spawn("openrgb -d 1 -m static -c 0000FF", false)
 
 -- Garbage collection
 require("gears").timer {

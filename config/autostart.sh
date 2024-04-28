@@ -6,8 +6,7 @@ function run {
   fi
 }
 
-run openrgb -d 0 -m off
-run openrgb -d 1 -m off
 run picom
 run xrdb "$HOME/.Xresources"
 run xwallpaper --stretch "$HOME/Pictures/Wallpapers/wallpaper.jpg"
+run setxkbmap -option caps:escape
