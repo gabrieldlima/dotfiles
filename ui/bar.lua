@@ -1,8 +1,7 @@
 local awful = require("awful")
 local wibox = require("wibox")
 local mod  = require("bindings.mod")
-
-local home = "/home/gabriel/"
+local helpers = require("helpers")
 
 --
 -- [[ Wibar ]]
@@ -13,7 +12,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
 
   -- Create a imagebox with Nix logo
   local nixos_logo = wibox.widget {
-    image = home .. ".config/awesome/assets/nix.svg",
+    image = os.getenv("HOME") .. "/.config/awesome/assets/nix.svg",
     valign = "center",
     halign = "center",
     forced_height = 26,
@@ -107,7 +106,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
         layout = wibox.layout.fixed.horizontal,
         wibox.widget.systray(),
         s.textclock_widget,
-        s.layoutbox_widget,
+        helpers.margin(s.layoutbox_widget, 4, 4, 4, 4)
       },
     }
   }
