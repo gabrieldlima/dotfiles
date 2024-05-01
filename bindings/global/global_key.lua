@@ -31,6 +31,11 @@ awful.keyboard.append_global_keybindings({
     { description = "open a terminal", group = "launcher" }
   ),
   awful.key(
+    { mod.super }, "e",
+    function () awful.spawn(apps.files) end,
+    { description = "open file manager", group = "launcher" }
+  ),
+  awful.key(
     { mod.super }, "p",
     function() menubar.show() end,
     { description = "show the dmenu", group = "launcher" }
