@@ -42,4 +42,10 @@ ruled.client.connect_signal("request::rules", function()
     rule       = { class = "steam" },
     properties = { screen = 1, tag = "9", floating = true, placement = awful.placement.centered }
   }
+
+  -- Virt Manager
+  ruled.client.append_rule {
+    rule       = { class = "Virt-manager" },
+    properties = { screen = 1, tag = "8" },
+  }
 end)
