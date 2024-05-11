@@ -1,5 +1,7 @@
 local wibox = require("wibox")
-local dpi = require("beautiful").xresources.apply_dpi
+local dpi   = require("beautiful").xresources.apply_dpi
+local gears = require("gears")
+
 
 local helpers = {}
 
@@ -29,6 +31,13 @@ helpers.margin = function(wgt, ml, mr, mt, mb)
     top = dpi(mt),
     bottom = dpi(mb),
   }
+end
+
+helpers.rrect = function(radius)
+  radius = radius or dpi(4)
+  return function (cr, width, height)
+    gears.shape.rounded_rect(cr, width, height, radius)
+  end
 end
 
 return helpers
