@@ -10,6 +10,17 @@ local colorscheme = {
   orange     = "#fab387", -- peach
   purple     = "#cba6f7", -- mauve
   cyan       = "#74c7ec", -- sapphire
+  base       = "#1e1e2e",
+  mantle     = "#181825",
+  crust      = "#11111b",
+  subtext1   = "#bac2de",
+  subtext0   = "#a6adc8",
+  overlay2   = "#9399b2",
+  overlay1   = "#7f849c",
+  overlay0   = "#6c7086",
+  surface2   = "#585b70",
+  surface1   = "#45475a",
+  surface0   = "#313244",
 }
 
 return colorscheme
