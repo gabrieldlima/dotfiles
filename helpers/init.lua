@@ -3,6 +3,16 @@ local dpi = require("beautiful").xresources.apply_dpi
 
 local helpers = {}
 
+--
+-- [[ Markup ]]
+--
+helpers.mtext = function(color, font, text)
+  return '<span color="' .. color .. '" font="' .. font .. '">' .. text .. '</span>'
+end
+
+--
+-- [[ Widgets ]]
+--
 helpers.textbox = function(color, font, text)
   return wibox.widget {
     markup = '<span color="' .. color .. '" font="' .. font .. '">' .. text .. '</span>',
