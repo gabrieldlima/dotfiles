@@ -10,7 +10,7 @@ local colors  = require("themes.colorsheme")
 local oslogo    = require("ui.bar.modules.oslogo")
 local systray   = require("ui.bar.modules.systray")
 local clock     = require("ui.bar.modules.clock")
-local layoutbox = require("ui.bar.modules.layout")
+local layoutbox = require("ui.bar.modules.layoutbox")
 
 awful.screen.connect_for_each_screen(function(s)
 
