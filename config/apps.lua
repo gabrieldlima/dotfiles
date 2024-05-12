@@ -1,6 +1,6 @@
 return {
   -- Default applications
-  terminal = "wezterm",
+  terminal = "kitty",
   browser  = "qutebrowser",
   editor   = "nvim",
   files    = "wezterm -e fish -c yy",
