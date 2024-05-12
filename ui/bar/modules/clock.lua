@@ -1,9 +1,11 @@
-local wibox = require("wibox")
+local wibox   = require("wibox")
+local helpers = require("helpers")
+local colors  = require("themes.colorsheme")
 
--- Create a textclock widget
 local textclock = wibox.widget {
-  format = "%a %b %d %I:%M %p ",
+  format = "%a %b %d %I:%M %p",
   widget = wibox.widget.textclock
 }
+local mytextclock = helpers.cbackground(textclock, helpers.rrect(4), colors.base)
 
-return textclock
+return mytextclock
