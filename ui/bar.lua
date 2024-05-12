@@ -13,6 +13,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
   -- Widgets
   -----------------------------------------------------------------------------
   s.nixos_logo = require('ui.modules.nixos_logo')
+  s.systray    = require('ui.modules.systray')
   s.textclock  = require("ui.modules.textclock")
 
   awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
@@ -79,6 +80,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
   s.wibox = awful.wibar {
     position = "top",
     screen   = s,
+    height = 40,
     widget   = {
       layout = wibox.layout.align.horizontal,
 
@@ -97,7 +99,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
       -- Right widgets
       {
         layout = wibox.layout.fixed.horizontal,
-        wibox.widget.systray(),
+        helpers.margin(s.systray, 4, 4, 4, 4),
         s.textclock,
         helpers.margin(s.layoutbox_widget, 4, 4, 4, 4)
       },

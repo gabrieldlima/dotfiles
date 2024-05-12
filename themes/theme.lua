@@ -81,4 +81,11 @@ theme.titlebar_close_button_normal                    = gears.color.recolor_imag
 theme.titlebar_close_button_focus                     = gears.color.recolor_image(titlebar_path .. "button.png", colorscheme.red)
 theme.titlebar_close_button_focus_hover               = titlebar_path .. "button_close.png"
 
+-------------------------------------------------------------------------------
+-- systray
+-------------------------------------------------------------------------------
+theme.bg_systray = colorscheme.base
+theme.systray_max_rows = nil
+theme.systray_icon_spacing = 10
+
 return theme
