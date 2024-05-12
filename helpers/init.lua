@@ -1,6 +1,6 @@
 local wibox = require("wibox")
-local dpi   = require("beautiful").xresources.apply_dpi
 local gears = require("gears")
+local dpi   = require("beautiful").xresources.apply_dpi
 
 
 local helpers = {}
@@ -41,6 +41,10 @@ helpers.cbackground = function(widget, shape, bg)
     bg = bg,
     widget = wibox.container.background
   }
+end
+
+helpers.gcolor_recolorimg = function (image, color)
+  return gears.color.recolor_image(image, color)
 end
 
 return helpers
