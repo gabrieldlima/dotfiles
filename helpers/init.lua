@@ -16,7 +16,7 @@ helpers.textbox = function(color, font, text)
   }
 end
 
-helpers.margin = function(wgt, ml, mr, mt, mb)
+helpers.margin = function(wgt, ml, mr, mt, mb, visible)
   return wibox.widget {
     wgt,
     widget = wibox.container.margin,
@@ -24,6 +24,7 @@ helpers.margin = function(wgt, ml, mr, mt, mb)
     right = dpi(mr),
     top = dpi(mt),
     bottom = dpi(mb),
+    visible = visible
   }
 end
 
