@@ -7,9 +7,10 @@ local colors  = require("themes.colorsheme")
 -----------------------------------------------------------------------------
 -- Widgets
 -----------------------------------------------------------------------------
-local oslogo  = require("ui.bar.modules.oslogo")
-local systray = require("ui.bar.modules.systray")
-local clock   = require("ui.bar.modules.clock")
+local oslogo    = require("ui.bar.modules.oslogo")
+local systray   = require("ui.bar.modules.systray")
+local clock     = require("ui.bar.modules.clock")
+local layoutbox = require("ui.bar.modules.layout")
 
 awful.screen.connect_for_each_screen(function(s)
 
@@ -56,25 +57,10 @@ awful.screen.connect_for_each_screen(function(s)
     }
   }
 
-  -- Create a layoutbox widget
-  s.layoutbox_widget = awful.widget.layoutbox {
-    screen  = s,
-    buttons = {
-      awful.button(
-        {}, mod.leftclick,
-        function () awful.layout.inc( 1) end
-      ),
-      awful.button(
-        {}, mod.rightclick,
-        function () awful.layout.inc(-1) end
-      ),
-    }
-  }
-
   -----------------------------------------------------------------------------
   -- Bar
   -----------------------------------------------------------------------------
-  s.bar = awful.wibar ({
+  s.bar = awful.wibar {
     position = "top",
     screen   = s,
     visible  = true,
@@ -82,14 +68,14 @@ awful.screen.connect_for_each_screen(function(s)
     width    = 1920,
     height   = 40,
     type     = "dock",
-  })
+  }
 
-  s.bar:setup ({
+  s.bar:setup {
     {
       {
         -- Left widgets
         {
-          oslogo,
+          helpers.margin(oslogo, 4, 4, 4, 4),
           s.taglist_widget,
           layout = wibox.layout.fixed.horizontal,
         },
@@ -100,8 +86,8 @@ awful.screen.connect_for_each_screen(function(s)
         -- Right widgets
         {
           helpers.margin(systray, 4, 4, 4, 4),
-          clock,
-          helpers.margin(s.layoutbox_widget, 10, 10, 10, 10),
+          helpers.margin(clock, 4, 4, 4, 4),
+          helpers.margin(layoutbox, 4, 4, 4, 4),
           layout = wibox.layout.fixed.horizontal,
         },
         layout = wibox.layout.align.horizontal,
@@ -110,5 +96,5 @@ awful.screen.connect_for_each_screen(function(s)
     },
     widget = wibox.container.background,
     bg = colors.background,
-  })
+  }
 end)
