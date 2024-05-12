@@ -5,16 +5,10 @@ local gears = require("gears")
 
 local helpers = {}
 
---
--- [[ Markup ]]
---
 helpers.mtext = function(color, font, text)
   return '<span color="' .. color .. '" font="' .. font .. '">' .. text .. '</span>'
 end
 
---
--- [[ Widgets ]]
---
 helpers.textbox = function(color, font, text)
   return wibox.widget {
     markup = '<span color="' .. color .. '" font="' .. font .. '">' .. text .. '</span>',
@@ -38,6 +32,15 @@ helpers.rrect = function(radius)
   return function (cr, width, height)
     gears.shape.rounded_rect(cr, width, height, radius)
   end
+end
+
+helpers.cbackground = function(widget, shape, bg)
+  return wibox.widget {
+    widget,
+    shape = shape,
+    bg = bg,
+    widget = wibox.container.background
+  }
 end
 
 return helpers
