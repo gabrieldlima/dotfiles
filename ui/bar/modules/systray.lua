@@ -1,5 +1,4 @@
 local wibox   = require("wibox")
-local dpi     = require("beautiful").xresources.apply_dpi
 local helpers = require("helpers")
 local color   = require("themes.colorsheme")
 
@@ -12,30 +11,8 @@ local hide_icon = ""
 
 local icon = helpers.textbox(color.foreground, font, show_icon)
 local tray_toggle = helpers.margin(icon, 4, 4, 4, 4)
-
-local systray = wibox.widget {
-  {
-    base_size = 20,
-    widget = wibox.widget.systray,
-  },
-  left    = dpi(5),
-  right   = dpi(5),
-  top     = dpi(5),
-  bottom  = dpi(5),
-  visible = false,
-  widget  = wibox.container.margin,
-}
-
-local togglableSystray = wibox.widget {
-  {
-    systray,
-    tray_toggle,
-    layout = wibox.layout.fixed.horizontal,
-  },
-  shape  = helpers.rrect(4),
-  bg     = color.base,
-  widget = wibox.container.background,
-}
+local systray = helpers.margin({ base_size = 20, widget = wibox.widget.systray }, 5, 5, 5, 5, false)
+local togglableSystray = helpers.cbackground({ systray, tray_toggle, layout = wibox.layout.fixed.horizontal }, helpers.rrect(4), color.base)
 
 tray_toggle:connect_signal("button::press", function(_, _, _, button)
   if button == 1 then
