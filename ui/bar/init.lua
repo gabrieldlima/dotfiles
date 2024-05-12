@@ -7,7 +7,7 @@ local colors  = require("themes.colorsheme")
 -----------------------------------------------------------------------------
 -- Widgets
 -----------------------------------------------------------------------------
-local oslogo    = require("ui.bar.modules.oslogo")
+local logo      = require("ui.bar.modules.logo")
 local systray   = require("ui.bar.modules.systray")
 local clock     = require("ui.bar.modules.clock")
 local layoutbox = require("ui.bar.modules.layoutbox")
@@ -75,7 +75,7 @@ awful.screen.connect_for_each_screen(function(s)
       {
         -- Left widgets
         {
-          helpers.margin(oslogo, 4, 4, 4, 4),
+          helpers.margin(logo, 4, 4, 4, 4),
           s.taglist_widget,
           layout = wibox.layout.fixed.horizontal,
         },
