@@ -1,20 +1,17 @@
-local awful = require("awful")
-local wibox = require("wibox")
-local mod  = require("bindings.mod")
+local awful   = require("awful")
+local wibox   = require("wibox")
+local mod     = require("bindings.mod")
 local helpers = require("helpers")
+local colors  = require("themes.colorsheme")
 
+-----------------------------------------------------------------------------
+-- Widgets
+-----------------------------------------------------------------------------
+local oslogo  = require("ui.bar.modules.oslogo")
+local systray = require("ui.bar.modules.systray")
+local clock   = require("ui.bar.modules.clock")
 
---
--- [[ Wibar ]]
---
-screen.connect_signal("request::desktop_decoration", function(s)
-
-  -----------------------------------------------------------------------------
-  -- Widgets
-  -----------------------------------------------------------------------------
-  s.nixos_logo = require('ui.modules.nixos_logo')
-  s.systray    = require('ui.modules.systray')
-  s.textclock  = require("ui.modules.textclock")
+awful.screen.connect_for_each_screen(function(s)
 
   awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
   -- awful.tag({ "一", "二", "三", "四", "五", "六", "七", "八", "九", "〇" }, s, awful.layout.layouts[1])
@@ -75,34 +72,43 @@ screen.connect_signal("request::desktop_decoration", function(s)
   }
 
   -----------------------------------------------------------------------------
-  -- Create the wibox
+  -- Bar
   -----------------------------------------------------------------------------
-  s.wibox = awful.wibar {
+  s.bar = awful.wibar ({
     position = "top",
     screen   = s,
-    height = 40,
-    widget   = {
-      layout = wibox.layout.align.horizontal,
+    visible  = true,
+    ontop    = false,
+    width    = 1920,
+    height   = 40,
+    type     = "dock",
+  })
 
-      -- Left widgets
+  s.bar:setup ({
+    {
       {
-        layout = wibox.layout.fixed.horizontal,
-        s.nixos_logo,
-        s.taglist_widget,
-      },
+        -- Left widgets
+        {
+          oslogo,
+          s.taglist_widget,
+          layout = wibox.layout.fixed.horizontal,
+        },
 
-      -- Center widgets
-      {
-        layout = wibox.layout.fixed.horizontal,
-      },
+        -- Center widgets
+        nil,
 
-      -- Right widgets
-      {
-        layout = wibox.layout.fixed.horizontal,
-        helpers.margin(s.systray, 4, 4, 4, 4),
-        s.textclock,
-        helpers.margin(s.layoutbox_widget, 4, 4, 4, 4)
+        -- Right widgets
+        {
+          helpers.margin(systray, 4, 4, 4, 4),
+          clock,
+          helpers.margin(s.layoutbox_widget, 10, 10, 10, 10),
+          layout = wibox.layout.fixed.horizontal,
+        },
+        layout = wibox.layout.align.horizontal,
       },
-    }
-  }
+      layout = wibox.layout.stack
+    },
+    widget = wibox.container.background,
+    bg = colors.background,
+  })
 end)

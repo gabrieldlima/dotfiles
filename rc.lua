@@ -17,7 +17,7 @@ require("themes")
 require("bindings")
 require("rules")
 require("signals")
-require("ui")
+require("ui.bar")
 require("awful.autofocus")
 require("awful.hotkeys_popup.keys")
 
