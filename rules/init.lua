@@ -48,4 +48,10 @@ ruled.client.connect_signal("request::rules", function()
     rule       = { class = "Virt-manager" },
     properties = { screen = 1, tag = "8" },
   }
+
+  -- Love2D
+  ruled.client.append_rule {
+    rule       = { class = "love" },
+    properties = { floating = true },
+  }
 end)
