@@ -41,10 +41,13 @@ theme.hotkeys_group_margin     = 10
 -------------------------------------------------------------------------------
 -- taglist
 -------------------------------------------------------------------------------
-theme.taglist_fg_empty         = colorscheme.background
+theme.taglist_font             = "FiraCode Nerd Font Bold 12"
+theme.taglist_bg_focus         = colorscheme.crust
 theme.taglist_fg_focus         = colorscheme.blue
+theme.taglist_fg_occupied      = colorscheme.text
+theme.taglist_fg_empty         = colorscheme.surface0
 theme.taglist_fg_urgent        = colorscheme.red
-theme.taglist_spacing          = 2
+theme.taglist_spacing          = 1
 
 -------------------------------------------------------------------------------
 -- tasklist

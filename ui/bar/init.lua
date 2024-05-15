@@ -11,51 +11,12 @@ local logo      = require("ui.bar.modules.logo")
 local systray   = require("ui.bar.modules.systray")
 local clock     = require("ui.bar.modules.clock")
 local layoutbox = require("ui.bar.modules.layoutbox")
+local taglist   = require("ui.bar.modules.taglist")
 
 awful.screen.connect_for_each_screen(function(s)
 
   awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
   -- awful.tag({ "一", "二", "三", "四", "五", "六", "七", "八", "九", "〇" }, s, awful.layout.layouts[1])
-
-  -- Create a taglist widget
-  s.taglist_widget = awful.widget.taglist {
-    screen  = s,
-    filter  = awful.widget.taglist.filter.noempty,
-    buttons = {
-      awful.button(
-        {}, mod.leftclick,
-        function(t) t:view_only() end
-      ),
-      awful.button(
-        { mod.super }, mod.leftclick,
-        function(t)
-          if client.focus then
-            client.focus:move_to_tag(t)
-          end
-        end
-      ),
-      awful.button(
-        {}, mod.rightclick,
-        awful.tag.viewtoggle
-      ),
-      awful.button(
-        { mod.super }, mod.rightclick,
-        function(t)
-          if client.focus then
-            client.focus:toggle_tag(t)
-          end
-        end
-      ),
-      awful.button(
-        {}, mod.scrollup,
-        function(t) awful.tag.viewprev(t.screen) end
-      ),
-      awful.button(
-        {}, mod.scrolldowm,
-        function(t) awful.tag.viewnext(t.screen) end
-      ),
-    }
-  }
 
   -----------------------------------------------------------------------------
   -- Bar
@@ -76,7 +37,7 @@ awful.screen.connect_for_each_screen(function(s)
         -- Left widgets
         {
           helpers.margin(logo, 4, 4, 4, 4),
-          s.taglist_widget,
+          helpers.margin(taglist(s), 4, 4, 4, 4),
           layout = wibox.layout.fixed.horizontal,
         },
 
