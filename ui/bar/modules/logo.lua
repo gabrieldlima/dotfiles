@@ -11,6 +11,6 @@ local logo = wibox.widget {
   resize = true,
   widget = wibox.widget.imagebox,
 }
-local mylogo = helpers.cbackground(helpers.margin(logo, 4, 4, 0, 0), helpers.rrect(4), colors.base)
+local mylogo = helpers.cbackground(helpers.margin(logo, 4, 4, 0, 0), helpers.rrect(4), colors.crust)
 
 return mylogo
