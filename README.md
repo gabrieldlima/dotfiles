@@ -1,1 +1,1 @@
-![img](assets/screen.png)
+![img](assets/AwesomeWM.png)
