@@ -1,6 +1,6 @@
 local awful       = require("awful")
 local wibox       = require("wibox")
-local mod         = require("config.mod")
+local mod         = require("config.binds.modkeys")
 local helpers     = require("helpers")
 
 client.connect_signal("request::titlebars", function(c)
