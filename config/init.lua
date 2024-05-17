@@ -1,2 +1,1 @@
-require("config.keyboard")
-require("config.mouse")
+require("config.keybinds")
