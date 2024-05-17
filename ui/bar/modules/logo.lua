@@ -3,7 +3,7 @@ local helpers = require("helpers")
 local colors  = require("themes.colorsheme")
 
 local logo = wibox.widget {
-  image = helpers.gcolor_recolorimg(os.getenv("HOME") .. "/.config/awesome/assets/nix.svg", colors.blue),
+  image = helpers.gcolor_recolorimg(os.getenv("HOME") .. "/.config/awesome/assets/logos/nix.svg", colors.blue),
   valign = "center",
   halign = "center",
   forced_height = 30,
