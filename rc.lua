@@ -13,8 +13,8 @@ pcall(require, "luarocks.loader")
 --
 -- [[ Awesome modules ]]
 --
+require("config")
 require("themes")
-require("bindings")
 require("rules")
 require("signals")
 require("ui.bar")

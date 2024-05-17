@@ -1,5 +1,5 @@
 local awful   = require("awful")
-local mod     = require("bindings.mod")
+local mod     = require("config.mod")
 local helpers = require("helpers")
 local colors  = require("themes.colorsheme")
 

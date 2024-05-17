@@ -1,6 +1,6 @@
 local awful   = require("awful")
 local helpers = require("helpers")
-local mod     = require("bindings.mod")
+local mod     = require("config.mod")
 local colors  = require("themes.colorsheme")
 
 local layoutbox = awful.widget.layoutbox {
