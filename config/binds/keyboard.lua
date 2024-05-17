@@ -1,6 +1,6 @@
 local awful         = require("awful")
 local mod           = require("config.binds.modkeys")
-local apps          = require("config.apps")
+local user          = require("config.user")
 local hotkeys_popup = require("awful.hotkeys_popup")
 local menubar       = require("menubar")
 
@@ -95,12 +95,12 @@ awful.keyboard.append_global_keybindings({
   ),
   awful.key(
     { mod.super }, "Return",
-    function () awful.spawn(apps.terminal) end,
+    function () awful.spawn(user.apps.terminal) end,
     { description = "open a terminal", group = "launcher" }
   ),
   awful.key(
     { mod.super }, "e",
-    function () awful.spawn(apps.files) end,
+    function () awful.spawn(user.apps.file_manager) end,
     { description = "open file manager", group = "launcher" }
   ),
   awful.key(
@@ -110,7 +110,7 @@ awful.keyboard.append_global_keybindings({
   ),
   awful.key(
     { mod.super }, "b",
-    function () awful.spawn(apps.browser) end,
+    function () awful.spawn(user.apps.web_browser) end,
     { description = "open a web browser", group = "launcher"}
   )
 })

@@ -11,7 +11,7 @@ local theme = {}
 -- Default variables
 -------------------------------------------------------------------------------
 theme.useless_gap                       = 5
-theme.font                              = user.font
+theme.font                              = user.config.font
 
 theme.bg_normal                         = color.background
 theme.bg_focus                          = color.background
@@ -34,8 +34,8 @@ theme.bg_systray                        = color.background
 -------------------------------------------------------------------------------
 theme.hotkeys_border_color              = color.blue
 theme.hotkeys_modifiers_fg              = color.foreground
-theme.hotkeys_font                      = user.font
-theme.hotkeys_description_font          = user.font
+theme.hotkeys_font                      = user.config.font
+theme.hotkeys_description_font          = user.config.font
 theme.hotkeys_group_margin              = 10
 
 -------------------------------------------------------------------------------
