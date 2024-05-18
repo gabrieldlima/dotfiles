@@ -3,6 +3,7 @@ local M = {}
 M.config = {
   -- My profile config
   user  = "Gabriel Lima",
+  home  = os.getenv("HOME"),
   host  = "aorus",
   theme = "catppuccin_mocha",
   font  = "FiraCode Nerd Font Bold 10",

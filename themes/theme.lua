@@ -2,8 +2,8 @@
 local gears         = require("gears")
 local user          = require("config.user")
 local color         = require("themes.colorsheme")
-local layout_path   = os.getenv("HOME") .. "/.config/awesome/assets/icons/layouts/"
-local titlebar_path = os.getenv("HOME") .. "/.config/awesome/assets/icons/titlebar/"
+local layout_path   = user.config.home .. "/.config/awesome/assets/icons/layouts/"
+local titlebar_path = user.config.home .. "/.config/awesome/assets/icons/titlebar/"
 
 local theme = {}
 
