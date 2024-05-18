@@ -13,7 +13,7 @@ M.apps = {
   terminal     = "kitty",
   web_browser  = "qutebrowser",
   text_editor  = "nvim",
-  file_manager = "kitty -e yazi",
+  file_manager = "kitty -e spf",
 }
 
 return M
