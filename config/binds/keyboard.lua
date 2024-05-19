@@ -112,6 +112,16 @@ awful.keyboard.append_global_keybindings({
     { mod.super }, "b",
     function () awful.spawn(user.apps.web_browser) end,
     { description = "open a web browser", group = "launcher"}
+  ),
+  awful.key(
+    { mod.super, mod.shift }, "s",
+    function () awful.spawn(user.apps.screnshoot .. " gui -p " .. user.config.home .. "/Pictures/Screenshots", false) end,
+    { description = "screenshot select", group = "launcher"}
+  ),
+  awful.key(
+    {}, "Print",
+    function () awful.spawn(user.apps.screnshoot .. " screen -p " .. user.config.home .. "/Pictures/Screenshots", false) end,
+    { description = "screenshot fullscreen", group = "launcher"}
   )
 })
 

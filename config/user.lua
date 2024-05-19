@@ -15,6 +15,7 @@ M.apps = {
   web_browser  = "qutebrowser",
   text_editor  = "nvim",
   file_manager = "kitty -e spf",
+  screnshoot   = "flameshot",
   image_viewer = "sxiv"
 }
 
