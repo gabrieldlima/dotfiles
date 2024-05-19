@@ -54,4 +54,10 @@ ruled.client.connect_signal("request::rules", function()
     rule       = { class = "love" },
     properties = { floating = true },
   }
+
+  -- sxiv
+  ruled.client.append_rule {
+    rule       = { class = "Sxiv" },
+    properties = { floating = true, placement = awful.placement.centered },
+  }
 end)
