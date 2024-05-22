@@ -48,4 +48,4 @@ export FZF_ALT_C_OPTS="--layout=reverse --height 40% --info=hidden --color=16 --
 
 
 # Startx
-[ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC" >& "$XDG_CACHE_HOME/xsession-errors"
+[ "$(tty)" = "/dev/tty1" ] && [ "$XDG_VTNR" = 1 ] && exec startx awesome >& "$XDG_CACHE_HOME/xsession-errors"
