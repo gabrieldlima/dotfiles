@@ -11,7 +11,7 @@ M.config = {
 
 M.apps = {
   -- My profile apps
-  terminal     = "kitty",
+  terminal     = "wezterm",
   web_browser  = "qutebrowser",
   text_editor  = "nvim",
   file_manager = "kitty -e spf",
