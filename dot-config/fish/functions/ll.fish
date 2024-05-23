@@ -1,4 +1,4 @@
-function ll --wraps='eza --long' --description 'alias ll=eza --long'
-  eza --long $argv
+function ll --wraps='eza --group-directories-first --long' --description 'alias ll=eza --group-directories-first --long'
+  eza --group-directories-first --long $argv
         
 end

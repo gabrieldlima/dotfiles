@@ -1,4 +1,4 @@
-function lt --wraps='eza --tree' --description 'alias lt=eza --tree'
-  eza --tree $argv
+function lt --wraps='eza --group-directories-first --tree' --description 'alias lt=eza --group-directories-first --tree'
+  eza --group-directories-first --tree $argv
         
 end
