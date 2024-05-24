@@ -41,6 +41,8 @@ base      = "#010101"
 mantle    = "#010101"
 crust     = "#010101" 
 
+c.colors.webpage.preferred_color_scheme         = "dark"
+
 c.colors.completion.category.bg                 = base
 c.colors.completion.category.border.bottom      = mantle
 c.colors.completion.category.border.top         = overlay2
