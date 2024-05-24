@@ -22,7 +22,7 @@ M.hide_tab_bar_if_only_one_tab = true
 M.window_background_opacity = 1.0
 
 -- Fonts
-M.font = wezterm.font_with_fallback { "JetBrains Mono", "FiraCode Nerd Font" }
+M.font = wezterm.font_with_fallback { "JetBrainsMono Nerd Font", "FiraCode Nerd Font" }
 M.font_size = 11
 
 -- Configuration
