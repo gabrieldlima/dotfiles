@@ -16,6 +16,7 @@ export PATH="$HOME/.local/bin/:$HOME/.local/share/cargo/bin:$PATH"
 
 
 # ~/ Clean-up:
+export BAT_CONFIG_PATH="$XDG_CONFIG_HOME"/bat
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GOPATH="$XDG_DATA_HOME"/go
