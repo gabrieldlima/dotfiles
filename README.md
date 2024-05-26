@@ -1,1 +1,1 @@
-![img](dot-config/awesome/assets/screenshots/screen02.png)
+![img](.config/awesome/assets/screenshots/screen02.png)
