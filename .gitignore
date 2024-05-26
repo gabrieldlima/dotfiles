@@ -1,4 +1,6 @@
-dot-config/awesome/lib/
-dot-config/fish/fish_variables
-dot-config/qutebrowser/bookmarks/
-dot-config/qutebrowser/autoconfig.yml
+.config/awesome/lib/
+.config/fish/fish_variables
+.config/qutebrowser/bookmarks/
+.config/qutebrowser/autoconfig.yml
+.config/qutebrowser/autoconfig.yml
+.config/qutebrowser/bookmarks/
