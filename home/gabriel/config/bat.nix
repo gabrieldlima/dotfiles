@@ -5,18 +5,18 @@
   programs.bat = {
     enable = true;
     themes = {
-      catppuccinMocha = {
+      CatppuccinMocha = {
         src = pkgs.fetchFromGitHub {
           owner = "catppuccin";
           repo = "bat";
           rev = "d714cc1";
-          sha256 = "sha256-6WVKQErGdaqb++oaXnY3i6/GuH2FhTgK0v4TN4Y0Wbw=";
+          sha256 = "sha256-Q5B4NDrfCIK3UAMs94vdXnR42k4AXCqZz6sRn8bzmf4=";
         };
-        file = "CatppuccinMocha.tmTheme";
+        file = "themes/Catppuccin Mocha.tmTheme";
       };
     };
     config = {
-      theme = "catppuccinMocha";
+      theme = "CatppuccinMocha";
       style = "header-filename,header-filesize,grid";
       wrap = "never";
     };
