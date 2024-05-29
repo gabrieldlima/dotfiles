@@ -10,7 +10,6 @@
     ./git.nix
     ./picom.nix
     ./starship.nix
-    ./xresources.nix
   ];
   home.packages = with pkgs; [
     _1password-gui
