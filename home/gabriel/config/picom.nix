@@ -24,6 +24,7 @@
       shadow-opacity = 1;
       shadow-offset-x = -12;
       shadow-offset-y = -12;
+      shadow-color = "#000000";
 
       # Opacity of windows
       active-opacity = 1.0;
@@ -35,7 +36,6 @@
       fading = true;
       fade-in-step = 0.5;
       fade-out-step = 0.5;
-
     };
     # Rules for specific window types
     wintypes = {
