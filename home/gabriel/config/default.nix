@@ -6,6 +6,7 @@
     ./awesome
     ./bat.nix
     ./eza.nix
+    ./fish.nix
     ./flameshot.nix
     ./git.nix
     ./picom.nix
@@ -21,7 +22,6 @@
     duf
     fd
     file
-    fish
     gimp
     gnome.gnome-themes-extra
     gnumake
