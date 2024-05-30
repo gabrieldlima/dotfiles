@@ -1,5 +1,10 @@
-all:
-	stow --dotfiles --verbose --target=$$HOME --restow .
+.PHONY: all home aorus
 
-delete:
-	stow --dotfiles --verbose --target=$$HOME --delete .
+all:
+	nixos-rebuild switch --flake .#aorus && home-manager switch --flake .#gabriel@aorus
+
+home:
+	home-manager switch --flake .#gabriel@aorus
+
+aorus:
+	nixos-rebuild switch --flake .#aorus
