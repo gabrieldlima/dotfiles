@@ -12,6 +12,7 @@
     ./qutebrowser
     ./starship.nix
     ./steam.nix
+    ./wezterm
   ];
 
   home.packages = with pkgs; [
@@ -41,5 +42,4 @@
     xsel
     xwallpaper
   ];
-  home.file.".config/wezterm/wezterm.lua".source = ./wezterm/wezterm.lua;
 }
