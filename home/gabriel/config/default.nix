@@ -10,6 +10,7 @@
     ./git.nix
     ./picom.nix
     ./starship.nix
+    ./steam.nix
   ];
   home.packages = with pkgs; [
     _1password-gui
@@ -26,6 +27,7 @@
     nixd
     obsidian
     pavucontrol
+    mangohud
     qutebrowser
     ripgrep
     sxiv
