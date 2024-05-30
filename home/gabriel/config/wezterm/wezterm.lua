@@ -6,7 +6,7 @@ color_overrides.background = "#010101"
 local M = {}
 
 -- Spawn a fish shell in login mode
-M.default_prog = { "/usr/bin/fish" }
+M.default_prog = { "fish" }
 
 -- Colors & Appearance
 M.color_schemes = {
@@ -22,7 +22,7 @@ M.hide_tab_bar_if_only_one_tab = true
 M.window_background_opacity = 1.0
 
 -- Fonts
-M.font = wezterm.font_with_fallback { "JetBrainsMono Nerd Font", "FiraCode Nerd Font" }
+M.font = wezterm.font_with_fallback { "FiraCode Nerd Font" }
 M.font_size = 11
 
 -- Configuration
