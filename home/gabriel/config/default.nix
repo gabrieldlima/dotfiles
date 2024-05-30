@@ -9,9 +9,11 @@
     ./flameshot.nix
     ./git.nix
     ./picom.nix
+    ./qutebrowser
     ./starship.nix
     ./steam.nix
   ];
+
   home.packages = with pkgs; [
     _1password-gui
     atuin
@@ -23,11 +25,11 @@
     gnome.gnome-themes-extra
     gnumake
     jq
+    mangohud
     neovim
     nixd
     obsidian
     pavucontrol
-    mangohud
     qutebrowser
     ripgrep
     sxiv
