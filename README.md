@@ -1,1 +1,1 @@
-![img](.config/awesome/assets/screenshots/screen02.png)
+![img](home/gabriel/config/awesome/assets/screenshots/screen02.png)
