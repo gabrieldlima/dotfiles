@@ -4,11 +4,11 @@ local colors  = require("themes.colorsheme")
 local user    = require("config.user")
 
 local logo = wibox.widget {
-  image = helpers.gcolor_recolorimg(user.config.home .. "/.config/awesome/assets/logos/awesome64.png", colors.blue),
+  image = helpers.gcolor_recolorimg(user.config.home .. "/.config/awesome/assets/logos/nix.svg", colors.blue),
   valign = "center",
   halign = "center",
-  forced_height = 20,
-  forced_width = 20,
+  forced_height = 28,
+  forced_width = 28,
   resize = true,
   widget = wibox.widget.imagebox,
 }
