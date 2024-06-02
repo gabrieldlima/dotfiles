@@ -22,6 +22,7 @@
     duf
     fd
     file
+    gcc
     gimp
     gnome.gnome-themes-extra
     gnumake
