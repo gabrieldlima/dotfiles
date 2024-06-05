@@ -4,18 +4,17 @@
 }: {
   imports = [
     ./alacritty.nix
-    ./awesome
+    # ./awesome
     ./bat.nix
     ./eza.nix
     ./fish.nix
     ./flameshot.nix
     ./git.nix
     ./hyprland
-    ./picom.nix
     ./qutebrowser
     ./starship.nix
     ./steam.nix
-    ./wezterm
+    # ./wezterm
   ];
 
   home.packages = with pkgs; [
@@ -36,13 +35,9 @@
     pavucontrol
     qutebrowser
     ripgrep
-    sxiv
     tldr
     unzip
     virtiofsd
-    # wezterm
     wget
-    xsel
-    xwallpaper
   ];
 }

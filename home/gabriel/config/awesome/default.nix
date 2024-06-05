@@ -19,6 +19,16 @@ let
     '';
   });
 in {
+  imports = [
+    ../picom.nix
+  ];
+
+  home.packages = with pkgs; [
+    sxiv
+    xsel
+    xwallpaper
+  ];
+
   xsession.windowManager.awesome = {
     enable = true;
     package = awesome-git;
