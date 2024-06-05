@@ -3,6 +3,7 @@
   ...
 }: {
   imports = [
+    ./alacritty.nix
     ./awesome
     ./bat.nix
     ./eza.nix
@@ -39,7 +40,7 @@
     tldr
     unzip
     virtiofsd
-    wezterm
+    # wezterm
     wget
     xsel
     xwallpaper

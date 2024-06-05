@@ -24,7 +24,7 @@
     # Variables
     "$browser" = "qutebrowser";
     "$launcher" = "rofi -show drun";
-    "$terminal" = "wezterm";
+    "$terminal" = "alacritty";
 
     # Set the modKey
     "$modKey" = "SUPER";
