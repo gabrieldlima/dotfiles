@@ -9,6 +9,7 @@
     ./fish.nix
     ./flameshot.nix
     ./git.nix
+    ./hyprland
     ./picom.nix
     ./qutebrowser
     ./starship.nix
