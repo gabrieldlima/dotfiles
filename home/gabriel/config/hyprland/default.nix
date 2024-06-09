@@ -34,7 +34,7 @@
       ###############################################################################
       # will execute only on launch
       exec-once = [
-        "swww init"
+        "swww-daemon"
         "openrgb -d 0 -m off && openrgb -d 1 -m off"
       ];
 
