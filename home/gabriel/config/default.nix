@@ -4,17 +4,17 @@
 }: {
   imports = [
     ./alacritty.nix
-    # ./awesome
+    ./awesome
     ./bat.nix
     ./eza.nix
     ./fish.nix
     ./flameshot.nix
     ./git.nix
-    ./hyprland
+    # ./hyprland
     ./qutebrowser
     ./starship.nix
     ./steam.nix
-    # ./wezterm
+    ./wezterm
   ];
 
   home.packages = with pkgs; [
