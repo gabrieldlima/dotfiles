@@ -15,8 +15,9 @@ M.color_schemes = {
 M.color_scheme = "Catppuccin_Mocha_Dark"
 
 -- Tab Bar Appearance & Colors
-M.enable_tab_bar = false
-M.hide_tab_bar_if_only_one_tab = true
+M.enable_tab_bar = true
+M.use_fancy_tab_bar = false
+M.hide_tab_bar_if_only_one_tab = false
 
 -- Window Background Opacity
 M.window_background_opacity = 1.0
