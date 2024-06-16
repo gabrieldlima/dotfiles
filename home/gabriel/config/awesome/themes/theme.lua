@@ -47,6 +47,7 @@ theme.taglist_fg_focus                  = color.blue
 theme.taglist_fg_occupied               = color.text
 theme.taglist_fg_empty                  = color.surface0
 theme.taglist_fg_urgent                 = color.red
+theme.taglist_bg_urgent                 = color.crust
 theme.taglist_spacing                   = 1
 
 -------------------------------------------------------------------------------
