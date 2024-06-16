@@ -13,7 +13,7 @@
     # ./hyprland
     ./qutebrowser
     ./starship.nix
-    ./steam.nix
+    # ./steam.nix
     ./wezterm
   ];
 
