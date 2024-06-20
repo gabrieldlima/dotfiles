@@ -12,7 +12,7 @@ local hide_icon = ""
 local icon = helpers.textbox(color.foreground, font, show_icon)
 local tray_toggle = helpers.margin(icon, 4, 4, 4, 4)
 local systray = helpers.margin({ base_size = 20, widget = wibox.widget.systray }, 5, 5, 5, 5, false)
-local togglableSystray = helpers.cbackground({ systray, tray_toggle, layout = wibox.layout.fixed.horizontal }, helpers.rrect(4), color.crust)
+local togglableSystray = helpers.cbackground({ systray, tray_toggle, layout = wibox.layout.fixed.horizontal }, helpers.rrect(4), color.background)
 
 tray_toggle:connect_signal("button::press", function(_, _, _, button)
   if button == 1 then
