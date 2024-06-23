@@ -20,15 +20,22 @@
     homeDirectory = "/home/gabriel";
 
     pointerCursor = {
-      name = "GoogleDot-Black";
-      package = pkgs.google-cursor;
+      name = "catppuccin-mocha-light-cursors";
+      package = pkgs.catppuccin-cursors.mochaLight;
       size = 16;
       gtk.enable = true;
       x11 = {
-       enable = false;
+       enable = true;
        defaultCursor = "left_ptr";
       };
     };
+  };
+
+  gtk = {
+    enable = true;
+    catppuccin.icon.enable = true;
+    catppuccin.icon.accent = "blue";
+    catppuccin.icon.flavor = "mocha";
   };
 
   xdg = {
@@ -56,23 +63,6 @@
         "image/png" = [ "sxiv.desktop" ];
         "image/jpg" = [ "sxiv.desktop" ];
       };
-    };
-  };
-
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Catppuccin-Mocha-Compact-Lavender-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "lavender" ];
-        size = "compact";
-        tweaks = [ "black" "rimless" ];
-        variant = "mocha";
-      };
-    };
-    iconTheme = {
-      name = "Papirus";
-      package = pkgs.papirus-icon-theme;
     };
   };
 

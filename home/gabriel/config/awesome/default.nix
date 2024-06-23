@@ -32,7 +32,7 @@ in {
   xresources = {
     properties = {
       "XTerm*faceName" = "FiraCode Nerd Font:size=12";
-      "Xcursor.theme" = "GoogleDot-Black";
+      "Xcursor.theme" = "catppuccin-mocha-light-cursors";
       "Xcursor.size" = 16;
     };
     extraConfig = ''
