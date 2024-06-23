@@ -18,6 +18,7 @@
         padding.x = 10;
         padding.y = 10;
         decorations = "None";
+        opacity = 0.95;
       };
 
       # FONT
