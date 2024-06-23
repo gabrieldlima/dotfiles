@@ -45,7 +45,7 @@ global_key({
 
   awful.key {
     description = "quit awesome",
-    modifiers = { mod.super },
+    modifiers = { mod.super, mod.shift },
     key = "q",
     on_press = function ()
       awesome.quit()
