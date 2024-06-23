@@ -2,7 +2,7 @@
   ...
 }: {
   programs.alacritty = {
-    enable = false;
+    enable = true;
     settings = {
       # GENERAL
       shell = "fish";

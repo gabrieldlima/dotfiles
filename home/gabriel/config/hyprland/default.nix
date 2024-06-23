@@ -60,11 +60,11 @@
         # border color for inactive windows
         "col.inactive_border" = "$base";
         # in seconds, after how many seconds of cursor’s inactivity to hide it. Set to 0 for never
-        cursor_inactive_timeout = 0;
+        # cursor_inactive_timeout = 0;
         # which layout to use. (Available: dwindle, master)
         layout = "master";
         # if true, will not warp the cursor in many cases (focusing, keybinds, etc)
-        no_cursor_warps = true;
+        # no_cursor_warps = true;
         # if true, will not fall back to the next available window when moving focus in a direction where no window was found
         no_focus_fallback = true;
         # if on, will also apply the sensitivity to raw mouse output (e.g. sensitivity in games) NOTICE: really not recommended
@@ -358,7 +358,7 @@
         # Disables direct scanout. Direct scanout attempts to reduce lag when there is only one fullscreen application on a screen (e.g. game). It is also recommended to set this to true if the fullscreen application shows graphical glitches
         no_direct_scanout = true;
         # Hides the cursor when the last input was a touch input until a mouse input is done
-        hide_cursor_on_touch = true;
+        # hide_cursor_on_touch = true;
         # Whether mouse moving into a different monitor should focus it
         mouse_move_focuses_monitor = true;
         # [Warning: buggy] starts rendering before your monitor displays a frame in order to lower latency
@@ -366,9 +366,9 @@
         # how many ms of safezone to add to rendering ahead of time. Recommended 1-2.
         render_ahead_safezone = 1;
         # the factor to zoom by around the cursor. AKA. Magnifying glass. Minimum 1.0 (meaning no zoom)
-        cursor_zoom_factor = 1.0;
+        # cursor_zoom_factor = 1.0;
         # whether the zoom should follow the cursor rigidly (cursor is always centered if it can be) or loosely
-        cursor_zoom_rigid = false;
+        # cursor_zoom_rigid = false;
         # if true, will allow you to restart a lockscreen app in case it crashes (red screen of death)
         allow_session_lock_restore = false;
         # change the background color. (requires enabled disable_hyprland_logo)
