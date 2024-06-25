@@ -20,7 +20,7 @@ M.initial_rows = 30
 M.enable_wayland = false
 
 -- Window Background Opacity
-M.window_background_opacity = 0.9
+M.window_background_opacity = 0.95
 
 -- Tab Bar Appearance & Colors
 M.enable_tab_bar = true
