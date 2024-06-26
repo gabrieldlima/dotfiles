@@ -16,7 +16,6 @@ local screenshot = require("ui.bar.modules.screenshot")
 awful.screen.connect_for_each_screen(function(s)
 
   awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
-  -- awful.tag({ "一", "二", "三", "四", "五", "六", "七", "八", "九", "〇" }, s, awful.layout.layouts[1])
 
   -----------------------------------------------------------------------------
   -- Bar
