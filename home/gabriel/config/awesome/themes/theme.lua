@@ -4,6 +4,7 @@ local user          = require("config.user")
 local color         = require("themes.colorsheme")
 local layout_path   = user.config.home .. "/.config/awesome/assets/icons/layouts/"
 local titlebar_path = user.config.home .. "/.config/awesome/assets/icons/titlebar/"
+local helpers = require("helpers")
 
 local theme = {}
 
@@ -37,18 +38,6 @@ theme.hotkeys_modifiers_fg              = color.foreground
 theme.hotkeys_font                      = user.config.font
 theme.hotkeys_description_font          = user.config.font
 theme.hotkeys_group_margin              = 10
-
--------------------------------------------------------------------------------
--- taglist
--------------------------------------------------------------------------------
-theme.taglist_font                      = "FiraCode Nerd Font Bold 12"
-theme.taglist_bg_focus                  = color.background
-theme.taglist_fg_focus                  = color.blue
-theme.taglist_fg_occupied               = color.text
-theme.taglist_fg_empty                  = color.surface0
-theme.taglist_fg_urgent                 = color.red
-theme.taglist_bg_urgent                 = color.background
-theme.taglist_spacing                   = 1
 
 -------------------------------------------------------------------------------
 -- tasklist
