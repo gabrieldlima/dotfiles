@@ -1,4 +1,5 @@
 local awful   = require("awful")
+local wibox   = require("wibox")
 local mod     = require("config.binds.modkeys")
 local helpers = require("helpers")
 local colors  = require("themes.colorsheme")
@@ -69,14 +70,64 @@ local buttons = {
   },
 }
 
+-- Widget
+-- =============================================================================
 local taglist = function (s)
   local taglist_widget = awful.widget.taglist {
     screen  = s,
     filter  = awful.widget.taglist.filter.all,
-    buttons = buttons
+    buttons = buttons,
+    layout  = wibox.layout.fixed.horizontal,
+    style = {
+      font    = nil,
+      spacing = 10,
+      shape   = nil,
+
+      -- Colors
+      bg_focus    = colors.background,
+      fg_focus    = colors.blue,
+      bg_occupied = colors.crust,
+      fg_occupied = colors.text,
+      bg_empty    = colors.crust,
+      fg_empty    = colors.surface0,
+      bg_urgent   = colors.crust,
+      fg_urgent   = colors.red,
+    },
+
+    -- TODO: Fix urgent color not working
+    widget_template = {
+      widget = wibox.container.background,
+      shape  = helpers.rrect(10),
+
+      create_callback = function (self, c3, _)
+        if c3.selected then
+          self.bg = colors.blue
+          self.forced_width = 24
+        elseif #c3:clients() == 0 then
+          self.bg = colors.surface0
+          self.forced_width = 12
+        else
+          self.bg = colors.foreground
+          self.forced_width = 12
+        end
+      end,
+
+      update_callback = function (self, c3, _)
+        if c3.selected then
+          self.bg = colors.blue
+          self.forced_width = 24
+        elseif #c3:clients() == 0 then
+          self.bg = colors.surface0
+          self.forced_width = 12
+        else
+          self.bg = colors.foreground
+          self.forced_width = 12
+        end
+      end,
+    }
   }
 
-  return helpers.cbackground(helpers.margin(taglist_widget, 4, 4, 4, 4), helpers.rrect(4), colors.background)
+  return helpers.cbackground(helpers.margin(taglist_widget, 4, 4, 13, 13), helpers.rrect(4), colors.background)
 end
 
 return taglist
