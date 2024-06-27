@@ -9,10 +9,10 @@ c.fonts.default_size = "10pt"
 c.tabs.show = "multiple"
 c.downloads.position = "bottom"
 c.content.javascript.clipboard = "access"
-c.url.default_page = "https://search.brave.com/"
-c.url.start_pages = ["https://search.brave.com/"]
+c.url.default_page = "https://start.duckduckgo.com"
+c.url.start_pages = [ "https://start.duckduckgo.com" ]
 c.url.searchengines = {
-    "DEFAULT": "https://search.brave.com/search?q={}&source=web",
+    "DEFAULT": "https://duckduckgo.com/?ia=web&q={}",
     "!g": "https://google.com/search?hl=en&q={}",
     "!d": "https://duckduckgo.com/?ia=web&q={}",
     "!b": "https://search.brave.com/search?q={}&source=web",
