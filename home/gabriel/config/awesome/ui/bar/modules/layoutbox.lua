@@ -1,7 +1,7 @@
 local awful   = require("awful")
 local helpers = require("helpers")
 local mod     = require("config.binds.modkeys")
-local colors  = require("themes.colorsheme")
+local colors  = require("theme.colorsheme")
 
 local layoutbox = awful.widget.layoutbox {
   buttons = {

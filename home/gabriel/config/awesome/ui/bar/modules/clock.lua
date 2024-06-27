@@ -1,6 +1,6 @@
 local wibox   = require("wibox")
 local helpers = require("helpers")
-local colors  = require("themes.colorsheme")
+local colors  = require("theme.colorsheme")
 
 local textclock = wibox.widget {
   format = " %a %b %d %I:%M %p ",

@@ -2,7 +2,7 @@ local awful   = require("awful")
 local wibox   = require("wibox")
 local mod     = require("config.binds.modkeys")
 local helpers = require("helpers")
-local colors  = require("themes.colorsheme")
+local colors  = require("theme.colorsheme")
 
 local buttons = {
   awful.button {

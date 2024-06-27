@@ -1,7 +1,7 @@
 local awful   = require("awful")
 local wibox   = require("wibox")
 local helpers = require("helpers")
-local colors  = require("themes.colorsheme")
+local colors  = require("theme.colorsheme")
 
 -----------------------------------------------------------------------------
 -- Widgets
