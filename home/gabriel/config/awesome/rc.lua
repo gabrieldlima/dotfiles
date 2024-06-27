@@ -14,9 +14,9 @@ pcall(require, "luarocks.loader")
 -- [[ Awesome modules ]]
 --
 require("config.binds")
-require("themes")
-require("rules")
-require("signals")
+require("theme")
+require("config.rules")
+require("signal")
 require("ui.bar")
 require("awful.autofocus")
 require("awful.hotkeys_popup.keys")
