@@ -1,1 +1,1 @@
-![img](.github/screenshots/screen02.png)
+![img](screenshots/screen02.png)
