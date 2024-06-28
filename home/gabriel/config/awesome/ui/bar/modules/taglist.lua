@@ -1,6 +1,6 @@
 local awful   = require("awful")
 local wibox   = require("wibox")
-local mod     = require("config.binds.modkeys")
+local mod     = require("binds.mod")
 local helpers = require("helpers")
 local colors  = require("theme.colorsheme")
 

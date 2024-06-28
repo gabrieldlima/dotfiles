@@ -2,7 +2,7 @@ local awful   = require("awful")
 local helpers = require("helpers")
 local colors  = require("theme.colorsheme")
 local user    = require("config.user")
-local mod     = require("config.binds.modkeys")
+local mod     = require("binds.mod")
 
 local screenshot = awful.widget.button {
   image = "/home/gabriel/.config/awesome/theme/assets/icons/screenshot.png",
