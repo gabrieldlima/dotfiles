@@ -49,7 +49,7 @@ awful.screen.connect_for_each_screen(function(s)
         -- Right widgets
         {
           helpers.margin(systray, 4, 4, 4, 4),
-          -- helpers.margin(screenshot, 4, 4, 4, 4),
+          helpers.margin(screenshot, 4, 4, 4, 4),
           helpers.margin(layoutbox, 4, 4, 4, 4),
           layout = wibox.layout.fixed.horizontal,
         },
