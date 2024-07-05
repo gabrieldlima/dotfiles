@@ -127,7 +127,7 @@ local taglist = function (s)
     }
   }
 
-  return helpers.cbackground(helpers.margin(taglist_widget, 4, 4, 13, 13), helpers.rrect(4), colors.background)
+  return helpers.cbackground(helpers.margin(taglist_widget, 4, 4, 9, 9), helpers.rrect(4), colors.background)
 end
 
 return taglist
