@@ -70,8 +70,8 @@ theme.layout_cornerse                   = layout_path .. "cornersew.png"
 theme.titlebar_bg                       = color.background
 theme.titlebar_bg_focus                 = color.background
 -- Close Button
-theme.titlebar_close_button_normal      = gears.color.recolor_image(titlebar_path .. "button.png", "#7f849c")
-theme.titlebar_close_button_focus       = gears.color.recolor_image(titlebar_path .. "button.png", color.red)
+theme.titlebar_close_button_normal      = helpers.recolor_image(titlebar_path .. "button.png", "#7f849c")
+theme.titlebar_close_button_focus       = helpers.recolor_image(titlebar_path .. "button.png", color.red)
 theme.titlebar_close_button_focus_hover = titlebar_path .. "button_close.png"
 
 -------------------------------------------------------------------------------

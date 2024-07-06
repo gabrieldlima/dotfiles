@@ -30,7 +30,7 @@ end
 
 helpers.rrect = function(radius)
   radius = radius or dpi(4)
-  return function (cr, width, height)
+  return function(cr, width, height)
     gears.shape.rounded_rect(cr, width, height, radius)
   end
 end
@@ -44,7 +44,10 @@ helpers.cbackground = function(widget, shape, bg)
   }
 end
 
-helpers.gcolor_recolorimg = function (image, color)
+-- Module: gears.color
+-- NOTE: https://awesomewm.org/doc/api/libraries/gears.color.html#recolor_image
+-- -----------------------------------------------------------------------------
+helpers.recolor_image = function(image, color)
   return gears.color.recolor_image(image, color)
 end
 
