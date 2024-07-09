@@ -1,10 +1,9 @@
 -- NOTE: https://awesomewm.org/apidoc/documentation/06-appearance.md.html
-local gears         = require("gears")
+local helpers       = require("helpers")
 local user          = require("config.user")
 local color         = require("theme.colorsheme")
 local layout_path   = user.config.home .. "/.config/awesome/theme/assets/icons/layouts/"
 local titlebar_path = user.config.home .. "/.config/awesome/theme/assets/icons/titlebar/"
-local helpers = require("helpers")
 
 local theme = {}
 
@@ -69,7 +68,6 @@ theme.layout_cornerse                   = layout_path .. "cornersew.png"
 -------------------------------------------------------------------------------
 theme.titlebar_bg                       = color.background
 theme.titlebar_bg_focus                 = color.background
--- Close Button
 theme.titlebar_close_button_normal      = helpers.recolor_image(titlebar_path .. "button.png", "#7f849c")
 theme.titlebar_close_button_focus       = helpers.recolor_image(titlebar_path .. "button.png", color.red)
 theme.titlebar_close_button_focus_hover = titlebar_path .. "button_close.png"
