@@ -104,7 +104,7 @@ local taglist = function (s)
           self.bg = colors.blue
           self.forced_width = 28
         elseif #c3:clients() == 0 then
-          self.bg = colors.surface0
+          self.bg = "#363a4f"
           self.forced_width = 12
         else
           self.bg = colors.foreground
@@ -117,7 +117,7 @@ local taglist = function (s)
           self.bg = colors.blue
           self.forced_width = 28
         elseif #c3:clients() == 0 then
-          self.bg = colors.surface0
+          self.bg = "#363a4f"
           self.forced_width = 12
         else
           self.bg = colors.foreground
@@ -127,7 +127,7 @@ local taglist = function (s)
     }
   }
 
-  return helpers.cbackground(helpers.margin(taglist_widget, 4, 4, 9, 9), helpers.rrect(4), colors.background)
+  return helpers.cbackground(helpers.margin(taglist_widget, 4, 4, 9, 9), helpers.rrect(4), colors.crust)
 end
 
 return taglist

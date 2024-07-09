@@ -9,7 +9,7 @@ local textclock = wibox.widget {
   format = " %a %b %d %I:%M %p ",
   widget = wibox.widget.textclock
 }
-local mytextclock = helpers.cbackground(textclock, helpers.rrect(4), colors.background)
+local mytextclock = helpers.cbackground(textclock, helpers.rrect(4), colors.crust)
 
 -- Calendar widget
 --------------------------------------------------------------------------------
@@ -26,7 +26,11 @@ local calendar = awful.widget.calendar_popup.month {
     border_width = 3,
     border_color = colors.blue,
   },
-  style_header = { fg_color = colors.foreground },
+  style_header = {
+    fg_color = colors.foreground,
+    bg_color = colors.crust,
+    shape = helpers.rrect(4)
+  },
   style_weekday = { fg_color = colors.lavender },
   style_normal = { fg_color = colors.subtext0 },
   style_focus = { fg_color = colors.blue },
