@@ -25,7 +25,7 @@
     file
     gcc
     gimp
-    gnome.gnome-themes-extra
+    gnome-themes-extra
     gnumake
     jq
     mangohud
