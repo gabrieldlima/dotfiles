@@ -31,8 +31,8 @@ client.connect_signal("request::default_keybindings", function ()
     awful.key {
       description = "toggle floating",
       group = "6. client",
-      modifiers = { mod.super, mod.ctrl },
-      key = "space",
+      modifiers = { mod.super, mod.shift },
+      key = "f",
       on_press = function ()
         awful.client.floating.toggle()
       end,
