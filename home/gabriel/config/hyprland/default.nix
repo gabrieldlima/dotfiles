@@ -400,7 +400,7 @@
         # (0.0 - 1.0) master split factor, the ratio of master split
         mfact = 0.5;
         # whether a newly open window should replace the master or join the slaves
-        new_is_master = true;
+        # new_is_master = true;
         # whether a newly open window should be on the top of the stack
         new_on_top = true;
         # whether to apply gaps when there is only one window on a workspace, aka. smart gaps. (default: disabled - 0) no border - 1, with border - 2

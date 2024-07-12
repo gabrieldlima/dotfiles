@@ -3,17 +3,18 @@
   ...
 }: {
   imports = [
-    # ./hyprland
+    # ./awesome
+    # ./steam.nix
+
     ./alacritty.nix
-    ./awesome
     ./bat.nix
     ./eza.nix
     ./fish.nix
     ./flameshot.nix
     ./git.nix
+    ./hyprland
     ./qutebrowser
     ./starship.nix
-    # ./steam.nix
     ./wezterm
   ];
 
