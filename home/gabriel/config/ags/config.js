@@ -3,12 +3,26 @@
 const hyprland = await Service.import("hyprland")
 
 
+// variables
+// -----------------------------------------------------------------------------
+const dateVar = Variable("", {
+  poll: [1000, 'date "+%a %b %d %I:%M %P"'],
+})
+
+
 // widgets
 // -----------------------------------------------------------------------------
 const clientTitle = () => {
   return Widget.Label({
     className: "clientTitle",
     label: hyprland.active.client.bind("class"),
+  })
+}
+
+const date = () => {
+  return Widget.Label({
+    className: "date",
+    label: dateVar.bind()
   })
 }
 
@@ -38,7 +52,7 @@ const right = () => {
     hpack: "end",
     spacing: 8,
     children: [
-      Widget.Label("Hello from right")
+      date()
     ],
   })
 }

@@ -6,5 +6,11 @@ window.bar {
 }
 
 .clientTitle {
-  color: #89b4fa;
+  color: #cdd6f4;
+  background: #11111b;
+}
+
+.date {
+  color: #cdd6f4;
+  background: #11111b;
 }
