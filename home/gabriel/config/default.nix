@@ -33,6 +33,7 @@
     mangohud
     neovim
     nixd
+    nodejs_22
     obsidian
     pavucontrol
     qutebrowser
