@@ -74,6 +74,7 @@
         shadow_render_power = 3;
         shadow_ignore_window = true;
         "col.shadow" = "$base";
+        "col.shadow_inactive" = "$base";
         shadow_offset = "0, 0";
         shadow_scale = 1.0;
         dim_inactive = false;
@@ -84,7 +85,7 @@
 
         blur = {
           enabled = true;
-          size = 3;
+          size = 1;
           passes = 1;
           ignore_opacity = false;
           new_optimizations = true;
@@ -92,7 +93,7 @@
           noise = 0.0117;
           contrast = 0.8916;
           brightness = 0.8172;
-          vibrancy = 0;
+          vibrancy = 0.1696;
           vibrancy_darkness = 0;
           special = false;
           popups = false;
