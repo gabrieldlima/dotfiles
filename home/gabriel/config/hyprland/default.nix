@@ -32,6 +32,7 @@
       # Autostart applications
       # ========================================================================
       exec-once = [
+        "ags -b hypr"
         "swww-daemon"
         "openrgb -d 0 -m off && openrgb -d 1 -m off"
       ];
