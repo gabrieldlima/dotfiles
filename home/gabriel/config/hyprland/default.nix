@@ -47,8 +47,11 @@
         no_border_on_floating = false;
         gaps_in = 5;
         gaps_out = 10;
+        gaps_workspaces = 0;
         "col.active_border" = "$blue";
         "col.inactive_border" = "$base";
+        "col.nogroup_border_active" = "$blue";
+        "col.nogroup_border" = "$base";
         layout = "master";
         no_focus_fallback = true;
         apply_sens_to_raw = false;
@@ -56,6 +59,7 @@
         extend_border_grab_area = 0;
         hover_icon_on_border = true;
         allow_tearing = false;
+        resize_corner = 0;
       };
 
       # Decoration
