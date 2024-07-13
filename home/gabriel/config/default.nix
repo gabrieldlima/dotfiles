@@ -6,6 +6,7 @@
     # ./awesome
     ./steam.nix
 
+    ./ags
     ./alacritty.nix
     ./bat.nix
     ./eza.nix
