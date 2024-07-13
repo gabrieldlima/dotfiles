@@ -4,7 +4,7 @@
 }: {
   imports = [
     # ./awesome
-    # ./steam.nix
+    ./steam.nix
 
     ./alacritty.nix
     ./bat.nix
