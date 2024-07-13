@@ -1,26 +1,52 @@
-const time = Variable('', {
-  poll: [1000, function() {
-    return Date().toString()
-  }],
-})
+const Left = () => {
+  return Widget.Box({
+    spacing: 8,
+    children: [
+      Widget.Label("Hello from Left")
+    ],
+  })
+}
 
-const Bar = (/** @type {number} */ monitor) => Widget.Window({
-  monitor,
-  name: `bar${monitor}`,
-  anchor: ['top', 'left', 'right'],
-  exclusivity: 'exclusive',
-  child: Widget.CenterBox({
-    start_widget: Widget.Label({
-      hpack: 'center',
-      label: 'Welcome to AGS!',
+const Center = () => {
+  return Widget.Box({
+    spacing: 8,
+    children: [
+      Widget.Label("Hello from Center")
+    ],
+  })
+}
+
+const Right = () => {
+  return Widget.Box({
+    hpack: "end",
+    spacing: 8,
+    children: [
+      Widget.Label("Hello from right")
+    ],
+  })
+}
+
+function Bar(monitor = 0) {
+  return Widget.Window({
+    name: `bar-${monitor}`,
+    class_name: "bar",
+    monitor,
+    anchor: ["top", "left", "right"],
+    exclusivity: "exclusive",
+    layer: "bottom",
+    child: Widget.CenterBox({
+      start_widget: Left(),
+      center_widget: Center(),
+      end_widget: Right(),
     }),
-    end_widget: Widget.Label({
-      hpack: 'center',
-      label: time.bind(),
-    }),
-  }),
-})
+  })
+}
 
 App.config({
-  windows: [Bar(0)],
+  style: "./style.css",
+  windows: [
+    Bar(),
+  ],
 })
+
+export { }
