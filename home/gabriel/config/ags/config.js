@@ -1,4 +1,21 @@
-const Left = () => {
+// imports
+// -----------------------------------------------------------------------------
+const hyprland = await Service.import("hyprland")
+
+
+// widgets
+// -----------------------------------------------------------------------------
+const clientTitle = () => {
+  return Widget.Label({
+    className: "clientTitle",
+    label: hyprland.active.client.bind("class"),
+  })
+}
+
+
+// bar layout
+// -----------------------------------------------------------------------------
+const left = () => {
   return Widget.Box({
     spacing: 8,
     children: [
@@ -7,16 +24,16 @@ const Left = () => {
   })
 }
 
-const Center = () => {
+const center = () => {
   return Widget.Box({
     spacing: 8,
     children: [
-      Widget.Label("Hello from Center")
+      clientTitle()
     ],
   })
 }
 
-const Right = () => {
+const right = () => {
   return Widget.Box({
     hpack: "end",
     spacing: 8,
@@ -26,18 +43,21 @@ const Right = () => {
   })
 }
 
-function Bar(monitor = 0) {
+
+// the ags bar
+// -----------------------------------------------------------------------------
+function bar(monitor = 0) {
   return Widget.Window({
     name: `bar-${monitor}`,
-    class_name: "bar",
+    className: "bar",
     monitor,
     anchor: ["top", "left", "right"],
     exclusivity: "exclusive",
     layer: "bottom",
     child: Widget.CenterBox({
-      start_widget: Left(),
-      center_widget: Center(),
-      end_widget: Right(),
+      startWidget: left(),
+      centerWidget: center(),
+      endWidget: right(),
     }),
   })
 }
@@ -45,7 +65,7 @@ function Bar(monitor = 0) {
 App.config({
   style: "./style.css",
   windows: [
-    Bar(),
+    bar(),
   ],
 })
 
