@@ -222,7 +222,8 @@
         allow_small_split = false;
         special_scale_factor = 0.5;
         mfact = 0.5;
-        new_on_top = true;
+        new_status = "master";
+        new_on_top = false;
         no_gaps_when_only = 0;
         orientation = "left";
         inherit_fullscreen = true;
