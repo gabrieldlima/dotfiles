@@ -7,6 +7,7 @@
 
     ./alacritty.nix
     ./awesome
+    ./bash.nix
     ./bat.nix
     ./eza.nix
     ./fish.nix
