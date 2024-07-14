@@ -12,9 +12,6 @@
 
     # Catppuccin
     catppuccin.url = "github:catppuccin/nix";
-
-    # AGS Shell
-    ags.url = "github:Aylur/ags";
   };
 
   outputs = {

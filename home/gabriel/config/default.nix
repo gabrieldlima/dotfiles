@@ -3,19 +3,18 @@
   ...
 }: {
   imports = [
-    # ./awesome
-    ./steam.nix
+    # ./hyprland
 
-    ./ags
     ./alacritty.nix
+    ./awesome
     ./bat.nix
     ./eza.nix
     ./fish.nix
     ./flameshot.nix
     ./git.nix
-    ./hyprland
     ./qutebrowser
     ./starship.nix
+    ./steam.nix
     ./wezterm
   ];
 
@@ -23,7 +22,6 @@
     _1password-gui
     atuin
     duf
-    esbuild
     fd
     file
     gcc
@@ -34,7 +32,6 @@
     mangohud
     neovim
     nixd
-    nodejs_22
     obsidian
     pavucontrol
     qutebrowser
