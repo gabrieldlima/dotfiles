@@ -23,6 +23,7 @@
     _1password-gui
     atuin
     duf
+    esbuild
     fd
     file
     gcc
