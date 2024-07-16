@@ -42,7 +42,7 @@ client.connect_signal("request::default_keybindings", function ()
     awful.key {
       description = "move to master",
       group = "6. client",
-      modifiers = { mod.super, mod.ctrl },
+      modifiers = { mod.super, mod.shift },
       key = "Return",
       on_press = function (c)
         c:swap(awful.client.getmaster())
