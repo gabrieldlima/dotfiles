@@ -11,6 +11,3 @@ aorus:
 
 awesome:
 	ln -sf $$HOME/Development/dotfiles/home/gabriel/config/awesome $$HOME/.config/awesome
-
-ags:
-	ln -sf $$HOME/Development/dotfiles/home/gabriel/config/ags $$HOME/.config/ags
