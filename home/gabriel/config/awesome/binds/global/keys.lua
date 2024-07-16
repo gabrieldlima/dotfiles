@@ -283,8 +283,8 @@ global_key({
 
   awful.key {
     description = "increase the number of master clients",
-    modifiers = { mod.super, mod.shift },
-    key = "h",
+    modifiers = { mod.super },
+    key = ",",
     on_press = function ()
       awful.tag.incnmaster( 1, nil, true)
     end,
@@ -293,8 +293,8 @@ global_key({
 
   awful.key {
     description = "decrease the number of master clients",
-    modifiers = { mod.super, mod.shift },
-    key = "l",
+    modifiers = { mod.super },
+    key = ".",
     on_press = function ()
       awful.tag.incnmaster(-1, nil, true)
     end,
