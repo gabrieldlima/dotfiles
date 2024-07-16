@@ -249,21 +249,28 @@ global_key({
   group = "5. layout",
 
   awful.key {
-    description = "select layout directly",
+    description = "select next",
     modifiers = { mod.super },
-    keygroup = "numpad",
-    on_press = function (index)
-      local t = awful.screen.focused().selected_tag
-      if t then
-        t.layout = t.layouts[index] or t.layout
-      end
+    key = "space",
+    on_press = function ()
+      awful.layout.inc(1)
+    end,
+    on_release = nil,
+  },
+
+  awful.key {
+    description = "select previous",
+    modifiers = { mod.super, mod.shift },
+    key = "space",
+    on_press = function ()
+      awful.layout.inc(-1)
     end,
     on_release = nil,
   },
 
   awful.key {
     description = "increase master width factor",
-    modifiers = { mod.super },
+    modifiers = { mod.super, mod.ctrl },
     key = "l",
     on_press = function ()
       awful.tag.incmwfact( 0.05)
@@ -273,12 +280,41 @@ global_key({
 
   awful.key {
     description = "decrease master width factor",
-    modifiers = { mod.super },
+    modifiers = { mod.super, mod.ctrl },
     key = "h",
     on_press = function ()
       awful.tag.incmwfact(-0.05)
     end,
     on_release = nil,
+  },
+
+  awful.key {
+    description = "increase gap size",
+    modifiers = { mod.super, mod.ctrl },
+    key = ",",
+    on_press = function ()
+      awful.tag.incgap(-5)
+    end,
+    on_release = nil,
+  },
+
+  awful.key {
+    description = "decrease gap size",
+    modifiers = { mod.super, mod.ctrl },
+    key = ".",
+    on_press = function ()
+      awful.tag.incgap(5)
+    end,
+    on_release = nil,
+  },
+
+  awful.key {
+    description = "set gap size",
+    modifiers = { mod.super, mod.ctrl },
+    key = "g",
+    on_press = function ()
+      awful.tag.setgap(5)
+    end,
   },
 
   awful.key {
@@ -303,8 +339,8 @@ global_key({
 
   awful.key {
     description = "increase the number of columns",
-    modifiers = { mod.super, mod.ctrl },
-    key = "h",
+    modifiers = { mod.super, mod.shift },
+    key = ",",
     on_press = function ()
       awful.tag.incncol( 1, nil, true)
     end,
@@ -313,30 +349,10 @@ global_key({
 
   awful.key {
     description = "decrease the number of columns",
-    modifiers = { mod.super, mod.ctrl },
-    key = "l",
+    modifiers = { mod.super, mod.shift },
+    key = ".",
     on_press = function ()
       awful.tag.incncol(-1, nil, true)
-    end,
-    on_release = nil,
-  },
-
-  awful.key {
-    description = "select next",
-    modifiers = { mod.super },
-    key = "space",
-    on_press = function ()
-      awful.layout.inc(1)
-    end,
-    on_release = nil,
-  },
-
-  awful.key {
-    description = "select previous",
-    modifiers = { mod.super, mod.shift },
-    key = "space",
-    on_press = function ()
-      awful.layout.inc(-1)
     end,
     on_release = nil,
   },
@@ -349,21 +365,81 @@ global_key({
   group = "6. client",
 
   awful.key{
-    description = "focus next by index",
+    description = "focus left",
     modifiers = { mod.super },
-    key = "j",
+    key = "h",
     on_press = function ()
-      awful.client.focus.byidx(1)
+      awful.client.focus.global_bydirection("left")
     end,
     on_release = nil,
   },
 
   awful.key {
-    description = "focus previous by index",
+    description = "focus down",
+    modifiers = { mod.super },
+    key = "j",
+    on_press = function ()
+      awful.client.focus.global_bydirection("down")
+    end,
+    on_release = nil,
+  },
+
+  awful.key {
+    description = "focus up",
     modifiers = { mod.super },
     key = "k",
     on_press = function ()
-      awful.client.focus.byidx(-1)
+      awful.client.focus.global_bydirection("up")
+    end,
+    on_release = nil,
+  },
+
+  awful.key {
+    description = "focus right",
+    modifiers = { mod.super },
+    key = "l",
+    on_press = function ()
+      awful.client.focus.global_bydirection("right")
+    end,
+    on_release = nil,
+  },
+
+  awful.key {
+    description = "swap left",
+    modifiers = { mod.super, mod.shift },
+    key = "h",
+    on_press = function ()
+      awful.client.swap.bydirection("left")
+    end,
+    on_release = nil,
+  },
+
+  awful.key {
+    description = "swap down",
+    modifiers = { mod.super, mod.shift },
+    key = "j",
+    on_press = function ()
+      awful.client.swap.bydirection("down")
+    end,
+    on_release = nil,
+  },
+
+  awful.key {
+    description = "swap up",
+    modifiers = { mod.super, mod.shift },
+    key = "k",
+    on_press = function ()
+      awful.client.swap.bydirection("up")
+    end,
+    on_release = nil,
+  },
+
+  awful.key {
+    description = "swap right",
+    modifiers = { mod.super, mod.shift },
+    key = "l",
+    on_press = function ()
+      awful.client.swap.bydirection("right")
     end,
     on_release = nil,
   },
@@ -391,26 +467,6 @@ global_key({
       if c then
         c:activate { raise = true, context = "key.unminimize" }
       end
-    end,
-    on_release = nil,
-  },
-
-  awful.key {
-    description = "swap with next client by index",
-    modifiers = { mod.super, mod.shift },
-    key = "j",
-    on_press = function ()
-      awful.client.swap.byidx(1)
-    end,
-    on_release = nil,
-  },
-
-  awful.key {
-    description = "swap with previous client by index",
-    modifiers = { mod.super, mod.shift },
-    key = "k",
-    on_press = function ()
-      awful.client.swap.byidx(-1)
     end,
     on_release = nil,
   },
