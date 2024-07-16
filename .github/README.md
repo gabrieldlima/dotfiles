@@ -13,3 +13,4 @@
 - $WM: [Awesomewm](https://awesomewm.org/)
 - $EDITOR: [Neovim](https://neovim.io/)
 - $TERMINAL: [Wezterm](https://wezfurlong.org/wezterm/index.html)
+- $BROWSER: [Qutebrowser](https://qutebrowser.org/)
