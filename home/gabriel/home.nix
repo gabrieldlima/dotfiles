@@ -19,17 +19,6 @@
     username = "gabriel";
     homeDirectory = "/home/gabriel";
 
-    pointerCursor = {
-      name = "catppuccin-mocha-light-cursors";
-      package = pkgs.catppuccin-cursors.mochaLight;
-      size = 16;
-      gtk.enable = true;
-      x11 = {
-       enable = true;
-       defaultCursor = "left_ptr";
-      };
-    };
-
     sessionVariables = {
       # Shell
       BROWSER = "qutebrowser";
@@ -55,7 +44,6 @@
       ZDOTDIR = "$HOME/.config/zsh";
     };
   };
-
 
   gtk = {
     enable = true;

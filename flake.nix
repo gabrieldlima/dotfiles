@@ -12,6 +12,9 @@
 
     # Catppuccin
     catppuccin.url = "github:catppuccin/nix";
+
+    # Theming with nix
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = {
@@ -19,6 +22,7 @@
     nixpkgs,
     home-manager,
     catppuccin,
+    stylix,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -37,6 +41,7 @@
         modules = [
           ./home/gabriel/home.nix
           catppuccin.homeManagerModules.catppuccin
+          stylix.homeManagerModules.stylix
         ];
       };
     };

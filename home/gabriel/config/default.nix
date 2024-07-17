@@ -16,6 +16,7 @@
     ./qutebrowser
     ./starship.nix
     ./steam.nix
+    ./stylix.nix
     ./wezterm
   ];
 
