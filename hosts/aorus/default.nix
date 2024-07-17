@@ -84,7 +84,6 @@
   hardware.opentabletdriver.enable = false;
 
   # Enable the Pulseaudio sound server
-  sound.enable = true;
   hardware.pulseaudio.enable = true;
 
   # Additional user accounts to be created automatically by the system
