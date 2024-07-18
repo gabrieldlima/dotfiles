@@ -60,4 +60,10 @@ ruled.client.connect_signal("request::rules", function()
     rule       = { class = "Sxiv" },
     properties = { floating = true, placement = awful.placement.centered },
   }
+
+  -- 1password
+  ruled.client.append_rule {
+    rule       = { class = "1Password" },
+    properties = { floating = true, placement = awful.placement.centered },
+  }
 end)
