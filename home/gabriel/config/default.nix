@@ -15,7 +15,7 @@
     ./git.nix
     ./qutebrowser
     ./starship.nix
-    ./steam.nix
+    # ./steam.nix
     ./stylix.nix
     ./wezterm
   ];
