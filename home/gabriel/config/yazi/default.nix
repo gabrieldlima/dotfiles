@@ -51,6 +51,13 @@ in
 
     initLua = ./init.lua;
 
+    keymap = {
+      manager.prepend_keymap = [
+        { on = [ "<A-f>" ]; run = "seek 5"; desc = "Scroll down (backward) in the preview panel"; }
+        { on = [ "<A-b>" ]; run = "seek -5"; desc = "Scroll up (forward) in the preview panel"; }
+      ];
+    };
+
     theme = {
       manager = {
         cwd = { fg = "${teal}"; };
