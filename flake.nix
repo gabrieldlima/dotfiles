@@ -15,6 +15,9 @@
 
     # Theming with nix
     stylix.url = "github:danth/stylix";
+
+    # Yazi file manager
+    yazi.url = "github:sxyazi/yazi";
   };
 
   outputs = {
@@ -23,6 +26,7 @@
     home-manager,
     catppuccin,
     stylix,
+    yazi,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -42,6 +46,9 @@
           ./home/gabriel/home.nix
           catppuccin.homeManagerModules.catppuccin
           stylix.homeManagerModules.stylix
+          ({ pkgs, ... }: {
+              home.packages = [ yazi.packages.${pkgs.system}.default ];
+          })
         ];
       };
     };

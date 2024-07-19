@@ -4,6 +4,7 @@
 }: {
   imports = [
     # ./hyprland
+    # ./steam.nix
 
     ./alacritty.nix
     ./awesome
@@ -15,9 +16,9 @@
     ./git.nix
     ./qutebrowser
     ./starship.nix
-    # ./steam.nix
     ./stylix.nix
     ./wezterm
+    ./yazi
   ];
 
   home.packages = with pkgs; [
