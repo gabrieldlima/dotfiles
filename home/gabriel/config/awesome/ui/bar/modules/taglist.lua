@@ -107,7 +107,7 @@ local taglist = function (s)
           self.bg = "#363a4f"
           self.forced_width = 12
         else
-          self.bg = colors.foreground
+          self.bg = colors.lavender
           self.forced_width = 12
         end
       end,
@@ -120,7 +120,7 @@ local taglist = function (s)
           self.bg = "#363a4f"
           self.forced_width = 12
         else
-          self.bg = colors.foreground
+          self.bg = colors.lavender
           self.forced_width = 12
         end
       end,
