@@ -6,7 +6,7 @@ local colors  = require("theme.colorsheme")
 -- Clock widget
 --------------------------------------------------------------------------------
 local textclock = wibox.widget {
-  format = " %a %b %d %I:%M %p ",
+  format = " %I:%M %p ",
   widget = wibox.widget.textclock
 }
 local mytextclock = helpers.cbackground(textclock, helpers.rrect(4), colors.crust)
@@ -23,8 +23,8 @@ local calendar = awful.widget.calendar_popup.month {
     fg_color     = colors.foreground,
     bg_color     = colors.background,
     padding      = 10,
-    border_width = 3,
-    border_color = colors.blue,
+    border_width = 1,
+    border_color = colors.overlay0,
   },
   style_header = {
     fg_color = colors.foreground,
@@ -35,6 +35,6 @@ local calendar = awful.widget.calendar_popup.month {
   style_normal = { fg_color = colors.subtext0 },
   style_focus = { fg_color = colors.blue },
 }
-calendar:attach(mytextclock, "tc", { on_hover = false })
+calendar:attach(mytextclock, "tr", { on_hover = false })
 
 return mytextclock
