@@ -86,11 +86,11 @@ local taglist = function (s)
       -- Colors
       bg_focus    = colors.background,
       fg_focus    = colors.blue,
-      bg_occupied = colors.crust,
+      bg_occupied = colors.background,
       fg_occupied = colors.text,
-      bg_empty    = colors.crust,
+      bg_empty    = colors.background,
       fg_empty    = colors.surface0,
-      bg_urgent   = colors.crust,
+      bg_urgent   = colors.background,
       fg_urgent   = colors.red,
     },
 
@@ -127,7 +127,7 @@ local taglist = function (s)
     }
   }
 
-  return helpers.cbackground(helpers.margin(taglist_widget, 4, 4, 9, 9), helpers.rrect(4), colors.crust)
+  return helpers.cbackground(helpers.margin(taglist_widget, 4, 4, 9, 9), helpers.rrect(4), colors.background)
 end
 
 return taglist

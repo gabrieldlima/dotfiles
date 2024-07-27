@@ -9,6 +9,6 @@ local layoutbox = awful.widget.layoutbox {
     awful.button({}, mod.rightclick, function () awful.layout.inc(-1) end),
   }
 }
-local mylayoutbox = helpers.cbackground(helpers.margin(layoutbox, 5, 5, 5, 5), helpers.rrect(4), colors.crust)
+local mylayoutbox = helpers.cbackground(helpers.margin(layoutbox, 5, 5, 5, 5), helpers.rrect(4), colors.background)
 
 return mylayoutbox

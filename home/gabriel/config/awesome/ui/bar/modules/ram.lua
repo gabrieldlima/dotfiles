@@ -26,7 +26,7 @@ arc_ram = wibox.widget {
   start_angle = 4.71238898,
   forced_height = 22,
   forced_width = 22,
-  bg = "#363a4f",
+  bg = colors.mantle,
   widget = wibox.container.arcchart
 }
 
@@ -37,4 +37,4 @@ watch(user.config.home .. "/.config/awesome/config/ram.sh", 2,
   end,
   arc_ram)
 
-return helpers.cbackground(helpers.margin(arc_ram, 4, 4, 4, 4), helpers.rrect(4), colors.crust)
+return helpers.cbackground(helpers.margin(arc_ram, 4, 4, 4, 4), helpers.rrect(4), colors.background)

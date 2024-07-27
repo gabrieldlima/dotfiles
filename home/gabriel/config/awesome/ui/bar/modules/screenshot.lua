@@ -18,6 +18,6 @@ local screenshot = awful.widget.button {
     end),
   }
 }
-local myscreenshot = helpers.cbackground(helpers.margin(screenshot, 5, 5, 5, 5), helpers.rrect(4), colors.crust)
+local myscreenshot = helpers.cbackground(helpers.margin(screenshot, 5, 5, 5, 5), helpers.rrect(4), colors.background)
 
 return myscreenshot

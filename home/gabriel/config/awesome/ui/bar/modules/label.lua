@@ -11,6 +11,6 @@ local label = wibox.widget {
   markup = helpers.mtext(colors.lavender, font, label_text),
   widget = wibox.widget.textbox
 }
-local mylabel = helpers.cbackground(label, helpers.rrect(4), colors.crust)
+local mylabel = helpers.cbackground(label, helpers.rrect(4), colors.background)
 
 return mylabel
