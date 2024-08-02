@@ -3,8 +3,7 @@
   ...
 }: {
   imports = [
-    # ./awesome
-    # ./steam.nix
+    ./awesome
 
     ./alacritty.nix
     ./bash.nix
@@ -16,6 +15,7 @@
     ./hyprland
     ./qutebrowser
     ./starship.nix
+    ./steam.nix
     ./wezterm
     ./yazi
   ];
