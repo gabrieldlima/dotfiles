@@ -35,6 +35,7 @@
     pavucontrol
     qutebrowser
     ripgrep
+    steam
     tldr
     unzip
     virtiofsd
