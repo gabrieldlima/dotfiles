@@ -13,9 +13,6 @@
     # Catppuccin
     catppuccin.url = "github:catppuccin/nix";
 
-    # Theming with nix
-    stylix.url = "github:danth/stylix";
-
     # Yazi file manager
     yazi.url = "github:sxyazi/yazi";
   };

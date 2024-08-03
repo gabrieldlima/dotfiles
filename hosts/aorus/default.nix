@@ -70,20 +70,20 @@
   };
 
   # Enable the X11 windowing system
-  services.xserver = {
-    enable = true;
-    videoDrivers = [ "amdgpu" ];
-    displayManager = {
-      startx.enable = true;
-    };
-    wacom.enable = true;
-  };
+  # services.xserver = {
+  #   enable = true;
+  #   videoDrivers = [ "amdgpu" ];
+  #   displayManager = {
+  #     startx.enable = true;
+  #   };
+  #   wacom.enable = true;
+  # };
 
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
-  hardware.opentabletdriver.enable = false;
+  hardware.opentabletdriver.enable = true;
 
   # Enable the Pulseaudio sound server
   hardware.pulseaudio.enable = true;
@@ -128,8 +128,8 @@
   };
 
   # Gamemode
-  programs.gamemode.enable = true;
-  programs.gamemode.settings.general.inhibit_screensaver = 0;
+  # programs.gamemode.enable = true;
+  # programs.gamemode.settings.general.inhibit_screensaver = 0;
 
   programs.nix-ld.enable = true;
 

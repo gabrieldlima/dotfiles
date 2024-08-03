@@ -3,7 +3,7 @@
   ...
 }: {
   imports = [
-    ./awesome
+    # ./awesome
 
     ./alacritty.nix
     ./bash.nix
