@@ -8,7 +8,6 @@ local colors  = require("theme.colorsheme")
 -----------------------------------------------------------------------------
 local clock      = require("ui.bar.modules.clock")
 local cpu        = require("ui.bar.modules.cpu")
-local label      = require("ui.bar.modules.label")
 local layoutbox  = require("ui.bar.modules.layoutbox")
 local logo       = require("ui.bar.modules.logo")
 local ram        = require("ui.bar.modules.ram")
@@ -45,7 +44,7 @@ awful.screen.connect_for_each_screen(function(s)
 
         -- Center widgets
         {
-          helpers.margin(label, 4, 4, 4, 4),
+          helpers.margin(clock, 4, 4, 4, 4),
           layout = wibox.layout.flex.horizontal,
         },
 
@@ -55,7 +54,6 @@ awful.screen.connect_for_each_screen(function(s)
           helpers.margin(screenshot, 4, 4, 4, 4),
           helpers.margin(cpu, 4, 4, 4, 4),
           helpers.margin(ram, 4, 4, 4, 4),
-          helpers.margin(clock, 4, 4, 4, 4),
           helpers.margin(layoutbox, 4, 4, 4, 4),
           layout = wibox.layout.fixed.horizontal,
         },
