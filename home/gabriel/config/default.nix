@@ -3,15 +3,15 @@
   ...
 }: {
   imports = [
-    # ./awesome
-    ./alacritty.nix
+    ./awesome
+    # ./alacritty.nix
     ./bash.nix
     ./bat.nix
     ./eza.nix
     ./fish.nix
     ./flameshot.nix
     ./git.nix
-    ./hyprland
+    # ./hyprland
     ./qutebrowser
     ./starship.nix
     ./wezterm
@@ -29,6 +29,7 @@
     gnome-themes-extra
     gnumake
     jq
+    mangohud
     neovim
     nixd
     obsidian

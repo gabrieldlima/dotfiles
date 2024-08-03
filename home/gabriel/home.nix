@@ -23,10 +23,10 @@
       name = "GoogleDot-White";
       package = pkgs.google-cursor;
       size = 16;
-      # x11 = {
-      #   enable = true;
-      #   defaultCursor = "left_ptr";
-      # };
+      x11 = {
+        enable = true;
+        defaultCursor = "left_ptr";
+      };
     };
 
     sessionVariables = {
