@@ -4,7 +4,6 @@
 }: {
   imports = [
     # ./awesome
-
     ./alacritty.nix
     ./bash.nix
     ./bat.nix
@@ -15,7 +14,6 @@
     ./hyprland
     ./qutebrowser
     ./starship.nix
-    ./steam.nix
     ./wezterm
     ./yazi
   ];
@@ -31,7 +29,6 @@
     gnome-themes-extra
     gnumake
     jq
-    mangohud
     neovim
     nixd
     obsidian
