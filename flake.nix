@@ -22,7 +22,6 @@
     nixpkgs,
     home-manager,
     catppuccin,
-    stylix,
     yazi,
     ...
   } @ inputs: let
