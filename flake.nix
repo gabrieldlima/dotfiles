@@ -41,7 +41,6 @@
         modules = [
           ./home/gabriel/home.nix
           catppuccin.homeManagerModules.catppuccin
-          stylix.homeManagerModules.stylix
           ({ pkgs, ... }: {
               home.packages = [ yazi.packages.${pkgs.system}.default ];
           })
