@@ -54,16 +54,17 @@ in {
     xwayland.enable = true;
 
     settings = {
+      # Monitors
+      # ========================================================================
+      monitor = "HDMI-A-2,1920x1080@60,0x0,1";
+
       # Autostart applications
       # ========================================================================
       exec-once = [
         "swww-daemon"
         "openrgb -d 0 -m off && openrgb -d 1 -m off"
       ];
-
-      # Monitors
-      # ========================================================================
-      monitor = "HDMI-A-2,1920x1080@60,0x0,1";
+      exec = [ ];
 
       # General
       # ========================================================================
@@ -265,7 +266,20 @@ in {
         "workspace 9,class:(virt-manager)"
       ];
 
+      # Variables
+      # ========================================================================
+      "$browser"     = "qutebrowser";
+      "$launcher"    = "rofi -show drun";
+      "$terminal"    = "alacritty";
+      "$fileManager" = "alacritty -e yazi";
 
+      "$mod"        = "SUPER";
+      "$modShift"   = "SUPER + SHIFT";
+      "$modControl" = "SUPER + CONTROL";
+      "$modAlt"     = "SUPER + ALT";
+
+      # Keybinds
+      # ========================================================================
       binds = {
         pass_mouse_when_bound = false;
         scroll_event_delay = 300;
@@ -278,102 +292,67 @@ in {
         disable_keybind_grabbing = false;
       };
 
-      # Variables
-      "$browser" = "qutebrowser";
-      "$launcher" = "rofi -show drun";
-      "$terminal" = "alacritty";
-
-      # Set the modKey
-      "$modKey" = "SUPER";
-
       bind = [
-        "$modKey, RETURN, exec, $terminal"
-        "$modKey, B,      exec, $browser"
-        "$modKey, P,      exec, $launcher"
+        "$mod, RETURN, exec, $terminal"
+        "$mod, B, exec, $browser"
+        "$mod, P, exec, $launcher"
+        "$mod, E, exec, $fileManager"
 
-        # closes (not kills) the active window
-        "$modKey SHIFT, C,     killactive"
-        # exits the compositor with no questions asked.
-        "$modKey SHIFT, Q,     exit"
-        # toggles the focused window’s fullscreen state
-        "$modKey,       F,     fullscreen"
-        # toggles the current window’s floating state
-        "$modKey,       SPACE, togglefloating"
-        # center the active window note: floating only
-        "$modKey SHIFT, SPACE, centerwindow"
+        "$modShift, C, killactive"
+        "$modShift, Q, exit"
+        "$modControl, R, exec, hyprctl reload"
+        "$modControl, X, exec, hyprctl kill"
 
-        # toggles the current active window into a group
-        "$modKey, g, togglegroup"
+        "$mod, F, fullscreen, 0"
+        "$mod, M, fullscreen, 1"
 
-        # switches to the next window in a group
-        "$modKey CONTROL, p, changegroupactive, b"
-        "$modKey CONTROL, n, changegroupactive, f"
+        "$modShift, F, togglefloating"
+        "$mod, SPACE, centerwindow"
 
-        # Move focus with $modKey + hjkl
-        "$modKey, h, movefocus, l"
-        "$modKey, l, movefocus, r"
-        "$modKey, k, movefocus, u"
-        "$modKey, j, movefocus, d"
+        "$mod, h, movefocus, l"
+        "$mod, l, movefocus, r"
+        "$mod, k, movefocus, u"
+        "$mod, j, movefocus, d"
 
-        # Move windows with $modKey + SHIFT + hjkl
-        "$modKey SHIFT, h, movewindow, l"
-        "$modKey SHIFT, l, movewindow, r"
-        "$modKey SHIFT, k, movewindow, u"
-        "$modKey SHIFT, j, movewindow, d"
+        "$modShift, h, movewindow, l"
+        "$modShift, l, movewindow, r"
+        "$modShift, k, movewindow, u"
+        "$modShift, j, movewindow, d"
 
-        # Resize windows with $modKey + ALT + hjkl
-        "$modKey CONTROL, h, resizeactive, -50 0"
-        "$modKey CONTROL, l, resizeactive, 50 0"
-        "$modKey CONTROL, k, resizeactive, 0 -50"
-        "$modKey CONTROL, j, resizeactive, 0 50"
+        "$modControl, h, resizeactive, -50 0"
+        "$modControl, l, resizeactive, 50 0"
+        "$modControl, k, resizeactive, 0 -50"
+        "$modControl, j, resizeactive, 0 50"
 
-        # swaps the current window with master. If the current window is the master, swaps it with the first child.
-        "$modKey SHIFT, RETURN, layoutmsg, swapwithmaster"
+        "$mod, 1, workspace, 1"
+        "$mod, 2, workspace, 2"
+        "$mod, 3, workspace, 3"
+        "$mod, 4, workspace, 4"
+        "$mod, 5, workspace, 5"
+        "$mod, 6, workspace, 6"
+        "$mod, 7, workspace, 7"
+        "$mod, 8, workspace, 8"
+        "$mod, 9, workspace, 9"
 
-        # Switch workspaces with modKey + [0-9]
-        "$modKey, 1, workspace, 1"
-        "$modKey, 2, workspace, 2"
-        "$modKey, 3, workspace, 3"
-        "$modKey, 4, workspace, 4"
-        "$modKey, 5, workspace, 5"
-        "$modKey, 6, workspace, 6"
-        "$modKey, 7, workspace, 7"
-        "$modKey, 8, workspace, 8"
-        "$modKey, 9, workspace, 9"
-        "$modKey, 0, workspace, 10"
+        "$modShift, 1, movetoworkspacesilent, 1"
+        "$modShift, 2, movetoworkspacesilent, 2"
+        "$modShift, 3, movetoworkspacesilent, 3"
+        "$modShift, 4, movetoworkspacesilent, 4"
+        "$modShift, 5, movetoworkspacesilent, 5"
+        "$modShift, 6, movetoworkspacesilent, 6"
+        "$modShift, 7, movetoworkspacesilent, 7"
+        "$modShift, 8, movetoworkspacesilent, 8"
+        "$modShift, 9, movetoworkspacesilent, 9"
 
-        # Move active window to a workspace with modKey + SHIFT + [0-9]
-        "$modKey SHIFT, 1, movetoworkspacesilent, 1"
-        "$modKey SHIFT, 2, movetoworkspacesilent, 2"
-        "$modKey SHIFT, 3, movetoworkspacesilent, 3"
-        "$modKey SHIFT, 4, movetoworkspacesilent, 4"
-        "$modKey SHIFT, 5, movetoworkspacesilent, 5"
-        "$modKey SHIFT, 6, movetoworkspacesilent, 6"
-        "$modKey SHIFT, 7, movetoworkspacesilent, 7"
-        "$modKey SHIFT, 8, movetoworkspacesilent, 8"
-        "$modKey SHIFT, 9, movetoworkspacesilent, 9"
-        "$modKey SHIFT, 0, movetoworkspacesilent, 10"
+        "$modShift, RETURN, layoutmsg, swapwithmaster"
 
-        # Change focus to another window, bring it to the top
-        "$modKey, Tab, cyclenext"
-        "$modKey, Tab, bringactivetotop"
-        "$modKey SHIFT, Tab, cyclenext, prev"
-        "$modKey SHIFT, Tab, bringactivetotop"
-
-
-        # Scroll through workspaces with $modKey + mouse sideup/sidedown
-        "$modKey, mouse:276, workspace, +1"
-        "$modKey, mouse:275, workspace, -1"
-
-        # Scroll through existing workspaces with $modKey + scroll
-        "$modKey, mouse_down, workspace, e+1"
-        "$modKey, mouse_up, workspace, e-1"
+        "$mod, mouse:276, workspace, +1"
+        "$mod, mouse:275, workspace, -1"
       ];
 
       bindm = [
-        # Move/resize windows with modKey + LMB/RMB and dragging
-        "$modKey, mouse:272, movewindow"
-        "$modKey, mouse:273, resizewindow"
+        "$mod, mouse:272, movewindow"
+        "$mod, mouse:273, resizewindow"
       ];
     };
   };
