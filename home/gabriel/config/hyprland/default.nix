@@ -8,13 +8,38 @@
 # ╚═══════════════════════════════════════════════════════════════════╝
 
 {
-  pkgs,
-  ...
-}: {
-  imports = [
-    ./binds.nix
-  ];
-
+pkgs,
+...
+}: let
+  # Theme: Catppuccin Mocha
+  # ========================================================================
+  rosewater = "0xfff5e0dc";
+  flamingo  = "0xfff2cdcd";
+  pink      = "0xfff5c2e7";
+  mauve     = "0xffcba6f7";
+  red       = "0xfff38ba8";
+  maroon    = "0xffeba0ac";
+  peach     = "0xfffab387";
+  yellow    = "0xfff9e2af";
+  green     = "0xffa6e3a1";
+  teal      = "0xff94e2d5";
+  sky       = "0xff89dceb";
+  sapphire  = "0xff74c7ec";
+  blue      = "0xff89b4fa";
+  lavender  = "0xffb4befe";
+  text      = "0xffcdd6f4";
+  subtext1  = "0xffbac2de";
+  subtext0  = "0xffa6adc8";
+  overlay2  = "0xff9399b2";
+  overlay1  = "0xff7f849c";
+  overlay0  = "0xff6c7086";
+  surface2  = "0xff585b70";
+  surface1  = "0xff45475a";
+  surface0  = "0xff313244";
+  base      = "0xff010101";
+  mantle    = "0xff181825";
+  crust     = "0xff11111b";
+in {
   home.packages = with pkgs; [
     hyprpicker
     rofi-wayland
@@ -48,10 +73,10 @@
         gaps_in = 5;
         gaps_out = 10;
         gaps_workspaces = 0;
-        "col.active_border" = "$blue";
-        "col.inactive_border" = "$base";
-        "col.nogroup_border_active" = "$blue";
-        "col.nogroup_border" = "$base";
+        "col.active_border" = "${blue}";
+        "col.inactive_border" = "${base}";
+        "col.nogroup_border_active" = "${blue}";
+        "col.nogroup_border" = "${base}";
         layout = "master";
         no_focus_fallback = true;
         apply_sens_to_raw = false;
@@ -73,8 +98,8 @@
         shadow_range = 5;
         shadow_render_power = 3;
         shadow_ignore_window = true;
-        "col.shadow" = "$base";
-        "col.shadow_inactive" = "$base";
+        "col.shadow" = "${base}";
+        "col.shadow_inactive" = "${base}";
         shadow_offset = "0, 0";
         shadow_scale = 1.0;
         dim_inactive = false;
@@ -160,10 +185,10 @@
       group = {
         insert_after_current = true;
         focus_removed_window = true;
-        "col.border_active" = "$red";
-        "col.border_inactive" = "$base";
-        "col.border_locked_active" = "$red";
-        "col.border_locked_inactive" = "$base";
+        "col.border_active" = "${red}";
+        "col.border_inactive" = "${base}";
+        "col.border_locked_active" = "${red}";
+        "col.border_locked_inactive" = "${base}";
 
         groupbar = {
           enabled = true;
@@ -174,11 +199,11 @@
           priority = 3;
           render_titles = true;
           scrolling = true;
-          text_color = "$text";
-          "col.active" = "$red";
-          "col.inactive" = "$base";
-          "col.locked_active" = "$red";
-          "col.locked_inactive" = "$base";
+          text_color = "${text}";
+          "col.active" = "${red}";
+          "col.inactive" = "${base}";
+          "col.locked_active" = "${red}";
+          "col.locked_inactive" = "${base}";
         };
       };
 
@@ -204,7 +229,7 @@
         render_ahead_of_time = false;
         render_ahead_safezone = 1;
         allow_session_lock_restore = false;
-        background_color = "$base";
+        background_color = "${base}";
         close_special_on_empty = true;
         new_window_takes_over_fullscreen = 0;
       };
@@ -240,34 +265,116 @@
         "workspace 9,class:(virt-manager)"
       ];
 
-      # Theme: Catppuccin Mocha
-      # ========================================================================
-      "$rosewater" = "0xfff5e0dc";
-      "$flamingo"  = "0xfff2cdcd";
-      "$pink"      = "0xfff5c2e7";
-      "$mauve"     = "0xffcba6f7";
-      "$red"       = "0xfff38ba8";
-      "$maroon"    = "0xffeba0ac";
-      "$peach"     = "0xfffab387";
-      "$yellow"    = "0xfff9e2af";
-      "$green"     = "0xffa6e3a1";
-      "$teal"      = "0xff94e2d5";
-      "$sky"       = "0xff89dceb";
-      "$sapphire"  = "0xff74c7ec";
-      "$blue"      = "0xff89b4fa";
-      "$lavender"  = "0xffb4befe";
-      "$text"      = "0xffcdd6f4";
-      "$subtext1"  = "0xffbac2de";
-      "$subtext0"  = "0xffa6adc8";
-      "$overlay2"  = "0xff9399b2";
-      "$overlay1"  = "0xff7f849c";
-      "$overlay0"  = "0xff6c7086";
-      "$surface2"  = "0xff585b70";
-      "$surface1"  = "0xff45475a";
-      "$surface0"  = "0xff313244";
-      "$base"      = "0xff010101";
-      "$mantle"    = "0xff181825";
-      "$crust"     = "0xff11111b";
+
+      binds = {
+        pass_mouse_when_bound = false;
+        scroll_event_delay = 300;
+        workspace_back_and_forth = false;
+        allow_workspace_cycles = false;
+        workspace_center_on = 0;
+        focus_preferred_method = 0;
+        ignore_group_lock = false;
+        movefocus_cycles_fullscreen = true;
+        disable_keybind_grabbing = false;
+      };
+
+      # Variables
+      "$browser" = "qutebrowser";
+      "$launcher" = "rofi -show drun";
+      "$terminal" = "alacritty";
+
+      # Set the modKey
+      "$modKey" = "SUPER";
+
+      bind = [
+        "$modKey, RETURN, exec, $terminal"
+        "$modKey, B,      exec, $browser"
+        "$modKey, P,      exec, $launcher"
+
+        # closes (not kills) the active window
+        "$modKey SHIFT, C,     killactive"
+        # exits the compositor with no questions asked.
+        "$modKey SHIFT, Q,     exit"
+        # toggles the focused window’s fullscreen state
+        "$modKey,       F,     fullscreen"
+        # toggles the current window’s floating state
+        "$modKey,       SPACE, togglefloating"
+        # center the active window note: floating only
+        "$modKey SHIFT, SPACE, centerwindow"
+
+        # toggles the current active window into a group
+        "$modKey, g, togglegroup"
+
+        # switches to the next window in a group
+        "$modKey CONTROL, p, changegroupactive, b"
+        "$modKey CONTROL, n, changegroupactive, f"
+
+        # Move focus with $modKey + hjkl
+        "$modKey, h, movefocus, l"
+        "$modKey, l, movefocus, r"
+        "$modKey, k, movefocus, u"
+        "$modKey, j, movefocus, d"
+
+        # Move windows with $modKey + SHIFT + hjkl
+        "$modKey SHIFT, h, movewindow, l"
+        "$modKey SHIFT, l, movewindow, r"
+        "$modKey SHIFT, k, movewindow, u"
+        "$modKey SHIFT, j, movewindow, d"
+
+        # Resize windows with $modKey + ALT + hjkl
+        "$modKey CONTROL, h, resizeactive, -50 0"
+        "$modKey CONTROL, l, resizeactive, 50 0"
+        "$modKey CONTROL, k, resizeactive, 0 -50"
+        "$modKey CONTROL, j, resizeactive, 0 50"
+
+        # swaps the current window with master. If the current window is the master, swaps it with the first child.
+        "$modKey SHIFT, RETURN, layoutmsg, swapwithmaster"
+
+        # Switch workspaces with modKey + [0-9]
+        "$modKey, 1, workspace, 1"
+        "$modKey, 2, workspace, 2"
+        "$modKey, 3, workspace, 3"
+        "$modKey, 4, workspace, 4"
+        "$modKey, 5, workspace, 5"
+        "$modKey, 6, workspace, 6"
+        "$modKey, 7, workspace, 7"
+        "$modKey, 8, workspace, 8"
+        "$modKey, 9, workspace, 9"
+        "$modKey, 0, workspace, 10"
+
+        # Move active window to a workspace with modKey + SHIFT + [0-9]
+        "$modKey SHIFT, 1, movetoworkspacesilent, 1"
+        "$modKey SHIFT, 2, movetoworkspacesilent, 2"
+        "$modKey SHIFT, 3, movetoworkspacesilent, 3"
+        "$modKey SHIFT, 4, movetoworkspacesilent, 4"
+        "$modKey SHIFT, 5, movetoworkspacesilent, 5"
+        "$modKey SHIFT, 6, movetoworkspacesilent, 6"
+        "$modKey SHIFT, 7, movetoworkspacesilent, 7"
+        "$modKey SHIFT, 8, movetoworkspacesilent, 8"
+        "$modKey SHIFT, 9, movetoworkspacesilent, 9"
+        "$modKey SHIFT, 0, movetoworkspacesilent, 10"
+
+        # Change focus to another window, bring it to the top
+        "$modKey, Tab, cyclenext"
+        "$modKey, Tab, bringactivetotop"
+        "$modKey SHIFT, Tab, cyclenext, prev"
+        "$modKey SHIFT, Tab, bringactivetotop"
+
+
+        # Scroll through workspaces with $modKey + mouse sideup/sidedown
+        "$modKey, mouse:276, workspace, +1"
+        "$modKey, mouse:275, workspace, -1"
+
+        # Scroll through existing workspaces with $modKey + scroll
+        "$modKey, mouse_down, workspace, e+1"
+        "$modKey, mouse_up, workspace, e-1"
+      ];
+
+      bindm = [
+        # Move/resize windows with modKey + LMB/RMB and dragging
+        "$modKey, mouse:272, movewindow"
+        "$modKey, mouse:273, resizewindow"
+      ];
     };
   };
 }
