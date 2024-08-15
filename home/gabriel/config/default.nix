@@ -3,30 +3,31 @@
   ...
 }: {
   imports = [
+    # ./alacritty.nix
     # ./awesome
-    ./alacritty.nix
+    # ./flameshot.nix
+    # ./hyprland
+
     ./bash.nix
     ./bat.nix
     ./eza.nix
     ./fish.nix
-    ./flameshot.nix
     ./git.nix
-    ./hyprland
     ./qutebrowser
     ./starship.nix
-    # ./wezterm
+    ./wezterm
     ./yazi
   ];
 
   home.packages = with pkgs; [
     _1password-gui
     atuin
+    brave
     duf
     fd
     file
     gcc
     gimp
-    gnome-themes-extra
     gnumake
     jq
     mangohud
@@ -34,7 +35,6 @@
     nixd
     obsidian
     pavucontrol
-    qutebrowser
     ripgrep
     steam
     tldr
