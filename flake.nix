@@ -15,6 +15,12 @@
 
     # Yazi file manager
     yazi.url = "github:sxyazi/yazi";
+
+    # COSMIC Epoch
+    nixos-cosmic = {
+      url = "github:lilyinstarlight/nixos-cosmic";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -23,6 +29,7 @@
     home-manager,
     catppuccin,
     yazi,
+    nixos-cosmic,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -30,7 +37,16 @@
     nixosConfigurations = {
       aorus = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs outputs; };
-        modules = [ ./hosts/aorus ];
+        modules = [
+          {
+            nix.settings = {
+              substituters = [ "https://cosmic.cachix.org/" ];
+              trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+            };
+          }
+          nixos-cosmic.nixosModules.default
+          ./hosts/aorus
+        ];
       };
     };
 
