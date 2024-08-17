@@ -24,6 +24,11 @@
       fsType = "btrfs";
     };
 
+  fileSystems."/media/ssd" =
+    { device = "/dev/disk/by-label/ssd";
+      fsType = "btrfs";
+    };
+
   fileSystems."/media/hdd" =
     { device = "/dev/disk/by-label/hdd";
       fsType = "ext4";
