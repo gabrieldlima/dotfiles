@@ -72,26 +72,26 @@
 
   services = {
     # Enable the X11 windowing system
-    # xserver = {
-    #   enable = true;
-    #   videoDrivers = [ "amdgpu" ];
-    #   displayManager = {
-    #     startx.enable = true;
-    #   };
-    #   wacom.enable = true;
-    # };
+    xserver = {
+      enable = true;
+      videoDrivers = [ "amdgpu" ];
+      displayManager = {
+        startx.enable = true;
+      };
+      wacom.enable = true;
+    };
 
     # Enable the COSMIC desktop environment
-    desktopManager = {
-      cosmic = {
-        enable = true;
-      };
-    };
-    displayManager = {
-      cosmic-greeter = {
-        enable = true;
-      };
-    };
+    # desktopManager = {
+    #   cosmic = {
+    #     enable = true;
+    #   };
+    # };
+    # displayManager = {
+    #   cosmic-greeter = {
+    #     enable = true;
+    #   };
+    # };
 
     hardware.openrgb = {
       enable = true;
@@ -105,7 +105,7 @@
       enable32Bit = true;
     };
     opentabletdriver.enable = true;
-    pulseaudio.enable = false;
+    pulseaudio.enable = true;
     bluetooth = {
       enable = false;
       powerOnBoot = true;

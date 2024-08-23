@@ -3,11 +3,11 @@
   ...
 }: {
   imports = [
-    # ./alacritty.nix
-    # ./awesome
     # ./flameshot.nix
     # ./hyprland
 
+    ./alacritty.nix
+    ./awesome
     ./bash.nix
     ./bat.nix
     ./eza.nix
