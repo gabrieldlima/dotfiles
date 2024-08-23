@@ -3,7 +3,6 @@
   ...
 }: {
   imports = [
-    # ./flameshot.nix
     # ./hyprland
 
     ./alacritty.nix
@@ -12,6 +11,7 @@
     ./bat.nix
     ./eza.nix
     ./fish.nix
+    ./flameshot.nix
     ./git.nix
     ./qutebrowser
     ./starship.nix
