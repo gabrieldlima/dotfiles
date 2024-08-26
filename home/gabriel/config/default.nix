@@ -22,7 +22,6 @@
   home.packages = with pkgs; [
     _1password-gui
     atuin
-    brave
     duf
     fd
     file
