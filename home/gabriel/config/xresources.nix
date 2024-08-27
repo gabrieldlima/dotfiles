@@ -1,10 +1,10 @@
 {
   xresources = {
-    properties = {
-      "XTerm*faceName" = "FiraCode Nerd Font:size=12";
-      "Xcursor.theme" = "GoogleDot-White";
-      "Xcursor.size" = 16;
-    };
+    # properties = {
+    #   "XTerm*faceName" = "FiraCode Nerd Font:size=12";
+    #   "Xcursor.theme" = "GoogleDot-White";
+    #   "Xcursor.size" = 16;
+    # };
     extraConfig = ''
       *background: #050508
       *foreground: #CDD6F4

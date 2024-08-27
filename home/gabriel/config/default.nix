@@ -15,6 +15,7 @@
     ./git.nix
     ./qutebrowser
     ./starship.nix
+    ./stylix.nix
     ./wezterm
     ./yazi
   ];

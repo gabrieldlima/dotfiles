@@ -21,6 +21,9 @@
     #   url = "github:lilyinstarlight/nixos-cosmic";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
+
+    # Stylix
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = {
@@ -29,6 +32,7 @@
     home-manager,
     catppuccin,
     yazi,
+    stylix,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -50,6 +54,7 @@
           ({ pkgs, ... }: {
               home.packages = [ yazi.packages.${pkgs.system}.default ];
           })
+          stylix.homeManagerModules.stylix
         ];
       };
     };

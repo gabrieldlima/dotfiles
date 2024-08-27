@@ -19,17 +19,6 @@
     username = "gabriel";
     homeDirectory = "/home/gabriel";
 
-    pointerCursor = {
-      gtk.enable = true;
-      name = "GoogleDot-White";
-      package = pkgs.google-cursor;
-      size = 16;
-      # x11 = {
-      #   enable = true;
-      #   defaultCursor = "left_ptr";
-      # };
-    };
-
     sessionVariables = {
       # Shell
       BROWSER = "qutebrowser";
@@ -58,18 +47,24 @@
 
   gtk = {
     enable = true;
-    catppuccin.icon.enable = true;
-    catppuccin.icon.accent = "blue";
-    catppuccin.icon.flavor = "mocha";
 
-    theme = {
-      package = pkgs.flat-remix-gtk;
-      name = "Flat-Remix-GTK-Blue-Darkest";
+    catppuccin = {
+      icon = {
+        enable = true;
+        accent = "blue";
+        flavor = "mocha";
+      };
     };
+  };
 
-    font = {
-      name = "FiraCode Nerd Font";
-      size = 11;
+  qt = {
+    style = {
+      catppuccin = {
+        enable = true;
+        apply = true;
+        flavor = "mocha";
+        accent = "blue";
+      };
     };
   };
 
