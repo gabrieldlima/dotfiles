@@ -16,7 +16,7 @@
 
         character = {
           success_symbol = "[[󰈸](bold peach) 󰁕](bold peach)";
-          error_symbol = "[[✘](bold red) 󰁕](bold red)";
+          error_symbol = "[[](bold red) 󰁕](bold red)";
           vimcmd_symbol = "[[](bold green) 󰁕](bold green)";
         };
 
