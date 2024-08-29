@@ -1,5 +1,4 @@
 {
-  pkgs,
   ...
 }: {
   services.picom = {
@@ -10,7 +9,7 @@
       vsync = true;
       mark-wmwin-focused = true;
       mark-ovredir-focused = true;
-      detect-rounded-corners = false;
+      detect-rounded-corners = true;
       detect-client-opacity = true;
       detect-transient = true;
       glx-no-stencil = true;
@@ -36,7 +35,15 @@
       fading = true;
       fade-in-step = 0.5;
       fade-out-step = 0.5;
+
+      # Corners
+      corner-radius = 10;
+      rounded-corners-exclude = [
+        "window_type = 'dock'"
+        "window_type = 'desktop'"
+      ];
     };
+
     # Rules for specific window types
     wintypes = {
       dnd = {
