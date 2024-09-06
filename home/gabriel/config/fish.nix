@@ -85,7 +85,7 @@
 
       # Misc
       t     = "tldr";
-      df    = "duf";
+      df    = "duf --hide special";
       cat   = "bat";
       cp    = "cp -v";
       mv    = "mv -v";
