@@ -5,6 +5,7 @@ local helpers   = require("helpers")
 local user      = require("config.user")
 
 local arc_cpu = {}
+local text_cpu = {}
 
 local text = wibox.widget {
   align = "center",
@@ -30,11 +31,21 @@ arc_cpu = wibox.widget {
   widget = wibox.container.arcchart
 }
 
+text_cpu = wibox.widget {
+  widget = wibox.widget.textbox
+}
+
 watch(user.config.home .. "/.config/awesome/config/cpu.sh", 2,
   function(widget, stdout)
-    widget.value = stdout
-    widget.colors = { colors.green }
+    widget.markup = helpers.mtext(colors.green, user.config.font, " " .. stdout)
   end,
-  arc_cpu)
+  text_cpu)
 
-return helpers.cbackground(helpers.margin(arc_cpu, 4, 4, 4, 4), helpers.rrect(4), colors.background)
+-- watch(user.config.home .. "/.config/awesome/config/cpu.sh", 2,
+--   function(widget, stdout)
+--     widget.value = stdout
+--     widget.colors = { colors.green }
+--   end,
+--   arc_cpu)
+
+return helpers.cbackground(helpers.margin(text_cpu, 4, 4, 4, 4), helpers.rrect(4), colors.background)
