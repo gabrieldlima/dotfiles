@@ -51,6 +51,7 @@ awful.screen.connect_for_each_screen(function(s)
 
         -- Center widgets
         {
+          helpers.margin(clock, 4, 4, 4, 4),
           layout = wibox.layout.flex.horizontal,
         },
 
@@ -60,7 +61,6 @@ awful.screen.connect_for_each_screen(function(s)
           helpers.margin(screenshot, 4, 4, 4, 4),
           helpers.margin(cpu, 4, 4, 4, 4),
           helpers.margin(ram, 4, 4, 4, 4),
-          helpers.margin(clock, 4, 4, 4, 4),
           helpers.margin(layoutbox, 4, 4, 4, 4),
           layout = wibox.layout.fixed.horizontal,
         },
