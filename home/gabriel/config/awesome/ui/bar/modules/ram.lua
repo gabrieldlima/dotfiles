@@ -5,6 +5,7 @@ local helpers   = require("helpers")
 local user      = require("config.user")
 
 local arc_ram = {}
+local text_ram = {}
 
 local text = wibox.widget {
   align = "center",
@@ -30,11 +31,21 @@ arc_ram = wibox.widget {
   widget = wibox.container.arcchart
 }
 
+text_ram = wibox.widget {
+  widget = wibox.widget.textbox
+}
+
 watch(user.config.home .. "/.config/awesome/config/ram.sh", 2,
   function(widget, stdout)
-    widget.value = stdout
-    widget.colors = { colors.red }
+    widget.markup = helpers.mtext(colors.red, user.config.font, "  " .. stdout)
   end,
-  arc_ram)
+  text_ram)
 
-return helpers.cbackground(helpers.margin(arc_ram, 4, 4, 4, 4), helpers.rrect(4), colors.background)
+-- watch(user.config.home .. "/.config/awesome/config/ram.sh", 2,
+--   function(widget, stdout)
+--     widget.value = stdout
+--     widget.colors = { colors.red }
+--   end,
+--   arc_ram)
+
+return helpers.cbackground(helpers.margin(text_ram, 4, 4, 4, 4), helpers.rrect(4), colors.background)
