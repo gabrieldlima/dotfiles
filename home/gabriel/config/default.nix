@@ -18,6 +18,7 @@
     ./stylix.nix
     ./wezterm
     ./yazi
+    ./zathura.nix
   ];
 
   home.packages = with pkgs; [
