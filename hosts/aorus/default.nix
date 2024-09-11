@@ -95,7 +95,7 @@
 
     hardware.openrgb = {
       enable = true;
-      motherboard = "intel";
+      motherboard = "amd";
     };
   };
 
@@ -104,8 +104,8 @@
       enable = true;
       enable32Bit = true;
     };
-    opentabletdriver.enable = true;
-    pulseaudio.enable = true;
+    opentabletdriver.enable = false;
+    pulseaudio.enable = false;
     bluetooth = {
       enable = false;
       powerOnBoot = true;
@@ -149,5 +149,5 @@
   };
 
   # NixOS release
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.05";
 }
