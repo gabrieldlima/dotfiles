@@ -50,7 +50,7 @@ in {
     };
 
     cursor = {
-      name = "GoogleDot-Black";
+      name = "GoogleDot-White";
       package = pkgs.google-cursor;
       size = 16;
     };
