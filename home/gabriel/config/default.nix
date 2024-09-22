@@ -13,7 +13,7 @@
     ./fish.nix
     ./flameshot.nix
     ./git.nix
-    ./qutebrowser
+    ./qutebrowser.nix
     ./starship.nix
     ./stylix.nix
     ./wezterm
