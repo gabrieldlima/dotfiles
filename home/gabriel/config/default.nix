@@ -4,7 +4,7 @@
 }: {
   imports = [
     # ./alacritty.nix
-    # ./hyprland
+    # ./hyprland.nix
 
     ./awesome
     ./bash.nix
