@@ -84,7 +84,7 @@ global_key({
     modifiers = { mod.super },
     key = "p",
     on_press = function ()
-      menubar.show()
+      awful.spawn(user.apps.launcher)
     end,
     on_release = nil,
   },

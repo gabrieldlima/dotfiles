@@ -14,6 +14,7 @@ M.apps = {
   terminal     = "wezterm",
   web_browser  = "qutebrowser",
   text_editor  = "nvim",
+  launcher     = "rofi -show drun",
   file_manager = "wezterm -e yazi",
   screnshoot   = "flameshot",
   image_viewer = "sxiv"
