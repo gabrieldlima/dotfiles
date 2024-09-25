@@ -49,7 +49,7 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [
-          ./home/gabriel/home.nix
+          ./home/home.nix
           catppuccin.homeManagerModules.catppuccin
           ({ pkgs, ... }: {
               home.packages = [ yazi.packages.${pkgs.system}.default ];

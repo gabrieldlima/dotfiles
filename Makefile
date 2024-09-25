@@ -10,4 +10,4 @@ aorus:
 	nixos-rebuild switch --flake .#aorus
 
 awesome:
-	ln -sf $$HOME/dev/dotfiles/home/gabriel/config/awesome $$HOME/.config/awesome
+	ln -sf $$HOME/dev/dotfiles/home/config/awesome $$HOME/.config/awesome
