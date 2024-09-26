@@ -80,7 +80,6 @@ in {
         "col.nogroup_border" = "${base}";
         layout = "master";
         no_focus_fallback = true;
-        apply_sens_to_raw = false;
         resize_on_border = true;
         extend_border_grab_area = 0;
         hover_icon_on_border = true;
@@ -225,7 +224,6 @@ in {
         disable_autoreload = false;
         enable_swallow = false;
         focus_on_activate = false;
-        no_direct_scanout = true;
         mouse_move_focuses_monitor = true;
         render_ahead_of_time = false;
         render_ahead_safezone = 1;
