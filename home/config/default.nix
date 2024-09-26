@@ -11,7 +11,7 @@
     ./eza.nix
     ./fish.nix
     ./git.nix
-    ./hyprland.nix
+    ./hyprland
     ./qutebrowser.nix
     ./starship.nix
     ./stylix.nix
