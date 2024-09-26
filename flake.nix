@@ -40,7 +40,7 @@
     nixosConfigurations = {
       aorus = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs outputs; };
-        modules = [ ./hosts/aorus ];
+        modules = [ ./hosts/hosts.nix ];
       };
     };
 
