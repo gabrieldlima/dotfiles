@@ -112,10 +112,10 @@
           cyan = "#94e2d5";
           white = "#bac2de";
         };
-        indexed_colors = [
-        { index = 16; color = "#fab387"; }
-        { index = 17; color = "#f5e0dc"; }
-        ];
+        # indexed_colors = [
+        # { index = 16; color = "#fab387"; }
+        # { index = 17; color = "#f5e0dc"; }
+        # ];
       };
 
       # MOUSE
