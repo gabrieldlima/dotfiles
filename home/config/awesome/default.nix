@@ -20,6 +20,7 @@ let
   });
 in {
   imports = [
+    ../flameshot.nix
     ../picom.nix
     ../xresources.nix
   ];

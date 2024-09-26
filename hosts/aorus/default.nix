@@ -26,14 +26,14 @@
 
   services = {
     # Enable the X11 windowing system
-    xserver = {
-      enable = true;
-      videoDrivers = [ "amdgpu" ];
-      displayManager = {
-        startx.enable = true;
-      };
-      wacom.enable = true;
-    };
+    # xserver = {
+    #   enable = true;
+    #   videoDrivers = [ "amdgpu" ];
+    #   displayManager = {
+    #     startx.enable = true;
+    #   };
+    #   wacom.enable = true;
+    # };
 
     # Enable the COSMIC desktop environment
     # desktopManager = {
@@ -58,7 +58,7 @@
       enable = true;
       enable32Bit = true;
     };
-    opentabletdriver.enable = false;
+    opentabletdriver.enable = true;
     pulseaudio.enable = false;
     bluetooth = {
       enable = false;
