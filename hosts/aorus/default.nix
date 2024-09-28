@@ -23,7 +23,6 @@
     };
   };
 
-
   services = {
     # Enable the X11 windowing system
     # xserver = {
@@ -47,6 +46,15 @@
     #   };
     # };
 
+    pipewire = {
+      enable = true;
+      pulse.enable = true;
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
+    };
+
     hardware.openrgb = {
       enable = true;
       motherboard = "amd";
@@ -59,7 +67,6 @@
       enable32Bit = true;
     };
     opentabletdriver.enable = true;
-    pulseaudio.enable = false;
     bluetooth = {
       enable = false;
       powerOnBoot = true;
