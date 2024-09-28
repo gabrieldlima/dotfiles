@@ -25,11 +25,17 @@ in {
     ../xresources.nix
   ];
 
-  home.packages = with pkgs; [
-    sxiv
-    xsel
-    xwallpaper
-  ];
+  home = {
+    file.".config/x11/xinitrc".text = ''
+      exec awesome
+    '';
+
+    packages = with pkgs; [
+      sxiv
+      xsel
+      xwallpaper
+    ];
+  };
 
   xsession.windowManager.awesome = {
     enable = true;

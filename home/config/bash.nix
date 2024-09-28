@@ -1,9 +1,6 @@
 {
   ...
 }: {
-  home.file.".config/x11/xinitrc".text = ''
-    exec awesome
-  '';
   programs.bash = {
     enable = true;
 
