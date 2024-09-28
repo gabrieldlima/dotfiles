@@ -13,6 +13,7 @@
     ./git.nix
     ./hyprland
     ./qutebrowser.nix
+    ./rofi.nix
     ./starship.nix
     ./stylix.nix
     ./wezterm

@@ -42,7 +42,6 @@ pkgs,
 in {
   home.packages = with pkgs; [
     hyprpicker
-    rofi-wayland
     socat
     swww
     xdg-desktop-portal-hyprland
