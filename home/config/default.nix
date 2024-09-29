@@ -3,15 +3,15 @@
   ...
 }: {
   imports = [
-    # ./awesome
+    # ./alacritty.nix
+    # ./hyprland
 
-    ./alacritty.nix
+    ./awesome
     ./bash.nix
     ./bat.nix
     ./eza.nix
     ./fish.nix
     ./git.nix
-    ./hyprland
     ./qutebrowser.nix
     ./rofi.nix
     ./starship.nix

@@ -5,7 +5,7 @@
     enable = true;
 
     profileExtra = ''
-      [ "$(tty)" = "/dev/tty1" ] && [ "$XDG_VTNR" = 1 ] && exec Hyprland
+      [ "$(tty)" = "/dev/tty1" ] && [ "$XDG_VTNR" = 1 ] && exec startx >& "$XDG_CACHE_HOME/xsession-errors"
     '';
   };
 }
