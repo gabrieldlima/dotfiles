@@ -26,10 +26,10 @@ M.window_decorations = "RESIZE"
 M.enable_tab_bar = true
 M.use_fancy_tab_bar = false
 M.hide_tab_bar_if_only_one_tab = false
-M.front_end = "WebGpu"
-M.webgpu_power_preference = "HighPerformance"
--- local gpus = wezterm.gui.enumerate_gpus()
-M.webgpu_preferred_adapter = wezterm.gui.enumerate_gpus()[1]
+M.front_end = "OpenGL"
+-- M.front_end = "WebGpu"
+-- M.webgpu_power_preference = "HighPerformance"
+-- M.webgpu_preferred_adapter = wezterm.gui.enumerate_gpus()[1]
 
 
 -- Theme

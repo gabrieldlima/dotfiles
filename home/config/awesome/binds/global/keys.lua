@@ -64,7 +64,7 @@ global_key({
     modifiers = { mod.super },
     key = "Return",
     on_press = function ()
-      awful.spawn(user.apps.terminal)
+      awful.spawn(user.config.home .. "/.local/bin/wezterm")
     end,
     on_release = nil,
   },
