@@ -20,17 +20,13 @@ M.check_for_updates = false
 M.window_close_confirmation = "NeverPrompt"
 M.initial_cols = 120
 M.initial_rows = 30
-M.enable_wayland = false -- TODO: This don't work with Hyprland. I need to fix this.
-M.window_background_opacity = 0.95
-M.window_decorations = "RESIZE"
+M.enable_wayland = true
+M.window_background_opacity = 1
+M.window_decorations = "NONE"
 M.enable_tab_bar = true
 M.use_fancy_tab_bar = false
 M.hide_tab_bar_if_only_one_tab = false
 M.front_end = "OpenGL"
--- M.front_end = "WebGpu"
--- M.webgpu_power_preference = "HighPerformance"
--- M.webgpu_preferred_adapter = wezterm.gui.enumerate_gpus()[1]
-
 
 -- Theme
 -- =============================================================================
