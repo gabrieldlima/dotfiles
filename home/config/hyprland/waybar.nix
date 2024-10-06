@@ -31,7 +31,7 @@
 
         modules-left = [ "image" "hyprland/workspaces" "hyprland/window" ];
         modules-center = [ ];
-        modules-right = [ "group/systray" "cpu" "memory" "pulseaudio" "clock" "user" ];
+        modules-right = [ "group/systray" "cpu" "memory" "network" "pulseaudio" "clock" "user" ];
 
         image = {
           path = "${config.home.homeDirectory}/.config/waybar/nixos.png";
@@ -91,6 +91,14 @@
           interval = 2;
           format = "  {used:0.1f}GiB";
           tooltip = false;
+        };
+
+        network = {
+          interval = 2;
+          interface = "eno1";
+          format-ethernet = "󰛳 {ifname}";
+          tooltip-format-ethernet = "󰩟 {ipaddr}\r󰇚 {bandwidthDownBits}\r󰕒 {bandwidthUpBits}";
+          tooltip = true;
         };
 
         pulseaudio = {
@@ -163,6 +171,13 @@
         box-shadow: 0px 0px 3px 0px ${base};
       }
 
+      tooltip {
+        font-family: "FiraCode Nerd Font SemBd";
+        font-size: 13px;
+        background-color: ${base};
+        border-radius: 10px;
+      }
+
       #image {
         padding-left: 8px;
       }
@@ -203,6 +218,7 @@
       #window,
       #cpu,
       #memory,
+      #network,
       #pulseaudio,
       #clock {
         font-family: "FiraCode Nerd Font SemBd";
@@ -230,6 +246,12 @@
 
       #memory {
         color: ${red};
+        padding-left: 2px;
+        padding-right: 2px;
+      }
+
+      #network {
+        color: ${teal};
         padding-left: 2px;
         padding-right: 2px;
       }
