@@ -31,7 +31,7 @@
 
         modules-left = [ "image" "hyprland/workspaces" "hyprland/window" ];
         modules-center = [ ];
-        modules-right = [ "tray" "cpu" "memory" "pulseaudio" "clock" "user" ];
+        modules-right = [ "group/systray" "cpu" "memory" "pulseaudio" "clock" "user" ];
 
         image = {
           path = "${config.home.homeDirectory}/.config/waybar/nixos.png";
@@ -64,9 +64,21 @@
           };
         };
 
+        "group/systray" = {
+          "orientation" = "horizontal";
+          "modules" = ["custom/showtray" "tray"];
+          "drawer" = {
+            "transition-duration" = 300;
+            "children-class" = "minimized";
+          };
+        };
         tray = {
           icon-size = 20;
           spacing = 5;
+        };
+        "custom/showtray" = {
+          "format" = "";
+          "tooltip" = false;
         };
 
         cpu = {
@@ -195,6 +207,19 @@
       #clock {
         font-family: "FiraCode Nerd Font SemBd";
         font-size: 13px;
+      }
+
+      #custom-showtray {
+        font-family: "FiraCode Nerd Font SemBd";
+        font-size: 14px;
+        color: ${text};
+        padding-left: 2px;
+        padding-right: 2px;
+      }
+
+      #tray {
+        padding-left: 2px;
+        padding-right: 2px;
       }
 
       #cpu {
