@@ -15,9 +15,9 @@
         layer = "bottom";
         output = [ "HDMI-A-1" ];
         position = "top";
-        height = 40;
-        width = 1900;
-        margin-top = 8;
+        height = 45;
+        width = 1910;
+        margin-top = 5;
         margin-left = 0;
         margin-right = 0;
         margin-bottom = 0;
@@ -127,8 +127,18 @@
       crust     = "#010101";
     in ''
       * {
-        min-height: 0;
+        min-height: 0px;
+      }
+
+      window#waybar {
+        background-color: transparent;
+      }
+
+      window#waybar > box {
         border-radius: 10px;
+        margin: 4px 4px 4px 4px;
+        background-color: ${base};
+        box-shadow: 0px 0px 3px 0px ${base};
       }
 
       #image {
@@ -136,15 +146,16 @@
       }
 
       #workspaces {
-        font-size: 0;
+        font-size: 0px;
         background: ${base};
-        margin: 0;
-        padding: 14px 0;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        padding: 10px 0px;
       }
 
       #workspaces button {
-        padding: 0;
-        margin: 0 5px;
+        padding: 0px;
+        margin: 0px 5px;
         min-width: 10px;
         border-radius: 10px;
         background: ${lavender};
