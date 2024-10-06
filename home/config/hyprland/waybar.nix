@@ -26,8 +26,8 @@
         fixed-center = true;
         reload_style_on_change = true;
 
-        modules-left = [ "image" "hyprland/workspaces" ];
-        modules-center = [ "hyprland/window" ];
+        modules-left = [ "image" "hyprland/workspaces" "hyprland/window" ];
+        modules-center = [ ];
         modules-right = [ "tray" "cpu" "memory" "clock" ];
 
         image = {
