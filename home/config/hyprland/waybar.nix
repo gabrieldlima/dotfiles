@@ -31,7 +31,7 @@
 
         modules-left = [ "image" "hyprland/workspaces" "hyprland/window" ];
         modules-center = [ ];
-        modules-right = [ "tray" "cpu" "memory" "clock" "user" ];
+        modules-right = [ "tray" "cpu" "memory" "pulseaudio" "clock" "user" ];
 
         image = {
           path = "${config.home.homeDirectory}/.config/waybar/nixos.png";
@@ -78,6 +78,16 @@
         memory = {
           interval = 2;
           format = "  {used:0.1f}GiB";
+          tooltip = false;
+        };
+
+        pulseaudio = {
+          format = "{icon} {volume}%";
+          format-muted = " ";
+          format-icons = {
+            default = [" " " " " " " " " " " " " "];
+          };
+          scroll-step = 2;
           tooltip = false;
         };
 
@@ -181,6 +191,7 @@
       #window,
       #cpu,
       #memory,
+      #pulseaudio,
       #clock {
         font-family: "FiraCode Nerd Font SemBd";
         font-size: 13px;
@@ -194,6 +205,12 @@
 
       #memory {
         color: ${red};
+        padding-left: 2px;
+        padding-right: 2px;
+      }
+
+      #pulseaudio {
+        color: ${rosewater};
         padding-left: 2px;
         padding-right: 2px;
       }
