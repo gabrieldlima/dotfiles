@@ -2,7 +2,10 @@
   config,
   ...
 }: {
-  home.file."${config.home.homeDirectory}/.config/waybar/nixos.png".source = ./nixos.png;
+  home.file = {
+    "${config.home.homeDirectory}/.config/waybar/nixos.png".source = ./assets/nixos.png;
+    "${config.home.homeDirectory}/.config/waybar/avatar.png".source = ./assets/avatar.png;
+  };
 
   programs.waybar = {
     enable = true;
@@ -28,10 +31,10 @@
 
         modules-left = [ "image" "hyprland/workspaces" "hyprland/window" ];
         modules-center = [ ];
-        modules-right = [ "tray" "cpu" "memory" "clock" ];
+        modules-right = [ "tray" "cpu" "memory" "clock" "user" ];
 
         image = {
-          path = ./nixos.png;
+          path = "${config.home.homeDirectory}/.config/waybar/nixos.png";
           size = 28;
         };
 
@@ -83,6 +86,14 @@
           format = "󰥔 {:%I:%M %p}";
           timezone = "America/Sao_Paulo";
           tooltip = false;
+        };
+
+        user = {
+          format = "";
+          icon = true;
+          avatar = "${config.home.homeDirectory}/.config/waybar/avatar.png";
+          height = 28;
+          width = 28;
         };
       };
     };
@@ -178,6 +189,11 @@
 
       #clock {
         color: ${peach};
+        padding-left: 2px;
+        padding-right: 2px;
+      }
+
+      #user {
         padding-left: 2px;
         padding-right: 8px;
       }
