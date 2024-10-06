@@ -40,6 +40,10 @@ pkgs,
   mantle    = "0xff181825";
   crust     = "0xff11111b";
 in {
+  imports = [
+    ./waybar.nix
+  ];
+
   home.packages = with pkgs; [
     hyprpicker
     socat
@@ -61,6 +65,7 @@ in {
       # ========================================================================
       exec-once = [
         "swww-daemon"
+        "waybar"
       ];
       exec = [ ];
 
