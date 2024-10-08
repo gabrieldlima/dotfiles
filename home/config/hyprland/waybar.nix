@@ -96,7 +96,7 @@
         network = {
           interval = 2;
           interface = "eno1";
-          format-ethernet = "󰛳 {ifname}";
+          format-ethernet = "󰈀 {ifname}";
           tooltip-format-ethernet = "󰩟 {ipaddr}\r󰇚 {bandwidthDownBits}\r󰕒 {bandwidthUpBits}";
           tooltip = true;
         };
