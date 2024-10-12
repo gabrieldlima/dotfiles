@@ -3,9 +3,10 @@
   ...
 }: {
   imports = [
-    # ./alacritty.nix
     # ./awesome
+    # ./wezterm
 
+    ./alacritty.nix
     ./bash.nix
     ./bat.nix
     ./eza.nix
@@ -16,7 +17,6 @@
     ./rofi.nix
     ./starship.nix
     ./stylix.nix
-    ./wezterm
     ./yazi
     ./zathura.nix
   ];
