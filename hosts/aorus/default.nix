@@ -51,11 +51,6 @@
         support32Bit = true;
       };
     };
-
-    hardware.openrgb = {
-      enable = true;
-      motherboard = "amd";
-    };
   };
 
   hardware = {
