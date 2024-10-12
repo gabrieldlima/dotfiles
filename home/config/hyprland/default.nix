@@ -271,8 +271,8 @@ in {
       # ========================================================================
       "$browser"     = "qutebrowser";
       "$launcher"    = "rofi -show drun";
-      "$terminal"    = "/home/gabriel/.local/bin/wezterm";
-      "$fileManager" = "/home/gabriel/.local/bin/wezterm -e yazi";
+      "$terminal"    = "alacritty";
+      "$fileManager" = "alacritty -e yazi";
 
       "$mod"        = "SUPER";
       "$modShift"   = "SUPER + SHIFT";
