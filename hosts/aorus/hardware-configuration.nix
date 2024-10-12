@@ -11,6 +11,7 @@
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ "amdgpu" ];
   boot.kernelModules = [ "kvm-amd" ];
+  boot.kernel.sysctl = { "vm.swappiness" = 10; };
   boot.extraModulePackages = [ ];
 
   fileSystems."/boot" =
@@ -24,19 +25,9 @@
       fsType = "btrfs";
     };
 
-  fileSystems."/media/ssd" =
-    { device = "/dev/disk/by-label/ssd";
-      fsType = "btrfs";
-    };
-
-  fileSystems."/media/hdd" =
-    { device = "/dev/disk/by-label/hdd";
-      fsType = "ext4";
-    };
-
   swapDevices = [ {
     device = "/var/lib/swapfile";
-    size = 8*1024;
+    size = 4*1024;
   }];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
