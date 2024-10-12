@@ -32,6 +32,7 @@
     gimp
     gnumake
     jq
+    nixd
     neovim
     obsidian
     pavucontrol
