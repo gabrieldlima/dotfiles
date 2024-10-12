@@ -71,7 +71,7 @@
       description = "Gabriel Lima";
       isNormalUser = true;
       initialPassword = "qw12QW!@";
-      extraGroups = [ "wheel" "libvirtd" "gamemode" ];
+      extraGroups = [ "wheel" "libvirtd" ];
     };
   };
 
@@ -95,10 +95,6 @@
   programs = {
     virt-manager.enable = true;
     nix-ld.enable = true;
-    gamemode = {
-      enable = true;
-      settings.general.inhibit_screensaver = 0;
-    };
   };
 
 }
