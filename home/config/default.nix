@@ -38,7 +38,6 @@
     obsidian
     pavucontrol
     ripgrep
-    steam
     tldr
     unzip
     virtiofsd
