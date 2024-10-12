@@ -32,9 +32,7 @@
     gimp
     gnumake
     jq
-    mangohud
     neovim
-    nixd
     obsidian
     pavucontrol
     ripgrep
