@@ -102,7 +102,7 @@ local taglist = function (s)
       create_callback = function (self, c3, _)
         if c3.selected then
           self.bg = colors.blue
-          self.forced_width = 28
+          self.forced_width = 40
         elseif #c3:clients() == 0 then
           self.bg = "#363a4f"
           self.forced_width = 12
@@ -115,7 +115,7 @@ local taglist = function (s)
       update_callback = function (self, c3, _)
         if c3.selected then
           self.bg = colors.blue
-          self.forced_width = 28
+          self.forced_width = 40
         elseif #c3:clients() == 0 then
           self.bg = "#363a4f"
           self.forced_width = 12
