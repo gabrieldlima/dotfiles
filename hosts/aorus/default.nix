@@ -22,14 +22,14 @@
 
   services = {
     # Enable the X11 windowing system
-    # xserver = {
-    #   enable = true;
-    #   videoDrivers = [ "amdgpu" ];
-    #   displayManager = {
-    #     startx.enable = true;
-    #   };
-    #   wacom.enable = true;
-    # };
+    xserver = {
+      enable = true;
+      videoDrivers = [ "amdgpu" ];
+      displayManager = {
+        startx.enable = true;
+      };
+      wacom.enable = false;
+    };
 
     # Enable the COSMIC desktop environment
     # desktopManager = {
