@@ -32,11 +32,12 @@
     gimp
     gnumake
     jq
-    nixd
     neovim
+    nixd
     obsidian
     pavucontrol
     ripgrep
+    steam
     tldr
     unzip
     virtiofsd
