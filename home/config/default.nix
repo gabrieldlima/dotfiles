@@ -4,7 +4,6 @@
 }: {
   imports = [
     # ./hyprland
-    # ./wezterm
 
     ./alacritty.nix
     ./awesome
@@ -17,6 +16,7 @@
     ./rofi.nix
     ./starship.nix
     ./stylix.nix
+    ./wezterm
     ./yazi
     ./zathura.nix
   ];
