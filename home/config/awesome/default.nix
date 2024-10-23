@@ -4,12 +4,12 @@
 }:
 let
   awesome-git = pkgs.awesome.overrideAttrs (oa: {
-    version = "git-d53eb1be67f594f62fb6134fe40928e8ca17304a";
+    version = "git-206e6e1";
     src = pkgs.fetchFromGitHub {
       owner = "awesomeWM";
       repo = "awesome";
-      rev = "d53eb1be67f594f62fb6134fe40928e8ca17304a";
-      hash = "sha256-FjvthODMP8M0NFyXWGTj0SmUU8TNqldTKZ3AfIFJVp8=";
+      rev = "206e6e1";
+      hash = "sha256-CpieBypRPQ9h/RzWskvv/zSVbPPBHCWOIdrGBySBtlQ=";
     };
 
     patches = [ ];
