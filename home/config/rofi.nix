@@ -6,7 +6,7 @@
     enable = true;
     package = pkgs.rofi;
 
-    font = "FiraCode Nerd Font Bold 12";
+    font = "Iosevka Slab ExtraBold 12";
 
     extraConfig = {
       modi= "run,drun,window";
