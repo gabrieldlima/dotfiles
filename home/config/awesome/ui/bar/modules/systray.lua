@@ -1,8 +1,9 @@
 local wibox   = require("wibox")
 local helpers = require("helpers")
 local colors  = require("theme.colorsheme")
+local user    = require("config.user")
 
-local font      = "FiraCode Nerd Font Bold 12"
+local font = user.config.font
 
 -- Option 1:  | 
 -- Option 2:  | 

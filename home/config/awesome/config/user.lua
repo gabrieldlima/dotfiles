@@ -6,7 +6,7 @@ M.config = {
   home  = os.getenv("HOME"),
   host  = "aorus",
   theme = "catppuccin_mocha",
-  font  = "FiraCode Nerd Font Bold 10",
+  font  = "Iosevka Slab ExtraBold 11",
 }
 
 M.apps = {
