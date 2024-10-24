@@ -64,7 +64,7 @@ in {
       };
 
       fonts = {
-        default_family = "FiraCode Nerd Font";
+        default_family = "Iosevka Etoile";
         default_size   = "10pt";
       };
 
