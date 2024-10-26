@@ -1,7 +1,4 @@
-.PHONY: all home aorus awesome
-
-all:
-	nixos-rebuild switch --flake .#aorus && home-manager switch --flake .#gabriel@aorus
+.PHONY: home aorus awesome
 
 home:
 	home-manager switch --flake .#gabriel@aorus
