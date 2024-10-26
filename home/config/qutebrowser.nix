@@ -64,8 +64,8 @@ in {
       };
 
       fonts = {
-        default_family = "Iosevka Etoile";
-        default_size   = "10pt";
+        default_family = "Iosevka Slab SemiBold";
+        default_size   = "11pt";
       };
 
       tabs = {
