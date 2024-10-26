@@ -85,7 +85,7 @@
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
-      (nerdfonts.override { fonts = [ "Iosevka" ]; })
+      (nerdfonts.override { fonts = [ "FiraCode" ]; })
     ];
   };
 
