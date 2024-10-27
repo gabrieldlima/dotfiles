@@ -20,6 +20,7 @@ local calendar = awful.widget.calendar_popup.month {
   week_numbers = false,
   long_weekdays = false,
   shape = helpers.rrect(10),
+  start_sunday = true,
 
   style_month = {
     fg_color     = colors.foreground,
