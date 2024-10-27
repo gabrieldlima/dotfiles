@@ -22,25 +22,33 @@
   ];
 
   home.packages = with pkgs; [
-    _1password-gui
+    # dev tools
+    # -------------
+    ccls
+    # clang-tools
+    gcc
+    gnumake
+    nixd
+
+    # cli apps
+    # -------------
     atuin
-    clang-tools
     duf
     fd
     file
-    gcc
-    gimp
-    gnumake
     jq
     neovim
-    nixd
-    obsidian
-    pavucontrol
     ripgrep
-    steam
     tldr
     unzip
-    virtiofsd
     wget
+
+    # gui apps
+    # -------------
+    _1password-gui
+    gimp
+    obsidian
+    pavucontrol
+    steam
   ];
 }
