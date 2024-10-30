@@ -24,8 +24,7 @@
   home.packages = with pkgs; [
     # dev tools
     # -------------
-    ccls
-    # clang-tools
+    clang-tools
     gcc
     gnumake
     nixd
