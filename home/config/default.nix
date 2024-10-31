@@ -48,6 +48,5 @@
     gimp
     obsidian
     pavucontrol
-    steam
   ];
 }
