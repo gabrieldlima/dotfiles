@@ -9,7 +9,7 @@
 
 ### Install:
 ```bash
-git clone https://github.com/gabrieldlima/dotfiles .dotfiles
-cd .dotfiles
+git clone https://github.com/gabrieldlima/dotfiles ~/.dotfiles
+cd ~/.dotfiles
 ./deploy.sh aorus && ./deploy.sh home
 ```
