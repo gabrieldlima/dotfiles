@@ -1,0 +1,3 @@
+[submodule "home/config/awesome/lib/awesome"]
+	path = home/config/awesome/lib/awesome
+	url = https://github.com/awesomeWM/awesome
