@@ -7,10 +7,9 @@
 ![img](screenshots/screen03.png)
 ---
 
-### Programs:
-
-- $OS: [NixOS](https://nixos.org/)
-- $WM: [Awesomewm](https://awesomewm.org/)
-- $EDITOR: [Neovim](https://neovim.io/)
-- $TERMINAL: [Wezterm](https://wezfurlong.org/wezterm/index.html)
-- $BROWSER: [Qutebrowser](https://qutebrowser.org/)
+### Install:
+```bash
+git clone https://github.com/gabrieldlima/dotfiles .dotfiles
+cd .dotfiles
+./deploy.sh aorus && ./deploy.sh home
+```
