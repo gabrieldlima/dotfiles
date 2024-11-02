@@ -88,6 +88,7 @@
 
       # Misc
       t     = "tldr";
+      tk    = "cat $HOME/.config/tk | xsel -ib";
       df    = "duf --hide special";
       cat   = "bat";
       cp    = "cp -v";
