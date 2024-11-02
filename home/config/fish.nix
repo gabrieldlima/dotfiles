@@ -12,6 +12,9 @@
       # Disable greeting message
       set -g fish_greeting
 
+      # Disable autosuggestions
+      set -g fish_autosuggestion_enabled 0
+
       #########################################################################
       # Theme
       # name: 'Catppuccin Mocha'
