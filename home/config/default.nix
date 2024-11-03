@@ -12,6 +12,7 @@
     ./eza.nix
     ./fish.nix
     ./git.nix
+    ./gaming.nix
     ./qutebrowser.nix
     ./rofi.nix
     ./starship.nix
