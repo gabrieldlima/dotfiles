@@ -17,7 +17,8 @@ M.apps = {
   launcher     = "rofi -show drun",
   file_manager = M.config.home .. "/.local/bin/wezterm" .. "-e yazi",
   screnshoot   = "flameshot",
-  image_viewer = "sxiv"
+  image_viewer = "sxiv",
+  pdf_viewer   = "zathura"
 }
 
 return M

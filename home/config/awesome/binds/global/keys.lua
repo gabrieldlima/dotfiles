@@ -100,6 +100,16 @@ global_key({
   },
 
   awful.key {
+    description = "open zathura pdf",
+    modifiers = { mod.super },
+    key = "z",
+    on_press = function ()
+      awful.spawn(user.apps.pdf_viewer)
+    end,
+    on_release = nil,
+  },
+
+  awful.key {
     description = "select screenshot",
     modifiers = { mod.super, mod.shift },
     key = "s",
