@@ -11,8 +11,9 @@
     ./bat.nix
     ./eza.nix
     ./fish.nix
-    ./git.nix
     ./gaming.nix
+    ./git.nix
+    ./kitty.nix
     ./qutebrowser.nix
     ./rofi.nix
     ./starship.nix
