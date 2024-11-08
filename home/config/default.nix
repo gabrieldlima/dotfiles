@@ -43,6 +43,7 @@
     tldr
     unzip
     wget
+    zoxide
 
     # gui apps
     # -------------
