@@ -13,15 +13,6 @@
     # Catppuccin
     catppuccin.url = "github:catppuccin/nix";
 
-    # Yazi file manager
-    yazi.url = "github:sxyazi/yazi";
-
-    # COSMIC Epoch
-    # nixos-cosmic = {
-    #   url = "github:lilyinstarlight/nixos-cosmic";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
     # Stylix
     stylix.url = "github:danth/stylix";
   };
@@ -31,7 +22,6 @@
     nixpkgs,
     home-manager,
     catppuccin,
-    yazi,
     stylix,
     ...
   } @ inputs: let
@@ -51,9 +41,6 @@
         modules = [
           ./home/home.nix
           catppuccin.homeManagerModules.catppuccin
-          ({ pkgs, ... }: {
-              home.packages = [ yazi.packages.${pkgs.system}.default ];
-          })
           stylix.homeManagerModules.stylix
         ];
       };
