@@ -31,7 +31,7 @@ M.front_end = "OpenGL"
 -- Theme
 -- =============================================================================
 local color_overrides = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
-color_overrides.background = "#010101"
+color_overrides.background = "#000000"
 
 M.color_schemes = {
   ["Catppuccin_Mocha_Dark"] = color_overrides,
@@ -40,33 +40,33 @@ M.color_scheme = "Catppuccin_Mocha_Dark"
 
 M.colors = {
   tab_bar = {
-    background = "#010101",
+    background = "#000000",
 
     active_tab = {
       bg_color = "#89b4fa",
-      fg_color = "#010101",
+      fg_color = "#000000",
       intensity = "Bold",
     },
 
     inactive_tab = {
-      bg_color = "#010101",
+      bg_color = "#000000",
       fg_color = "#cdd6f4",
     },
 
     inactive_tab_hover = {
-      bg_color = "#010101",
+      bg_color = "#000000",
       fg_color = "#cdd6f4",
       italic = true,
     },
 
     new_tab = {
-      bg_color = "#010101",
+      bg_color = "#000000",
       fg_color = "#89b4fa",
       intensity = "Bold",
     },
 
     new_tab_hover = {
-      bg_color = "#010101",
+      bg_color = "#000000",
       fg_color = "#89b4fa",
       intensity = "Bold",
     },

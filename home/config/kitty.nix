@@ -43,7 +43,7 @@
       # Color scheme
       background_opacity   = "0.95";
       foreground           = "#CDD6F4";
-      background           = "#010101";
+      background           = "#000000";
       selection_foreground = "#1E1E2E";
       selection_background = "#F5E0DC";
 

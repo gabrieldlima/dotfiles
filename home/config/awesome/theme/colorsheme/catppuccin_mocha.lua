@@ -1,5 +1,5 @@
 local colorscheme = {
-  background = "#010101",
+  background = "#000000",
   foreground = "#cdd6f4",
   red        = "#f38ba8",
   green      = "#a6e3a1",

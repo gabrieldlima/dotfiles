@@ -45,7 +45,7 @@
       # COLORS
       colors = {
         primary = {
-          background = "#010101";
+          background = "#000000";
           foreground = "#cdd6f4";
           dim_foreground = "#7f849c";
           bright_foreground = "#cdd6f4";

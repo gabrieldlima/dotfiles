@@ -9,8 +9,8 @@ in {
     autoEnable = false;
     image = "${imagePath}";
     base16Scheme = {
-      base00 = "010101"; # base
-      base01 = "010101"; # mantle
+      base00 = "000000"; # base
+      base01 = "000000"; # mantle
       base02 = "313244"; # surface0
       base03 = "45475a"; # surface1
       base04 = "585b70"; # surface2

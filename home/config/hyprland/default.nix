@@ -36,7 +36,7 @@ pkgs,
   surface2  = "0xff585b70";
   surface1  = "0xff45475a";
   surface0  = "0xff313244";
-  base      = "0xff010101";
+  base      = "0xff000000";
   mantle    = "0xff181825";
   crust     = "0xff11111b";
 in {

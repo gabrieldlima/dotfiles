@@ -152,9 +152,9 @@
       surface2  = "#585b70";
       surface1  = "#45475a";
       surface0  = "#313244";
-      base      = "#010101";
-      mantle    = "#010101";
-      crust     = "#010101";
+      base      = "#000000";
+      mantle    = "#000000";
+      crust     = "#000000";
     in ''
       * {
         min-height: 0px;
