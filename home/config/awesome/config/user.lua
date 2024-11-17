@@ -18,7 +18,8 @@ M.apps = {
   file_manager = "wezterm -e yazi",
   screnshoot   = "flameshot",
   image_viewer = "sxiv",
-  pdf_viewer   = "zathura"
+  pdf_viewer   = "zathura",
+  notes        = "obsidian"
 }
 
 return M

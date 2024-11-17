@@ -110,6 +110,16 @@ global_key({
   },
 
   awful.key {
+    description = "open obsidian",
+    modifiers = { mod.super },
+    key = "o",
+    on_press = function ()
+      awful.spawn(user.apps.notes)
+    end,
+    on_release = nil,
+  },
+
+  awful.key {
     description = "select screenshot",
     modifiers = { mod.super, mod.shift },
     key = "s",
