@@ -5,13 +5,13 @@
   imports = [
     # ./alacritty.nix
     # ./hyprland
+    # ./gaming.nix
 
     ./awesome
     ./bash.nix
     ./bat.nix
     ./eza.nix
     ./fish.nix
-    ./gaming.nix
     ./git.nix
     ./kitty.nix
     ./qutebrowser.nix
