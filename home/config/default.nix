@@ -15,6 +15,7 @@
     ./fish.nix
     ./git.nix
     ./qutebrowser.nix
+    ./redshift.nix
     ./rofi.nix
     ./starship.nix
     ./stylix.nix
