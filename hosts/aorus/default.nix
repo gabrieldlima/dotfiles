@@ -28,7 +28,7 @@
       displayManager = {
         startx.enable = true;
       };
-      wacom.enable = false;
+      wacom.enable = true;
     };
 
     # Enable the COSMIC desktop environment
@@ -58,7 +58,7 @@
       enable = true;
       enable32Bit = true;
     };
-    opentabletdriver.enable = true;
+    opentabletdriver.enable = false;
     bluetooth = {
       enable = false;
       powerOnBoot = true;
