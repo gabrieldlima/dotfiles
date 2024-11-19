@@ -37,7 +37,7 @@
       fade-out-step = 0.5;
 
       # Corners
-      corner-radius = 0;
+      corner-radius = 10;
       rounded-corners-exclude = [
         "window_type = 'dock'"
         "window_type = 'desktop'"
