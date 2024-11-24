@@ -44,7 +44,7 @@
     # };
 
     pipewire = {
-      enable = true;
+      enable = false;
       pulse.enable = true;
       alsa = {
         enable = true;
@@ -58,7 +58,12 @@
       enable = true;
       enable32Bit = true;
     };
-    opentabletdriver.enable = false;
+
+    pulseaudio = {
+      enable = true;
+      support32Bit = true;
+    };
+
     bluetooth = {
       enable = false;
       powerOnBoot = true;
