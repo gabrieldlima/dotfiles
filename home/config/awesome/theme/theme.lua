@@ -70,8 +70,8 @@ theme.titlebar_close_button_focus_hover = titlebar_path .. "button_close.png"
 -------------------------------------------------------------------------------
 -- systray
 -------------------------------------------------------------------------------
-theme.bg_systray = color.base
+theme.bg_systray = color.background
 theme.systray_max_rows = nil
-theme.systray_icon_spacing = 10
+theme.systray_icon_spacing = 5
 
 return theme
