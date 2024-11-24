@@ -41,10 +41,10 @@ watch(cmd, 2,
     awful.spawn.easy_async_with_shell("pactl get-sink-mute @DEFAULT_SINK@", function (is_muted)
       is_muted = is_muted:match("yes")
       if is_muted then
-        widget.markup = helpers.mtext(colors.background, user.config.font, "󰖁 VOL ") ..
+        widget.markup = helpers.mtext(colors.background, user.config.font, "󰖁 ") ..
                         helpers.mtext(colors.background, user.config.font, "off")
       else
-        widget.markup = helpers.mtext(colors.background, user.config.font, "󰕾 VOL ") ..
+        widget.markup = helpers.mtext(colors.background, user.config.font, "󰕾 ") ..
                         helpers.mtext(colors.background, user.config.font, stdout)
       end
     end)

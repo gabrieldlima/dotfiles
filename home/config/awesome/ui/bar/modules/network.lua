@@ -14,7 +14,7 @@ local network_widget = wibox.widget {
 
 watch(cmd, 2,
   function(widget, stdout)
-    widget.markup = helpers.mtext(colors.background, user.config.font, "󰈀 NET ") ..
+    widget.markup = helpers.mtext(colors.background, user.config.font, "󰈀 ") ..
                     helpers.mtext(colors.background, user.config.font, stdout)
   end,
   network_widget)

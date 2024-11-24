@@ -34,7 +34,7 @@ local memory_widget = wibox.widget {
 
 watch(cmd, 2,
   function(widget, stdout)
-    widget.markup = helpers.mtext(colors.background, user.config.font, "  RAM ") ..
+    widget.markup = helpers.mtext(colors.background, user.config.font, " ") ..
                     helpers.mtext(colors.background, user.config.font, stdout)
 end,
   memory_widget)

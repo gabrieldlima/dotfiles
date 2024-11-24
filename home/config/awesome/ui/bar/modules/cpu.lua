@@ -34,7 +34,7 @@ local cpu_widget = wibox.widget {
 
 watch(cmd, 2,
   function(widget, stdout)
-    widget.markup = helpers.mtext(colors.background, user.config.font, " CPU ") ..
+    widget.markup = helpers.mtext(colors.background, user.config.font, " ") ..
                     helpers.mtext(colors.background, user.config.font, stdout)
   end,
   cpu_widget)
