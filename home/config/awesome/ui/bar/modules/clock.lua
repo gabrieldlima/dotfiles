@@ -1,16 +1,28 @@
-local awful   = require("awful")
-local wibox   = require("wibox")
-local helpers = require("helpers")
-local colors  = require("theme.colorsheme")
+local awful     = require("awful")
+local wibox     = require("wibox")
+local watch     = require("awful.widget.watch")
+local colors    = require("theme.colorsheme")
+local helpers   = require("helpers")
+local user      = require("config.user")
 
 -- Clock widget
 --------------------------------------------------------------------------------
+-- '+%a %b %d %I:%M %p'
+local cmd = [[
+  bash -c "date '+%a %b %d %I:%M %p'"
+]]
+
 local textclock = wibox.widget {
-  -- format = "%I:%M %p",
-  format = "%a %b %d %I:%M %p",
-  widget = wibox.widget.textclock
+  widget = wibox.widget.textbox
 }
-local mytextclock = helpers.cbackground(textclock, helpers.rrect(4), colors.background)
+
+watch(cmd, 30,
+  function(widget, stdout)
+    widget.markup = helpers.mtext(colors.pink, user.config.font, "") ..
+                    helpers.mtext(colors.foreground, user.config.font, stdout)
+  end,
+  textclock)
+local mytextclock = helpers.cbackground(helpers.margin(textclock, 0, 4, 4, 4), helpers.rrect(4), colors.background)
 
 -- Calendar widget
 --------------------------------------------------------------------------------
@@ -30,14 +42,14 @@ local calendar = awful.widget.calendar_popup.month {
     border_color = colors.overlay0,
   },
   style_header = {
-    fg_color = colors.foreground,
-    bg_color = colors.background,
+    fg_color = colors.background,
+    bg_color = colors.blue,
     shape = helpers.rrect(4)
   },
   style_weekday = { fg_color = colors.foreground },
   style_normal = { fg_color = colors.subtext0 },
-  style_focus = { fg_color = colors.blue },
+  style_focus = { fg_color = colors.background, bg_color = colors.blue, shape = helpers.rrect(4) },
 }
-calendar:attach(mytextclock, "t", { on_hover = false })
+calendar:attach(mytextclock, "tc", { on_hover = false })
 
 return mytextclock
