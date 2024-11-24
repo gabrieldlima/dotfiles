@@ -4,7 +4,6 @@
 }: {
   imports = [
     # ./alacritty.nix
-    # ./gaming.nix
     # ./hyprland
     # ./kitty.nix
 
@@ -13,6 +12,7 @@
     ./bat.nix
     ./eza.nix
     ./fish.nix
+    ./gaming.nix
     ./git.nix
     ./qutebrowser.nix
     ./redshift.nix
