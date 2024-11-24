@@ -13,6 +13,8 @@ local logo       = require("ui.bar.modules.logo")
 local ram        = require("ui.bar.modules.ram")
 local systray    = require("ui.bar.modules.systray")
 local taglist    = require("ui.bar.modules.taglist")
+local volume     = require("ui.bar.modules.volume")
+local network    = require("ui.bar.modules.network")
 
 awful.screen.connect_for_each_screen(function(s)
 
@@ -44,22 +46,24 @@ awful.screen.connect_for_each_screen(function(s)
       {
         -- Left widgets
         {
-          helpers.margin(logo, 4, 4, 4, 4),
+          helpers.margin(logo, 4, 4, 8, 8),
           helpers.margin(taglist(s), 4, 4, 5, 5),
           layout = wibox.layout.fixed.horizontal,
         },
 
         -- Center widgets
         {
-          helpers.margin(clock, 4, 4, 4, 4),
+          helpers.margin(clock, 4, 4, 8, 8),
           layout = wibox.layout.flex.horizontal,
         },
 
         -- Right widgets
         {
-          helpers.margin(systray, 4, 4, 4, 4),
-          helpers.margin(cpu, 4, 4, 4, 4),
-          helpers.margin(ram, 4, 4, 4, 4),
+          helpers.margin(systray, 4, 4, 8, 8),
+          helpers.margin(cpu, 4, 4, 8, 8),
+          helpers.margin(ram, 4, 4, 8, 8),
+          helpers.margin(network, 4, 4, 8, 8),
+          helpers.margin(volume, 4, 4, 8, 8),
           helpers.margin(layoutbox, 4, 4, 4, 4),
           layout = wibox.layout.fixed.horizontal,
         },
