@@ -14,7 +14,7 @@
     ./fish.nix
     ./gaming.nix
     ./git.nix
-    ./i3wm.nix
+    ./i3wm
     ./qutebrowser.nix
     ./redshift.nix
     ./rofi.nix

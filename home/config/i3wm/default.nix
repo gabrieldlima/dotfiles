@@ -3,9 +3,9 @@
   ...
 }: {
   imports = [
-    ./flameshot.nix
-    ./picom.nix
-    ./xresources.nix
+    ../flameshot.nix
+    ../picom.nix
+    ../xresources.nix
   ];
 
   home = {
