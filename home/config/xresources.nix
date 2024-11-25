@@ -1,45 +1,41 @@
 {
   xresources = {
-    # properties = {
-    #   "XTerm*faceName" = "FiraCode Nerd Font:size=12";
-    #   "Xcursor.theme" = "GoogleDot-White";
-    #   "Xcursor.size" = 16;
-    # };
     extraConfig = ''
-      *background: #050508
-      *foreground: #CDD6F4
+      *background: #000000
+      *foreground: #cdd6f4
+      *cursorColor: #f5e0dc
 
       ! black
-      *color0: #45475A
-      *color8: #585B70
+      *color0: #45475a
+      *color8: #585b70
 
       ! red
-      *color1: #F38BA8
-      *color9: #F38BA8
+      *color1: #f38ba8
+      *color9: #f38ba8
 
       ! green
-      *color2: #A6E3A1
-      *color10: #A6E3A1
+      *color2: #a6e3a1
+      *color10: #a6e3a1
 
       ! yellow
-      *color3: #F9E2AF
-      *color11: #F9E2AF
+      *color3: #f9e2af
+      *color11: #f9e2af
 
       ! blue
-      *color4: #89B4FA
-      *color12: #89B4FA
+      *color4: #89b4fa
+      *color12: #89b4fa
 
       ! magenta
-      *color5: #F5C2E7
-      *color13: #F5C2E7
+      *color5: #f5c2e7
+      *color13: #f5c2e7
 
       ! cyan
-      *color6: #94E2D5
-      *color14: #94E2D5
+      *color6: #94e2d5
+      *color14: #94e2d5
 
       ! white
-      *color7: #BAC2DE
-      *color15: #A6ADC8
-      '';
+      *color7: #bac2de
+      *color15: #a6adc8
+    '';
   };
 }
