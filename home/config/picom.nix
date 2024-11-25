@@ -24,6 +24,9 @@
       shadow-offset-x = -12;
       shadow-offset-y = -12;
       shadow-color = "#000000";
+      shadow-exclude = [
+        "window_type = 'dock'"
+      ];
 
       # Opacity of windows
       active-opacity = 1.0;
