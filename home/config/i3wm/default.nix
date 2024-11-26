@@ -231,9 +231,8 @@
         "Mod4+minus"       = "scratchpad show";
         "Mod4+Shift+minus" = "move scratchpad";
 
-        # TODO: Find a good key for these
-        "Mod4+Shift+i" = "split h";
-        "Mod4+Shift+." = "split v";
+        "Mod4+d"       = "split h";
+        "Mod4+Shift+d" = "split v";
 
         # change focus
         "Mod4+h" = "focus left";
