@@ -39,18 +39,8 @@
       # bindsym Mod4+a focus parent
       # bindsym Mod4+d exec /nix/store/sqmgxc3mi2fq656srxjfi541if63dxfz-dmenu-5.3/bin/dmenu_run
       # bindsym Mod4+minus scratchpad show
-      # bindsym Mod4+r mode resize
       # bindsym Mod4+space focus mode_toggle
       # bindsym Mod4+v split v
-
-      # mode "resize" {
-      #   bindsym Down resize grow height 10 px or 10 ppt
-      #   bindsym Escape mode default
-      #   bindsym Left resize shrink width 10 px or 10 ppt
-      #   bindsym Return mode default
-      #   bindsym Right resize grow width 10 px or 10 ppt
-      #   bindsym Up resize shrink height 10 px or 10 ppt
-      # }
 
       # Reading colors from resources
       set_from_resource $background i3wm.background #000000
@@ -202,7 +192,7 @@
               text = "$foreground";
             };
             urgentWorkspace = {
-              background = "$red";
+              background = "$green";
               border = "$background";
               text = "$background";
             };
@@ -250,6 +240,8 @@
         "Mod4+Shift+space" = "floating toggle";
         "Mod4+Shift+f"     = "fullscreen toggle";
 
+        "Mod4+r"           = "mode resize";
+
         # TODO: Find a good key for these
         "Mod4+Shift+i" = "split h";
         "Mod4+Shift+." = "split v";
@@ -287,6 +279,19 @@
         "Mod4+Shift+7" = "move container to workspace number ${ws7}";
         "Mod4+Shift+8" = "move container to workspace number ${ws8}";
         "Mod4+Shift+9" = "move container to workspace number ${ws9}";
+      };
+
+      modes = {
+        resize = {
+          Escape = "mode default";
+          Return = "mode default";
+
+          # vim-keys
+          j = "resize grow height 10 px or 10 ppt";
+          h = "resize shrink width 10 px or 10 ppt";
+          l = "resize grow width 10 px or 10 ppt";
+          k = "resize shrink height 10 px or 10 ppt";
+        };
       };
     };
   };
