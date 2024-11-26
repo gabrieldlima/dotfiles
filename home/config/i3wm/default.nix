@@ -26,22 +26,6 @@
     enable = true;
 
     extraConfig = ''
-      # bindsym Mod4+Down focus down
-      # bindsym Mod4+Left focus left
-      # bindsym Mod4+Right focus right
-      # bindsym Mod4+Shift+. split v
-      # bindsym Mod4+Shift+Down move down
-      # bindsym Mod4+Shift+Left move left
-      # bindsym Mod4+Shift+Right move right
-      # bindsym Mod4+Shift+Up move up
-      # bindsym Mod4+Shift+minus move scratchpad
-      # bindsym Mod4+Up focus up
-      # bindsym Mod4+a focus parent
-      # bindsym Mod4+d exec /nix/store/sqmgxc3mi2fq656srxjfi541if63dxfz-dmenu-5.3/bin/dmenu_run
-      # bindsym Mod4+minus scratchpad show
-      # bindsym Mod4+space focus mode_toggle
-      # bindsym Mod4+v split v
-
       # Reading colors from resources
       set_from_resource $background i3wm.background #000000
       set_from_resource $foreground i3wm.foreground #cdd6f4
@@ -53,7 +37,6 @@
       set_from_resource $magenta i3wm.color5     #f5c2e7
       set_from_resource $cyan    i3wm.color6     #94e2d5
     '';
-
 
     config = {
       startup = [
@@ -240,7 +223,13 @@
         "Mod4+Shift+space" = "floating toggle";
         "Mod4+Shift+f"     = "fullscreen toggle";
 
-        "Mod4+r"           = "mode resize";
+        "Mod4+r" = "mode resize";
+
+        "Mod4+a"     = "focus parent";
+        "Mod4+space" = "focus mode_toggle";
+
+        "Mod4+minus"       = "scratchpad show";
+        "Mod4+Shift+minus" = "move scratchpad";
 
         # TODO: Find a good key for these
         "Mod4+Shift+i" = "split h";
