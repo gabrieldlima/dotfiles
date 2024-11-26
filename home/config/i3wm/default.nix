@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   ...
 }: {
   imports = [
@@ -27,7 +28,6 @@
     extraConfig = ''
       # bindsym Mod4+Down focus down
       # bindsym Mod4+Left focus left
-      # bindsym Mod4+Return exec --no-startup-id wezterm
       # bindsym Mod4+Right focus right
       # bindsym Mod4+Shift+. split v
       # bindsym Mod4+Shift+Down move down
@@ -37,10 +37,8 @@
       # bindsym Mod4+Shift+minus move scratchpad
       # bindsym Mod4+Up focus up
       # bindsym Mod4+a focus parent
-      # bindsym Mod4+b exec --no-startup-id qutebrowser
       # bindsym Mod4+d exec /nix/store/sqmgxc3mi2fq656srxjfi541if63dxfz-dmenu-5.3/bin/dmenu_run
       # bindsym Mod4+minus scratchpad show
-      # bindsym Mod4+p exec --no-startup-id rofi -show drun
       # bindsym Mod4+r mode resize
       # bindsym Mod4+space focus mode_toggle
       # bindsym Mod4+v split v
@@ -53,29 +51,6 @@
       #   bindsym Right resize grow width 10 px or 10 ppt
       #   bindsym Up resize shrink height 10 px or 10 ppt
       # }
-
-      #   bar {
-      #     font pango:monospace 8.000000
-      #     mode dock
-      #     hidden_state hide
-      #     position bottom
-      #     status_command /nix/store/a3ih241ld0jq7ycf3rl91y4xcww3fhcq-i3status-2.15/bin/i3status
-      #     i3bar_command /nix/store/bgpl4fdpc4mpxnlx0mzaahs03z7zkpws-i3-4.24/bin/i3bar
-      #     workspace_buttons yes
-      #     strip_workspace_numbers no
-      #     tray_output primary
-      #     colors {
-      #       background #000000
-      #       statusline #ffffff
-      #       separator #666666
-      #       focused_workspace #4c7899 #285577 #ffffff
-      #       active_workspace #333333 #5f676a #ffffff
-      #       inactive_workspace #333333 #222222 #888888
-      #       urgent_workspace #2f343a #900000 #ffffff
-      #       binding_mode #2f343a #900000 #ffffff
-      #     }
-      #   }
-      #
 
       # Reading colors from resources
       set_from_resource $background i3wm.background #000000
@@ -93,8 +68,8 @@
     config = {
       startup = [
         { command = "picom"; notification = false; }
-        { command = "xwallpaper --stretch /home/gabriel/Pictures/Wallpapers/wallpaper.jpg"; notification = false; }
-        { command = "xrdb -load /home/gabriel/.Xresources"; notification = false; }
+        { command = "xwallpaper --stretch ${config.home.homeDirectory}/Pictures/Wallpapers/wallpaper.jpg"; notification = false; }
+        { command = "xrdb -load ${config.home.homeDirectory}/.Xresources"; notification = false; }
         { command = "setxkbmap -option caps:escape"; notification = false; }
       ];
 
@@ -109,9 +84,24 @@
       };
 
       window = {
-        titlebar = true;
+        titlebar = false;
         border = 2;
-        hideEdgeBorders = "smart";
+        hideEdgeBorders = "none";
+
+        commands = [
+          {
+            command = "floating enable";
+            criteria = { class = "^steam$"; };
+          }
+          {
+            command = "floating enable";
+            criteria = { class = "^1Password$"; };
+          }
+          {
+            command = "floating enable";
+            criteria = { class = "^Sxiv$"; };
+          }
+        ];
       };
 
       floating = {
@@ -120,8 +110,8 @@
       };
 
       gaps = {
-        smartBorders = "no_gaps";
-        smartGaps = true;
+        smartBorders = "off";
+        smartGaps = false;
         inner = 10;
         left = 1;
         right = 1;
@@ -136,44 +126,94 @@
         mouseWarping = true;
       };
 
+      assigns = {
+        "2" = [{ class = "^qutebrowser$"; }];
+        "3" = [{ class = "^obsidian$"; }];
+        "8" = [{ class = "^Virt-manager$"; }];
+        "9" = [{ class = "^steam$"; }];
+      };
+
       colors = {
         background = "$background";
         focused = {
           border      = "$blue";
           background  = "$blue";
           text        = "$background";
-          indicator   = "$red";
+          indicator   = "$blue";
           childBorder = "$blue";
         };
         focusedInactive = {
           border      = "$background";
           background  = "$background";
           text        = "$foreground";
-          indicator   = "$red";
+          indicator   = "$blue";
           childBorder = "$background";
         };
         unfocused = {
           border      = "$background";
           background  = "$background";
           text        = "$foreground";
-          indicator   = "$red";
+          indicator   = "$blue";
           childBorder = "$background";
         };
         urgent = {
           border      = "$blue";
           background  = "$blue";
           text        = "$foreground";
-          indicator   = "$red";
-          childBorder = "$green";
+          indicator   = "$blue";
+          childBorder = "$red";
         };
         placeholder = {
           border      = "$blue";
           background  = "$blue";
           text        = "$foreground";
-          indicator   = "$red";
+          indicator   = "$blue";
           childBorder = "$green";
         };
       };
+
+      bars = let
+        bar_cmd = "${config.home.homeDirectory}/.nix-profile/bin/i3status-rs";
+        bar_cfg = "${config.home.homeDirectory}/.config/i3status-rust/config-default.toml";
+      in [
+        {
+          position = "bottom";
+          statusCommand = "${bar_cmd} ${bar_cfg}";
+
+          fonts = {
+            names = [ "Iosevka Slab" "FiraCode Nerd Font" ];
+            style = "Bold";
+            size = 10.0;
+          };
+
+          colors = {
+            background = "$background";
+            statusline = "$foreground";
+            separator  = "$red";
+
+            focusedWorkspace = {
+              background = "$blue";
+              border = "$background";
+              text = "$background";
+            };
+            activeWorkspace = {
+              background = "$yellow";
+              border = "$background";
+              text = "$foreground";
+            };
+            urgentWorkspace = {
+              background = "$red";
+              border = "$background";
+              text = "$background";
+            };
+            inactiveWorkspace = {
+              background = "$background";
+              border = "$background";
+              text = "$foreground";
+            };
+          };
+        }
+      ];
 
       modifier = "Mod4";
 
@@ -210,7 +250,7 @@
         "Mod4+Shift+space" = "floating toggle";
         "Mod4+Shift+f"     = "fullscreen toggle";
 
-        # TODO: Found a good key for these
+        # TODO: Find a good key for these
         "Mod4+Shift+i" = "split h";
         "Mod4+Shift+." = "split v";
 
