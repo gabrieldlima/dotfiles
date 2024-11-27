@@ -32,10 +32,6 @@
           {
             block = "focused_window";
             format = " $title.str(max_w:200) |  i3wm ";
-            theme_overrides = {
-              idle_bg = "#89b4fa";
-              idle_fg = "#000000";
-            };
           }
 
           # A pomodoro timer
@@ -59,11 +55,11 @@
           }
 
           # The system temperature
-          {
-            block = "temperature";
-            format = " $icon $average ";
-            format_alt = " $icon $min/$average/$max ";
-          }
+          # {
+          #   block = "temperature";
+          #   format = " $icon $average ";
+          #   format_alt = " $icon $min/$average/$max ";
+          # }
 
           # CPU statistics
           {
