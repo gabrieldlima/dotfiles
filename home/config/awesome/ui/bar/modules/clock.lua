@@ -38,7 +38,7 @@ local calendar = awful.widget.calendar_popup.month {
     fg_color     = colors.foreground,
     bg_color     = colors.background,
     padding      = 10,
-    border_width = 3,
+    border_width = 2,
     border_color = colors.blue,
     shape = helpers.rrect(0)
   },

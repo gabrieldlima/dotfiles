@@ -12,7 +12,7 @@ naughty.connect_signal("request::display_error", function(message, startup)
     title   = "Oops, an error happened"..(startup and " during startup!" or "!"),
     message = message,
     border_color = colors.blue,
-    border_width = 3,
+    border_width = 2,
     shape = helpers.rrect(0),
     position = "top_right"
   }

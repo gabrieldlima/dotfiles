@@ -22,7 +22,7 @@ theme.fg_focus                         = color.foreground
 theme.fg_urgent                        = color.red
 theme.fg_minimize                      = color.foreground
 
-theme.border_width                     = 3
+theme.border_width                     = 2
 theme.border_color_active              = color.blue
 theme.border_color_normal              = color.background
 
