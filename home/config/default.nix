@@ -10,6 +10,7 @@
 
     ./bash.nix
     ./bat.nix
+    ./dunst.nix
     ./eza.nix
     ./fish.nix
     ./gaming.nix
