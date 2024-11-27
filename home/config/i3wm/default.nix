@@ -44,6 +44,7 @@
         { command = "xwallpaper --stretch ${config.home.homeDirectory}/Pictures/Wallpapers/wallpaper.jpg"; notification = false; }
         { command = "xrdb -load ${config.home.homeDirectory}/.Xresources"; notification = false; }
         { command = "setxkbmap -option caps:escape"; notification = false; }
+        { command = "dunst"; notification = false; }
       ];
 
       defaultWorkspace = "1";
@@ -162,7 +163,7 @@
           colors = {
             background = "$background";
             statusline = "$foreground";
-            separator  = "$red";
+            separator  = "$blue";
 
             focusedWorkspace = {
               background = "$blue";
@@ -175,7 +176,7 @@
               text = "$foreground";
             };
             urgentWorkspace = {
-              background = "$green";
+              background = "$red";
               border = "$background";
               text = "$background";
             };
