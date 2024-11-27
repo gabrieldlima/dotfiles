@@ -120,7 +120,7 @@
           border      = "$background";
           background  = "$background";
           text        = "$foreground";
-          indicator   = "$blue";
+          indicator   = "$background";
           childBorder = "$background";
         };
         unfocused = {
