@@ -4,10 +4,11 @@
 }: {
   imports = [
     # ./alacritty.nix
-    # ./awesome
     # ./hyprland
+    # ./i3wm
     # ./kitty.nix
 
+    ./awesome
     ./bash.nix
     ./bat.nix
     ./dunst.nix
@@ -15,7 +16,6 @@
     ./fish.nix
     ./gaming.nix
     ./git.nix
-    ./i3wm
     ./qutebrowser.nix
     ./redshift.nix
     ./rofi.nix
