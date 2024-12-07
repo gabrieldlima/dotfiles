@@ -31,7 +31,7 @@ theme.bg_systray                       = color.background
 -------------------------------------------------------------------------------
 -- hotkeys
 -------------------------------------------------------------------------------
-theme.hotkeys_border_color             = color.blue
+theme.hotkeys_border_color             = color.background
 theme.hotkeys_modifiers_fg             = color.foreground
 theme.hotkeys_font                     = user.config.font
 theme.hotkeys_description_font         = user.config.font
