@@ -41,14 +41,14 @@ watch(cmd, 2,
     awful.spawn.easy_async_with_shell("pactl get-sink-mute @DEFAULT_SINK@", function (is_muted)
       is_muted = is_muted:match("yes")
       if is_muted then
-        widget.markup = helpers.mtext(colors.background, user.config.font, "󰖁 ") ..
-                        helpers.mtext(colors.background, user.config.font, "off")
+        widget.markup = helpers.mtext(colors.rosewater, "FiraCode Nerd Font Bold 12", "󰖁 ") ..
+                        helpers.mtext(colors.foreground, user.config.font, "off")
       else
-        widget.markup = helpers.mtext(colors.background, user.config.font, "󰕾 ") ..
-                        helpers.mtext(colors.background, user.config.font, stdout)
+        widget.markup = helpers.mtext(colors.rosewater, "FiraCode Nerd Font Bold 12", "󰕾 ") ..
+                        helpers.mtext(colors.foreground, user.config.font, stdout)
       end
     end)
   end,
   volume_widget)
 
-return helpers.cbackground(helpers.margin(volume_widget, 4, 4, 4, 4), helpers.rrect(4), colors.blue)
+return helpers.cbackground(helpers.margin(volume_widget, 4, 4, 4, 4), helpers.rrect(4), colors.background)
