@@ -27,7 +27,7 @@
       inherit (config.lib.formats.rasi) mkLiteral;
     in {
       "*" = {
-        width             = mkLiteral "700";
+        width             = mkLiteral "800";
       };
       "#element-text, element-icon , mode-switcher" = {
         background-color  = mkLiteral "inherit";
@@ -71,7 +71,7 @@
       "#listview" = {
         background-color  = mkLiteral "#000000";
         border            = mkLiteral "0px 0px 0px";
-        columns           = mkLiteral "1";
+        columns           = mkLiteral "2";
         lines             = mkLiteral "5";
         margin            = mkLiteral "0px 20px 0px 20px";
         padding           = mkLiteral "6px 0px 0px";
