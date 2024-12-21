@@ -14,7 +14,6 @@
     ./dunst.nix
     ./eza.nix
     ./fish.nix
-    ./gaming.nix
     ./git.nix
     ./qutebrowser.nix
     ./redshift.nix
