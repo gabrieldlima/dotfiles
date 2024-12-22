@@ -1,7 +1,7 @@
-local wibox = require("wibox")
-local gears = require("gears")
-local dpi   = require("beautiful").xresources.apply_dpi
-
+local wibox   = require("wibox")
+local gears   = require("gears")
+local dpi     = require("beautiful").xresources.apply_dpi
+local colors  = require("theme.colorsheme")
 
 local helpers = {}
 
@@ -44,9 +44,19 @@ helpers.cbackground = function(widget, shape, bg)
   }
 end
 
--- Module: gears.color
--- NOTE: https://awesomewm.org/doc/api/libraries/gears.color.html#recolor_image
--- -----------------------------------------------------------------------------
+helpers.tagcolor = function(self, c3)
+    if c3.selected then
+        self.bg = colors.blue
+        self.forced_width = 40
+    elseif #c3:clients() == 0 then
+        self.bg = colors.background
+        self.forced_width = 12
+    else
+        self.bg = colors.lavender
+        self.forced_width = 12
+    end
+end
+
 helpers.recolor_image = function(image, color)
   return gears.color.recolor_image(image, color)
 end
