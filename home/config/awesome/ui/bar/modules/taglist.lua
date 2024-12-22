@@ -14,7 +14,6 @@ local buttons = {
         client.focus:move_to_tag(t)
       end
     end,
-    on_release = nil,
   },
 
   awful.button {
@@ -26,52 +25,41 @@ local buttons = {
         client.focus:toggle_tag(t)
       end
     end,
-    on_release = nil,
   },
 
   awful.button {
     description = "viewtoggle",
-    modifiers = {},
     button = mod.rightclick,
     on_press = function (t)
       awful.tag.viewtoggle(t)
     end,
-    on_release = nil,
   },
 
   awful.button {
     description = "viewprev",
-    modifiers = {},
     button = mod.scrollup,
     on_press = function (t)
       awful.tag.viewprev(t.screen)
     end,
-    on_release = nil,
   },
 
   awful.button {
     description = "viewnext",
-    modifiers = {},
     button = mod.scrolldown,
     on_press = function (t)
       awful.tag.viewnext(t.screen)
     end,
-    on_release = nil,
   },
 
   awful.button {
     description = "view_only",
-    modifiers = {},
     button = mod.leftclick,
     on_press = function (t)
       t:view_only()
     end,
-    on_release = nil,
   },
 }
 
--- Widget
--- =============================================================================
 local taglist = function (s)
   local taglist_widget = awful.widget.taglist {
     screen  = s,
@@ -82,8 +70,6 @@ local taglist = function (s)
       font    = nil,
       spacing = 10,
       shape   = nil,
-
-      -- Colors
       bg_focus    = colors.background,
       fg_focus    = colors.blue,
       bg_occupied = colors.background,
@@ -91,38 +77,19 @@ local taglist = function (s)
       bg_empty    = colors.background,
       fg_empty    = colors.surface0,
       bg_urgent   = colors.background,
-      fg_urgent   = colors.red,
+      fg_urgent   = colors.red,  -- TODO: Fix urgent color not working
     },
 
-    -- TODO: Fix urgent color not working
     widget_template = {
       widget = wibox.container.background,
       shape  = helpers.rrect(10),
 
       create_callback = function (self, c3, _)
-        if c3.selected then
-          self.bg = colors.blue
-          self.forced_width = 40
-        elseif #c3:clients() == 0 then
-          self.bg = "#363a4f"
-          self.forced_width = 12
-        else
-          self.bg = colors.lavender
-          self.forced_width = 12
-        end
+        helpers.tagcolor(self, c3)
       end,
 
       update_callback = function (self, c3, _)
-        if c3.selected then
-          self.bg = colors.blue
-          self.forced_width = 40
-        elseif #c3:clients() == 0 then
-          self.bg = "#363a4f"
-          self.forced_width = 12
-        else
-          self.bg = colors.lavender
-          self.forced_width = 12
-        end
+        helpers.tagcolor(self, c3)
       end,
     }
   }
