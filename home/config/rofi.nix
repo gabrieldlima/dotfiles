@@ -37,7 +37,7 @@
         background-color  = mkLiteral "#000000";
         border            = mkLiteral "2px";
         border-color      = mkLiteral "#000000";
-        border-radius     = mkLiteral "5px";
+        border-radius     = mkLiteral "0px";
         height            = mkLiteral "400px";
       };
       "#mainbox" = {
