@@ -45,7 +45,7 @@ ruled.client.connect_signal("request::rules", function()
 
   -- Virt Manager
   ruled.client.append_rule {
-    rule       = { class = "Virt-manager" },
+    rule       = { class = ".virt-manager-wrapped" },
     properties = { screen = 1, tag = "8" },
   }
 
