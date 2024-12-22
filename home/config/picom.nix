@@ -13,7 +13,7 @@
       "${config.home.homeDirectory}/.config/picom/picom.conf".text = ''
         active-opacity = 1.000000;
         backend = "glx";
-        corner-radius = 10;
+        corner-radius = 0;
         detect-client-opacity = true;
         detect-rounded-corners = true;
         detect-transient = true;
@@ -46,14 +46,12 @@
         animations = (
             {
               triggers = [ "open", "show" ];
-              preset = "fly-in";
-              direction = "up";
+              preset = "appear";
               duration = 0.2;
             },
             {
               triggers = [ "close", "hide" ];
-              preset = "fly-out";
-              direction = "down";
+              preset = "disappear";
               duration = 0.2;
             },
             {
