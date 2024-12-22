@@ -3,11 +3,6 @@
   ...
 }: {
   imports = [
-    # ./alacritty.nix
-    # ./hyprland
-    # ./i3wm
-    # ./kitty.nix
-
     ./awesome
     ./bash.nix
     ./bat.nix
