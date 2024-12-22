@@ -52,7 +52,7 @@ local buttons = {
   awful.button {
     description = "viewnext",
     modifiers = {},
-    button = mod.scrolldowm,
+    button = mod.scrolldown,
     on_press = function (t)
       awful.tag.viewnext(t.screen)
     end,

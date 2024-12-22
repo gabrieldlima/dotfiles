@@ -9,7 +9,7 @@ return {
   leftclick     = 1,
   midclick      = 2,
   rightclick    = 3,
-  scrolldowm    = 4,
+  scrolldown    = 4,
   scrollup      = 5,
   sidedownclick = 8,
   sideupclick   = 9
