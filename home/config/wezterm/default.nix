@@ -1,12 +1,18 @@
 {
-  # pkgs,
+  inputs,
   ...
 }: {
-  # home.packages = with pkgs; [
-  #   wezterm
-  # ];
-
   home.file = {
-    ".config/wezterm/wezterm.lua".source = ./wezterm.lua;
+    ".config/wezterm/config.lua".source = ./config.lua;
+  };
+
+  programs.wezterm = {
+    enable = true;
+    package = inputs.wezterm-nightly.packages.x86_64-linux.default;
+
+    extraConfig = ''
+      local config = require("config")
+      return config
+    '';
   };
 }
