@@ -49,7 +49,7 @@ helpers.tagcolor = function(self, c3)
         self.bg = colors.blue
         self.forced_width = 40
     elseif #c3:clients() == 0 then
-        self.bg = colors.background
+        self.bg = colors.base
         self.forced_width = 12
     else
         self.bg = colors.lavender
