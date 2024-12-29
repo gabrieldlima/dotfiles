@@ -1,23 +1,64 @@
+# ╔══════════════════════════════════════════════════════════════════════════════════════════════════════╗
+# ║██╗  ██╗ ██████╗ ███╗   ███╗███████╗    ███╗   ███╗ █████╗ ███╗   ██╗ █████╗  ██████╗ ███████╗██████╗ ║
+# ║██║  ██║██╔═══██╗████╗ ████║██╔════╝    ████╗ ████║██╔══██╗████╗  ██║██╔══██╗██╔════╝ ██╔════╝██╔══██╗║
+# ║███████║██║   ██║██╔████╔██║█████╗█████╗██╔████╔██║███████║██╔██╗ ██║███████║██║  ███╗█████╗  ██████╔╝║
+# ║██╔══██║██║   ██║██║╚██╔╝██║██╔══╝╚════╝██║╚██╔╝██║██╔══██║██║╚██╗██║██╔══██║██║   ██║██╔══╝  ██╔══██╗║
+# ║██║  ██║╚██████╔╝██║ ╚═╝ ██║███████╗    ██║ ╚═╝ ██║██║  ██║██║ ╚████║██║  ██║╚██████╔╝███████╗██║  ██║║
+# ║╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝    ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝║
+# ╚══════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
 {
-  inputs,
-  lib,
   config,
   pkgs,
   ...
 }: {
   imports = [
-    ./config
+    ./alacritty
+    ./awesome
+    ./bash
+    ./bat
+    ./dunst
+    ./eza
+    ./fish
+    ./git
+    ./kitty
+    ./mangohud
+    ./qutebrowser
+    ./redshift
+    ./rofi
+    ./starship
+    ./stylix
+    ./wezterm
+    ./yazi
+    ./zathura
   ];
-
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
 
   home = {
     username = "gabriel";
     homeDirectory = "/home/gabriel";
+
+    packages = [
+      pkgs._1password-gui
+      pkgs.atuin
+      pkgs.clang-tools
+      pkgs.duf
+      pkgs.fd
+      pkgs.file
+      pkgs.gcc
+      pkgs.gimp
+      pkgs.gnumake
+      pkgs.jq
+      pkgs.neovim
+      pkgs.nixd
+      pkgs.obsidian
+      pkgs.pavucontrol
+      pkgs.ripgrep
+      pkgs.steam
+      pkgs.tldr
+      pkgs.unzip
+      pkgs.wget
+      pkgs.zoxide
+    ];
 
     sessionVariables = {
       # Shell
@@ -93,6 +134,12 @@
         "image/png" = [ "sxiv.desktop" ];
         "image/jpg" = [ "sxiv.desktop" ];
       };
+    };
+  };
+
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
     };
   };
 
