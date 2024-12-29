@@ -4,10 +4,10 @@
   ...
 }: {
   imports = [
-    ./i3status.nix
-    ../flameshot.nix
-    ../picom.nix
-    ../xresources.nix
+    ../flameshot
+    ../i3status
+    ../picom
+    ../xresources
   ];
 
   home = {

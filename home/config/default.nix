@@ -3,51 +3,45 @@
   ...
 }: {
   imports = [
+    ./alacritty
     ./awesome
-    ./bash.nix
-    ./bat.nix
-    ./dunst.nix
-    ./eza.nix
-    ./fish.nix
-    ./gaming.nix
-    ./git.nix
-    ./qutebrowser.nix
-    ./redshift.nix
-    ./rofi.nix
-    ./starship.nix
-    ./stylix.nix
+    ./bash
+    ./bat
+    ./dunst
+    ./eza
+    ./fish
+    ./git
+    ./kitty
+    ./mangohud
+    ./qutebrowser
+    ./redshift
+    ./rofi
+    ./starship
+    ./stylix
     ./wezterm
     ./yazi
-    ./zathura.nix
+    ./zathura
   ];
 
   home.packages = with pkgs; [
-    # dev tools
-    # -------------
-    clang-tools
-    gcc
-    gnumake
-    nixd
-
-    # cli apps
-    # -------------
+    _1password-gui
     atuin
+    clang-tools
     duf
     fd
     file
+    gcc
+    gimp
+    gnumake
     jq
     neovim
+    nixd
+    obsidian
+    pavucontrol
     ripgrep
     tldr
     unzip
     wget
     zoxide
-
-    # gui apps
-    # -------------
-    _1password-gui
-    gimp
-    obsidian
-    pavucontrol
   ];
 }

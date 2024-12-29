@@ -41,7 +41,7 @@ pkgs,
   crust     = "0xff11111b";
 in {
   imports = [
-    ./waybar.nix
+    ../waybar
   ];
 
   home.packages = with pkgs; [

@@ -2,7 +2,7 @@
 ...
 }: {
   programs.kitty = {
-    enable = true;
+    enable = false;
 
     font = {
       name = "Iosevka Term Slab Medium";
