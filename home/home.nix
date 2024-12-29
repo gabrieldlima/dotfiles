@@ -8,7 +8,6 @@
 # ╚══════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 {
-  config,
   pkgs,
   ...
 }: {
@@ -29,6 +28,7 @@
     ./starship
     ./stylix
     ./wezterm
+    ./xdg
     ./yazi
     ./zathura
   ];
@@ -60,6 +60,10 @@
       pkgs.zoxide
     ];
 
+    sessionPath = [
+      "$HOME/.local/bin"
+    ];
+
     sessionVariables = {
       # Shell
       BROWSER = "qutebrowser";
@@ -69,7 +73,6 @@
       HISTFILE = "$XDG_DATA_HOME/history";
       HISTSIZE = 10000;
       SAVEHIST = 10000;
-      PATH = "$HOME/.local/bin/:$PATH";
 
       # # ~/ Clean-up
       CARGO_HOME = "$XDG_DATA_HOME/cargo";
@@ -109,33 +112,6 @@
     };
   };
 
-  xdg = {
-    # NOTE: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
-    enable = true;
-
-    # $XDG_CACHE_HOME: Absolute path to directory holding application caches
-    cacheHome = "${config.home.homeDirectory}/.cache";
-
-    # $XDG_CONFIG_HOME: Absolute path to directory holding application configurations
-    configHome = "${config.home.homeDirectory}/.config";
-
-    # $XDG_DATA_HOME: Absolute path to directory holding application data
-    dataHome = "${config.home.homeDirectory}/.local/share";
-
-    # $XDG_STATE_HOME: Absolute path to directory holding application states
-    stateHome = "${config.home.homeDirectory}/.local/state";
-
-    userDirs.createDirectories = true;
-
-    mime.enable = true;
-    mimeApps = {
-      enable = true;
-      defaultApplications = {
-        "image/png" = [ "sxiv.desktop" ];
-        "image/jpg" = [ "sxiv.desktop" ];
-      };
-    };
-  };
 
   nixpkgs = {
     config = {
