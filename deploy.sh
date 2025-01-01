@@ -7,7 +7,7 @@ TMP_DIR="/tmp"
 # /* ======================================================================== *\
 awesome() {
   echo "Creating symbolic link for AwesomeWM..."
-  ln -sf "$DOTFILES_DIR/home/config/awesome" "$HOME/.config/awesome"
+  ln -sf "$DOTFILES_DIR/home/awesome" "$HOME/.config/awesome"
 }
 
 
