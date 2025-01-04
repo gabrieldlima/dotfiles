@@ -11,44 +11,15 @@
 pkgs,
 ...
 }: let
-  # Theme: Catppuccin Mocha
-  # ========================================================================
-  rosewater = "0xfff5e0dc";
-  flamingo  = "0xfff2cdcd";
-  pink      = "0xfff5c2e7";
-  mauve     = "0xffcba6f7";
-  red       = "0xfff38ba8";
-  maroon    = "0xffeba0ac";
-  peach     = "0xfffab387";
-  yellow    = "0xfff9e2af";
-  green     = "0xffa6e3a1";
-  teal      = "0xff94e2d5";
-  sky       = "0xff89dceb";
-  sapphire  = "0xff74c7ec";
-  blue      = "0xff89b4fa";
-  lavender  = "0xffb4befe";
-  text      = "0xffcdd6f4";
-  subtext1  = "0xffbac2de";
-  subtext0  = "0xffa6adc8";
-  overlay2  = "0xff9399b2";
-  overlay1  = "0xff7f849c";
-  overlay0  = "0xff6c7086";
-  surface2  = "0xff585b70";
-  surface1  = "0xff45475a";
-  surface0  = "0xff313244";
-  base      = "0xff000000";
-  mantle    = "0xff181825";
-  crust     = "0xff11111b";
+  red  = "rgba(f38ba8ff)";
+  blue = "rgba(89b4faff)";
+  text = "rgba(cdd6f4ff)";
+  base = "rgba(000000ff)";
 in {
-  imports = [
-    ../waybar
-  ];
-
   home.packages = with pkgs; [
     hyprpicker
     socat
     swww
-    xdg-desktop-portal-hyprland
   ];
 
   wayland.windowManager.hyprland = {
@@ -66,10 +37,10 @@ in {
       env = XDG_SESSION_TYPE,wayland
       env = XDG_SESSION_DESKTOP,Hyprland
 
-      env = QT_AUTO_SCREEN_SCALE_FACTOR,1
-      env = QT_QPA_PLATFORM,wayland;xcb
-      env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
-      env = QT_QPA_PLATFORMTHEME,qt5ct
+      # env = QT_AUTO_SCREEN_SCALE_FACTOR,1
+      # env = QT_QPA_PLATFORM,wayland;xcb
+      # env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
+      # env = QT_QPA_PLATFORMTHEME,qt5ct
     '';
 
     settings = {
@@ -81,22 +52,21 @@ in {
       # ========================================================================
       exec-once = [
         "swww-daemon"
-        "waybar"
       ];
       exec = [ ];
 
       # General
       # ========================================================================
       general = {
-        border_size = 3;
+        border_size = 2;
         no_border_on_floating = false;
         gaps_in = 5;
         gaps_out = 10;
         gaps_workspaces = 0;
         "col.active_border" = "${blue}";
         "col.inactive_border" = "${base}";
-        "col.nogroup_border_active" = "${blue}";
         "col.nogroup_border" = "${base}";
+        "col.nogroup_border_active" = "${blue}";
         layout = "master";
         no_focus_fallback = true;
         resize_on_border = true;
@@ -104,23 +74,22 @@ in {
         hover_icon_on_border = true;
         allow_tearing = false;
         resize_corner = 0;
+
+        snap = {
+          enabled = false;
+          window_gap = 10;
+          monitor_gap = 10;
+          border_overlap = false;
+        };
       };
 
       # Decoration
       # ========================================================================
       decoration = {
-        rounding = 5;
+        rounding = 0;
         active_opacity = 1.0;
         inactive_opacity = 1.0;
         fullscreen_opacity = 1.0;
-        drop_shadow = true;
-        shadow_range = 5;
-        shadow_render_power = 3;
-        shadow_ignore_window = true;
-        "col.shadow" = "${base}";
-        "col.shadow_inactive" = "${base}";
-        shadow_offset = "0, 0";
-        shadow_scale = 1.0;
         dim_inactive = false;
         dim_strength = 0.5;
         dim_special = 0.2;
@@ -142,6 +111,19 @@ in {
           special = false;
           popups = false;
           popups_ignorealpha = 0.2;
+          input_methods = false;
+          input_methods_ignorealpha = 0.2;
+        };
+
+        shadow = {
+          enabled = true;
+          range = 4;
+          render_power = 3;
+          sharp = false;
+          ignore_window = true;
+          color = "0xee1a1a1a";
+          offset = "0, 0";
+          scale = 1.0;
         };
       };
 
@@ -150,36 +132,55 @@ in {
       animations = {
         enabled = true;
         first_launch_animation = true;
-        bezier = [
-          "myBezier, 0.05, 0.9, 0.1, 1.05"
-        ];
         animation = [
-          "windows, 1, 7, myBezier"
-          "windowsOut, 1, 7, default, popin 80%"
-          "border, 1, 10, default"
-          "borderangle, 1, 8, default"
-          "fade, 1, 7, default"
-          "workspaces, 1, 6, default"
+          "windows, 1, 3, default"
+          "windowsIn, 1, 3, default"
+          "windowsOut, 1, 3, default"
+          "windowsMove, 1, 3, default"
+
+          "layers, 1, 3, default"
+          "layersIn, 1, 3, default"
+          "layersOut, 1, 3, default"
+
+          "fade, 0"
+
+          "border, 0"
+          "borderangle, 0"
+
+          "workspaces, 1, 3, default"
         ];
       };
 
       # Input
       # ========================================================================
       input = {
+        kb_model = "";
         kb_layout = "us";
+        kb_variant = "";
         kb_options = "caps:swapescape";
+        kb_rules = "";
+        kb_file = "";
         numlock_by_default = false;
+        resolve_binds_by_sym = false;
         repeat_rate = 25;
         repeat_delay = 600;
         sensitivity = 0;
+        accel_profile = "";
         force_no_accel = false;
         left_handed = false;
+        scroll_points = "";
+        scroll_method = "";
         scroll_button = 0;
-        scroll_button_lock = false;
+        scroll_button_lock = 0;
+        scroll_factor = 1;
         natural_scroll = false;
         follow_mouse = 1;
         mouse_refocus = true;
+        focus_on_close = 0;
         float_switch_override_focus = 1;
+        special_fallthrough = false;
+        off_window_axis_events = 1;
+        emulate_discrete_scroll = 1;
       };
 
       # Gestures
@@ -267,7 +268,7 @@ in {
         mfact = 0.5;
         new_status = "master";
         new_on_top = false;
-        no_gaps_when_only = 0;
+        # no_gaps_when_only = 0;
         orientation = "left";
         inherit_fullscreen = true;
         always_center_master = false;
@@ -287,8 +288,8 @@ in {
       # ========================================================================
       "$browser"     = "qutebrowser";
       "$launcher"    = "rofi -show drun";
-      "$terminal"    = "alacritty";
-      "$fileManager" = "alacritty -e yazi";
+      "$terminal"    = "wezterm";
+      "$fileManager" = "wezterm -e yazi";
 
       "$mod"        = "SUPER";
       "$modShift"   = "SUPER + SHIFT";
