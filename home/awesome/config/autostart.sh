@@ -8,5 +8,5 @@ function run {
 
 run picom
 run xrdb -load "$HOME/.Xresources"
-run xwallpaper --stretch "$HOME/Pictures/Wallpapers/wallpaper.jpg"
+run xwallpaper --stretch "$HOME/pictures/wallpapers/wallpaper.jpg"
 run setxkbmap -option caps:escape
