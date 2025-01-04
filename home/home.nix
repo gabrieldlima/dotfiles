@@ -13,14 +13,13 @@
 }: {
   imports = [
     ./alacritty
-    # ./awesome
+    ./awesome
     ./bash
     ./bat
     ./dunst
     ./eza
     ./fish
     ./git
-    ./hyprland
     ./kitty
     ./mangohud
     ./qutebrowser
@@ -90,28 +89,28 @@
     };
   };
 
-  gtk = {
-    enable = true;
-
-    catppuccin = {
-      icon = {
-        enable = true;
-        accent = "blue";
-        flavor = "mocha";
-      };
-    };
-  };
-
-  qt = {
-    style = {
-      catppuccin = {
-        enable = true;
-        apply = true;
-        flavor = "mocha";
-        accent = "blue";
-      };
-    };
-  };
+  # gtk = {
+  #   enable = true;
+  #
+  #   catppuccin = {
+  #     icon = {
+  #       enable = true;
+  #       accent = "blue";
+  #       flavor = "mocha";
+  #     };
+  #   };
+  # };
+  #
+  # qt = {
+  #   style = {
+  #     catppuccin = {
+  #       enable = true;
+  #       apply = true;
+  #       flavor = "mocha";
+  #       accent = "blue";
+  #     };
+  #   };
+  # };
 
 
   nixpkgs = {
