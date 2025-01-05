@@ -10,11 +10,12 @@ local clock      = require("ui.bar.modules.clock")
 local cpu        = require("ui.bar.modules.cpu")
 local layoutbox  = require("ui.bar.modules.layoutbox")
 local logo       = require("ui.bar.modules.logo")
+local network    = require("ui.bar.modules.network")
 local ram        = require("ui.bar.modules.ram")
 local systray    = require("ui.bar.modules.systray")
 local taglist    = require("ui.bar.modules.taglist")
+local tasklist   = require("ui.bar.modules.tasklist")
 local volume     = require("ui.bar.modules.volume")
-local network    = require("ui.bar.modules.network")
 
 awful.screen.connect_for_each_screen(function(s)
 
@@ -41,6 +42,7 @@ awful.screen.connect_for_each_screen(function(s)
         {
           helpers.margin(logo, 4, 4, 8, 8),
           helpers.margin(taglist(s), 4, 4, 5, 5),
+          helpers.margin(tasklist(s), 4, 4, 8, 8),
           layout = wibox.layout.fixed.horizontal,
         },
 
