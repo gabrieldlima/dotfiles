@@ -21,7 +21,9 @@ let
       hash = "sha256-GIUkREl60vQ0cOalA37sCgn7Gv8j/9egfRk9emgGm/Y=";
     };
 
-    patches = [ ];
+    patches = [
+      ./patches/tasklist.patch
+    ];
 
     postPatch = ''
       patchShebangs tests/examples/_postprocess.lua

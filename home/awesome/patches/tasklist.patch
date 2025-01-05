@@ -1,0 +1,15 @@
+--- ./lib/awful/widget/tasklist.lua	2025-01-05 11:40:33.115797588 -0300
++++ ./lib/awful/widget/tasklist.lua	2025-01-05 11:41:32.228204986 -0300
+@@ -486,10 +486,10 @@
+ 
+     if not disable_task_name then
+         if c.minimized then
+-            name = name .. (gstring.xml_escape(c.icon_name) or gstring.xml_escape(c.name) or
++            name = name .. (gstring.xml_escape(c.icon_name) or gstring.xml_escape(c.class) or
+                             gstring.xml_escape("<untitled>"))
+         else
+-            name = name .. (gstring.xml_escape(c.name) or gstring.xml_escape("<untitled>"))
++            name = name .. (gstring.xml_escape(c.class) or gstring.xml_escape("<untitled>"))
+         end
+     end
+ 
