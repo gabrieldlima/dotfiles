@@ -16,6 +16,10 @@ pkgs,
   text = "rgba(cdd6f4ff)";
   base = "rgba(000000ff)";
 in {
+  imports = [
+    ./binds.nix
+  ];
+
   home.packages = with pkgs; [
     hyprpicker
     socat
@@ -46,7 +50,7 @@ in {
     settings = {
       # Monitors
       # ========================================================================
-      monitor = "HDMI-A-2,1920x1080@60,0x0,1";
+      monitor = "HDMI-A-1,1920x1080@60,0x0,1";
 
       # Autostart applications
       # ========================================================================
@@ -97,7 +101,7 @@ in {
         screen_shader = "";
 
         blur = {
-          enabled = true;
+          enabled = false;
           size = 1;
           passes = 1;
           ignore_opacity = false;
@@ -183,28 +187,17 @@ in {
         emulate_discrete_scroll = 1;
       };
 
-      # Gestures
-      # ========================================================================
-      gestures = {
-        workspace_swipe = false;
-        workspace_swipe_fingers = 3;
-        workspace_swipe_distance = 300;
-        workspace_swipe_touch = false;
-        workspace_swipe_invert = true;
-        workspace_swipe_min_speed_to_force = 30;
-        workspace_swipe_cancel_ratio = 0.5;
-        workspace_swipe_create_new = true;
-        workspace_swipe_direction_lock = true;
-        workspace_swipe_direction_lock_threshold = 10;
-        workspace_swipe_forever = false;
-        workspace_swipe_use_r = false;
-      };
-
       # Group
       # ========================================================================
       group = {
+        auto_group = true;
         insert_after_current = true;
         focus_removed_window = true;
+        drag_into_group = 1;
+        merge_groups_on_drag = true;
+        merge_groups_on_groupbar = true;
+        merge_floated_into_tiled_on_groupbar = false;
+        group_on_movetoworkspace = false;
         "col.border_active" = "${red}";
         "col.border_inactive" = "${base}";
         "col.border_locked_active" = "${red}";
@@ -216,10 +209,11 @@ in {
           font_size = 10;
           gradients = true;
           height = 15;
+          stacked = false;
           priority = 3;
           render_titles = true;
           scrolling = true;
-          text_color = "${text}";
+          "text_color" = "${text}";
           "col.active" = "${red}";
           "col.inactive" = "${base}";
           "col.locked_active" = "${red}";
@@ -232,6 +226,9 @@ in {
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = false;
+        "col.splash" = "${text}";
+        font_family = "FiraCode Nerd Font Bold";
+        splash_font_family = "FiraCode Nerd Font Bold";
         force_default_wallpaper = -1;
         vfr = true;
         vrr = 0;
@@ -243,21 +240,75 @@ in {
         animate_mouse_windowdragging = false;
         disable_autoreload = false;
         enable_swallow = false;
+        swallow_regex = "";
+        swallow_exception_regex = "";
         focus_on_activate = false;
         mouse_move_focuses_monitor = true;
         render_ahead_of_time = false;
         render_ahead_safezone = 1;
         allow_session_lock_restore = false;
-        background_color = "${base}";
+        "background_color" = "${base}";
         close_special_on_empty = true;
         new_window_takes_over_fullscreen = 0;
+        exit_window_retains_fullscreen = false;
+        initial_workspace_tracking = 1;
+        middle_click_paste = true;
+        render_unfocused_fps = 15;
+        disable_xdg_env_checks = false;
+        disable_hyprland_qtutils_check = false;
+        lockdead_screen_delay = 1000;
       };
 
       # XWayland
       # ========================================================================
       xwayland = {
+        enabled = true;
         use_nearest_neighbor = true;
         force_zero_scaling = false;
+      };
+
+      # OpenGL (Nvidia-only)
+      # ========================================================================
+      opengl = {
+        nvidia_anti_flicker = true;
+        force_introspection = 2;
+      };
+
+      # Render
+      # ========================================================================
+      render = {
+        explicit_sync = 2;
+        explicit_sync_kms = 2;
+        direct_scanout = false;
+        expand_undersized_textures = true;
+      };
+
+      # Cursor
+      # ========================================================================
+      cursor = {
+        sync_gsettings_theme = true;
+        no_hardware_cursors = 2;
+        no_break_fs_vrr = false;
+        min_refresh_rate = 24;
+        hotspot_padding = 1;
+        inactive_timeout = 0;
+        no_warps = false;
+        persistent_warps = false;
+        warp_on_change_workspace = 0;
+        default_monitor = "";
+        zoom_factor = 1.0;
+        zoom_rigid = false;
+        enable_hyprcursor = true;
+        hide_on_key_press = false;
+        hide_on_touch = true;
+        use_cpu_buffer = false;
+        warp_back_after_non_mouse_input = false;
+      };
+
+      # Ecosystem
+      # ========================================================================
+      ecosystem = {
+        no_update_news = false;
       };
 
       # Master layout
@@ -268,7 +319,7 @@ in {
         mfact = 0.5;
         new_status = "master";
         new_on_top = false;
-        # no_gaps_when_only = 0;
+        new_on_active = "none";
         orientation = "left";
         inherit_fullscreen = true;
         always_center_master = false;
@@ -279,98 +330,17 @@ in {
       # Windows rules
       # ========================================================================
       windowrulev2 = [
-        "workspace 2,class:(org.qutebrowser.qutebrowser)"
-        "workspace 3,class:(obsidian)"
-        "workspace 9,class:(virt-manager)"
+        "workspace 2, class:(org.qutebrowser.qutebrowser)"
+        "workspace 3, class:(obsidian)"
+        "workspace 8, class:(.virt-manager-wrapped)"
+
+        "workspace 9, class:(steam)"
+        "float, class:(steam)"
       ];
 
-      # Variables
-      # ========================================================================
-      "$browser"     = "qutebrowser";
-      "$launcher"    = "rofi -show drun";
-      "$terminal"    = "wezterm";
-      "$fileManager" = "wezterm -e yazi";
-
-      "$mod"        = "SUPER";
-      "$modShift"   = "SUPER + SHIFT";
-      "$modControl" = "SUPER + CONTROL";
-      "$modAlt"     = "SUPER + ALT";
-
-      # Keybinds
-      # ========================================================================
-      binds = {
-        pass_mouse_when_bound = false;
-        scroll_event_delay = 300;
-        workspace_back_and_forth = false;
-        allow_workspace_cycles = false;
-        workspace_center_on = 0;
-        focus_preferred_method = 0;
-        ignore_group_lock = false;
-        movefocus_cycles_fullscreen = true;
-        disable_keybind_grabbing = false;
-      };
-
-      bind = [
-        "$mod, RETURN, exec, $terminal"
-        "$mod, B, exec, $browser"
-        "$mod, P, exec, $launcher"
-        "$mod, E, exec, $fileManager"
-
-        "$modShift, C, killactive"
-        "$modShift, Q, exit"
-        "$modControl, R, exec, hyprctl reload"
-        "$modControl, X, exec, hyprctl kill"
-
-        "$mod, F, fullscreen, 0"
-        "$mod, M, fullscreen, 1"
-
-        "$modShift, F, togglefloating"
-        "$mod, SPACE, centerwindow"
-
-        "$mod, h, movefocus, l"
-        "$mod, l, movefocus, r"
-        "$mod, k, movefocus, u"
-        "$mod, j, movefocus, d"
-
-        "$modShift, h, movewindow, l"
-        "$modShift, l, movewindow, r"
-        "$modShift, k, movewindow, u"
-        "$modShift, j, movewindow, d"
-
-        "$modControl, h, resizeactive, -50 0"
-        "$modControl, l, resizeactive, 50 0"
-        "$modControl, k, resizeactive, 0 -50"
-        "$modControl, j, resizeactive, 0 50"
-
-        "$mod, 1, workspace, 1"
-        "$mod, 2, workspace, 2"
-        "$mod, 3, workspace, 3"
-        "$mod, 4, workspace, 4"
-        "$mod, 5, workspace, 5"
-        "$mod, 6, workspace, 6"
-        "$mod, 7, workspace, 7"
-        "$mod, 8, workspace, 8"
-        "$mod, 9, workspace, 9"
-
-        "$modShift, 1, movetoworkspacesilent, 1"
-        "$modShift, 2, movetoworkspacesilent, 2"
-        "$modShift, 3, movetoworkspacesilent, 3"
-        "$modShift, 4, movetoworkspacesilent, 4"
-        "$modShift, 5, movetoworkspacesilent, 5"
-        "$modShift, 6, movetoworkspacesilent, 6"
-        "$modShift, 7, movetoworkspacesilent, 7"
-        "$modShift, 8, movetoworkspacesilent, 8"
-        "$modShift, 9, movetoworkspacesilent, 9"
-
-        "$modShift, RETURN, layoutmsg, swapwithmaster"
-
-        "$mod, mouse:276, workspace, +1"
-        "$mod, mouse:275, workspace, -1"
-      ];
-
-      bindm = [
-        "$mod, mouse:272, movewindow"
-        "$mod, mouse:273, resizewindow"
+      workspace = [
+        # gaming workspace rules
+        "9, gapsin:0, gapsout:0, bordersize:0, border:false, shadow:false, rounding:false, decorate:false"
       ];
     };
   };
