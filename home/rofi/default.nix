@@ -8,11 +8,13 @@
 # ╚════════════════════════════╝
 
 {
+  pkgs,
   config,
   ...
 }: {
   programs.rofi = {
     enable = true;
+    package = pkgs.rofi-wayland;
 
     font = "Iosevka Slab ExtraBold 11";
 
@@ -46,7 +48,7 @@
         background-color  = mkLiteral "#000000";
         border            = mkLiteral "2px";
         border-color      = mkLiteral "#89b4fa";
-        border-radius     = mkLiteral "0px";
+        border-radius     = mkLiteral "10px";
         height            = mkLiteral "400px";
       };
       "#mainbox" = {
