@@ -377,11 +377,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1736277415,
-        "narHash": "sha256-kPDXF6cIPsVqSK08XF5EC6KM7BdMnM9vtJDzsnf+lLU=",
+        "lastModified": 1736366465,
+        "narHash": "sha256-Fo68EF6p/N9GJyHiAUbXtiE7IJlb3IMjK86LuxFMsRU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "5c4302313d9207f7ec0886d68f8ff4a3c71209a1",
+        "rev": "7e00856596891850ba5ad4c5ecd2ed74468c08c5",
         "type": "github"
       },
       "original": {
@@ -520,6 +520,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1735471104,
+        "narHash": "sha256-0q9NGQySwDQc7RhAV2ukfnu7Gxa5/ybJ2ANT8DQrQrs=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "88195a94f390381c6afcdaa933c2f6ff93959cb4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nuscht-search": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -549,7 +565,8 @@
         "home-manager": "home-manager_2",
         "nixpkgs": "nixpkgs_2",
         "stylix": "stylix",
-        "wezterm-nightly": "wezterm-nightly"
+        "wezterm-nightly": "wezterm-nightly",
+        "zen-browser": "zen-browser"
       }
     },
     "rust-overlay": {
@@ -593,11 +610,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1736274934,
-        "narHash": "sha256-mAAjaD6rPZLH7NDezJlZWAl8Se5BP0sboVnX8pvCNQ8=",
+        "lastModified": 1736300059,
+        "narHash": "sha256-z3mR+0gBN/iVM8UgfCSIxjgw4jm1bu1kjMKyQx9mGBc=",
         "owner": "danth",
         "repo": "stylix",
-        "rev": "5c84f02fcfb4fc697f132e90b8b3f9598c809b96",
+        "rev": "168306ce7f5d823ccee8b7d4e112ea20671c2b8f",
         "type": "github"
       },
       "original": {
@@ -742,6 +759,24 @@
         "dir": "nix",
         "owner": "wez",
         "repo": "wezterm",
+        "type": "github"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1736267677,
+        "narHash": "sha256-7FH/gFShKOzf46yKqA4VWAaWxuyHBRnXOdaffbTxVo4=",
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
+        "rev": "c96c6a1ebf1bea782f9528dc316d986a6087ebc0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
         "type": "github"
       }
     },
