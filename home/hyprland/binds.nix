@@ -2,7 +2,7 @@
   ...
 }: let
   terminal     = "wezterm";
-  web_browser  = "qutebrowser";
+  web_browser  = "zen";
   launcher     = "rofi -show drun";
   file_manager = "wezterm -e yazi";
   pdf_viewer   = "zathura";
