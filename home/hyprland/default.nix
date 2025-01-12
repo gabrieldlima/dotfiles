@@ -330,7 +330,7 @@ in {
       # Windows rules
       # ========================================================================
       windowrulev2 = [
-        "workspace 2, class:(zen-beta)"
+        "workspace 2, class:(zen)"
         "workspace 2, class:(org.qutebrowser.qutebrowser)"
 
         "workspace 3, class:(obsidian)"
