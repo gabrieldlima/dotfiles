@@ -5,8 +5,8 @@ local M = {}
 -- Config
 -- =============================================================================
 M.default_prog = { "fish" }
-M.font = wezterm.font_with_fallback { "Iosevka Term Slab Medium", "FiraCode Nerd Font" }
-M.font_size = 11
+M.font = wezterm.font_with_fallback { "JetBrains Mono", "FiraCode Nerd Font" }
+M.font_size = 10
 M.check_for_updates = false
 M.window_close_confirmation = "NeverPrompt"
 M.initial_cols = 120
