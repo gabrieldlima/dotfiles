@@ -14,12 +14,13 @@
 }: {
   imports = [
     ./alacritty
+    ./awesome
     ./bash
     ./bat
     ./dunst
     ./eza
     ./fish
-    # ./ghostty
+    ./ghostty
     ./git
     ./hyprland
     ./kitty

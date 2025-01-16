@@ -2,7 +2,7 @@
   ...
 }: {
   programs.ghostty = {
-    enable = true;
+    enable = false;
 
     settings = {
       command = "fish";
