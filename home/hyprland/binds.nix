@@ -1,12 +1,10 @@
 {
   ...
 }: let
-  terminal     = "ghostty";
-  # terminal     = "wezterm";
+  terminal     = "wezterm";
   web_browser  = "zen";
   launcher     = "rofi -show drun";
   file_manager = "${terminal} -e yazi";
-  # file_manager = "wezterm -e yazi";
   pdf_viewer   = "zathura";
   notes        = "obsidian";
 

@@ -19,7 +19,7 @@
     ./dunst
     ./eza
     ./fish
-    ./ghostty
+    # ./ghostty
     ./git
     ./hyprland
     ./kitty
