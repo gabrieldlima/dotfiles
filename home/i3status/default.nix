@@ -31,17 +31,17 @@
               critical_fg = "#f38ba8";
               separator_bg = "#000000";
               separator_fg = "#89b4fa";
-              separator = "|";
+              separator = "";
             };
           };
         };
 
         blocks = [
           # Currently focused window
-          {
-            block = "focused_window";
-            format = " $title.str(max_w:200) |  i3wm ";
-          }
+          # {
+          #   block = "focused_window";
+          #   format = " $title.str(max_w:200) |  i3wm ";
+          # }
 
           # A pomodoro timer
           {
