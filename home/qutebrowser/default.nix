@@ -38,7 +38,7 @@
   crust     = "#000000";
 in {
   programs.qutebrowser = {
-    enable = false;
+    enable = true;
 
     quickmarks = {
       awesomewm    = "https://awesomewm.org/apidoc/index.html";

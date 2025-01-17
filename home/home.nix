@@ -14,7 +14,6 @@
 }: {
   imports = [
     ./alacritty
-    ./awesome
     ./bash
     ./bat
     ./dunst
@@ -22,7 +21,7 @@
     ./fish
     ./ghostty
     ./git
-    ./hyprland
+    ./i3wm
     ./kitty
     ./mangohud
     ./qutebrowser

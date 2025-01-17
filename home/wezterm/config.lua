@@ -11,8 +11,8 @@ M.check_for_updates = false
 M.window_close_confirmation = "NeverPrompt"
 M.initial_cols = 120
 M.initial_rows = 30
-M.enable_wayland = true
-M.window_background_opacity = 0.95
+M.enable_wayland = false
+M.window_background_opacity = 1
 M.enable_tab_bar = true
 M.use_fancy_tab_bar = false
 M.hide_tab_bar_if_only_one_tab = true
@@ -22,21 +22,20 @@ M.animation_fps = 120
 
 -- Theme
 -- =============================================================================
--- local color_overrides = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
--- color_overrides.background = "#000000"
---
--- M.color_schemes = {
---   ["Catppuccin_Mocha_Dark"] = color_overrides,
--- }
--- M.color_scheme = "Catppuccin_Mocha_Dark"
-M.color_scheme = "Black Metal (Bathory) (base16)"
+local color_overrides = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
+color_overrides.background = "#000000"
+
+M.color_schemes = {
+  ["Catppuccin_Mocha_Dark"] = color_overrides,
+}
+M.color_scheme = "Catppuccin_Mocha_Dark"
 
 M.colors = {
   tab_bar = {
     background = "#000000",
 
     active_tab = {
-      bg_color = "#E78A52",
+      bg_color = "#89b4fa",
       fg_color = "#000000",
       intensity = "Bold",
     },
