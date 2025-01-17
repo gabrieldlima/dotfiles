@@ -12,9 +12,9 @@ pkgs,
 ...
 }: let
   red  = "rgba(f38ba8ff)";
-  blue = "rgba(89b4faff)";
-  text = "rgba(cdd6f4ff)";
-  base = "rgba(000000ff)";
+  blue = "rgba(E78A52FF)";
+  text = "rgba(C1C1C1FF)";
+  base = "rgba(000000FF)";
 in {
   imports = [
     ./binds.nix
