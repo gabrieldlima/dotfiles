@@ -11,6 +11,6 @@
   ...
 }: {
   services.dunst = {
-    enable = false;
+    enable = true;
   };
 }
