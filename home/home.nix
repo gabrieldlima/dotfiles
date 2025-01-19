@@ -45,6 +45,7 @@
       pkgs._1password-gui
       pkgs.atuin
       pkgs.clang-tools
+      pkgs.discord
       pkgs.duf
       pkgs.fd
       pkgs.file
