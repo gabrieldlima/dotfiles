@@ -64,11 +64,11 @@
           }
 
           # The system temperature
-          # {
-          #   block = "temperature";
-          #   format = " $icon $average ";
-          #   format_alt = " $icon $min/$average/$max ";
-          # }
+          {
+            block = "temperature";
+            format = " $icon $average ";
+            format_alt = " $icon $min/$average/$max ";
+          }
 
           # CPU statistics
           {
