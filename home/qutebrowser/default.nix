@@ -73,8 +73,8 @@ in {
       };
 
       fonts = {
-        default_family = "Iosevka Slab SemiBold";
-        default_size   = "11pt";
+        default_family = "JetBrains Mono SemiBold";
+        default_size   = "10pt";
       };
 
       tabs = {

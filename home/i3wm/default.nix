@@ -61,7 +61,7 @@
       workspaceAutoBackAndForth = false;
 
       fonts = {
-        names = [ "Iosevka Slab" ];
+        names = [ "JetBrains Mono" ];
         style = "Bold";
         size = 10.0;
       };
@@ -164,7 +164,7 @@
           statusCommand = "${bar_cmd} ${bar_cfg}";
 
           fonts = {
-            names = [ "Iosevka Slab" "FiraCode Nerd Font" ];
+            names = [ "JetBrains Mono" "FiraCode Nerd Font" ];
             style = "Bold";
             size = 10.0;
           };

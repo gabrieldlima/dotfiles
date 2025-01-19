@@ -16,7 +16,7 @@
     enable = true;
     package = pkgs.rofi;
 
-    font = "Iosevka Slab ExtraBold 11";
+    font = "JetBrains Mono ExtraBold 10";
 
     extraConfig = {
       modi = "run,drun,window";
