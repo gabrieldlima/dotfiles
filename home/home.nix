@@ -40,8 +40,6 @@
     homeDirectory = "/home/gabriel";
 
     packages = [
-      inputs.zen-browser.packages.x86_64-linux.default
-
       pkgs._1password-gui
       pkgs.atuin
       pkgs.clang-tools
