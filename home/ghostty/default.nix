@@ -2,7 +2,7 @@
   ...
 }: {
   programs.ghostty = {
-    enable = false;
+    enable = true;
 
     settings = {
       command = "fish";
@@ -11,8 +11,14 @@
 
       mouse-hide-while-typing = true;
 
-      theme = "catppuccin-mocha-black";
       window-decoration = false;
+      window-theme = "ghostty";
+      window-width = 120;
+      window-height = 35;
+      window-padding-x = 10;
+      window-padding-y = 10;
+
+      theme = "catppuccin-mocha-black";
     };
 
     themes = {
