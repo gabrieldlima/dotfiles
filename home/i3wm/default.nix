@@ -84,6 +84,10 @@
             command = "floating enable";
             criteria = { class = "^Sxiv$"; };
           }
+          {
+            command = "border pixel 2";
+            criteria = { class = "com.mitchellh.ghostty"; };
+          }
         ];
       };
 
@@ -202,7 +206,7 @@
 
       keybindings = let
         # My default apps
-        terminal    = "wezterm";
+        terminal    = "ghostty";
         web_browser = "qutebrowser";
         launcher    = "rofi -show drun";
 
