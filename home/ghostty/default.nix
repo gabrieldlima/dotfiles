@@ -10,6 +10,7 @@
       font-size = 10;
 
       mouse-hide-while-typing = true;
+      clipboard-paste-protection = false;
 
       window-decoration = false;
       window-theme = "ghostty";
