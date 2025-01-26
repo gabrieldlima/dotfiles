@@ -1,8 +1,8 @@
 {
   ...
 }: let
-  terminal     = "wezterm";
-  web_browser  = "zen";
+  terminal     = "ghostty";
+  web_browser  = "qutebrowser";
   launcher     = "rofi -show drun";
   file_manager = "${terminal} -e yazi";
   pdf_viewer   = "zathura";
