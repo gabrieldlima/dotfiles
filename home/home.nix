@@ -8,12 +8,12 @@
 # ╚══════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 {
-  inputs,
   pkgs,
   ...
 }: {
   imports = [
     ./alacritty
+    ./awesome
     ./bash
     ./bat
     ./dunst
@@ -21,7 +21,6 @@
     ./fish
     ./ghostty
     ./git
-    ./hyprland
     ./kitty
     ./mangohud
     ./qutebrowser
