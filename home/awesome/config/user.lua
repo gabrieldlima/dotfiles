@@ -6,16 +6,16 @@ M.config = {
   home  = os.getenv("HOME"),
   host  = "aorus",
   theme = "catppuccin_mocha",
-  font  = "Iosevka Slab ExtraBold 11",
+  font  = "JetBrains Mono Bold 10",
 }
 
 M.apps = {
   -- My profile apps
-  terminal     = "wezterm",
+  terminal     = "ghostty",
   web_browser  = "qutebrowser",
   text_editor  = "nvim",
   launcher     = "rofi -show drun",
-  file_manager = "wezterm -e yazi",
+  file_manager = "ghostty -e yazi",
   screnshoot   = "flameshot",
   image_viewer = "sxiv",
   pdf_viewer   = "zathura",
