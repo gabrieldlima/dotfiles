@@ -43,24 +43,24 @@ M.colors = {
 
     inactive_tab = {
       bg_color = "#000000",
-      fg_color = "#C1C1C1",
+      fg_color = "#cdd6f4",
     },
 
     inactive_tab_hover = {
       bg_color = "#000000",
-      fg_color = "#C1C1C1",
+      fg_color = "#cdd6f4",
       italic = true,
     },
 
     new_tab = {
       bg_color = "#000000",
-      fg_color = "#C1C1C1",
+      fg_color = "#cdd6f4",
       intensity = "Bold",
     },
 
     new_tab_hover = {
       bg_color = "#000000",
-      fg_color = "#C1C1C1",
+      fg_color = "#cdd6f4",
       intensity = "Bold",
     },
   },
