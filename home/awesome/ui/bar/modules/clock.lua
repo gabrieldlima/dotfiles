@@ -51,6 +51,6 @@ local calendar = awful.widget.calendar_popup.month {
   style_normal = { fg_color = colors.subtext0 },
   style_focus = { fg_color = colors.background, bg_color = colors.blue, shape = helpers.rrect(4) },
 }
-calendar:attach(mytextclock, "tc", { on_hover = false })
+calendar:attach(mytextclock, "tr", { on_hover = false })
 
 return mytextclock
