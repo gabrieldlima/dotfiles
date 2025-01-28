@@ -22,7 +22,7 @@
       "${config.home.homeDirectory}/.config/picom/picom.conf".text = ''
         active-opacity = 1.000000;
         backend = "glx";
-        corner-radius = 0;
+        corner-radius = 10;
         detect-client-opacity = true;
         detect-rounded-corners = true;
         detect-transient = true;
