@@ -9,7 +9,7 @@ local user      = require("config.user")
 --------------------------------------------------------------------------------
 -- '+%a %b %d %I:%M %p'
 local cmd = [[
-  bash -c "date '+%a %b %d %I:%M %p'"
+  bash -c "date '+%I:%M %p'"
 ]]
 
 local textclock = wibox.widget {
@@ -18,7 +18,7 @@ local textclock = wibox.widget {
 
 watch(cmd, 30,
   function(widget, stdout)
-    widget.markup = helpers.mtext(colors.pink, user.config.font, "") ..
+    widget.markup = helpers.mtext(colors.background, user.config.font, "") ..
                     helpers.mtext(colors.foreground, user.config.font, stdout)
   end,
   textclock)
@@ -51,6 +51,6 @@ local calendar = awful.widget.calendar_popup.month {
   style_normal = { fg_color = colors.subtext0 },
   style_focus = { fg_color = colors.background, bg_color = colors.blue, shape = helpers.rrect(4) },
 }
-calendar:attach(mytextclock, "tr", { on_hover = false })
+calendar:attach(mytextclock, "br", { on_hover = false })
 
 return mytextclock

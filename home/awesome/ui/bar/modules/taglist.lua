@@ -1,14 +1,13 @@
 local awful   = require("awful")
 local wibox   = require("wibox")
-local mod     = require("binds.mod")
 local helpers = require("helpers")
 local colors  = require("theme.colorsheme")
 
 local buttons = {
   awful.button {
     description = "move_to_tag",
-    modifiers = { mod.super },
-    button = mod.leftclick,
+    modifiers = { "Mod1" },
+    button = 1,
     on_press = function (t)
       if client.focus then
         client.focus:move_to_tag(t)
@@ -18,8 +17,8 @@ local buttons = {
 
   awful.button {
     description = "toggle_tag",
-    modifiers = { mod.super },
-    button = mod.rightclick,
+    modifiers = { "Mod1" },
+    button = 3,
     on_press = function (t)
       if client.focus then
         client.focus:toggle_tag(t)
@@ -29,7 +28,7 @@ local buttons = {
 
   awful.button {
     description = "viewtoggle",
-    button = mod.rightclick,
+    button = 3,
     on_press = function (t)
       awful.tag.viewtoggle(t)
     end,
@@ -37,7 +36,7 @@ local buttons = {
 
   awful.button {
     description = "viewprev",
-    button = mod.scrollup,
+    button = 5,
     on_press = function (t)
       awful.tag.viewprev(t.screen)
     end,
@@ -45,7 +44,7 @@ local buttons = {
 
   awful.button {
     description = "viewnext",
-    button = mod.scrolldown,
+    button = 4,
     on_press = function (t)
       awful.tag.viewnext(t.screen)
     end,
@@ -53,7 +52,7 @@ local buttons = {
 
   awful.button {
     description = "view_only",
-    button = mod.leftclick,
+    button = 1,
     on_press = function (t)
       t:view_only()
     end,

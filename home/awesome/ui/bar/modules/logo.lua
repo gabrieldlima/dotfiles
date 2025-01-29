@@ -1,6 +1,5 @@
 local awful   = require("awful")
 local wibox   = require("wibox")
-local mod     = require("binds.mod")
 local helpers = require("helpers")
 local colors  = require("theme.colorsheme")
 local user    = require("config.user")
@@ -9,7 +8,7 @@ local buttons = {
   awful.button {
     description = "open launcher",
     modifiers = { },
-    button = mod.leftclick,
+    button = 1,
     on_press = function()
       awful.spawn(user.apps.launcher)
     end,
@@ -18,7 +17,7 @@ local buttons = {
 }
 
 local logo = wibox.widget {
-  image = helpers.recolor_image(user.config.home .. "/.config/awesome/theme/assets/logos/nix.svg", colors.blue),
+  image = helpers.recolor_image(user.config.home .. "/.config/awesome/theme/icons/nix.svg", colors.blue),
   valign = "center",
   halign = "center",
   forced_height = 28,

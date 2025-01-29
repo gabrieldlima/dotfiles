@@ -1,13 +1,12 @@
 local awful   = require("awful")
-local mod     = require("binds.mod")
 local helpers = require("helpers")
 local colors  = require("theme.colorsheme")
 
 local buttons = {
-  awful.button({ }, mod.leftclick, function (c) c:activate { context = "tasklist", action = "toggle_minimization" } end),
-  awful.button({ }, mod.rightclick, function() awful.menu.client_list { theme = { width = 250 } } end),
-  awful.button({ }, mod.scrolldown, function() awful.client.focus.byidx(-1) end),
-  awful.button({ }, mod.scrollup, function() awful.client.focus.byidx( 1) end),
+  awful.button({ }, 1, function (c) c:activate { context = "tasklist", action = "toggle_minimization" } end),
+  awful.button({ }, 3, function() awful.menu.client_list { theme = { width = 250 } } end),
+  awful.button({ }, 4, function() awful.client.focus.byidx(-1) end),
+  awful.button({ }, 5, function() awful.client.focus.byidx( 1) end),
 }
 
 local tasklist = function (s)
