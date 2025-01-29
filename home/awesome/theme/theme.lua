@@ -2,7 +2,8 @@
 local helpers       = require("helpers")
 local user          = require("config.user")
 local color         = require("theme.colorsheme")
-local layout_path   = user.config.home .. "/.config/awesome/theme/assets/icons/layouts/"
+local layout_icons   = user.config.home .. "/.config/awesome/theme/icons/layouts/"
+local titlebar_icons = user.config.home .. "/.config/awesome/theme/icons/titlebar/"
 
 local theme = {}
 
@@ -40,22 +41,36 @@ theme.hotkeys_group_margin             = 10
 -------------------------------------------------------------------------------
 -- layout
 -------------------------------------------------------------------------------
-theme.layout_fairh                     = layout_path .. "fairhw.png"
-theme.layout_fairv                     = layout_path .. "fairvw.png"
-theme.layout_floating                  = layout_path .. "floatingw.png"
-theme.layout_magnifier                 = layout_path .. "magnifierw.png"
-theme.layout_max                       = layout_path .. "maxw.png"
-theme.layout_fullscreen                = layout_path .. "fullscreenw.png"
-theme.layout_tilebottom                = layout_path .. "tilebottomw.png"
-theme.layout_tileleft                  = layout_path .. "tileleftw.png"
-theme.layout_tile                      = layout_path .. "tilew.png"
-theme.layout_tiletop                   = layout_path .. "tiletopw.png"
-theme.layout_spiral                    = layout_path .. "spiralw.png"
-theme.layout_dwindle                   = layout_path .. "dwindlew.png"
-theme.layout_cornernw                  = layout_path .. "cornernww.png"
-theme.layout_cornerne                  = layout_path .. "cornernew.png"
-theme.layout_cornersw                  = layout_path .. "cornersww.png"
-theme.layout_cornerse                  = layout_path .. "cornersew.png"
+theme.layout_fairh                     = layout_icons .. "fairhw.png"
+theme.layout_fairv                     = layout_icons .. "fairvw.png"
+theme.layout_floating                  = layout_icons .. "floatingw.png"
+theme.layout_magnifier                 = layout_icons .. "magnifierw.png"
+theme.layout_max                       = layout_icons .. "maxw.png"
+theme.layout_fullscreen                = layout_icons .. "fullscreenw.png"
+theme.layout_tilebottom                = layout_icons .. "tilebottomw.png"
+theme.layout_tileleft                  = layout_icons .. "tileleftw.png"
+theme.layout_tile                      = layout_icons .. "tilew.png"
+theme.layout_tiletop                   = layout_icons .. "tiletopw.png"
+theme.layout_spiral                    = layout_icons .. "spiralw.png"
+theme.layout_dwindle                   = layout_icons .. "dwindlew.png"
+theme.layout_cornernw                  = layout_icons .. "cornernww.png"
+theme.layout_cornerne                  = layout_icons .. "cornernew.png"
+theme.layout_cornersw                  = layout_icons .. "cornersww.png"
+theme.layout_cornerse                  = layout_icons .. "cornersew.png"
+
+theme.taglist_bg_focus = color.red
+
+--------------------------------------------------------------------------------
+-- titlebar
+-------------------------------------------------------------------------------
+theme.titlebar_bg                       = color.background
+theme.titlebar_bg_focus                 = color.background
+
+-- Close Button
+theme.titlebar_close_button_normal      = helpers.recolor_image(titlebar_icons .. "button_normal.png", color.surface0)
+theme.titlebar_close_button_focus       = helpers.recolor_image(titlebar_icons .. "button_close.png", color.red)
+theme.titlebar_close_button_focus_hover = titlebar_icons .. "button_close.png"
+------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
 -- systray
