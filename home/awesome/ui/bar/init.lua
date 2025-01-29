@@ -7,15 +7,11 @@ local colors  = require("theme.colorsheme")
 -- Widgets
 -----------------------------------------------------------------------------
 local clock      = require("ui.bar.modules.clock")
-local cpu        = require("ui.bar.modules.cpu")
 local layoutbox  = require("ui.bar.modules.layoutbox")
 local logo       = require("ui.bar.modules.logo")
-local network    = require("ui.bar.modules.network")
-local ram        = require("ui.bar.modules.ram")
 local systray    = require("ui.bar.modules.systray")
 local taglist    = require("ui.bar.modules.taglist")
 local tasklist   = require("ui.bar.modules.tasklist")
-local volume     = require("ui.bar.modules.volume")
 
 awful.screen.connect_for_each_screen(function(s)
 
@@ -26,12 +22,14 @@ awful.screen.connect_for_each_screen(function(s)
   -----------------------------------------------------------------------------
 
   s.bar = awful.wibar {
-    position = "top",
+    position = "bottom",
     screen   = s,
     visible  = true,
     ontop    = false,
-    width    = 1920,
+    width    = 1900,
+    shape    = helpers.rrect(10),
     height   = 40,
+    margins  = { bottom = 10 },
     type     = "dock",
   }
 
@@ -42,23 +40,19 @@ awful.screen.connect_for_each_screen(function(s)
         {
           helpers.margin(logo, 4, 4, 8, 8),
           helpers.margin(taglist(s), 4, 4, 5, 5),
-          helpers.margin(tasklist(s), 4, 4, 8, 8),
           layout = wibox.layout.fixed.horizontal,
         },
 
         -- Center widgets
         {
-          helpers.margin(clock, 4, 4, 8, 8),
+          helpers.margin(tasklist(s), 4, 4, 5, 5),
           layout = wibox.layout.flex.horizontal,
         },
 
         -- Right widgets
         {
           helpers.margin(systray, 4, 4, 8, 8),
-          helpers.margin(cpu, 4, 4, 8, 8),
-          helpers.margin(ram, 4, 4, 8, 8),
-          helpers.margin(network, 4, 4, 8, 8),
-          helpers.margin(volume, 4, 4, 8, 8),
+          helpers.margin(clock, 4, 4, 8, 8),
           helpers.margin(layoutbox, 4, 4, 4, 4),
           layout = wibox.layout.fixed.horizontal,
         },
