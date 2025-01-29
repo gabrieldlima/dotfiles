@@ -47,7 +47,7 @@ end
 helpers.tagcolor = function(self, c3)
     if c3.selected then
         self.bg = colors.blue
-        self.forced_width = 40
+        self.forced_width = 50
     elseif #c3:clients() == 0 then
         self.bg = colors.base
         self.forced_width = 12
