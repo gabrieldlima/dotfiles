@@ -11,11 +11,11 @@ M.config = {
 
 M.apps = {
   -- My profile apps
-  terminal     = "wezterm",
+  terminal     = "ghostty",
   web_browser  = "qutebrowser",
   text_editor  = "nvim",
   launcher     = "rofi -show drun",
-  file_manager = "wezterm -e yazi",
+  file_manager = "ghostty -e yazi",
   screnshoot   = "flameshot",
   image_viewer = "sxiv",
   pdf_viewer   = "zathura",

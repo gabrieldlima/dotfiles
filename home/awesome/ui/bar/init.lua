@@ -22,14 +22,12 @@ awful.screen.connect_for_each_screen(function(s)
   -----------------------------------------------------------------------------
 
   s.bar = awful.wibar {
-    position = "bottom",
+    position = "top",
     screen   = s,
     visible  = true,
     ontop    = false,
-    width    = 1900,
-    shape    = helpers.rrect(10),
+    width    = 1920,
     height   = 40,
-    margins  = { bottom = 10 },
     type     = "dock",
   }
 
