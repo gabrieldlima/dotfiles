@@ -14,7 +14,7 @@
 }: {
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi;
+    package = pkgs.rofi-wayland;
 
     font = "JetBrains Mono ExtraBold 10";
 

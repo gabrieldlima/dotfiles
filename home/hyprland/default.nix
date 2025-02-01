@@ -22,8 +22,8 @@ in {
 
   home.packages = with pkgs; [
     hyprpicker
+    hyprpaper
     socat
-    swww
   ];
 
   wayland.windowManager.hyprland = {
@@ -55,7 +55,6 @@ in {
       # Autostart applications
       # ========================================================================
       exec-once = [
-        "swww-daemon"
       ];
       exec = [ ];
 
@@ -322,7 +321,7 @@ in {
         new_on_active = "none";
         orientation = "left";
         inherit_fullscreen = true;
-        always_center_master = false;
+        # always_center_master = false;
         smart_resizing = true;
         drop_at_cursor = true;
       };
