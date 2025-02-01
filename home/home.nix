@@ -15,6 +15,7 @@
     ./alacritty
     ./bash
     ./bat
+    ./awesome
     ./dunst
     ./eza
     ./fish
