@@ -242,8 +242,8 @@
         "Mod4+a"     = "focus parent";
         "Mod4+space" = "focus mode_toggle";
 
-        "Mod4+minus"       = "scratchpad show";
-        "Mod4+Shift+minus" = "move scratchpad";
+        "Mod4+comma"       = "scratchpad show";
+        "Mod4+Shift+comma" = "move scratchpad";
 
         "Mod4+d"       = "split h";
         "Mod4+Shift+d" = "split v";
