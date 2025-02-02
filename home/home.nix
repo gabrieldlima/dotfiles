@@ -15,13 +15,13 @@
     ./alacritty
     ./bash
     ./bat
-    ./awesome
     ./dunst
     ./eza
     ./fish
     ./ghostty
     ./git
     ./hyprland
+    ./i3wm
     ./kitty
     ./mangohud
     ./qutebrowser
