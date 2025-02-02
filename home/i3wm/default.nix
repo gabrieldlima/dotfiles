@@ -164,7 +164,7 @@
         bar_cfg = "${config.home.homeDirectory}/.config/i3status-rust/config-default.toml";
       in [
         {
-          position = "bottom";
+          position = "top";
           statusCommand = "${bar_cmd} ${bar_cfg}";
 
           fonts = {

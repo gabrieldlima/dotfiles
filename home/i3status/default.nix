@@ -44,11 +44,11 @@
           # }
 
           # A pomodoro timer
-          {
-            block = "pomodoro";
-            format = " $icon{ $message|} ";
-            notify_cmd = "dunstify '{msg}'";
-          }
+          # {
+          #   block = "pomodoro";
+          #   format = " $icon{ $message|} ";
+          #   notify_cmd = "dunstify '{msg}'";
+          # }
 
           # Notifications
           {
@@ -64,11 +64,11 @@
           }
 
           # The system temperature
-          {
-            block = "temperature";
-            format = " $icon $average ";
-            format_alt = " $icon $min/$average/$max ";
-          }
+          # {
+          #   block = "temperature";
+          #   format = " $icon $average ";
+          #   format_alt = " $icon $min/$average/$max ";
+          # }
 
           # CPU statistics
           {
@@ -96,12 +96,12 @@
           }
 
           # Network information
-          {
-            block = "net";
-            format = " ^icon_net_down$speed_down.eng(prefix:K) ^icon_net_up$speed_up.eng(prefix:K) ";
-            format_alt = " $icon $ip ";
-            device = "eno1";
-          }
+          # {
+          #   block = "net";
+          #   format = " ^icon_net_down$speed_down.eng(prefix:K) ^icon_net_up$speed_up.eng(prefix:K) ";
+          #   format_alt = " $icon $ip ";
+          #   device = "eno1";
+          # }
 
           # Volume level
           {
