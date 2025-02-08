@@ -50,7 +50,7 @@
     config = {
       startup = [
         { command = "picom"; notification = false; }
-        { command = "xwallpaper --stretch ${config.home.homeDirectory}/Pictures/Wallpapers/wallpaper.jpg"; notification = false; }
+        { command = "xwallpaper --stretch ${config.home.homeDirectory}/pictures/wallpapers/wallpaper.jpg"; notification = false; }
         { command = "xrdb -load ${config.home.homeDirectory}/.Xresources"; notification = false; }
         { command = "setxkbmap -option caps:escape"; notification = false; }
         { command = "dunst"; notification = false; }
@@ -164,7 +164,7 @@
         bar_cfg = "${config.home.homeDirectory}/.config/i3status-rust/config-default.toml";
       in [
         {
-          position = "top";
+          position = "bottom";
           statusCommand = "${bar_cmd} ${bar_cfg}";
 
           fonts = {
