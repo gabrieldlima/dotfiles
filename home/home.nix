@@ -91,30 +91,6 @@
     };
   };
 
-  # gtk = {
-  #   enable = true;
-  #
-  #   catppuccin = {
-  #     icon = {
-  #       enable = true;
-  #       accent = "blue";
-  #       flavor = "mocha";
-  #     };
-  #   };
-  # };
-  #
-  # qt = {
-  #   style = {
-  #     catppuccin = {
-  #       enable = true;
-  #       apply = true;
-  #       flavor = "mocha";
-  #       accent = "blue";
-  #     };
-  #   };
-  # };
-
-
   nixpkgs = {
     config = {
       allowUnfree = true;
