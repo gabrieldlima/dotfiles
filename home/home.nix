@@ -20,7 +20,6 @@
     ./fish
     ./ghostty
     ./git
-    ./hyprland
     ./i3wm
     ./kitty
     ./mangohud
