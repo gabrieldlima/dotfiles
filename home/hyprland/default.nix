@@ -17,7 +17,7 @@ pkgs,
   base = "rgba(000000ff)";
 in {
   imports = [
-    ./binds.nix
+    # ./binds.nix
   ];
 
   home.packages = with pkgs; [
@@ -32,318 +32,295 @@ in {
     xwayland.enable = true;
 
     extraConfig = ''
-      env = GDK_BACKEND,wayland,x11,*
-      env = QT_QPA_PLATFORM,wayland;xcb
-      env = SDL_VIDEODRIVER,wayland
-      env = CLUTTER_BACKEND,wayland
+      # This is an example Hyprland config file.
+      # Refer to the wiki for more information.
+      # https://wiki.hyprland.org/Configuring/
 
-      env = XDG_CURRENT_DESKTOP,Hyprland
-      env = XDG_SESSION_TYPE,wayland
-      env = XDG_SESSION_DESKTOP,Hyprland
+      # Please note not all available settings / options are set here.
+      # For a full list, see the wiki
 
-      # env = QT_AUTO_SCREEN_SCALE_FACTOR,1
-      # env = QT_QPA_PLATFORM,wayland;xcb
-      # env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
-      # env = QT_QPA_PLATFORMTHEME,qt5ct
+      # You can split this configuration into multiple files
+      # Create your files separately and then link them to this file like this:
+      # source = ~/.config/hypr/myColors.conf
+
+
+      ################
+      ### MONITORS ###
+      ################
+
+      # See https://wiki.hyprland.org/Configuring/Monitors/
+      monitor=,preferred,auto,auto
+
+
+      ###################
+      ### MY PROGRAMS ###
+      ###################
+
+      # See https://wiki.hyprland.org/Configuring/Keywords/
+
+      # Set programs that you use
+      $terminal = ghostty
+      $fileManager = dolphin
+      $menu = rofi -show drun
+
+
+      #################
+      ### AUTOSTART ###
+      #################
+
+      # Autostart necessary processes (like notifications daemons, status bars, etc.)
+      # Or execute your favorite apps at launch like this:
+
+      # exec-once = $terminal
+      # exec-once = nm-applet &
+      # exec-once = waybar & hyprpaper & firefox
+
+
+      #############################
+      ### ENVIRONMENT VARIABLES ###
+      #############################
+
+      # See https://wiki.hyprland.org/Configuring/Environment-variables/
+
+      env = XCURSOR_SIZE,24
+      env = HYPRCURSOR_SIZE,24
+
+
+      #####################
+      ### LOOK AND FEEL ###
+      #####################
+
+      # Refer to https://wiki.hyprland.org/Configuring/Variables/
+
+      # https://wiki.hyprland.org/Configuring/Variables/#general
+      general {
+          gaps_in = 5
+          gaps_out = 20
+
+          border_size = 2
+
+          # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
+          col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
+          col.inactive_border = rgba(595959aa)
+
+          # Set to true enable resizing windows by clicking and dragging on borders and gaps
+          resize_on_border = false
+
+          # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
+          allow_tearing = false
+
+          layout = dwindle
+      }
+
+      # https://wiki.hyprland.org/Configuring/Variables/#decoration
+      decoration {
+          rounding = 10
+          rounding_power = 2
+
+          # Change transparency of focused and unfocused windows
+          active_opacity = 1.0
+          inactive_opacity = 1.0
+
+          shadow {
+              enabled = true
+              range = 4
+              render_power = 3
+              color = rgba(1a1a1aee)
+          }
+
+          # https://wiki.hyprland.org/Configuring/Variables/#blur
+          blur {
+              enabled = true
+              size = 3
+              passes = 1
+
+              vibrancy = 0.1696
+          }
+      }
+
+      # https://wiki.hyprland.org/Configuring/Variables/#animations
+      animations {
+          enabled = yes, please :)
+
+          # Default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
+
+          bezier = easeOutQuint,0.23,1,0.32,1
+          bezier = easeInOutCubic,0.65,0.05,0.36,1
+          bezier = linear,0,0,1,1
+          bezier = almostLinear,0.5,0.5,0.75,1.0
+          bezier = quick,0.15,0,0.1,1
+
+          animation = global, 1, 10, default
+          animation = border, 1, 5.39, easeOutQuint
+          animation = windows, 1, 4.79, easeOutQuint
+          animation = windowsIn, 1, 4.1, easeOutQuint, popin 87%
+          animation = windowsOut, 1, 1.49, linear, popin 87%
+          animation = fadeIn, 1, 1.73, almostLinear
+          animation = fadeOut, 1, 1.46, almostLinear
+          animation = fade, 1, 3.03, quick
+          animation = layers, 1, 3.81, easeOutQuint
+          animation = layersIn, 1, 4, easeOutQuint, fade
+          animation = layersOut, 1, 1.5, linear, fade
+          animation = fadeLayersIn, 1, 1.79, almostLinear
+          animation = fadeLayersOut, 1, 1.39, almostLinear
+          animation = workspaces, 1, 1.94, almostLinear, fade
+          animation = workspacesIn, 1, 1.21, almostLinear, fade
+          animation = workspacesOut, 1, 1.94, almostLinear, fade
+      }
+
+      # Ref https://wiki.hyprland.org/Configuring/Workspace-Rules/
+      # "Smart gaps" / "No gaps when only"
+      # uncomment all if you wish to use that.
+      # workspace = w[tv1], gapsout:0, gapsin:0
+      # workspace = f[1], gapsout:0, gapsin:0
+      # windowrulev2 = bordersize 0, floating:0, onworkspace:w[tv1]
+      # windowrulev2 = rounding 0, floating:0, onworkspace:w[tv1]
+      # windowrulev2 = bordersize 0, floating:0, onworkspace:f[1]
+      # windowrulev2 = rounding 0, floating:0, onworkspace:f[1]
+
+      # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
+      dwindle {
+          pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+          preserve_split = true # You probably want this
+      }
+
+      # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
+      master {
+          new_status = master
+      }
+
+      # https://wiki.hyprland.org/Configuring/Variables/#misc
+      misc {
+          force_default_wallpaper = -1 # Set to 0 or 1 to disable the anime mascot wallpapers
+          disable_hyprland_logo = false # If true disables the random hyprland logo / anime girl background. :(
+      }
+
+
+      #############
+      ### INPUT ###
+      #############
+
+      # https://wiki.hyprland.org/Configuring/Variables/#input
+      input {
+          kb_layout = us
+          kb_variant =
+          kb_model =
+          kb_options =
+          kb_rules =
+
+          follow_mouse = 1
+
+          sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
+
+          touchpad {
+              natural_scroll = false
+          }
+      }
+
+      # https://wiki.hyprland.org/Configuring/Variables/#gestures
+      gestures {
+          workspace_swipe = false
+      }
+
+      # Example per-device config
+      # See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
+      device {
+          name = epic-mouse-v1
+          sensitivity = -0.5
+      }
+
+
+      ###################
+      ### KEYBINDINGS ###
+      ###################
+
+      # See https://wiki.hyprland.org/Configuring/Keywords/
+      $mainMod = SUPER # Sets "Windows" key as main modifier
+
+      # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
+      bind = $mainMod, Q, exec, $terminal
+      bind = $mainMod, C, killactive,
+      bind = $mainMod, M, exit,
+      bind = $mainMod, E, exec, $fileManager
+      bind = $mainMod, V, togglefloating,
+      bind = $mainMod, R, exec, $menu
+      bind = $mainMod, P, pseudo, # dwindle
+      bind = $mainMod, J, togglesplit, # dwindle
+
+      # Move focus with mainMod + arrow keys
+      bind = $mainMod, left, movefocus, l
+      bind = $mainMod, right, movefocus, r
+      bind = $mainMod, up, movefocus, u
+      bind = $mainMod, down, movefocus, d
+
+      # Switch workspaces with mainMod + [0-9]
+      bind = $mainMod, 1, workspace, 1
+      bind = $mainMod, 2, workspace, 2
+      bind = $mainMod, 3, workspace, 3
+      bind = $mainMod, 4, workspace, 4
+      bind = $mainMod, 5, workspace, 5
+      bind = $mainMod, 6, workspace, 6
+      bind = $mainMod, 7, workspace, 7
+      bind = $mainMod, 8, workspace, 8
+      bind = $mainMod, 9, workspace, 9
+      bind = $mainMod, 0, workspace, 10
+
+      # Move active window to a workspace with mainMod + SHIFT + [0-9]
+      bind = $mainMod SHIFT, 1, movetoworkspace, 1
+      bind = $mainMod SHIFT, 2, movetoworkspace, 2
+      bind = $mainMod SHIFT, 3, movetoworkspace, 3
+      bind = $mainMod SHIFT, 4, movetoworkspace, 4
+      bind = $mainMod SHIFT, 5, movetoworkspace, 5
+      bind = $mainMod SHIFT, 6, movetoworkspace, 6
+      bind = $mainMod SHIFT, 7, movetoworkspace, 7
+      bind = $mainMod SHIFT, 8, movetoworkspace, 8
+      bind = $mainMod SHIFT, 9, movetoworkspace, 9
+      bind = $mainMod SHIFT, 0, movetoworkspace, 10
+
+      # Example special workspace (scratchpad)
+      bind = $mainMod, S, togglespecialworkspace, magic
+      bind = $mainMod SHIFT, S, movetoworkspace, special:magic
+
+      # Scroll through existing workspaces with mainMod + scroll
+      bind = $mainMod, mouse_down, workspace, e+1
+      bind = $mainMod, mouse_up, workspace, e-1
+
+      # Move/resize windows with mainMod + LMB/RMB and dragging
+      bindm = $mainMod, mouse:272, movewindow
+      bindm = $mainMod, mouse:273, resizewindow
+
+      # Laptop multimedia keys for volume and LCD brightness
+      bindel = ,XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
+      bindel = ,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+      bindel = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+      bindel = ,XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+      bindel = ,XF86MonBrightnessUp, exec, brightnessctl s 10%+
+      bindel = ,XF86MonBrightnessDown, exec, brightnessctl s 10%-
+
+      # Requires playerctl
+      bindl = , XF86AudioNext, exec, playerctl next
+      bindl = , XF86AudioPause, exec, playerctl play-pause
+      bindl = , XF86AudioPlay, exec, playerctl play-pause
+      bindl = , XF86AudioPrev, exec, playerctl previous
+
+      ##############################
+      ### WINDOWS AND WORKSPACES ###
+      ##############################
+
+      # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
+      # See https://wiki.hyprland.org/Configuring/Workspace-Rules/ for workspace rules
+
+      # Example windowrule v1
+      # windowrule = float, ^(kitty)$
+
+      # Example windowrule v2
+      # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
+
+      # Ignore maximize requests from apps. You'll probably like this.
+      windowrulev2 = suppressevent maximize, class:.*
+
+      # Fix some dragging issues with XWayland
+      windowrulev2 = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
     '';
-
-    settings = {
-      # Monitors
-      # ========================================================================
-      monitor = "HDMI-A-1,1920x1080@60,0x0,1";
-
-      # Autostart applications
-      # ========================================================================
-      exec-once = [
-      ];
-      exec = [ ];
-
-      # General
-      # ========================================================================
-      general = {
-        border_size = 2;
-        no_border_on_floating = false;
-        gaps_in = 5;
-        gaps_out = 10;
-        gaps_workspaces = 0;
-        "col.active_border" = "${blue}";
-        "col.inactive_border" = "${base}";
-        "col.nogroup_border" = "${base}";
-        "col.nogroup_border_active" = "${blue}";
-        layout = "master";
-        no_focus_fallback = true;
-        resize_on_border = true;
-        extend_border_grab_area = 0;
-        hover_icon_on_border = true;
-        allow_tearing = false;
-        resize_corner = 0;
-
-        snap = {
-          enabled = false;
-          window_gap = 10;
-          monitor_gap = 10;
-          border_overlap = false;
-        };
-      };
-
-      # Decoration
-      # ========================================================================
-      decoration = {
-        rounding = 10;
-        active_opacity = 1.0;
-        inactive_opacity = 1.0;
-        fullscreen_opacity = 1.0;
-        dim_inactive = false;
-        dim_strength = 0.5;
-        dim_special = 0.2;
-        dim_around = 0.4;
-        screen_shader = "";
-
-        blur = {
-          enabled = false;
-          size = 1;
-          passes = 1;
-          ignore_opacity = false;
-          new_optimizations = true;
-          xray = false;
-          noise = 0.0117;
-          contrast = 0.8916;
-          brightness = 0.8172;
-          vibrancy = 0.1696;
-          vibrancy_darkness = 0;
-          special = false;
-          popups = false;
-          popups_ignorealpha = 0.2;
-          input_methods = false;
-          input_methods_ignorealpha = 0.2;
-        };
-
-        shadow = {
-          enabled = true;
-          range = 4;
-          render_power = 3;
-          sharp = false;
-          ignore_window = true;
-          color = "0xee1a1a1a";
-          offset = "0, 0";
-          scale = 1.0;
-        };
-      };
-
-      # Animations
-      # ========================================================================
-      animations = {
-        enabled = true;
-        first_launch_animation = true;
-        animation = [
-          "windows, 1, 3, default"
-          "windowsIn, 1, 3, default"
-          "windowsOut, 1, 3, default"
-          "windowsMove, 1, 3, default"
-
-          "layers, 1, 3, default"
-          "layersIn, 1, 3, default"
-          "layersOut, 1, 3, default"
-
-          "fade, 0"
-
-          "border, 0"
-          "borderangle, 0"
-
-          "workspaces, 1, 3, default"
-        ];
-      };
-
-      # Input
-      # ========================================================================
-      input = {
-        kb_model = "";
-        kb_layout = "us";
-        kb_variant = "";
-        kb_options = "caps:swapescape";
-        kb_rules = "";
-        kb_file = "";
-        numlock_by_default = false;
-        resolve_binds_by_sym = false;
-        repeat_rate = 25;
-        repeat_delay = 600;
-        sensitivity = 0;
-        accel_profile = "";
-        force_no_accel = false;
-        left_handed = false;
-        scroll_points = "";
-        scroll_method = "";
-        scroll_button = 0;
-        scroll_button_lock = 0;
-        scroll_factor = 1;
-        natural_scroll = false;
-        follow_mouse = 1;
-        mouse_refocus = true;
-        focus_on_close = 0;
-        float_switch_override_focus = 1;
-        special_fallthrough = false;
-        off_window_axis_events = 1;
-        emulate_discrete_scroll = 1;
-      };
-
-      # Group
-      # ========================================================================
-      group = {
-        auto_group = true;
-        insert_after_current = true;
-        focus_removed_window = true;
-        drag_into_group = 1;
-        merge_groups_on_drag = true;
-        merge_groups_on_groupbar = true;
-        merge_floated_into_tiled_on_groupbar = false;
-        group_on_movetoworkspace = false;
-        "col.border_active" = "${red}";
-        "col.border_inactive" = "${base}";
-        "col.border_locked_active" = "${red}";
-        "col.border_locked_inactive" = "${base}";
-
-        groupbar = {
-          enabled = true;
-          font_family = "FiraCode Nerd Font Bold";
-          font_size = 10;
-          gradients = true;
-          height = 15;
-          stacked = false;
-          priority = 3;
-          render_titles = true;
-          scrolling = true;
-          "text_color" = "${text}";
-          "col.active" = "${red}";
-          "col.inactive" = "${base}";
-          "col.locked_active" = "${red}";
-          "col.locked_inactive" = "${base}";
-        };
-      };
-
-      # Misc
-      # ========================================================================
-      misc = {
-        disable_hyprland_logo = true;
-        disable_splash_rendering = false;
-        "col.splash" = "${text}";
-        font_family = "FiraCode Nerd Font Bold";
-        splash_font_family = "FiraCode Nerd Font Bold";
-        force_default_wallpaper = -1;
-        vfr = true;
-        vrr = 0;
-        mouse_move_enables_dpms = false;
-        key_press_enables_dpms = false;
-        always_follow_on_dnd = true;
-        layers_hog_keyboard_focus = true;
-        animate_manual_resizes = false;
-        animate_mouse_windowdragging = false;
-        disable_autoreload = false;
-        enable_swallow = false;
-        swallow_regex = "";
-        swallow_exception_regex = "";
-        focus_on_activate = false;
-        mouse_move_focuses_monitor = true;
-        render_ahead_of_time = false;
-        render_ahead_safezone = 1;
-        allow_session_lock_restore = false;
-        "background_color" = "${base}";
-        close_special_on_empty = true;
-        new_window_takes_over_fullscreen = 0;
-        exit_window_retains_fullscreen = false;
-        initial_workspace_tracking = 1;
-        middle_click_paste = true;
-        render_unfocused_fps = 15;
-        disable_xdg_env_checks = false;
-        disable_hyprland_qtutils_check = false;
-        lockdead_screen_delay = 1000;
-      };
-
-      # XWayland
-      # ========================================================================
-      xwayland = {
-        enabled = true;
-        use_nearest_neighbor = true;
-        force_zero_scaling = false;
-      };
-
-      # OpenGL (Nvidia-only)
-      # ========================================================================
-      opengl = {
-        nvidia_anti_flicker = true;
-        force_introspection = 2;
-      };
-
-      # Render
-      # ========================================================================
-      render = {
-        explicit_sync = 2;
-        explicit_sync_kms = 2;
-        direct_scanout = false;
-        expand_undersized_textures = true;
-      };
-
-      # Cursor
-      # ========================================================================
-      cursor = {
-        sync_gsettings_theme = true;
-        no_hardware_cursors = 2;
-        no_break_fs_vrr = false;
-        min_refresh_rate = 24;
-        hotspot_padding = 1;
-        inactive_timeout = 0;
-        no_warps = false;
-        persistent_warps = false;
-        warp_on_change_workspace = 0;
-        default_monitor = "";
-        zoom_factor = 1.0;
-        zoom_rigid = false;
-        enable_hyprcursor = true;
-        hide_on_key_press = false;
-        hide_on_touch = true;
-        use_cpu_buffer = false;
-        warp_back_after_non_mouse_input = false;
-      };
-
-      # Ecosystem
-      # ========================================================================
-      ecosystem = {
-        no_update_news = false;
-      };
-
-      # Master layout
-      # ========================================================================
-      master = {
-        allow_small_split = false;
-        special_scale_factor = 0.5;
-        mfact = 0.5;
-        new_status = "master";
-        new_on_top = false;
-        new_on_active = "none";
-        orientation = "left";
-        inherit_fullscreen = true;
-        # always_center_master = false;
-        smart_resizing = true;
-        drop_at_cursor = true;
-      };
-
-      # Windows rules
-      # ========================================================================
-      windowrulev2 = [
-        "workspace 2, class:(zen)"
-        "workspace 2, class:(org.qutebrowser.qutebrowser)"
-
-        "workspace 3, class:(obsidian)"
-
-        "workspace 8, class:(.virt-manager-wrapped)"
-
-        "workspace 9, class:(steam)"
-        "float, class:(steam)"
-      ];
-
-      workspace = [
-        # gaming workspace rules
-        "9, gapsin:0, gapsout:0, bordersize:0, border:false, shadow:false, rounding:false, decorate:false"
-      ];
-    };
   };
 }
