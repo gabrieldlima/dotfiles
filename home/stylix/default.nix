@@ -16,7 +16,7 @@ in {
   stylix = {
     enable = true;
     autoEnable = false;
-    image = "${imagePath}";
+    # image = "${imagePath}";
     base16Scheme = {
       base00 = "000000"; # base
       base01 = "000000"; # mantle
