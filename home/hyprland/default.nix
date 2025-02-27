@@ -79,6 +79,8 @@ in {
       # ====================================================================== #
       general = {
         border_size                 = 2;
+        gaps_in                     = 5;
+        gaps_out                    = 10;
         "col.active_border"         = "${blue}";
         "col.inactive_border"       = "${base}";
         "col.nogroup_border"        = "${base}";
