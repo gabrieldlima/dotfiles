@@ -49,7 +49,7 @@
       fade-out-step = 0.5;
 
       # Corners
-      corner-radius = 0;
+      corner-radius = 10;
       rounded-corners-exclude = [
         "window_type = 'dock'"
         "window_type = 'desktop'"
@@ -58,18 +58,24 @@
 
     # Rules for specific window types
     wintypes = {
+      menu = {
+        shadow = false;
+      };
+      dropdown_menu = {
+        shadow = false;
+      };
+      popup_menu = {
+        shadow = false;
+      };
+      utility = {
+        shadow = true;
+      };
       dnd = {
         shadow = true;
       };
       dock = {
         shadow = true;
         clip-shadow-above = true;
-      };
-      dropdown_menu = {
-        opacity = 1;
-      };
-      popup_menu = {
-        opacity = 1;
       };
       tooltip = {
         fade = true;
