@@ -46,6 +46,7 @@
       pkgs.duf
       pkgs.fd
       pkgs.file
+      pkgs.gamescope
       pkgs.gcc
       pkgs.gimp
       pkgs.gnumake
