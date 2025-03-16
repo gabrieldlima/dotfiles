@@ -26,11 +26,8 @@ awful.screen.connect_for_each_screen(function(s)
     screen   = s,
     visible  = true,
     ontop    = false,
-    width    = 2542,
     height   = 40,
     type     = "dock",
-    margins  = { top = 10 },
-    shape    = helpers.rrect(10),
   }
 
   s.bar:setup {
