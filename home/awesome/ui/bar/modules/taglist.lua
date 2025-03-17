@@ -66,34 +66,35 @@ local taglist = function (s)
     buttons = buttons,
     layout  = wibox.layout.fixed.horizontal,
     style = {
-      font    = nil,
+      -- font    = "JetBrains Mono Bold 10",
       spacing = 10,
-      shape   = nil,
-      bg_focus    = colors.background,
-      fg_focus    = colors.blue,
+      shape   = helpers.rrect(5),
+      bg_focus    = colors.blue,
+      fg_focus    = colors.background,
       bg_occupied = colors.background,
-      fg_occupied = colors.text,
+      fg_occupied = colors.lavender,
       bg_empty    = colors.background,
       fg_empty    = colors.surface0,
       bg_urgent   = colors.background,
-      fg_urgent   = colors.red,  -- TODO: Fix urgent color not working
+      fg_urgent   = colors.red,
     },
 
-    widget_template = {
-      widget = wibox.container.background,
-      shape  = helpers.rrect(10),
-
-      create_callback = function (self, c3, _)
-        helpers.tagcolor(self, c3)
-      end,
-
-      update_callback = function (self, c3, _)
-        helpers.tagcolor(self, c3)
-      end,
-    }
+    -- widget_template = {
+    --   widget = wibox.container.background,
+    --   shape  = helpers.rrect(10),
+    --
+    --   create_callback = function (self, c3, _)
+    --     helpers.tagcolor(self, c3)
+    --   end,
+    --
+    --   update_callback = function (self, c3, _)
+    --     helpers.tagcolor(self, c3)
+    --   end,
+    -- }
   }
 
-  return helpers.cbackground(helpers.margin(taglist_widget, 4, 4, 9, 9), helpers.rrect(4), colors.background)
+  return taglist_widget
+  -- return helpers.cbackground(helpers.margin(taglist_widget, 0, 0, 0, 0), helpers.rrect(2), colors.crust)
 end
 
 return taglist

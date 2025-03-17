@@ -28,25 +28,25 @@ ruled.client.connect_signal("request::rules", function()
   -- Qutebrowser
   ruled.client.append_rule {
     rule       = { class = "qutebrowser" },
-    properties = { screen = 1, tag = "2" }
+    properties = { screen = 1, tag = "2:web" }
   }
 
   -- Obsidian
   ruled.client.append_rule {
     rule       = { class = "obsidian" },
-    properties = { screen = 1, tag = "3" },
+    properties = { screen = 1, tag = "3:chat" },
   }
 
   -- Steam
   ruled.client.append_rule {
     rule       = { class = "steam" },
-    properties = { screen = 1, tag = "9", floating = true, placement = awful.placement.centered }
+    properties = { screen = 1, tag = "5:play", floating = true, placement = awful.placement.centered }
   }
 
   -- Virt Manager
   ruled.client.append_rule {
     rule       = { class = ".virt-manager-wrapped" },
-    properties = { screen = 1, tag = "8" },
+    properties = { screen = 1, tag = "4:virt" },
   }
 
   -- Love2D

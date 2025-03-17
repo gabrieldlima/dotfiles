@@ -15,7 +15,7 @@ local tasklist   = require("ui.bar.modules.tasklist")
 
 awful.screen.connect_for_each_screen(function(s)
 
-  awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+  awful.tag({ "1:dev", "2:web", "3:chat", "4:virt", "5:play"}, s, awful.layout.layouts[1])
 
   -----------------------------------------------------------------------------
   -- Bar
@@ -27,6 +27,9 @@ awful.screen.connect_for_each_screen(function(s)
     visible  = true,
     ontop    = false,
     height   = 40,
+    -- width    = 2540,
+    -- margins  = { top = 10 },
+    -- shape    = helpers.rrect(10),
     type     = "dock",
   }
 
@@ -35,14 +38,14 @@ awful.screen.connect_for_each_screen(function(s)
       {
         -- Left widgets
         {
-          helpers.margin(logo, 4, 4, 8, 8),
-          helpers.margin(taglist(s), 4, 4, 5, 5),
+          helpers.margin(logo, 0, 0, 8, 8),
+          helpers.margin(tasklist(s), 0, 4, 4, 4),
           layout = wibox.layout.fixed.horizontal,
         },
 
         -- Center widgets
         {
-          helpers.margin(tasklist(s), 4, 4, 5, 5),
+          helpers.margin(taglist(s), 4, 4, 8, 8),
           layout = wibox.layout.flex.horizontal,
         },
 
