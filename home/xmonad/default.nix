@@ -30,7 +30,7 @@
 
   xsession.windowManager.xmonad = {
     enable = true;
-    enableContribExtras = true;
+    enableContribAndExtras = true;
     config = ./xmonad.hs;
   };
 }
