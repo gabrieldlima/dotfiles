@@ -13,7 +13,6 @@
 }: {
   imports = [
     ./alacritty
-    ./awesome
     ./bash
     ./bat
     ./dunst
@@ -30,6 +29,7 @@
     ./stylix
     ./wezterm
     ./xdg
+    ./xmonad
     ./yazi
     ./zathura
   ];
