@@ -8,6 +8,9 @@ import XMonad.Util.SpawnOnce
 
 import XMonad.Hooks.EwmhDesktops
 
+import XMonad.Layout.Gaps
+import XMonad.Layout.Spacing
+
 
 --------------------------------------------------------------------------------
 -- Main:
@@ -17,6 +20,8 @@ myConfig = def
     modMask = myModMask
   , layoutHook = myLayoutHook
   , startupHook = myStartupHook
+  , normalBorderColor = myNormalBorderColor
+  , focusedBorderColor = myFocusedBorderColor
   }
   `additionalKeysP` myKeys
 
@@ -25,10 +30,18 @@ main = xmonad $ ewmhFullscreen $ ewmh $ myConfig
 
 
 --------------------------------------------------------------------------------
--- Key bindings:
+-- Variables:
 
 myModMask :: KeyMask
 myModMask = mod4Mask
+
+myNormalBorderColor, myFocusedBorderColor :: String
+myNormalBorderColor = "#000000"
+myFocusedBorderColor = "#89b4fa"
+
+
+--------------------------------------------------------------------------------
+-- Key bindings:
 
 myTerminal :: String
 myTerminal = "ghostty"
@@ -50,7 +63,10 @@ myKeys =
 --------------------------------------------------------------------------------
 -- Layouts:
 
-myLayoutHook = tiled ||| Mirror tiled ||| Full
+myLayoutHook = avoidStruts
+  $ gaps [(U,10), (D,10), (R,10), (L,10)]
+  $ spacing 10
+  $ tiled ||| Mirror tiled ||| Full
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled = Tall nmaster delta ratio
@@ -63,7 +79,6 @@ myLayoutHook = tiled ||| Mirror tiled ||| Full
 
     -- Percent of screen to increment by when resizing panes
     delta = 3 / 100
-
 
 
 --------------------------------------------------------------------------------
