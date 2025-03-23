@@ -20,6 +20,7 @@
     ./fish
     ./ghostty
     ./git
+    ./i3wm
     ./kitty
     ./mangohud
     ./qutebrowser
@@ -29,7 +30,6 @@
     ./stylix
     ./wezterm
     ./xdg
-    ./xmonad
     ./yazi
     ./zathura
   ];
