@@ -20,7 +20,7 @@
     ./fish
     ./ghostty
     ./git
-    ./i3wm
+    ./hyprland
     ./kitty
     ./mangohud
     ./qutebrowser
