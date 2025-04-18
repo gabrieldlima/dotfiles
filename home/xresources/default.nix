@@ -10,41 +10,41 @@
 {
   xresources = {
     extraConfig = ''
-      *background: #000000
-      *foreground: #cdd6f4
-      *cursorColor: #f5e0dc
+      ! Gruvbox Dark
+      *background: #0f0f0f
+      *foreground: #ebdbb2
 
-      ! black
-      *color0: #45475a
-      *color8: #585b70
+      ! Black + DarkGrey
+      *color0:  #282828
+      *color8:  #928374
 
-      ! red
-      *color1: #f38ba8
-      *color9: #f38ba8
+      ! DarkRed + Red
+      *color1:  #cc241d
+      *color9:  #fb4934
 
-      ! green
-      *color2: #a6e3a1
-      *color10: #a6e3a1
+      ! DarkGreen + Green
+      *color2:  #98971a
+      *color10: #b8bb26
 
-      ! yellow
-      *color3: #f9e2af
-      *color11: #f9e2af
+      ! DarkYellow + Yellow
+      *color3:  #d79921
+      *color11: #fabd2f
 
-      ! blue
-      *color4: #89b4fa
-      *color12: #89b4fa
+      ! DarkBlue + Blue
+      *color4:  #458588
+      *color12: #83a598
 
-      ! magenta
-      *color5: #f5c2e7
-      *color13: #f5c2e7
+      ! DarkMagenta + Magenta
+      *color5:  #b16286
+      *color13: #d3869b
 
-      ! cyan
-      *color6: #94e2d5
-      *color14: #94e2d5
+      ! DarkCyan + Cyan
+      *color6:  #689d6a
+      *color14: #8ec07c
 
-      ! white
-      *color7: #bac2de
-      *color15: #a6adc8
+      ! LightGrey + White
+      *color7:  #a89984
+      *color15: #ebdbb2
     '';
   };
 }
