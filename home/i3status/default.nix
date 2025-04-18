@@ -21,17 +21,19 @@
           theme =  {
             theme = "plain";
             overrides = {
-              idle_bg = "#000000";
-              idle_fg = "#cdd6f4";
-              good_bg = "#000000";
-              good_fg = "#cdd6f4";
-              warning_bg = "#000000";
-              warning_fg = "#f9e2af";
-              critical_bg = "#000000";
-              critical_fg = "#f38ba8";
-              separator_bg = "#000000";
-              separator_fg = "#89b4fa";
+              idle_bg = "#0f0f0f";
+              idle_fg = "#ebdbb2";
+              info_bg = "#458588";
+              info_fg = "#ebdbb2";
+              good_bg = "#98971a";
+              good_fg = "#ebdbb2";
+              warning_bg = "#d79921";
+              warning_fg = "#ebdbb2";
+              critical_bg = "#cc241d";
+              critical_fg = "#ebdbb2";
               separator = "";
+              separator_bg = "#0f0f0f";
+              separator_fg = "#0f0f0f";
             };
           };
         };
