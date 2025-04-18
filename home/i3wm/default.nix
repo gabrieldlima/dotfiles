@@ -37,14 +37,14 @@
     extraConfig = ''
       # Reading colors from resources
       set_from_resource $background i3wm.background #000000
-      set_from_resource $foreground i3wm.foreground #cdd6f4
+      set_from_resource $foreground i3wm.foreground #ebdbb2
 
-      set_from_resource $red     i3wm.color1     #f38ba8
-      set_from_resource $green   i3wm.color2     #a6e3a1
-      set_from_resource $yellow  i3wm.color3     #f9e2af
-      set_from_resource $blue    i3wm.color4     #89b4fa
-      set_from_resource $magenta i3wm.color5     #f5c2e7
-      set_from_resource $cyan    i3wm.color6     #94e2d5
+      set_from_resource $red     i3wm.color1     #cc241d
+      set_from_resource $green   i3wm.color2     #98971a
+      set_from_resource $yellow  i3wm.color3     #d79921
+      set_from_resource $blue    i3wm.color4     #458588
+      set_from_resource $magenta i3wm.color5     #b16286
+      set_from_resource $cyan    i3wm.color6     #689d6a
     '';
 
     config = {
