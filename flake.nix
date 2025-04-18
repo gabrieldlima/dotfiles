@@ -9,13 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    wezterm-nightly = {
-      url = "github:wez/wezterm?dir=nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    catppuccin.url = "github:catppuccin/nix";
-
     stylix.url = "github:danth/stylix";
   };
 
@@ -23,7 +16,6 @@
     self,
     nixpkgs,
     home-manager,
-    catppuccin,
     stylix,
     ...
   } @ inputs: let
@@ -42,7 +34,6 @@
         extraSpecialArgs = { inherit inputs outputs; };
         modules = [
           ./home/home.nix
-          catppuccin.homeManagerModules.catppuccin
           stylix.homeManagerModules.stylix
         ];
       };
