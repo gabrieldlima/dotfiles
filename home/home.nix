@@ -15,6 +15,7 @@
     ./alacritty
     ./bash
     ./bat
+    ./i3wm
     ./dunst
     ./eza
     ./fish
