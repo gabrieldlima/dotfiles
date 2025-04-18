@@ -19,13 +19,18 @@
       window-padding-x = 10;
       window-padding-y = 10;
 
-      background-opacity = 0.95;
+      background-opacity = 1;
       background-blur = true;
 
-      theme = "catppuccin-mocha-black";
+      theme = "GruvboxDarkHard";
     };
 
     themes = {
+      GruvboxDarkHard = {
+        background = "0f0f0f";
+        foreground = "ebdbb2";
+      };
+
       catppuccin-mocha-black = {
         background = "000000";
         cursor-color = "f5e0dc";
