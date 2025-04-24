@@ -45,6 +45,7 @@
       pkgs.clang-tools
       pkgs.discord
       pkgs.duf
+      pkgs.emacs-gtk
       pkgs.fd
       pkgs.file
       pkgs.gamescope
@@ -71,7 +72,7 @@
     sessionVariables = {
       # Shell
       BROWSER = "qutebrowser";
-      EDITOR = "nvim";
+      EDITOR = "emacs";
       TERMINAL = "ghostty";
       TERM = "xterm-256color";
       HISTFILE = "$XDG_DATA_HOME/history";

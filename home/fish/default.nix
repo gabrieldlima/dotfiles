@@ -85,7 +85,7 @@
       vim   = "nvim";
       nano  = "nvim";
       code  = "nvim";
-      emacs = "nvim";
+      emacs = "emacs";
 
       # Colors
       ip   = "ip -color";
