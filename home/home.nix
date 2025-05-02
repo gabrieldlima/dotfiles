@@ -13,15 +13,14 @@
 }: {
   imports = [
     ./alacritty
+    ./awesome
     ./bash
     ./bat
-    ./i3wm
     ./dunst
     ./eza
     ./fish
     ./ghostty
     ./git
-    ./hyprland
     ./kitty
     ./mangohud
     ./qutebrowser
