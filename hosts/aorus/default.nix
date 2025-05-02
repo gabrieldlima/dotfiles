@@ -22,26 +22,41 @@
 
   services = {
     # Enable the X11 windowing system
-    # xserver = {
-    #   enable = true;
-    #   videoDrivers = [ "amdgpu" ];
-    #   displayManager = {
-    #     startx.enable = true;
-    #   };
-    #   wacom.enable = true;
-    # };
+    xserver = {
+      enable = true;
+      videoDrivers = [ "amdgpu" ];
+      wacom.enable = true;
 
-    # Enable the COSMIC desktop environment
-    # desktopManager = {
-    #   cosmic = {
-    #     enable = true;
-    #   };
-    # };
-    # displayManager = {
-    #   cosmic-greeter = {
-    #     enable = true;
-    #   };
-    # };
+      # Enable xorg xinit
+      displayManager = {
+        startx.enable = true;
+      };
+
+      # Enable the GNOME desktop environment
+      # desktopManager = {
+      #   gnome = {
+      #     enable = true;
+      #   };
+      # };
+      # displayManager = {
+      #   gdm = {
+      #     enable = true;
+      #   };
+      # };
+
+      # Enable the COSMIC desktop environment
+      # desktopManager = {
+      #   cosmic = {
+      #     enable = true;
+      #   };
+      # };
+      # displayManager = {
+      #   cosmic-greeter = {
+      #     enable = true;
+      #   };
+      # };
+    };
+
 
     udev.extraRules = ''
       KERNEL=="hidraw*", ATTRS{idVendor}=="054c", ATTRS{idProduct}=="0ce6", MODE="0660", TAG+="uaccess"
@@ -84,11 +99,46 @@
     };
   };
 
-  # The set of packages that is automatically available to all users
-  environment.systemPackages = with pkgs; [
-    git
-    vim
-  ];
+  environment = {
+    # The set of packages that is automatically available to all users
+    systemPackages = [
+      pkgs.git
+      pkgs.vim
+    ];
+    # Exclude gnome applications
+    gnome.excludePackages = with pkgs; [
+      baobab
+      epiphany
+      evince
+      file-roller
+      geary
+      gnome-backgrounds
+      gnome-calculator
+      gnome-calendar
+      gnome-characters
+      gnome-clocks
+      gnome-connections
+      gnome-console
+      gnome-contacts
+      gnome-disk-utility
+      gnome-font-viewer
+      gnome-logs
+      gnome-maps
+      gnome-music
+      gnome-software
+      gnome-system-monitor
+      gnome-text-editor
+      gnome-tour
+      gnome-user-docs
+      gnome-weather
+      orca
+      seahorse
+      simple-scan
+      snapshot
+      totem
+      yelp
+    ];
+  };
 
   # Fonts
   fonts = {
