@@ -4,8 +4,6 @@
    NixOS & Home Manager
 </h1>
 
----
-
 ### Install:
 ```bash
 git clone https://github.com/gabrieldlima/dotfiles ~/.dotfiles
