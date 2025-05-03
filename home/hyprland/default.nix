@@ -14,10 +14,10 @@
   # ====================================================================== #
   # COLORS                                                                 #
   # ====================================================================== #
-  red  = "rgba(f38ba8ff)";
-  blue = "rgba(89b4faff)";
-  text = "rgba(cdd6f4ff)";
-  base = "rgba(000000ff)";
+  red        = "rgba(cc241dff)";
+  blue       = "rgba(458588ff)";
+  foreground = "rgba(f9f5d7ff)";
+  background = "rgba(000000ff)";
 
   # ====================================================================== #
   # DEFAULT APPS                                                           #
@@ -82,8 +82,8 @@ in {
         gaps_in                     = 5;
         gaps_out                    = 10;
         "col.active_border"         = "${blue}";
-        "col.inactive_border"       = "${base}";
-        "col.nogroup_border"        = "${base}";
+        "col.inactive_border"       = "${background}";
+        "col.nogroup_border"        = "${background}";
         "col.nogroup_border_active" = "${blue}";
         layout                      = "master";
       };
