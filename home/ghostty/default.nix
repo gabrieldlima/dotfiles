@@ -12,7 +12,7 @@
       mouse-hide-while-typing = true;
       clipboard-paste-protection = false;
 
-      window-decoration = true;
+      window-decoration = false;
       window-theme = "ghostty";
       window-width = 120;
       window-height = 35;
