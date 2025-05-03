@@ -11,9 +11,9 @@
   inputs,
   ...
 }: {
-  home.file = {
-    ".config/wezterm/config.lua".source = ./config.lua;
-  };
+  # home.file = {
+  #   ".config/wezterm/config.lua".source = ./config.lua;
+  # };
 
   programs.wezterm = {
     enable = false;
