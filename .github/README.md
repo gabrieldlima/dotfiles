@@ -4,7 +4,6 @@
    NixOS & Home Manager
 </h1>
 
-![img](screenshots/screen03.png)
 ---
 
 ### Install:
