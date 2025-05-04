@@ -38,7 +38,7 @@ in {
   # IMPORTS                                                                #
   # ====================================================================== #
   imports = [
-    # ../waybar
+    ../quickshell
   ];
 
   # ====================================================================== #
@@ -62,6 +62,7 @@ in {
       # AUTOSTART                                                              #
       # ====================================================================== #
       exec-once = [
+        "quickshell"
         "swww-daemon"
       ];
 
@@ -92,6 +93,7 @@ in {
       # DECORATION                                                             #
       # ====================================================================== #
       decoration = {
+        rounding = 10;
         blur = {
           enabled = false;
         };
@@ -206,15 +208,15 @@ in {
         "${modM}, 8, workspace, 8"
         "${modM}, 9, workspace, 9"
 
-        "${modS}, 1, movetoworkspace, 1"
-        "${modS}, 2, movetoworkspace, 2"
-        "${modS}, 3, movetoworkspace, 3"
-        "${modS}, 4, movetoworkspace, 4"
-        "${modS}, 5, movetoworkspace, 5"
-        "${modS}, 6, movetoworkspace, 6"
-        "${modS}, 7, movetoworkspace, 7"
-        "${modS}, 8, movetoworkspace, 8"
-        "${modS}, 9, movetoworkspace, 9"
+        "${modS}, 1, movetoworkspacesilent, 1"
+        "${modS}, 2, movetoworkspacesilent, 2"
+        "${modS}, 3, movetoworkspacesilent, 3"
+        "${modS}, 4, movetoworkspacesilent, 4"
+        "${modS}, 5, movetoworkspacesilent, 5"
+        "${modS}, 6, movetoworkspacesilent, 6"
+        "${modS}, 7, movetoworkspacesilent, 7"
+        "${modS}, 8, movetoworkspacesilent, 8"
+        "${modS}, 9, movetoworkspacesilent, 9"
 
         "${modS}, RETURN, layoutmsg, swapwithmaster"
       ];
