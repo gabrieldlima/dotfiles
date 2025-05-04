@@ -11,8 +11,8 @@
   xresources = {
     extraConfig = ''
       ! Gruvbox Dark
-      *background: #0f0f0f
-      *foreground: #ebdbb2
+      *background: #000000
+      *foreground: #f9f5d7
 
       ! Black + DarkGrey
       *color0:  #282828
