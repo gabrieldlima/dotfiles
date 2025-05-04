@@ -77,7 +77,7 @@
         padding           = mkLiteral "6px";
         placeholder       = "Search";
         placeholder-color = mkLiteral "#45475a";
-        text-color        = mkLiteral "#ebdbb2";
+        text-color        = mkLiteral "#f9f5d7";
       };
       "#listview" = {
         background-color  = mkLiteral "#000000";
@@ -90,7 +90,7 @@
       "#element" = {
         background-color  = mkLiteral "#000000";
         padding           = mkLiteral "5px";
-        text-color        = mkLiteral "#ebdbb2";
+        text-color        = mkLiteral "#f9f5d7";
       };
       "#element-icon" = {
         size              = mkLiteral "20px";
