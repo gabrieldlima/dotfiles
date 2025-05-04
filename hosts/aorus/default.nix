@@ -22,40 +22,40 @@
 
   services = {
     # Enable the X11 windowing system
-    # xserver = {
-    #   enable = true;
-    #   videoDrivers = [ "amdgpu" ];
-    #   wacom.enable = true;
-    #
-    #   # Enable xorg xinit
-    #   displayManager = {
-    #     startx.enable = true;
-    #   };
-    #
-    #   # Enable the GNOME desktop environment
-    #   # desktopManager = {
-    #   #   gnome = {
-    #   #     enable = true;
-    #   #   };
-    #   # };
-    #   # displayManager = {
-    #   #   gdm = {
-    #   #     enable = true;
-    #   #   };
-    #   # };
-    #
-    #   # Enable the COSMIC desktop environment
-    #   # desktopManager = {
-    #   #   cosmic = {
-    #   #     enable = true;
-    #   #   };
-    #   # };
-    #   # displayManager = {
-    #   #   cosmic-greeter = {
-    #   #     enable = true;
-    #   #   };
-    #   # };
-    # };
+    xserver = {
+      enable = true;
+      videoDrivers = [ "amdgpu" ];
+      wacom.enable = true;
+
+      # Enable xorg xinit
+      displayManager = {
+        startx.enable = true;
+      };
+
+      # Enable the GNOME desktop environment
+      # desktopManager = {
+      #   gnome = {
+      #     enable = true;
+      #   };
+      # };
+      # displayManager = {
+      #   gdm = {
+      #     enable = true;
+      #   };
+      # };
+
+      # Enable the COSMIC desktop environment
+      # desktopManager = {
+      #   cosmic = {
+      #     enable = true;
+      #   };
+      # };
+      # displayManager = {
+      #   cosmic-greeter = {
+      #     enable = true;
+      #   };
+      # };
+    };
 
 
     udev.extraRules = ''

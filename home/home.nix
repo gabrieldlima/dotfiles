@@ -13,7 +13,6 @@
 }: {
   imports = [
     ./alacritty
-    ./hyprland
     ./bash
     ./bat
     ./dunst
@@ -21,6 +20,7 @@
     ./fish
     ./ghostty
     ./git
+    ./i3wm
     ./kitty
     ./mangohud
     ./qutebrowser
@@ -45,7 +45,7 @@
       pkgs.clang-tools
       pkgs.discord
       pkgs.duf
-      pkgs.emacs-pgtk
+      pkgs.emacs-gtk
       pkgs.fd
       pkgs.file
       pkgs.gamescope
