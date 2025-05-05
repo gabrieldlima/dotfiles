@@ -13,8 +13,8 @@
   ...
 }: {
   imports = [
+    ./i3status.nix
     ../flameshot
-    ../i3status
     ../picom
     ../xresources
   ];
