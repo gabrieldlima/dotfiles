@@ -58,7 +58,6 @@
       pkgs.obsidian
       pkgs.pavucontrol
       pkgs.ripgrep
-      pkgs.steam
       pkgs.tldr
       pkgs.unzip
       pkgs.wget
