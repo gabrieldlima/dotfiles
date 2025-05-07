@@ -58,35 +58,35 @@ in {
       };
     };
 
-    # cursor = {
-    #   name = "GoogleDot-White";
-    #   package = pkgs.google-cursor;
-    #   size = 16;
-    # };
-    cursor = let
-      getFrom = url: hash: name: {
-        name = name;
-        size = 16;
-        package = pkgs.runCommand "moveUp" {} ''
-          mkdir -p $out/share/icons
-          ln -s ${pkgs.fetchzip {
-          url = url;
-          hash = hash;
-          }} $out/share/icons/${name}
-        '';
-      };
-    in
-      getFrom
-    "https://github.com/gabrieldlima/oldSys/releases/download/release/91083-oldSys.tar.gz"
-    "sha256-WvlnCmeWywCqKZXIREiuLG9sQj+M4/3egAlmZDfi7yQ="
-    "oldSys";
+    cursor = {
+      name = "GoogleDot-Black";
+      package = pkgs.google-cursor;
+      size = 16;
+    };
+    # cursor = let
+    #   getFrom = url: hash: name: {
+    #     name = name;
+    #     size = 16;
+    #     package = pkgs.runCommand "moveUp" {} ''
+    #       mkdir -p $out/share/icons
+    #       ln -s ${pkgs.fetchzip {
+    #       url = url;
+    #       hash = hash;
+    #       }} $out/share/icons/${name}
+    #     '';
+    #   };
+    # in
+    #   getFrom
+    # "https://github.com/gabrieldlima/oldSys/releases/download/release/91083-oldSys.tar.gz"
+    # "sha256-WvlnCmeWywCqKZXIREiuLG9sQj+M4/3egAlmZDfi7yQ="
+    # "oldSys";
 
     targets = {
       gtk = {
         enable = true;
-        extraCss = ''
-          * { border-radius: 0; }
-        '';
+        # extraCss = ''
+        #   * { border-radius: 0; }
+        # '';
       };
     };
   };
