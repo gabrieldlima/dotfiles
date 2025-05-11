@@ -36,7 +36,7 @@
 
     extraConfig = ''
       # Reading colors from resources
-      set_from_resource $background i3wm.background #000000
+      set_from_resource $background i3wm.background #0f0f0f
       set_from_resource $foreground i3wm.foreground #ebdbb2
 
       set_from_resource $red     i3wm.color1     #cc241d
@@ -67,9 +67,9 @@
       };
 
       window = {
-        titlebar = false;
+        titlebar = true;
         border = 2;
-        hideEdgeBorders = "none";
+        hideEdgeBorders = "smart";
 
         commands = [
           {
@@ -85,7 +85,7 @@
             criteria = { class = "^Sxiv$"; };
           }
           {
-            command = "border pixel 2";
+            command = "border normal 2";
             criteria = { class = "com.mitchellh.ghostty"; };
           }
         ];
@@ -114,9 +114,9 @@
       };
 
       assigns = {
-        "2" = [{ class = "^qutebrowser$"; }];
-        "3" = [{ class = "^obsidian$"; }];
-        "8" = [{ class = "^Virt-manager$"; }];
+        "2" = [{ class = "^qutebrowser$"; } { class = "^brave"; }];
+        "3" = [{ class = "^obsidian$";} { class = "^discord"; } ];
+        "8" = [{ class = "^.virt-manager-wrapped$"; }];
         "9" = [{ class = "^steam$"; }];
       };
 
@@ -207,7 +207,7 @@
       keybindings = let
         # My default apps
         terminal    = "ghostty";
-        web_browser = "qutebrowser";
+        web_browser = "brave";
         launcher    = "rofi -show drun";
 
         # Define names for default workspaces for which we configure key bindings later on.
