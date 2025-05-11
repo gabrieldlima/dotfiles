@@ -14,8 +14,8 @@
     enable = true;
     options = {
       font = "Iosevka Slab SemiBold 11";
-      default-bg = "#000000";
-      default-fg = "#cdd6f4";
+      default-bg = "#0f0f0f";
+      default-fg = "#ebdbb2";
     };
   };
 }
