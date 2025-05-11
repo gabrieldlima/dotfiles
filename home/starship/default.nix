@@ -16,7 +16,7 @@
       flavour = "mocha";
     in
     {
-      enable = true;
+      enable = false;
       settings = {
         palette = "catppuccin_${flavour}";
 
