@@ -70,7 +70,7 @@
 
     sessionVariables = {
       # Shell
-      BROWSER = "qutebrowser";
+      BROWSER = "brave";
       EDITOR = "emacs";
       TERMINAL = "ghostty";
       TERM = "xterm-256color";
