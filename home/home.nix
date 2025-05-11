@@ -18,18 +18,22 @@
     ./dunst
     ./eza
     ./fish
+    ./flameshot
     ./ghostty
     ./git
     ./i3wm
     ./kitty
     ./mangohud
+    ./picom
     ./qutebrowser
     ./redshift
     ./rofi
     ./starship
     ./stylix
     ./wezterm
+    ./x11
     ./xdg
+    ./xresources
     ./yazi
     ./zathura
   ];
@@ -58,9 +62,12 @@
       pkgs.obsidian
       pkgs.pavucontrol
       pkgs.ripgrep
+      pkgs.sxiv
       pkgs.tldr
       pkgs.unzip
       pkgs.wget
+      pkgs.xsel
+      pkgs.xwallpaper
       pkgs.zoxide
     ];
 

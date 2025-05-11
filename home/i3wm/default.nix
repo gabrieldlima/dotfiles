@@ -8,28 +8,12 @@
 # ╚════════════════════════════════╝
 
 {
-  pkgs,
   config,
   ...
 }: {
   imports = [
     ./i3status.nix
-    ../flameshot
-    ../picom
-    ../xresources
   ];
-
-  home = {
-    file.".config/x11/xinitrc".text = ''
-      exec i3
-    '';
-
-    packages = with pkgs; [
-      sxiv
-      xsel
-      xwallpaper
-    ];
-  };
 
   xsession.windowManager.i3 = {
     enable = true;

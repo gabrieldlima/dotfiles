@@ -30,24 +30,6 @@ let
     '';
   });
 in {
-  imports = [
-    ../flameshot
-    ../picom
-    ../xresources
-  ];
-
-  home = {
-    file.".config/x11/xinitrc".text = ''
-      exec awesome
-    '';
-
-    packages = with pkgs; [
-      sxiv
-      xsel
-      xwallpaper
-    ];
-  };
-
   xsession.windowManager.awesome = {
     enable = true;
     package = awesome-git;
