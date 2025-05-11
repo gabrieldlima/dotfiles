@@ -98,7 +98,7 @@
       };
 
       assigns = {
-        "2" = [{ class = "^qutebrowser$"; } { class = "^brave"; }];
+        "2" = [{ class = "^qutebrowser$"; } { class = "^Brave-browser"; }];
         "3" = [{ class = "^obsidian$";} { class = "^discord"; } ];
         "8" = [{ class = "^.virt-manager-wrapped$"; }];
         "9" = [{ class = "^steam$"; }];
