@@ -27,8 +27,8 @@
 
     themes = {
       GruvboxDarkHard = {
-        background = "000000";
-        foreground = "f9f5d7";
+        background = "0f0f0f";
+        foreground = "ebdbb2";
       };
 
       catppuccin-mocha-black = {
