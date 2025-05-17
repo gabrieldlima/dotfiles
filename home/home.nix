@@ -21,7 +21,7 @@
     ./flameshot
     ./ghostty
     ./git
-    ./i3wm
+    ./hyprland
     ./kitty
     ./mangohud
     ./picom
@@ -45,11 +45,11 @@
     packages = [
       pkgs._1password-gui
       pkgs.atuin
-      pkgs.brave
+      #pkgs.brave
       pkgs.clang-tools
       pkgs.discord
       pkgs.duf
-      pkgs.emacs-gtk
+      pkgs.emacs-pgtk
       pkgs.fd
       pkgs.file
       pkgs.gamescope
