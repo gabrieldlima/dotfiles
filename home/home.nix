@@ -45,7 +45,6 @@
     packages = [
       pkgs._1password-gui
       pkgs.atuin
-      #pkgs.brave
       pkgs.clang-tools
       pkgs.discord
       pkgs.duf
@@ -62,6 +61,7 @@
       pkgs.obsidian
       pkgs.pavucontrol
       pkgs.ripgrep
+      pkgs.steam
       pkgs.sxiv
       pkgs.tldr
       pkgs.unzip
@@ -77,7 +77,7 @@
 
     sessionVariables = {
       # Shell
-      BROWSER = "brave";
+      BROWSER = "qutebrowser";
       EDITOR = "emacs";
       TERMINAL = "ghostty";
       TERM = "xterm-256color";
@@ -113,5 +113,5 @@
   systemd.user.startServices = "sd-switch";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  home.stateVersion = "24.05";
+  home.stateVersion = "25.05";
 }
