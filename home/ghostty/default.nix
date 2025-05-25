@@ -27,7 +27,7 @@
 
     themes = {
       GruvboxDarkHard = {
-        background = "0f0f0f";
+        background = "000000";
         foreground = "ebdbb2";
       };
 
