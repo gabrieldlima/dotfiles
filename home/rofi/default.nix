@@ -46,9 +46,9 @@
       };
       "#window" = {
         background-color  = mkLiteral "#000000";
-        border            = mkLiteral "2px";
+        border            = mkLiteral "3px";
         border-color      = mkLiteral "#458588";
-        border-radius     = mkLiteral "10px";
+        border-radius     = mkLiteral "0px";
         height            = mkLiteral "500px";
       };
       "#mainbox" = {
