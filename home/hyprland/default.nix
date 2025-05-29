@@ -25,6 +25,7 @@
   browser  = "qutebrowser";
   launcher = "rofi -show drun";
   terminal = "ghostty";
+  editor   = "emacs";
 
   # ====================================================================== #
   # MODKEYS                                                                #
@@ -179,6 +180,7 @@ in {
         "${modM}, RETURN, exec, ${terminal}"
         "${modM}, P , exec, ${launcher}"
         "${modM}, B , exec, ${browser}"
+        "${modM}, E , exec, ${editor}"
 
         "${modS}, Q, exit"
         "${modC}, R, exec, hyprctl reload"
