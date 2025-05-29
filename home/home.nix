@@ -61,6 +61,7 @@
       pkgs.obsidian
       pkgs.pavucontrol
       pkgs.ripgrep
+      pkgs.sioyek
       pkgs.steam
       pkgs.sxiv
       pkgs.tldr
