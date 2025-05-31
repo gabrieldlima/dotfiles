@@ -11,22 +11,17 @@
   config,
   ...
 }: {
-  home.file = {
-    "${config.home.homeDirectory}/.config/waybar/nixos.png".source = ./assets/nixos.png;
-    "${config.home.homeDirectory}/.config/waybar/avatar.png".source = ./assets/avatar.png;
-  };
-
   programs.waybar = {
     enable = true;
 
     settings = {
       waybar = {
         layer = "bottom";
-        output = [ "HDMI-A-1" ];
+        output = [ "DP-2" ];
         position = "top";
-        height = 45;
-        width = 1910;
-        margin-top = 5;
+        height = 32;
+        width = 2560;
+        margin-top = 0;
         margin-left = 0;
         margin-right = 0;
         margin-bottom = 0;
@@ -38,14 +33,15 @@
         fixed-center = true;
         reload_style_on_change = true;
 
-        modules-left = [ "image" "hyprland/workspaces" "hyprland/window" ];
-        modules-center = [ ];
-        modules-right = [ "group/systray" "cpu" "memory" "network" "pulseaudio" "clock" "user" ];
-
-        image = {
-          path = "${config.home.homeDirectory}/.config/waybar/nixos.png";
-          size = 28;
-        };
+        modules-left = [
+          "hyprland/workspaces"
+        ];
+        modules-center = [
+          "hyprland/window"
+        ];
+        modules-right = [
+          "group/systray" "clock"
+        ];
 
         "hyprland/workspaces" = {
           active-only = false;
@@ -55,11 +51,11 @@
           format-icons = {
             active = "";
             default = "";
-            sort-by-number = true;
             urgent = "";
+            sort-by-number = true;
           };
           persistent-workspaces = {
-            "*" = 9;
+            "*" = 4;
           };
           on-click = "activate";
         };
@@ -70,6 +66,7 @@
             "org.pwmt.zathura" = "zathura";
             "org.qutebrowser.qutebrowser" = "qutebrowser";
             "org.wezfurlong.wezterm" = "wezterm";
+            "com.mitchellh.ghostty" = "ghostty";
           };
         };
 
@@ -77,210 +74,153 @@
           "orientation" = "horizontal";
           "modules" = ["custom/showtray" "tray"];
           "drawer" = {
+            "click-to-reveal" = true;
             "transition-duration" = 300;
             "children-class" = "minimized";
           };
         };
-        tray = {
-          icon-size = 20;
-          spacing = 5;
-        };
+
         "custom/showtray" = {
           "format" = "";
           "tooltip" = false;
         };
 
-        cpu = {
-          interval = 2;
-          format = " {usage}%";
-          tooltip = false;
-        };
-
-        memory = {
-          interval = 2;
-          format = "  {used:0.1f}GiB";
-          tooltip = false;
-        };
-
-        network = {
-          interval = 2;
-          interface = "eno1";
-          format-ethernet = "󰈀 {ifname}";
-          tooltip-format-ethernet = "󰩟 {ipaddr}\r󰇚 {bandwidthDownBits}\r󰕒 {bandwidthUpBits}";
-          tooltip = true;
-        };
-
-        pulseaudio = {
-          format = "{icon} {volume}%";
-          format-muted = " ";
-          format-icons = {
-            default = [" " " " " " " " " " " " " "];
-          };
-          scroll-step = 2;
-          tooltip = false;
+        tray = {
+          icon-size = 16;
+          spacing = 5;
         };
 
         clock = {
           interval = 60;
           format = "󰥔 {:%I:%M %p}";
+          format-alt = "{:%A, %B %d, %Y}";
           timezone = "America/Sao_Paulo";
           tooltip = false;
-        };
-
-        user = {
-          format = "";
-          icon = true;
-          avatar = "${config.home.homeDirectory}/.config/waybar/avatar.png";
-          height = 28;
-          width = 28;
         };
       };
     };
 
-    style = let
-      rosewater = "#f5e0dc";
-      flamingo  = "#f2cdcd";
-      pink      = "#f5c2e7";
-      mauve     = "#cba6f7";
-      red       = "#f38ba8";
-      maroon    = "#eba0ac";
-      peach     = "#fab387";
-      yellow    = "#f9e2af";
-      green     = "#a6e3a1";
-      teal      = "#94e2d5";
-      sky       = "#89dceb";
-      sapphire  = "#74c7ec";
-      blue      = "#89b4fa";
-      lavender  = "#b4befe";
-      text      = "#cdd6f4";
-      subtext1  = "#bac2de";
-      subtext0  = "#a6adc8";
-      overlay2  = "#9399b2";
-      overlay1  = "#7f849c";
-      overlay0  = "#6c7086";
-      surface2  = "#585b70";
-      surface1  = "#45475a";
-      surface0  = "#313244";
-      base      = "#000000";
-      mantle    = "#000000";
-      crust     = "#000000";
-    in ''
-      * {
-        min-height: 0px;
-      }
+    style = ''
+        /*
+        =================================================================================
+        Waybar
+        =================================================================================
+        */
+        * {
+            min-height: 0px;
+        }
 
-      window#waybar {
-        background-color: transparent;
-      }
+        window#waybar {
+            color: #ebdbb2;
+            background-color: #000000;
+            font-family: "JetBrains Mono ExtraBold";
+            font-size: 13px;
+        }
 
-      window#waybar > box {
-        border-radius: 10px;
-        margin: 4px 4px 4px 4px;
-        background-color: ${base};
-        box-shadow: 0px 0px 3px 0px ${base};
-      }
+        /*
+        =================================================================================
+        Tooltip
+        =================================================================================
+        */
+        tooltip {
+            background-color: #000000;
+            border: 0px;
+            border-radius: 0px;
+        }
+        tooltip label {
+            color: #ebdbb2;
+            background-color: #000000;
+            font-family: "JetBrains Mono ExtraBold";
+            font-size: 13px;
+        }
 
-      tooltip {
-        font-family: "FiraCode Nerd Font SemBd";
-        font-size: 13px;
-        background-color: ${base};
-        border-radius: 10px;
-      }
+        /*
+        =================================================================================
+        Hyprland
+        =================================================================================
+        */
+        #workspaces {
+            color: #ebdbb2;
+            background: #000000;
+            font-size: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-left: 5px;
+            padding-right: 0px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
 
-      #image {
-        padding-left: 8px;
-      }
+        #workspaces button {
+            color: #000000;
+            background: #ebdbb2;
+            font-size: 0px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            min-width: 10px;
+            border-radius: 10px;
+            transition: min-width 0.2s linear;
+        }
 
-      #workspaces {
-        font-size: 0px;
-        background: ${base};
-        margin-top: 3px;
-        margin-bottom: 3px;
-        padding: 10px 0px;
-      }
+        #workspaces button.empty {
+            background: #282828;
+        }
 
-      #workspaces button {
-        padding: 0px;
-        margin: 0px 5px;
-        min-width: 10px;
-        border-radius: 10px;
-        background: ${lavender};
-        transition: all 0.3s ease-in-out;
-      }
+        #workspaces button.active {
+            background: #458588;
+            min-width: 40px;
+        }
 
-      #workspaces button.empty {
-        background: ${surface0};
-      }
+        #workspaces button.urgent {
+            background: #cc241d;
+        }
 
-      #workspaces button.active {
-        background: ${blue};
-        min-width: 40px;
-        background-size: 400% 400%;
-      }
+        /*
+        =================================================================================
+        System tray
+        =================================================================================
+        */
+        #custom-showtray {
+            font-size: 13px;
+            color: #ebdbb2;
+            padding-left: 2px;
+            padding-right: 2px;
+        }
 
-      #workspaces button:hover {
-        background: ${sapphire};
-        min-width: 40px;
-        background-size: 400% 400%;
-      }
+        #tray {
+            padding-left: 2px;
+            padding-right: 2px;
+        }
 
-      #window,
-      #cpu,
-      #memory,
-      #network,
-      #pulseaudio,
-      #clock {
-        font-family: "FiraCode Nerd Font SemBd";
-        font-size: 13px;
-      }
+        #tray menu {
+            color: #ebdbb2;
+            background: #000000;
+            border: 0px solid #458588;
+            border-radius: 0px;
+        }
 
-      #custom-showtray {
-        font-family: "FiraCode Nerd Font SemBd";
-        font-size: 14px;
-        color: ${text};
-        padding-left: 2px;
-        padding-right: 2px;
-      }
+        #tray menu menuitem:hover {
+            color: #000000;
+            background: #458588;
+            border-radius: 0px;
+        }
 
-      #tray {
-        padding-left: 2px;
-        padding-right: 2px;
-      }
-
-      #cpu {
-        color: ${green};
-        padding-left: 2px;
-        padding-right: 2px;
-      }
-
-      #memory {
-        color: ${red};
-        padding-left: 2px;
-        padding-right: 2px;
-      }
-
-      #network {
-        color: ${teal};
-        padding-left: 2px;
-        padding-right: 2px;
-      }
-
-      #pulseaudio {
-        color: ${rosewater};
-        padding-left: 2px;
-        padding-right: 2px;
-      }
-
-      #clock {
-        color: ${peach};
-        padding-left: 2px;
-        padding-right: 2px;
-      }
-
-      #user {
-        padding-left: 2px;
-        padding-right: 8px;
-      }
+        /*
+        =================================================================================
+        Clock
+        =================================================================================
+        */
+        #clock {
+            padding-right: 5px;
+        }
     '';
   };
 }
