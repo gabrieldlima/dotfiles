@@ -24,16 +24,13 @@
     ./hyprland
     ./kitty
     ./mangohud
-    ./picom
     ./qutebrowser
     ./redshift
     ./rofi
     ./starship
     ./stylix
     ./wezterm
-    ./x11
     ./xdg
-    ./xresources
     ./yazi
     ./zathura
   ];
@@ -63,12 +60,9 @@
       pkgs.ripgrep
       pkgs.sioyek
       pkgs.steam
-      pkgs.sxiv
       pkgs.tldr
       pkgs.unzip
       pkgs.wget
-      pkgs.xsel
-      pkgs.xwallpaper
       pkgs.zoxide
     ];
 
