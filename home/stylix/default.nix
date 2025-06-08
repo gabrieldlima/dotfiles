@@ -18,8 +18,8 @@ in {
     autoEnable = false;
     # image = "${imagePath}";
     base16Scheme = {
-      base00 = "0f0f0f";
-      base01 = "1d2021";
+      base00 = "000000";
+      base01 = "0f0f0f";
       base02 = "3c3835";
       base03 = "504945";
       base04 = "bdae93";
@@ -58,28 +58,28 @@ in {
       };
     };
 
-    cursor = {
-      name = "GoogleDot-Black";
-      package = pkgs.google-cursor;
-      size = 16;
-    };
-    # cursor = let
-    #   getFrom = url: hash: name: {
-    #     name = name;
-    #     size = 16;
-    #     package = pkgs.runCommand "moveUp" {} ''
-    #       mkdir -p $out/share/icons
-    #       ln -s ${pkgs.fetchzip {
-    #       url = url;
-    #       hash = hash;
-    #       }} $out/share/icons/${name}
+    # cursor = {
+    #   name = "GoogleDot-Black";
+    #   package = pkgs.google-cursor;
+    #   size = 16;
+    # };
+    cursor = let
+      getFrom = url: hash: name: {
+        name = name;
+        size = 16;
+        package = pkgs.runCommand "moveUp" {} ''
+          mkdir -p $out/share/icons
+          ln -s ${pkgs.fetchzip {
+          url = url;
+          hash = hash;
+          }} $out/share/icons/${name}
     #     '';
-    #   };
-    # in
-    #   getFrom
-    # "https://github.com/gabrieldlima/oldSys/releases/download/release/91083-oldSys.tar.gz"
-    # "sha256-WvlnCmeWywCqKZXIREiuLG9sQj+M4/3egAlmZDfi7yQ="
-    # "oldSys";
+      };
+    in
+      getFrom
+    "https://github.com/gabrieldlima/oldSys/releases/download/release/91083-oldSys.tar.gz"
+    "sha256-WvlnCmeWywCqKZXIREiuLG9sQj+M4/3egAlmZDfi7yQ="
+    "oldSys";
 
     targets = {
       gtk = {
