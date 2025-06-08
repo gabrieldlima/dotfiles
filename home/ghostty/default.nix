@@ -6,7 +6,7 @@
 
     settings = {
       command = "fish";
-      font-family = "JetBrains Mono";
+      font-family = "Iosevka";
       font-size = 10;
 
       mouse-hide-while-typing = true;

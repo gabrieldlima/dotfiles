@@ -16,7 +16,7 @@
     enable = true;
     package = pkgs.rofi-wayland;
 
-    font = "JetBrains Mono ExtraBold 10";
+    font = "Iosevka ExtraBold 10";
 
     extraConfig = {
       modi = "drun,run,window";

@@ -113,7 +113,7 @@
         window#waybar {
             color: #ebdbb2;
             background-color: #000000;
-            font-family: "JetBrains Mono ExtraBold";
+            font-family: "Iosevka ExtraBold";
             font-size: 13px;
         }
 
@@ -130,7 +130,7 @@
         tooltip label {
             color: #ebdbb2;
             background-color: #000000;
-            font-family: "JetBrains Mono ExtraBold";
+            font-family: "Iosevka ExtraBold";
             font-size: 13px;
         }
 

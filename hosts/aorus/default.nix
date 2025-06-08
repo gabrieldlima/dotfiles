@@ -145,6 +145,7 @@
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
+      iosevka
       jetbrains-mono
       nerd-fonts.fira-code
     ];
