@@ -72,8 +72,9 @@ in {
       # ====================================================================== #
       master = {
         mfact      = 0.5;
-        new_status = "master";
-        new_on_top = true;
+        new_status = "inherit";
+        new_on_top = false;
+        new_on_active = "after";
       };
 
       # ====================================================================== #
@@ -144,19 +145,20 @@ in {
       # ====================================================================== #
       misc = {
         font_family = "JetBrains Mono";
+        focus_on_activate = false;
       };
 
       # ====================================================================== #
       # WINDOW RULES                                                           #
       # ====================================================================== #
       windowrulev2 = [
-        "workspace 2, class:(org.qutebrowser.qutebrowser)"
+        "workspace 2 silent, class:(org.qutebrowser.qutebrowser)"
 
-        "workspace 3, class:(obsidian)"
+        "workspace 3 silent, class:(obsidian)"
 
-        "workspace 8, class:(discord)"
+        "workspace 8 silent, class:(discord)"
 
-        "workspace 9, class:(steam)"
+        "workspace 9 silent, class:(steam)"
         "float, class:(steam)"
 
         # Ignore maximize requests from apps. You'll probably like this.
@@ -189,6 +191,8 @@ in {
         "${modM}, F, fullscreen, 0"
         "${modM}, M, fullscreen, 1"
         "${modM}, SPACE, togglefloating"
+        "${modS}, SPACE, centerwindow, none"
+        "${modM}, U, focusurgentorlast"
 
         "${modM}, h, movefocus, l"
         "${modM}, l, movefocus, r"
