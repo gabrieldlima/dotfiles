@@ -10,32 +10,13 @@
 {
 ...
 }: let
-  rosewater = "#f5e0dc";
-  # flamingo  = "#f2cdcd";
-  # pink      = "#f5c2e7";
-  # mauve     = "#cba6f7";
-  red       = "#f38ba8";
-  # maroon    = "#eba0ac";
-  peach     = "#fab387";
-  yellow    = "#f9e2af";
-  green     = "#a6e3a1";
-  teal      = "#94e2d5";
-  sky       = "#89dceb";
-  # sapphire  = "#74c7ec";
-  blue      = "#89b4fa";
-  # lavender  = "#b4befe";
-  text      = "#cdd6f4";
-  subtext1  = "#bac2de";
-  subtext0  = "#a6adc8";
-  overlay2  = "#9399b2";
-  # overlay1  = "#7f849c";
-  overlay0  = "#6c7086";
-  surface2  = "#585b70";
-  # surface1  = "#45475a";
-  # surface0  = "#313244";
-  base      = "#000000";
-  mantle    = "#000000";
-  crust     = "#000000";
+  red        = "#cc241d";
+  green      = "#98971a";
+  blue       = "#458588";
+  yellow     = "#d79921";
+  black      = "#282828";
+  background = "#000000";
+  foreground = "#ebdbb2";
 in {
   programs.qutebrowser = {
     enable = true;
@@ -74,7 +55,7 @@ in {
       };
 
       fonts = {
-        default_family = "JetBrains Mono SemiBold";
+        default_family = "Iosevka SemiBold";
         default_size   = "10pt";
       };
 
@@ -100,52 +81,52 @@ in {
 
         # ==========
         completion = {
-          fg       = "${subtext0}";
-          even.bg  = "${base}";
-          odd.bg   = "${base}";
-          match.fg = "${green}";
+          fg       = "${foreground}";
+          even.bg  = "${background}";
+          odd.bg   = "${background}";
+          match.fg = "${red}";
 
           category = {
-            bg = "${base}";
-            fg = "${green}";
+            bg = "${background}";
+            fg = "${blue}";
             border = {
-              top    = "${overlay2}";
-              bottom = "${mantle}";
+              top    = "${black}";
+              bottom = "${black}";
             };
           };
 
           item.selected = {
-            bg       = "${surface2}";
-            fg       = "${text}";
-            match.fg = "${rosewater}";
+            bg       = "${blue}";
+            fg       = "${background}";
+            match.fg = "${red}";
             border = {
-              top    = "${surface2}";
-              bottom = "${surface2}";
+              top    = "${black}";
+              bottom = "${black}";
             };
           };
 
           scrollbar = {
-            bg = "${crust}";
-            fg = "${surface2}";
+            bg = "${background}";
+            fg = "${blue}";
           };
         };
 
         # ==========
         downloads = {
-          bar.bg = "${base}";
+          bar.bg = "${background}";
 
           error = {
-            bg = "${base}";
+            bg = "${background}";
             fg = "${red}";
           };
 
           start = {
-            bg = "${base}";
+            bg = "${background}";
             fg = "${blue}";
           };
 
           stop = {
-            bg = "${base}";
+            bg = "${background}";
             fg = "${green}";
           };
 
@@ -157,99 +138,99 @@ in {
 
         # ==========
         hints = {
-          bg       = "${peach}";
-          fg       = "${mantle}";
-          match.fg = "${subtext1}";
+          bg       = "${blue}";
+          fg       = "${background}";
+          match.fg = "${foreground}";
         };
 
         # ==========
         keyhint = {
-          bg        = "${mantle}";
-          fg        = "${text}";
-          suffix.fg = "${subtext1}";
+          bg        = "${background}";
+          fg        = "${foreground}";
+          suffix.fg = "${blue}";
         };
 
         # ==========
         messages = {
           error = {
-            bg     = "${overlay0}";
+            bg     = "${background}";
             fg     = "${red}";
-            border = "${mantle}";
+            border = "${black}";
           };
 
           info = {
-            bg     = "${overlay0}";
-            fg     = "${text}";
-            border = "${mantle}";
+            bg     = "${background}";
+            fg     = "${green}";
+            border = "${black}";
           };
 
           warning = {
-            bg     = "${overlay0}";
-            fg     = "${peach}";
-            border = "${mantle}";
+            bg     = "${background}";
+            fg     = "${yellow}";
+            border = "${black}";
           };
         };
 
         # ==========
         prompts = {
-          bg     = "${mantle}";
-          fg     = "${text}";
-          border = "${overlay0}";
+          bg     = "${background}";
+          fg     = "${foreground}";
+          border = "${black}";
           selected = {
-            bg = "${surface2}";
-            fg = "${rosewater}";
+            bg = "${background}";
+            fg = "${blue}";
           };
         };
 
         # ==========
         statusbar = {
-          progress.bg = "${base}";
+          progress.bg = "${background}";
 
           passthrough = {
-            fg = "${peach}";
-            bg = "${base}";
+            bg = "${background}";
+            fg = "${foreground}";
           };
 
           normal = {
-            bg = "${base}";
-            fg = "${text}";
+            bg = "${background}";
+            fg = "${foreground}";
           };
 
           insert = {
-            bg = "${crust}";
-            fg = "${rosewater}";
+            bg = "${background}";
+            fg = "${foreground}";
           };
 
           command = {
-            bg = "${base}";
-            fg = "${text}";
+            bg = "${background}";
+            fg = "${foreground}";
             private = {
-              bg = "${base}";
-              fg = "${subtext1}";
+              bg = "${background}";
+              fg = "${foreground}";
             };
           };
 
           private = {
-            bg = "${mantle}";
-            fg = "${subtext1}";
+            bg = "${background}";
+            fg = "${foreground}";
           };
 
           caret = {
-            bg = "${base}";
-            fg = "${peach}";
+            bg = "${background}";
+            fg = "${foreground}";
             selection = {
-              bg = "${base}";
-              fg = "${peach}";
+              bg = "${background}";
+              fg = "${foreground}";
             };
           };
 
           url = {
             error.fg = "${red}";
-            fg       = "${text}";
-            hover.fg = "${sky}";
+            fg       = "${foreground}";
+            hover.fg = "${blue}";
             warn.fg  = "${yellow}";
             success  = {
-              http.fg  = "${teal}";
+              http.fg  = "${green}";
               https.fg = "${green}";
             };
           };
@@ -257,16 +238,16 @@ in {
 
         # ==========
         tabs = {
-          bar.bg = "${crust}";
+          bar.bg = "${background}";
 
           even = {
-            bg = "${crust}";
-            fg = "${text}";
+            bg = "${background}";
+            fg = "${foreground}";
           };
 
           odd = {
-            bg = "${crust}";
-            fg = "${text}";
+            bg = "${background}";
+            fg = "${foreground}";
           };
 
           indicator = {
@@ -277,31 +258,31 @@ in {
           selected = {
             even = {
               bg = "${blue}";
-              fg = "${crust}";
+              fg = "${background}";
             };
             odd = {
               bg = "${blue}";
-              fg = "${crust}";
+              fg = "${background}";
             };
           };
 
           pinned = {
             even = {
-              bg = "${crust}";
-              fg = "${text}";
+              bg = "${background}";
+              fg = "${foreground}";
             };
             odd = {
-              bg = "${crust}";
-              fg = "${text}";
+              bg = "${background}";
+              fg = "${foreground}";
             };
             selected = {
               odd = {
                 bg = "${blue}";
-                fg = "${crust}";
+                fg = "${background}";
               };
               even = {
                 bg = "${blue}";
-                fg = "${crust}";
+                fg = "${background}";
               };
             };
           };
@@ -310,18 +291,18 @@ in {
         # ==========
         contextmenu = {
           menu = {
-            bg = "${base}";
-            fg = "${text}";
+            bg = "${background}";
+            fg = "${foreground}";
           };
 
           disabled = {
-            bg = "${mantle}";
-            fg = "${overlay0}";
+            bg = "${background}";
+            fg = "${black}";
           };
 
           selected = {
-            bg = "${overlay0}";
-            fg = "${rosewater}";
+            bg = "${blue}";
+            fg = "${background}";
           };
         };
       };
