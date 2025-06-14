@@ -16,7 +16,7 @@
     enable = true;
     package = pkgs.rofi-wayland;
 
-    font = "Iosevka ExtraBold 10";
+    font = "Iosevka ExtraBold 11";
 
     extraConfig = {
       modi = "drun,run,window";
@@ -46,7 +46,7 @@
       };
       "#window" = {
         background-color  = mkLiteral "#000000";
-        border            = mkLiteral "3px";
+        border            = mkLiteral "2px";
         border-color      = mkLiteral "#458588";
         border-radius     = mkLiteral "0px";
         height            = mkLiteral "500px";

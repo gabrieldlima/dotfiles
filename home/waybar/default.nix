@@ -114,7 +114,7 @@
             color: #ebdbb2;
             background-color: #000000;
             font-family: "Iosevka ExtraBold";
-            font-size: 13px;
+            font-size: 14px;
         }
 
         /*
@@ -131,7 +131,7 @@
             color: #ebdbb2;
             background-color: #000000;
             font-family: "Iosevka ExtraBold";
-            font-size: 13px;
+            font-size: 14px;
         }
 
         /*

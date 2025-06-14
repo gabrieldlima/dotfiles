@@ -7,7 +7,7 @@
     settings = {
       command = "fish";
       font-family = "Iosevka";
-      font-size = 10;
+      font-size = 11;
 
       mouse-hide-while-typing = true;
       clipboard-paste-protection = false;

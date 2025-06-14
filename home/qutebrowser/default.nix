@@ -56,7 +56,7 @@ in {
 
       fonts = {
         default_family = "Iosevka SemiBold";
-        default_size   = "10pt";
+        default_size   = "11pt";
       };
 
       tabs = {
@@ -138,7 +138,7 @@ in {
 
         # ==========
         hints = {
-          bg       = "${blue}";
+          bg       = "${yellow}";
           fg       = "${background}";
           match.fg = "${foreground}";
         };
