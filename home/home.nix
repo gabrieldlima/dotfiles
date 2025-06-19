@@ -33,6 +33,7 @@
     ./xdg
     ./yazi
     ./zathura
+    ./zed
   ];
 
   home = {
@@ -74,7 +75,7 @@
     sessionVariables = {
       # Shell
       BROWSER = "brave";
-      EDITOR = "emacs";
+      EDITOR = "zeditor";
       TERMINAL = "ghostty";
       TERM = "xterm-256color";
       HISTFILE = "$XDG_DATA_HOME/history";

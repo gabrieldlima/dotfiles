@@ -1,0 +1,86 @@
+{
+  ...
+}: {
+  programs.zed-editor = {
+    enable = true;
+
+    userSettings = {
+      restore_on_startup = "none";
+      auto_update = false;
+
+      ui_font_family = "JetBrains Mono";
+      ui_font_size = 16;
+
+      buffer_font_family = "JetBrains Mono";
+      buffer_font_size = 14;
+
+      close_on_file_detele = true;
+      confirm_quit = true;
+
+      scrollbar = {
+        show = "never";
+      };
+
+      tab_bar = {
+        show = false;
+      };
+
+      toolbar = {
+        breadcrumbs = false;
+        quick_actions = false;
+        selections_menu = false;
+        agent_review = false;
+        code_actions = false;
+      };
+
+      git = {
+        inline_blame = { enabled = false; };
+      };
+
+      telemetry = {
+        metrics = false;
+        diagnostics = true;
+      };
+
+      terminal = {
+        button = false;
+        font_family = "JetBrains Mono";
+        font_size = 14;
+        shell = { program = "fish"; };
+        toolbar = { breadcrumbs = false; };
+      };
+
+      theme = {
+        mode = "dark";
+        light = "Gruvbox Dark Hard";
+        dark = "Gruvbox Dark Hard";
+      };
+      "experimental.theme_overrides" = {
+        "background" = "#000000";
+        "border" = "#458588";
+        "border.variant" = "#458588";
+        "editor.background" = "#000000";
+        "editor.gutter.background" = "#000000";
+        "elevated_surface.background" = "#000000";
+        "panel.background" = "#000000";
+        "status_bar.background" = "#000000";
+        "tab_bar.background" = "#000000";
+        "terminal.background" = "#000000";
+        "title_bar.background" = "#000000";
+        "title_bar.inactive_background" = "#000000";
+        "toolbar.background" = "#000000";
+      };
+
+      vim_mode = true;
+
+      agent = {
+        button = false;
+        enabled = false;
+      };
+
+      features = {
+        copilot = false;
+      };
+    };
+  };
+}

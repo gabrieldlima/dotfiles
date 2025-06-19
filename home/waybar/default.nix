@@ -8,7 +8,6 @@
 # ╚═══════════════════════════════════════════════════╝
 
 {
-  config,
   ...
 }: {
   programs.waybar = {
@@ -68,6 +67,7 @@
             "brave-browser" = "brave";
             "org.wezfurlong.wezterm" = "wezterm";
             "com.mitchellh.ghostty" = "ghostty";
+            "dev.zed.Zed" = "zed";
           };
         };
 

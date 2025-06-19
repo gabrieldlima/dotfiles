@@ -25,7 +25,7 @@
   browser  = "brave";
   launcher = "rofi -show drun";
   terminal = "ghostty";
-  editor   = "emacs";
+  editor   = "zeditor";
 
   # ====================================================================== #
   # MODKEYS                                                                #
@@ -137,7 +137,7 @@ in {
       # INPUT                                                                  #
       # ====================================================================== #
       input = {
-        kb_options = "caps:ctrl_modifier";
+        kb_options = "caps:swapescape";
       };
 
       # ====================================================================== #
