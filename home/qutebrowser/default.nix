@@ -19,7 +19,7 @@
   foreground = "#ebdbb2";
 in {
   programs.qutebrowser = {
-    enable = true;
+    enable = false;
 
     quickmarks = {
       awesomewm    = "https://awesomewm.org/apidoc/index.html";

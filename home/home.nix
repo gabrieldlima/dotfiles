@@ -42,6 +42,7 @@
     packages = [
       pkgs._1password-gui
       pkgs.atuin
+      pkgs.brave
       pkgs.clang-tools
       pkgs.discord
       pkgs.duf
@@ -72,7 +73,7 @@
 
     sessionVariables = {
       # Shell
-      BROWSER = "qutebrowser";
+      BROWSER = "brave";
       EDITOR = "emacs";
       TERMINAL = "ghostty";
       TERM = "xterm-256color";

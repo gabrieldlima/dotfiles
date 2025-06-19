@@ -22,7 +22,7 @@
   # ====================================================================== #
   # DEFAULT APPS                                                           #
   # ====================================================================== #
-  browser  = "qutebrowser";
+  browser  = "brave";
   launcher = "rofi -show drun";
   terminal = "ghostty";
   editor   = "emacs";
@@ -153,6 +153,7 @@ in {
       # ====================================================================== #
       windowrulev2 = [
         "workspace 2 silent, class:(org.qutebrowser.qutebrowser)"
+        "workspace 2 silent, class:(brave-browser)"
 
         "workspace 3 silent, class:(obsidian)"
 

@@ -65,6 +65,7 @@
           rewrite = {
             "org.pwmt.zathura" = "zathura";
             "org.qutebrowser.qutebrowser" = "qutebrowser";
+            "brave-browser" = "brave";
             "org.wezfurlong.wezterm" = "wezterm";
             "com.mitchellh.ghostty" = "ghostty";
           };
