@@ -114,7 +114,7 @@
         window#waybar {
             color: #ebdbb2;
             background-color: #000000;
-            font-family: "Iosevka ExtraBold";
+            font-family: "JetBrains Mono ExtraBold";
             font-size: 14px;
         }
 
@@ -126,12 +126,12 @@
         tooltip {
             background-color: #000000;
             border: 0px;
-            border-radius: 0px;
+            border-radius: 10px;
         }
         tooltip label {
             color: #ebdbb2;
             background-color: #000000;
-            font-family: "Iosevka ExtraBold";
+            font-family: "JetBrains Mono ExtraBold";
             font-size: 14px;
         }
 
@@ -205,13 +205,13 @@
             color: #ebdbb2;
             background: #000000;
             border: 0px solid #458588;
-            border-radius: 0px;
+            border-radius: 10px;
         }
 
         #tray menu menuitem:hover {
             color: #000000;
             background: #458588;
-            border-radius: 0px;
+            border-radius: 10px;
         }
 
         /*

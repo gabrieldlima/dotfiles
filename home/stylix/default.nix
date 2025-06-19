@@ -84,9 +84,9 @@ in {
     targets = {
       gtk = {
         enable = true;
-        # extraCss = ''
-        #   * { border-radius: 0; }
-        # '';
+        extraCss = ''
+          * { border-radius: 10; }
+        '';
       };
     };
   };

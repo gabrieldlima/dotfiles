@@ -16,7 +16,7 @@
     enable = true;
     package = pkgs.rofi-wayland;
 
-    font = "Iosevka ExtraBold 11";
+    font = "JetBrains Mono ExtraBold 11";
 
     extraConfig = {
       modi = "drun,run,window";
@@ -46,9 +46,9 @@
       };
       "#window" = {
         background-color  = mkLiteral "#000000";
-        border            = mkLiteral "2px";
+        border            = mkLiteral "3px";
         border-color      = mkLiteral "#458588";
-        border-radius     = mkLiteral "0px";
+        border-radius     = mkLiteral "10px";
         height            = mkLiteral "500px";
       };
       "#mainbox" = {
@@ -57,12 +57,12 @@
       "#inputbar" = {
         children          = mkLiteral "[prompt,entry]";
         background-color  = mkLiteral "#000000";
-        border-radius     = mkLiteral "0px";
+        border-radius     = mkLiteral "10px";
         padding           = mkLiteral "2px";
       };
       "#prompt" = {
         background-color  = mkLiteral "#458588";
-        border-radius     = mkLiteral "0px";
+        border-radius     = mkLiteral "10px";
         margin            = mkLiteral "20px 0px 0px 20px";
         padding           = mkLiteral "6px";
         text-color        = mkLiteral "#000000";
@@ -97,7 +97,7 @@
       };
       "#element selected" = {
         background-color  = mkLiteral "#458588";
-        border-radius     = mkLiteral "0px";
+        border-radius     = mkLiteral "10px";
         text-color        = mkLiteral "#000000";
       };
       "#mode-switcher" = {
@@ -116,7 +116,7 @@
       };
       "#message" = {
         background-color  = mkLiteral "#000000";
-        border-radius     = mkLiteral "0px";
+        border-radius     = mkLiteral "10px";
         margin            = mkLiteral "2px";
         padding           = mkLiteral "2px";
       };
