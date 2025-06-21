@@ -90,6 +90,15 @@
           "j k" = "vim::NormalBefore";
         };
       }
+      {
+        context = "Dock";
+        bindings = {
+          "ctrl-w h" = "workspace::ActivatePaneLeft";
+          "ctrl-w l" = "workspace::Activate";
+          "ctrl-w k" = "workspace::ActivatePaneUp";
+          "ctrl-w j" = "workspace::ActivatePaneDown";
+        };
+      }
     ];
   };
 }
