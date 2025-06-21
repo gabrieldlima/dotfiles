@@ -82,5 +82,14 @@
         copilot = false;
       };
     };
+
+    userKeymaps = [
+      {
+        context = "vim_mode == insert";
+        bindings = {
+          "j k" = "vim::NormalBefore";
+        };
+      }
+    ];
   };
 }
