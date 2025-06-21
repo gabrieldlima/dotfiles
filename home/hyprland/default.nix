@@ -194,6 +194,8 @@ in {
         "${modM}, SPACE, togglefloating"
         "${modS}, SPACE, centerwindow, none"
         "${modM}, U, focusurgentorlast"
+        "${modS}, COMMA, movetoworkspacesilent, special"
+        "${modM}, COMMA, togglespecialworkspace"
 
         "${modM}, h, movefocus, l"
         "${modM}, l, movefocus, r"
