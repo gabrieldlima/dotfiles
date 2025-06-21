@@ -81,7 +81,7 @@ in {
       # GENERAL                                                                #
       # ====================================================================== #
       general = {
-        border_size                 = 3;
+        border_size                 = 2;
         gaps_in                     = 5;
         gaps_out                    = 10;
         "col.active_border"         = "${blue}";
@@ -95,7 +95,7 @@ in {
       # DECORATION                                                             #
       # ====================================================================== #
       decoration = {
-        rounding = 10;
+        rounding = 0;
         blur = {
           enabled = false;
         };

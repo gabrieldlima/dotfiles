@@ -46,9 +46,9 @@
       };
       "#window" = {
         background-color  = mkLiteral "#000000";
-        border            = mkLiteral "3px";
+        border            = mkLiteral "2px";
         border-color      = mkLiteral "#458588";
-        border-radius     = mkLiteral "10px";
+        border-radius     = mkLiteral "0px";
         height            = mkLiteral "500px";
       };
       "#mainbox" = {
@@ -57,12 +57,12 @@
       "#inputbar" = {
         children          = mkLiteral "[prompt,entry]";
         background-color  = mkLiteral "#000000";
-        border-radius     = mkLiteral "10px";
+        border-radius     = mkLiteral "0px";
         padding           = mkLiteral "2px";
       };
       "#prompt" = {
         background-color  = mkLiteral "#458588";
-        border-radius     = mkLiteral "10px";
+        border-radius     = mkLiteral "0px";
         margin            = mkLiteral "20px 0px 0px 20px";
         padding           = mkLiteral "6px";
         text-color        = mkLiteral "#000000";
@@ -97,7 +97,7 @@
       };
       "#element selected" = {
         background-color  = mkLiteral "#458588";
-        border-radius     = mkLiteral "10px";
+        border-radius     = mkLiteral "0px";
         text-color        = mkLiteral "#000000";
       };
       "#mode-switcher" = {
@@ -116,7 +116,7 @@
       };
       "#message" = {
         background-color  = mkLiteral "#000000";
-        border-radius     = mkLiteral "10px";
+        border-radius     = mkLiteral "0px";
         margin            = mkLiteral "2px";
         padding           = mkLiteral "2px";
       };
