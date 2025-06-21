@@ -6,8 +6,8 @@
 
     settings = {
       command = "fish";
-      font-family = "Iosevka";
-      font-size = 11;
+      font-family = "JetBrains Mono";
+      font-size = 10;
 
       mouse-hide-while-typing = true;
       clipboard-paste-protection = false;
