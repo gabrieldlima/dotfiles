@@ -12,7 +12,7 @@
   ...
 }: {
   services.flameshot = {
-    enable = true;
+    enable = false;
 
     # NOTE: https://github.com/flameshot-org/flameshot/blob/master/flameshot.example.ini
     settings = {
