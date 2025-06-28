@@ -11,7 +11,7 @@
   ...
 }: {
   services.redshift = {
-    enable = true;
+    enable = false;
     provider = "manual";
     latitude = -18.91;
     longitude = -48.26;
