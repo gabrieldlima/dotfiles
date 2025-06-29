@@ -53,6 +53,10 @@ in {
     enable = true;
     xwayland.enable = true;
 
+    extraConfig = ''
+      env = ELECTRON_OZONE_PLATFORM_HINT,wayland
+    '';
+
     settings = {
       # ====================================================================== #
       # MONITORS                                                               #
