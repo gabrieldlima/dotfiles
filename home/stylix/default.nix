@@ -59,9 +59,9 @@ in {
     };
 
     cursor = {
-      name = "GoogleDot-White";
-      package = pkgs.google-cursor;
-      size = 32;
+      name = "Bibata-Modern-Ice-Right";
+      package = pkgs.bibata-cursors;
+      size = 24;
     };
     # cursor = let
     #   getFrom = url: hash: name: {
