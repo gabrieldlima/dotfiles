@@ -79,6 +79,8 @@
       enable32Bit = true;
     };
 
+    opentabletdriver.enable = true;
+
     # pulseaudio = {
     #   enable = true;
     #   support32Bit = true;
