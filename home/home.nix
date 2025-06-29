@@ -64,6 +64,7 @@
       pkgs.tldr
       pkgs.unzip
       pkgs.wget
+      pkgs.zed-editor
       pkgs.zoxide
     ];
 
