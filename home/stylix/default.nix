@@ -58,28 +58,28 @@ in {
       };
     };
 
-    cursor = {
-      name = "Bibata-Modern-Ice-Right";
-      package = pkgs.bibata-cursors;
-      size = 24;
-    };
-    # cursor = let
-    #   getFrom = url: hash: name: {
-    #     name = name;
-    #     size = 16;
-    #     package = pkgs.runCommand "moveUp" {} ''
-    #       mkdir -p $out/share/icons
-    #       ln -s ${pkgs.fetchzip {
-    #       url = url;
-    #       hash = hash;
-    #       }} $out/share/icons/${name}
-    # #     '';
-    #   };
-    # in
-    #   getFrom
-    # "https://github.com/gabrieldlima/oldSys/releases/download/release/91083-oldSys.tar.gz"
-    # "sha256-WvlnCmeWywCqKZXIREiuLG9sQj+M4/3egAlmZDfi7yQ="
-    # "oldSys";
+    # cursor = {
+    #   name = "Bibata-Modern-Ice-Right";
+    #   package = pkgs.bibata-cursors;
+    #   size = 24;
+    # };
+    cursor = let
+      getFrom = url: hash: name: {
+        name = name;
+        size = 16;
+        package = pkgs.runCommand "moveUp" {} ''
+          mkdir -p $out/share/icons
+          ln -s ${pkgs.fetchzip {
+          url = url;
+          hash = hash;
+          }} $out/share/icons/${name}
+    #     '';
+      };
+    in
+      getFrom
+    "https://github.com/gabrieldlima/oldSys/releases/download/release/91083-oldSys.tar.gz"
+    "sha256-WvlnCmeWywCqKZXIREiuLG9sQj+M4/3egAlmZDfi7yQ="
+    "oldSys";
 
     targets = {
       gtk = {
