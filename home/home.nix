@@ -33,7 +33,6 @@
     ./xdg
     ./yazi
     ./zathura
-    ./zed
   ];
 
   home = {
@@ -43,7 +42,6 @@
     packages = [
       pkgs._1password-gui
       pkgs.atuin
-      pkgs.brave
       pkgs.clang-tools
       pkgs.discord
       pkgs.duf
@@ -64,7 +62,6 @@
       pkgs.tldr
       pkgs.unzip
       pkgs.wget
-      pkgs.zed-editor
       pkgs.zoxide
     ];
 
@@ -74,8 +71,8 @@
 
     sessionVariables = {
       # Shell
-      BROWSER = "brave";
-      EDITOR = "zeditor";
+      BROWSER = "qutebrowser";
+      EDITOR = "nvim";
       TERMINAL = "ghostty";
       TERM = "xterm-256color";
       HISTFILE = "$XDG_DATA_HOME/history";
