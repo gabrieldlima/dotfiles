@@ -19,11 +19,9 @@
   foreground = "#ebdbb2";
 in {
   programs.qutebrowser = {
-    enable = false;
+    enable = true;
 
     quickmarks = {
-      awesomewm    = "https://awesomewm.org/apidoc/index.html";
-      catppuccin   = "https://catppuccin.com";
       chatgpt      = "https://chat.openai.com";
       drive        = "https://drive.google.com/drive/my-drive";
       github       = "https://github.com/dashboard";
@@ -55,8 +53,8 @@ in {
       };
 
       fonts = {
-        default_family = "Iosevka SemiBold";
-        default_size   = "11pt";
+        default_family = "JetBrains Mono";
+        default_size   = "10pt";
       };
 
       tabs = {
