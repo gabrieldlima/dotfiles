@@ -55,7 +55,7 @@
 
       #########################################################################
       # Shell prompt
-      # starship init fish | source
+      starship init fish | source
 
       #########################################################################
       # Atuin (better shell history)
