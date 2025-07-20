@@ -112,10 +112,16 @@
         }
 
         window#waybar {
+          background-color: transparent;
+        }
+
+        window#waybar > box {
             color: #ebdbb2;
             background-color: #000000;
             font-family: "JetBrains Mono ExtraBold";
             font-size: 14px;
+            margin: 0px 0px 3px 0px;
+            box-shadow: 0px 0px 3px 0px #000000;
         }
 
         /*
