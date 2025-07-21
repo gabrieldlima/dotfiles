@@ -27,6 +27,12 @@
     "selections_menu": false
   },
 
+  "title_bar": {
+    "show_onboarding_banner": false,
+    "show_sign_in": false,
+    "show_user_picture": false
+  },
+
   "git": {
     "inline_blame": {
       "enabled": false
@@ -76,8 +82,7 @@
 
   "agent": {
     "button": false,
-    "enabled": false,
-    "version": "1"
+    "enabled": false
   },
 
   "features": {
