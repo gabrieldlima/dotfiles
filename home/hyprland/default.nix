@@ -123,22 +123,22 @@ in {
         ];
 
         animation = [
-          "global, 1, 10, default"
-          "border, 1, 5.39, easeOutQuint"
-          "windows, 1, 4.79, easeOutQuint"
-          "windowsIn, 1, 4.1, easeOutQuint, popin 87%"
-          "windowsOut, 1, 1.49, linear, popin 87%"
-          "fadeIn, 1, 1.73, almostLinear"
-          "fadeOut, 1, 1.46, almostLinear"
-          "fade, 1, 3.03, quick"
-          "layers, 1, 3.81, easeOutQuint"
-          "layersIn, 1, 4, easeOutQuint, fade"
-          "layersOut, 1, 1.5, linear, fade"
-          "fadeLayersIn, 1, 1.79, almostLinear"
-          "fadeLayersOut, 1, 1.39, almostLinear"
-          "workspaces, 1, 1.94, almostLinear, fade"
-          "workspacesIn, 1, 1.21, almostLinear, fade"
-          "workspacesOut, 1, 1.94, almostLinear, fade"
+          "global, 0, 10, default"
+          "border, 0, 5.39, easeOutQuint"
+          "windows, 0, 4.79, easeOutQuint"
+          "windowsIn, 0, 4.1, easeOutQuint, popin 87%"
+          "windowsOut, 0, 1.49, linear, popin 87%"
+          "fadeIn, 0, 1.73, almostLinear"
+          "fadeOut, 0, 1.46, almostLinear"
+          "fade, 0, 3.03, quick"
+          "layers, 0, 3.81, easeOutQuint"
+          "layersIn, 0, 4, easeOutQuint, fade"
+          "layersOut, 0, 1.5, linear, fade"
+          "fadeLayersIn, 0, 1.79, almostLinear"
+          "fadeLayersOut, 0, 1.39, almostLinear"
+          "workspaces, 0, 1.94, almostLinear, fade"
+          "workspacesIn, 0, 1.21, almostLinear, fade"
+          "workspacesOut, 0, 1.94, almostLinear, fade"
         ];
       };
 
