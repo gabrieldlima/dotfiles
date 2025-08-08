@@ -33,6 +33,7 @@
     ./xdg
     ./yazi
     ./zathura
+    ./zen
   ];
 
   home = {
