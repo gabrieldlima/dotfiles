@@ -53,9 +53,9 @@
             urgent = "";
             sort-by-number = true;
           };
-          persistent-workspaces = {
-            "*" = 4;
-          };
+          # persistent-workspaces = {
+          #   "*" = 4;
+          # };
           on-click = "activate";
         };
 
@@ -68,6 +68,7 @@
             "org.wezfurlong.wezterm" = "wezterm";
             "com.mitchellh.ghostty" = "ghostty";
             "dev.zed.Zed" = "zed";
+            "zen-beta" = "zen";
           };
         };
 
@@ -146,47 +147,36 @@
         Hyprland
         =================================================================================
         */
-        #workspaces {
+        #workspaces button {
             color: #ebdbb2;
             background: #000000;
-            font-size: 0px;
-            margin-left: 0px;
-            margin-right: 0px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            padding-left: 5px;
-            padding-right: 0px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-
-        #workspaces button {
-            color: #000000;
-            background: #ebdbb2;
-            font-size: 0px;
-            margin-left: 5px;
-            margin-right: 5px;
-            margin-top: 0px;
-            margin-bottom: 0px;
+            font-size: 14px;
+            margin-left: 4px;
+            margin-right: 4px;
+            margin-top: 4px;
+            margin-bottom: 4px;
             padding-left: 0px;
             padding-right: 0px;
             padding-top: 0px;
             padding-bottom: 0px;
-            min-width: 10px;
-            border-radius: 10px;
-            transition: min-width 0.2s linear;
+            border-radius: 0px;
         }
 
         #workspaces button.empty {
-            background: #282828;
+            border-radius: 0px;
+            color: #000000;
+            background: #000000;
         }
 
         #workspaces button.active {
+            border-radius: 0px;
+            color: #000000;
             background: #458588;
-            min-width: 40px;
         }
 
         #workspaces button.urgent {
+            border-radius: 0px;
+            color: #000000;
             background: #cc241d;
         }
 
