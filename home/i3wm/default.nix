@@ -9,18 +9,34 @@
 
 {
   config,
+  pkgs,
   ...
 }: {
   imports = [
+    ../flameshot
+    ../picom
+    ../xresources
     ./i3status.nix
   ];
+
+  home = {
+    file.".config/x11/xinitrc".text = ''
+      exec i3
+    '';
+
+    packages = [
+      pkgs.sxiv
+      pkgs.xsel
+      pkgs.xwallpaper
+    ];
+  };
 
   xsession.windowManager.i3 = {
     enable = true;
 
     extraConfig = ''
       # Reading colors from resources
-      set_from_resource $background i3wm.background #0f0f0f
+      set_from_resource $background i3wm.background #000000
       set_from_resource $foreground i3wm.foreground #ebdbb2
 
       set_from_resource $red     i3wm.color1     #cc241d
@@ -33,6 +49,7 @@
 
     config = {
       startup = [
+        { command = "xrandr --output DisplayPort-1 --mode 2560x1440 --rate 170"; notification = false; }
         { command = "picom"; notification = false; }
         { command = "xwallpaper --stretch ${config.home.homeDirectory}/pictures/wallpapers/wallpaper.jpg"; notification = false; }
         { command = "xrdb -load ${config.home.homeDirectory}/.Xresources"; notification = false; }
@@ -51,7 +68,7 @@
       };
 
       window = {
-        titlebar = true;
+        titlebar = false;
         border = 2;
         hideEdgeBorders = "smart";
 
@@ -69,14 +86,14 @@
             criteria = { class = "^Sxiv$"; };
           }
           {
-            command = "border normal 2";
+            command = "border pixel 2";
             criteria = { class = "com.mitchellh.ghostty"; };
           }
         ];
       };
 
       floating = {
-        titlebar = true;
+        titlebar = false;
         border = 2;
       };
 
@@ -148,7 +165,7 @@
         bar_cfg = "${config.home.homeDirectory}/.config/i3status-rust/config-default.toml";
       in [
         {
-          position = "top";
+          position = "bottom";
           statusCommand = "${bar_cmd} ${bar_cfg}";
 
           fonts = {
