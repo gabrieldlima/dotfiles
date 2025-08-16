@@ -46,16 +46,17 @@
           active-only = false;
           all-outputs = false;
           disable-scroll = true;
-          format = "{name}";
+          format = "{icon}";
           format-icons = {
-            active = "";
-            default = "";
-            urgent = "";
+            active = "";
+            default = "";
+            urgent = "";
+            empty = "";
             sort-by-number = true;
           };
-          # persistent-workspaces = {
-          #   "*" = 4;
-          # };
+          persistent-workspaces = {
+            "*" = 9;
+          };
           on-click = "activate";
         };
 
@@ -122,7 +123,7 @@
             font-family: "JetBrains Mono ExtraBold";
             font-size: 14px;
             margin: 0px 0px 3px 0px;
-            box-shadow: 0px 0px 3px 0px #000000;
+            box-shadow: 0px 0px 2px 0px #000000;
         }
 
         /*
@@ -164,20 +165,20 @@
 
         #workspaces button.empty {
             border-radius: 0px;
-            color: #000000;
+            color: #282828;
             background: #000000;
         }
 
         #workspaces button.active {
             border-radius: 0px;
-            color: #000000;
-            background: #458588;
+            color: #458588;
+            background: #000000;
         }
 
         #workspaces button.urgent {
             border-radius: 0px;
-            color: #000000;
-            background: #cc241d;
+            color: #cc241d;
+            background: #000000;
         }
 
         /*
