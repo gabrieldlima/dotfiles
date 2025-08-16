@@ -21,7 +21,7 @@
           theme =  {
             theme = "plain";
             overrides = {
-              idle_bg = "#0f0f0f";
+              idle_bg = "#000000";
               idle_fg = "#ebdbb2";
               info_bg = "#458588";
               info_fg = "#ebdbb2";
@@ -32,8 +32,8 @@
               critical_bg = "#cc241d";
               critical_fg = "#ebdbb2";
               separator = "";
-              separator_bg = "#0f0f0f";
-              separator_fg = "#0f0f0f";
+              separator_bg = "#000000";
+              separator_fg = "#000000";
             };
           };
         };
@@ -53,11 +53,11 @@
           # }
 
           # Notifications
-          {
-            block = "notify";
-            format = " $icon {$paused{Off}|On} {($notification_count.eng(w:1))|}";
-            driver = "dunst";
-          }
+          # {
+          #   block = "notify";
+          #   format = " $icon {$paused{Off}|On} {($notification_count.eng(w:1))|}";
+          #   driver = "dunst";
+          # }
 
           # Scratchpad indicator
           {
@@ -73,29 +73,29 @@
           # }
 
           # CPU statistics
-          {
-            block = "cpu";
-            format = "  $utilization ";
-            format_alt = "  $frequency $barchart ";
-            interval = 2;
-          }
+          # {
+          #   block = "cpu";
+          #   format = "  $utilization ";
+          #   format_alt = "  $frequency $barchart ";
+          #   interval = 2;
+          # }
 
           # Memory usage
-          {
-            block = "custom";
-            format = "   $text ";
-            command = "free -h | awk '/Mem:/ {print $3}'";
-            shell = "bash";
-            interval = 2;
-          }
+          # {
+          #   block = "custom";
+          #   format = "   $text ";
+          #   command = "free -h | awk '/Mem:/ {print $3}'";
+          #   shell = "bash";
+          #   interval = 2;
+          # }
 
           # Disk usage statistics
-          {
-            block = "disk_space";
-            format = " $icon $used/$total ";
-            format_alt = " $icon $free/$percentage ";
-            path = "/";
-          }
+          # {
+          #   block = "disk_space";
+          #   format = " $icon $used/$total ";
+          #   format_alt = " $icon $free/$percentage ";
+          #   path = "/";
+          # }
 
           # Network information
           # {
