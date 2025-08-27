@@ -208,7 +208,7 @@
       keybindings = let
         # My default apps
         terminal    = "ghostty";
-        web_browser = "brave";
+        web_browser = "qutebrowser";
         launcher    = "rofi -show drun";
 
         # Define names for default workspaces for which we configure key bindings later on.

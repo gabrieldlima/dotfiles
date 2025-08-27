@@ -17,11 +17,11 @@
     ./bat
     ./dunst
     ./eza
-    ./i3wm
     ./fish
     ./flameshot
     ./ghostty
     ./git
+    ./hyprland
     ./kitty
     ./mangohud
     ./qutebrowser
