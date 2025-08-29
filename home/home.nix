@@ -18,18 +18,13 @@
     ./dunst
     ./eza
     ./fish
-    ./flameshot
-    ./ghostty
     ./git
     ./hyprland
-    ./kitty
     ./mangohud
     ./qutebrowser
-    ./redshift
     ./rofi
     ./starship
     ./stylix
-    ./wezterm
     ./xdg
     ./yazi
     ./zathura
@@ -45,6 +40,7 @@
       pkgs.clang-tools
       pkgs.discord
       pkgs.duf
+      pkgs.emacs-pgtk
       pkgs.fd
       pkgs.file
       pkgs.gamescope
@@ -54,10 +50,8 @@
       pkgs.jq
       pkgs.neovim
       pkgs.nixd
-      pkgs.obsidian
       pkgs.pavucontrol
       pkgs.ripgrep
-      pkgs.sioyek
       pkgs.steam
       pkgs.tldr
       pkgs.unzip
@@ -73,7 +67,7 @@
       # Shell
       BROWSER = "qutebrowser";
       EDITOR = "nvim";
-      TERMINAL = "ghostty";
+      TERMINAL = "alacritty";
       TERM = "xterm-256color";
       HISTFILE = "$XDG_DATA_HOME/history";
       HISTSIZE = 10000;
