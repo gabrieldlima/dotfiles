@@ -11,7 +11,7 @@
 ...
 }: {
   programs.kitty = {
-    enable = false;
+    enable = true;
 
     font = {
       name = "Iosevka Term Slab Medium";

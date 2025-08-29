@@ -16,7 +16,7 @@
   # };
 
   programs.wezterm = {
-    enable = false;
+    enable = true;
     package = inputs.wezterm-nightly.packages.x86_64-linux.default;
 
     extraConfig = ''
