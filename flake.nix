@@ -9,12 +9,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    stylix.url = "github:danth/stylix";
+
     # quickshell = {
     #   url = "github:quickshell-mirror/quickshell";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
-
-    stylix.url = "github:danth/stylix";
 
     # zen-browser = {
     #   url = "github:0xc000022070/zen-browser-flake";
