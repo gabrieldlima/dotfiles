@@ -11,10 +11,10 @@
   ...
 }: {
   programs.zathura = {
-    enable = false;
+    enable = true;
     options = {
-      font = "Iosevka Slab SemiBold 11";
-      default-bg = "#0f0f0f";
+      font = "Iosevka 12";
+      default-bg = "#000000";
       default-fg = "#ebdbb2";
     };
   };
