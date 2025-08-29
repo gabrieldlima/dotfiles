@@ -145,7 +145,7 @@
         window#waybar > box {
             color: #ebdbb2;
             background-color: #000000;
-            font-family: "JetBrains Mono ExtraBold";
+            font-family: "Iosevka";
             font-size: 14px;
             margin: 3px 0px 0px 0px;
             box-shadow: 0px 0px 3px 0px #000000;
@@ -164,7 +164,7 @@
         tooltip label {
             color: #ebdbb2;
             background-color: #000000;
-            font-family: "JetBrains Mono ExtraBold";
+            font-family: "Iosevka";
             font-size: 14px;
         }
 
