@@ -25,8 +25,8 @@
   # ====================================================================== #
   browser  = "qutebrowser";
   launcher = "rofi -show drun";
-  terminal = "ghostty";
-  editor   = "ghostty -e yazi";
+  terminal = "alacritty";
+  editor   = "alacritty -e yazi";
 
   # ====================================================================== #
   # MODKEYS                                                                #
@@ -47,6 +47,7 @@ in {
   # WAYLAND-ONLY PACKAGES                                                  #
   # ====================================================================== #
   home.packages = [
+    pkgs.hyprpicker
     pkgs.swww
   ];
 
@@ -154,7 +155,7 @@ in {
       # MISC                                                                   #
       # ====================================================================== #
       misc = {
-        font_family = "JetBrains Mono";
+        font_family = "Iosevka";
         focus_on_activate = false;
       };
 
