@@ -1,4 +1,4 @@
-# ╔════════════════════════════╗
+# ╔══════ ══════════════════════╗
 # ║██████╗  ██████╗ ███████╗██╗║
 # ║██╔══██╗██╔═══██╗██╔════╝██║║
 # ║██████╔╝██║   ██║█████╗  ██║║
@@ -16,13 +16,13 @@
     enable = true;
     package = pkgs.rofi-wayland;
 
-    font = "JetBrains Mono ExtraBold 11";
+    font = "Iosevka 12";
 
     extraConfig = {
       modi = "drun,run,window";
       icon-theme = "Papirus";
       show-icons = false;
-      terminal = "ghostty";
+      terminal = "alacritty";
       drun-display-format = "{icon} {name}";
       location = 0;
       disable-history = true;
@@ -75,7 +75,7 @@
         background-color  = mkLiteral "#000000";
         margin            = mkLiteral "20px 0px 0px 10px";
         padding           = mkLiteral "6px";
-        placeholder       = "Search";
+        placeholder       = " Search";
         placeholder-color = mkLiteral "#45475a";
         text-color        = mkLiteral "#ebdbb2";
       };
