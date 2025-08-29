@@ -10,13 +10,10 @@
 {
 pkgs,
 ...
-}: let
-  imagePath = /home/gabriel/Pictures/Wallpapers/wallpaper.jpg;
-in {
+}: {
   stylix = {
     enable = true;
     autoEnable = false;
-    # image = "${imagePath}";
     base16Scheme = {
       base00 = "000000";
       base01 = "0f0f0f";
@@ -39,27 +36,27 @@ in {
     fonts = {
       serif = {
         package = pkgs.noto-fonts;
-        name = "DejaVu Serif";
+        name = "Iosevka";
       };
 
       sansSerif = {
         package = pkgs.noto-fonts;
-        name = "DejaVu Sans";
+        name = "Iosevka";
       };
 
       monospace = {
         package = pkgs.noto-fonts;
-        name = "DejaVu Sans Mono";
+        name = "Iosevka";
       };
 
       emoji = {
         package = pkgs.noto-fonts-emoji;
-        name = "Noto Color Emoji";
+        name = "Iosevka";
       };
     };
 
     cursor = {
-      name = "GoogleDot-White";
+      name = "GoogleDot-Black";
       package = pkgs.google-cursor;
       size = 48;
     };
