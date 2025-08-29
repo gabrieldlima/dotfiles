@@ -53,8 +53,8 @@ in {
       };
 
       fonts = {
-        default_family = "JetBrains Mono";
-        default_size   = "10pt";
+        default_family = "Iosevka";
+        default_size   = "12pt";
       };
 
       tabs = {
