@@ -49,6 +49,7 @@
       pkgs.gcc
       pkgs.gimp
       pkgs.gnumake
+      pkgs.godot
       pkgs.jq
       pkgs.nixd
       pkgs.pavucontrol
