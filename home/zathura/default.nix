@@ -14,8 +14,10 @@
     enable = true;
     options = {
       font = "Iosevka 12";
-      default-bg = "#000000";
+      default-bg = "#0f0f0f";
       default-fg = "#ebdbb2";
+      recolor-darkcolor = "#ebdbb2";
+      recolor-lightcolor = "#0f0f0f";
     };
   };
 }
