@@ -27,7 +27,7 @@
         padding.x = 10;
         padding.y = 10;
         decorations = "None";
-        opacity = 0.95;
+        opacity = 1;
       };
 
       # FONT
@@ -54,7 +54,7 @@
       # COLORS
       colors = {
         primary = {
-          background = "#000000";
+          background = "#0f0f0f";
           foreground = "#ebdbb2";
         };
         normal = {
