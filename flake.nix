@@ -11,6 +11,8 @@
 
     stylix.url = "github:danth/stylix";
 
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+
     # quickshell = {
     #   url = "github:quickshell-mirror/quickshell";
     #   inputs.nixpkgs.follows = "nixpkgs";

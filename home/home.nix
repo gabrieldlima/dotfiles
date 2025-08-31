@@ -9,6 +9,7 @@
 
 {
   pkgs,
+  inputs,
   ...
 }: {
   imports = [
@@ -35,6 +36,8 @@
     homeDirectory = "/home/gabriel";
 
     packages = [
+      inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
+
       pkgs._1password-gui
       pkgs.atuin
       pkgs.clang-tools
@@ -48,7 +51,6 @@
       pkgs.gimp
       pkgs.gnumake
       pkgs.jq
-      pkgs.neovim
       pkgs.nixd
       pkgs.pavucontrol
       pkgs.ripgrep
