@@ -43,7 +43,6 @@
       pkgs.clang-tools
       pkgs.discord
       pkgs.duf
-      pkgs.emacs-pgtk
       pkgs.fd
       pkgs.file
       pkgs.gamescope
