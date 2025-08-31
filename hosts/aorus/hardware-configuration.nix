@@ -25,11 +25,6 @@
       fsType = "btrfs";
     };
 
-  fileSystems."/media/ssd" =
-    { device = "/dev/disk/by-label/ssd";
-      fsType = "btrfs";
-    };
-
   swapDevices = [ {
     device = "/var/lib/swapfile";
     size = 4*1024;
