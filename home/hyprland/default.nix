@@ -147,8 +147,8 @@ in {
       # INPUT                                                                  #
       # ====================================================================== #
       input = {
-        kb_options = "caps:ctrl_modifier";
-        # kb_options = "caps:swapescape";
+        # kb_options = "caps:ctrl_modifier";
+        kb_options = "caps:swapescape";
       };
 
       # ====================================================================== #
