@@ -20,11 +20,11 @@
     ./eza
     ./fish
     ./git
-    ./hyprland
     ./mangohud
     ./qutebrowser
     ./rofi
     ./starship
+    ./i3wm
     ./stylix
     ./xdg
     ./yazi
