@@ -13,7 +13,6 @@
   ...
 }: {
   imports = [
-    ../flameshot
     ../picom
     ../xresources
     ./i3status.nix
@@ -36,7 +35,7 @@
 
     extraConfig = ''
       # Reading colors from resources
-      set_from_resource $background i3wm.background #000000
+      set_from_resource $background i3wm.background #0f0f0f
       set_from_resource $foreground i3wm.foreground #ebdbb2
 
       set_from_resource $red     i3wm.color1     #cc241d
@@ -88,6 +87,14 @@
           {
             command = "border pixel 2";
             criteria = { class = "com.mitchellh.ghostty"; };
+          }
+          {
+            command = "border pixel 2";
+            criteria = { class = "Alacritty"; };
+          }
+          {
+            command = "border pixel 2";
+            criteria = { class = "steam"; };
           }
         ];
       };
@@ -207,7 +214,7 @@
 
       keybindings = let
         # My default apps
-        terminal    = "ghostty";
+        terminal    = "alacritty";
         web_browser = "qutebrowser";
         launcher    = "rofi -show drun";
 
