@@ -20,11 +20,11 @@
     ./eza
     ./fish
     ./git
+    ./hyprland
     ./mangohud
     ./qutebrowser
     ./rofi
     ./starship
-    ./i3wm
     ./stylix
     ./xdg
     ./yazi
@@ -47,7 +47,7 @@
       pkgs.file
       pkgs.gamescope
       pkgs.gcc
-      pkgs.gimp
+      pkgs.gimp3
       pkgs.gnumake
       pkgs.godot
       pkgs.jq
