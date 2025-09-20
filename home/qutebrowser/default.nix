@@ -31,7 +31,6 @@ in {
       home-manager = "https://nix-community.github.io/home-manager/options.xhtml";
       hyprland     = "https://wiki.hyprland.org";
       nixpkgs      = "https://search.nixos.org/packages";
-      reddit       = "https://www.reddit.com";
       translate    = "https://translate.google.com";
       twitch       = "https://www.twitch.tv";
       youtube      = "https://www.youtube.com";
