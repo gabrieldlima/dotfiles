@@ -17,14 +17,14 @@
       waybar = {
         layer = "bottom";
         output = [ "DP-2" ];
-        position = "bottom";
+        position = "top";
         height = 32;
         width = 2560;
         margin-top = 0;
         margin-left = 0;
         margin-right = 0;
         margin-bottom = 0;
-        spacing = 10;
+        spacing = 15;
         name = "waybar";
         mode = "dock";
         start_hidden = false;
@@ -33,7 +33,7 @@
         reload_style_on_change = true;
 
         modules-left = [ "hyprland/workspaces" ];
-        modules-center = [ ];
+        modules-center = [ "hyprland/window" ];
         modules-right = [ "group/systray" "network" "pulseaudio" "clock" ];
 
         "hyprland/workspaces" = {
@@ -89,8 +89,7 @@
 
         clock = {
           interval = 60;
-          format = "󰥔 {:%I:%M %p}";
-          format-alt = "{:%A, %B %d, %Y}";
+          format =  " {:%a %b %d  󰥔 %I:%M %p}";
           timezone = "America/Sao_Paulo";
           tooltip = false;
         };
@@ -106,7 +105,7 @@
             "phone-muted" = "";
             "portable" = "";
             "car" = "";
-            "default" = ["" ""];
+            "default" = ["" ""];
           };
           on-click-right = "pavucontrol";
           scroll-step = 5;
@@ -147,7 +146,7 @@
             background-color: #000000;
             font-family: "Iosevka";
             font-size: 14px;
-            margin: 3px 0px 0px 0px;
+            margin: 0px 0px 3px 0px;
             box-shadow: 0px 0px 3px 0px #000000;
         }
 
@@ -173,37 +172,48 @@
         Hyprland
         =================================================================================
         */
-        #workspaces button {
+        #workspaces {
             color: #ebdbb2;
             background: #000000;
-            font-size: 14px;
-            margin-left: 2px;
-            margin-right: 2px;
-            margin-top: 4px;
-            margin-bottom: 4px;
+            font-size: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-left: 5px;
+            padding-right: 0px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        #workspaces button {
+            color: #000000;
+            background: #ebdbb2;
+            font-size: 0px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 0px;
+            margin-bottom: 0px;
             padding-left: 0px;
             padding-right: 0px;
             padding-top: 0px;
             padding-bottom: 0px;
+            min-width: 10px;
             border-radius: 0px;
+            transition: min-width 0.1s linear;
         }
 
         #workspaces button.empty {
-            border-radius: 0px;
-            color: #000000;
-            background: #000000;
+            background: #282828;
         }
 
         #workspaces button.active {
-            border-radius: 0px;
-            color: #000000;
             background: #458588;
+            min-width: 35px;
         }
 
         #workspaces button.urgent {
-            border-radius: 0px;
-            color: #cc241d;
-            background: #000000;
+            background: #cc241d;
         }
 
         /*
