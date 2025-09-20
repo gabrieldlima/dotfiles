@@ -20,16 +20,15 @@
     extraConfig = {
       modi = "drun,run,window";
       icon-theme = "Papirus";
-      show-icons = false;
+      show-icons = true;
       terminal = "alacritty";
       drun-display-format = "{icon} {name}";
       location = 0;
       disable-history = true;
       hide-scrollbar = true;
-      display-drun = "drun";
-      # display-run = " Run";
-      # display-window = "󰕰 Window";
-      # display-Network = "󰤨 Network";
+      display-drun = " Apps";
+      display-run = " Run";
+      display-window = "󰕰 Window";
       sidebar-mode = true;
     };
 
@@ -37,25 +36,25 @@
       inherit (config.lib.formats.rasi) mkLiteral;
     in {
       "*" = {
-        width             = mkLiteral "400";
+        width             = mkLiteral "600";
       };
       "#element-text, element-icon , mode-switcher" = {
         background-color  = mkLiteral "inherit";
         text-color        = mkLiteral "inherit";
       };
       "#window" = {
-        background-color  = mkLiteral "#000000";
+        background-color  = mkLiteral "#0f0f0f";
         border            = mkLiteral "2px";
         border-color      = mkLiteral "#458588";
         border-radius     = mkLiteral "0px";
         height            = mkLiteral "500px";
       };
       "#mainbox" = {
-        background-color  = mkLiteral "#000000";
+        background-color  = mkLiteral "#0f0f0f";
       };
       "#inputbar" = {
         children          = mkLiteral "[prompt,entry]";
-        background-color  = mkLiteral "#000000";
+        background-color  = mkLiteral "#0f0f0f";
         border-radius     = mkLiteral "0px";
         padding           = mkLiteral "2px";
       };
@@ -64,14 +63,14 @@
         border-radius     = mkLiteral "0px";
         margin            = mkLiteral "20px 0px 0px 20px";
         padding           = mkLiteral "6px";
-        text-color        = mkLiteral "#000000";
+        text-color        = mkLiteral "#0f0f0f";
       };
       "#textbox-prompt-colon" = {
         expand            = mkLiteral "false";
         str               = " =";
       };
       "#entry" = {
-        background-color  = mkLiteral "#000000";
+        background-color  = mkLiteral "#0f0f0f";
         margin            = mkLiteral "20px 0px 0px 10px";
         padding           = mkLiteral "6px";
         placeholder       = " Search";
@@ -79,15 +78,15 @@
         text-color        = mkLiteral "#ebdbb2";
       };
       "#listview" = {
-        background-color  = mkLiteral "#000000";
+        background-color  = mkLiteral "#0f0f0f";
         border            = mkLiteral "0px 0px 0px";
-        columns           = mkLiteral "1";
+        columns           = mkLiteral "2";
         lines             = mkLiteral "5";
         margin            = mkLiteral "0px 20px 0px 20px";
         padding           = mkLiteral "6px 0px 0px";
       };
       "#element" = {
-        background-color  = mkLiteral "#000000";
+        background-color  = mkLiteral "#0f0f0f";
         padding           = mkLiteral "5px";
         text-color        = mkLiteral "#ebdbb2";
       };
@@ -97,30 +96,30 @@
       "#element selected" = {
         background-color  = mkLiteral "#458588";
         border-radius     = mkLiteral "0px";
-        text-color        = mkLiteral "#000000";
+        text-color        = mkLiteral "#0f0f0f";
       };
       "#mode-switcher" = {
         spacing           = mkLiteral "0";
       };
       "#button" = {
-        background-color  = mkLiteral "#000000";
+        background-color  = mkLiteral "#0f0f0f";
         horizontal-align  = mkLiteral "0.5";
         padding           = mkLiteral "10px";
         text-color        = mkLiteral "#6c7086";
         vertical-align    = mkLiteral "0.5";
       };
       "#button selected" = {
-        background-color  = mkLiteral "#000000";
+        background-color  = mkLiteral "#0f0f0f";
         text-color        = mkLiteral "#458588";
       };
       "#message" = {
-        background-color  = mkLiteral "#000000";
+        background-color  = mkLiteral "#0f0f0f";
         border-radius     = mkLiteral "0px";
         margin            = mkLiteral "2px";
         padding           = mkLiteral "2px";
       };
       "#textbox" = {
-        background-color  = mkLiteral "#000000";
+        background-color  = mkLiteral "#0f0f0f";
         margin            = mkLiteral "20px 0px 0px 20px";
         padding           = mkLiteral "6px";
         text-color        = mkLiteral "#458588";
