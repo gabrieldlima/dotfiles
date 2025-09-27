@@ -186,6 +186,7 @@
           padding: 0 6px;
           margin: 0 1.5px;
           min-width: 9px;
+          color: #ebdbb2;
         }
 
         #workspaces button.empty {
