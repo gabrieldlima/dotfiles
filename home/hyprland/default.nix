@@ -23,7 +23,7 @@
   # ====================================================================== #
   # DEFAULT APPS                                                           #
   # ====================================================================== #
-  browser  = "qutebrowser";
+  browser  = "zen";
   launcher = "rofi -show drun";
   terminal = "alacritty";
   editor   = "alacritty -e yazi";
