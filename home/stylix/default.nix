@@ -17,7 +17,7 @@
     autoEnable = false;
 
     base16Scheme = {
-      base00 = "#0f0f0f"; # ----
+      base00 = "#000000"; # ----
       base01 = "#1d2021"; # ---
       base02 = "#504945"; # --
       base03 = "#665c54"; # -
@@ -36,6 +36,7 @@
     };
 
     fonts = {
+      monospace = { name = "Iosevka"; };
       serif = config.stylix.fonts.monospace;
       sansSerif = config.stylix.fonts.monospace;
       emoji = config.stylix.fonts.monospace;
