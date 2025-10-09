@@ -22,13 +22,14 @@
     ./git
     ./hyprland
     ./mangohud
+    ./niri
+    ./qutebrowser
     ./rofi
     ./starship
     ./stylix
     ./xdg
     ./yazi
     ./zathura
-    ./zen
   ];
 
   home = {
@@ -51,6 +52,7 @@
       pkgs.gnumake
       pkgs.godot
       pkgs.jq
+      pkgs.niri
       pkgs.nixd
       pkgs.pavucontrol
       pkgs.ripgrep
@@ -58,6 +60,7 @@
       pkgs.tldr
       pkgs.unzip
       pkgs.wget
+      pkgs.xwayland-satellite
       pkgs.zoxide
     ];
 
