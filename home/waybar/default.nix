@@ -32,13 +32,21 @@
         fixed-center = true;
         reload_style_on_change = true;
 
-        modules-left = [ "custom/logo" "hyprland/workspaces" ];
+        modules-left = [ "custom/logo" "niri/workspaces" ];
         modules-center = [ "clock" ];
         modules-right = [ "group/systray" "network" "pulseaudio" ];
 
         "custom/logo" = {
-          format = " ";
+          format = "󱄅 ";
           on-click = "rofi -show drun";
+        };
+
+        "niri/workspaces" = {
+          format = "{icon}";
+          format-icons = {
+            active = "󱓻";
+            default = "";
+          };
         };
 
         "hyprland/workspaces" = {
@@ -178,7 +186,7 @@
 
         /*
         =================================================================================
-        Hyprland
+        Workspaces
         =================================================================================
         */
         #workspaces button {
@@ -247,7 +255,7 @@
         =================================================================================
         */
         #custom-logo {
-          font-size: 16px;
+          font-size: 20px;
         }
 
         /*
