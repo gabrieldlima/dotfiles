@@ -36,7 +36,7 @@
     };
 
     fonts = {
-      monospace = { name = "Iosevka"; };
+      monospace = { name = "FiraCode"; };
       serif = config.stylix.fonts.monospace;
       sansSerif = config.stylix.fonts.monospace;
       emoji = config.stylix.fonts.monospace;
@@ -45,7 +45,7 @@
     cursor = {
       name = "Bibata-Modern-Ice-Right";
       package = pkgs.bibata-cursors;
-      size = 32;
+      size = 40;
     };
 
     icons = {
