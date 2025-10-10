@@ -147,7 +147,7 @@
     enableDefaultPackages = true;
     packages = with pkgs; [
       iosevka
-      jetbrains-mono
+      fira-code
       nerd-fonts.fira-code
     ];
   };
