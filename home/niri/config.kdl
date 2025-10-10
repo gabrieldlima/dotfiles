@@ -39,8 +39,21 @@ layout {
 }
 
 
+overview {
+    zoom 0.5
+    backdrop-color "#0f0f0f"
+
+    workspace-shadow {
+        softness 40
+        spread 10
+        offset x=0 y=10
+        color "#00000050"
+    }
+}
+
+
 hotkey-overlay {
-    // skip-at-startup
+    skip-at-startup
 }
 
 
@@ -76,6 +89,8 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+P hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
     Mod+O repeat=false { toggle-overview; }
+    Mod+B hotkey-overlay-title="Open a Browser: qutebrowser" { spawn "qutebrowser"; }
+
     Mod+Shift+C repeat=false { close-window; }
 
     Mod+H { focus-column-left; }
