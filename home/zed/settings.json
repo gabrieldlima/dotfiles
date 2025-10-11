@@ -2,13 +2,12 @@
   "restore_on_startup": "none",
   "auto_update": false,
 
-  "ui_font_family": "JetBrains Mono",
+  "ui_font_family": "Fira Code",
   "ui_font_size": 16,
 
-  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_family": "Fira Code",
   "buffer_font_size": 14,
 
-  "close_on_file_detele": true,
   "confirm_quit": true,
 
   "scrollbar": {
@@ -16,7 +15,18 @@
   },
 
   "tab_bar": {
-    "show": false
+    "show": true
+  },
+
+  "disable_ai": true,
+
+  "minimap": {
+    "show": "always"
+  },
+
+  "show_whitespaces": "boundary",
+  "indent_guides": {
+    "enabled": false
   },
 
   "toolbar": {
@@ -46,7 +56,7 @@
 
   "terminal": {
     "button": false,
-    "font_family": "JetBrains Mono",
+    "font_family": "Fira Code",
     "font_size": 14,
     "shell": {
       "program": "fish"
@@ -64,13 +74,13 @@
 
   "experimental.theme_overrides": {
     "background": "#000000",
-    "border": "#458588",
-    "border.variant": "#458588",
     "editor.background": "#000000",
     "editor.gutter.background": "#000000",
     "elevated_surface.background": "#000000",
     "panel.background": "#000000",
     "status_bar.background": "#000000",
+    "tab.active_background": "#000000",
+    "tab.inactive_background": "#000000",
     "tab_bar.background": "#000000",
     "terminal.background": "#000000",
     "title_bar.background": "#000000",
@@ -83,9 +93,5 @@
   "agent": {
     "button": false,
     "enabled": false
-  },
-
-  "features": {
-    "copilot": false
   }
 }

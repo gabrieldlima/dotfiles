@@ -30,6 +30,7 @@
     ./xdg
     ./yazi
     ./zathura
+    ./zed
   ];
 
   home = {
@@ -60,7 +61,9 @@
       pkgs.tldr
       pkgs.unzip
       pkgs.wget
+      pkgs.xdg-desktop-portal-gtk
       pkgs.xwayland-satellite
+      pkgs.zed-editor
       pkgs.zoxide
     ];
 
