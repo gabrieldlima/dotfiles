@@ -1,6 +1,9 @@
 spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
 
+environment {
+    ZED_WINDOW_DECORATIONS "server"
+}
 
 output "DP-2" {
     mode "2560x1440@170.001"
@@ -213,4 +216,3 @@ binds {
 
     Mod+Shift+P { power-off-monitors; }
 }
-
