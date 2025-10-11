@@ -20,7 +20,6 @@
     ./eza
     ./fish
     ./git
-    ./hyprland
     ./mangohud
     ./niri
     ./qutebrowser
@@ -51,7 +50,6 @@
       pkgs.gimp3
       pkgs.gnumake
       pkgs.jq
-      pkgs.niri
       pkgs.nixd
       pkgs.pavucontrol
       pkgs.ripgrep
