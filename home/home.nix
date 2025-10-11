@@ -30,7 +30,6 @@
     ./xdg
     ./yazi
     ./zathura
-    ./zed
   ];
 
   home = {
@@ -51,7 +50,6 @@
       pkgs.gcc
       pkgs.gimp3
       pkgs.gnumake
-      pkgs.godot
       pkgs.jq
       pkgs.niri
       pkgs.nixd
@@ -63,7 +61,6 @@
       pkgs.wget
       pkgs.xdg-desktop-portal-gtk
       pkgs.xwayland-satellite
-      pkgs.zed-editor
       pkgs.zoxide
     ];
 
@@ -73,7 +70,7 @@
 
     sessionVariables = {
       # Shell
-      BROWSER = "zen";
+      BROWSER = "qutebrowser";
       EDITOR = "nvim";
       TERMINAL = "alacritty";
       TERM = "xterm-256color";
