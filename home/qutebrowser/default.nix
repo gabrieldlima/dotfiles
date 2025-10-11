@@ -52,8 +52,8 @@ in {
       };
 
       fonts = {
-        default_family = "Iosevka";
-        default_size   = "12pt";
+        default_family = "Fira Code";
+        default_size   = "11pt";
       };
 
       tabs = {
