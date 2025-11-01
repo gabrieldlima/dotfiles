@@ -43,9 +43,9 @@
     };
 
     cursor = {
-      name = "Bibata-Modern-Ice-Right";
-      package = pkgs.bibata-cursors;
-      size = 40;
+      name = "GoogleDot-White";
+      package = pkgs.google-cursor;
+      size = 48;
     };
 
     icons = {
