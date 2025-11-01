@@ -70,6 +70,10 @@
         support32Bit = true;
       };
     };
+
+    ratbagd = {
+        enable = true;
+    };
   };
 
   hardware = {

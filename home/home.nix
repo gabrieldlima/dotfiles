@@ -52,6 +52,7 @@
       pkgs.jq
       pkgs.nixd
       pkgs.pavucontrol
+      pkgs.piper
       pkgs.ripgrep
       pkgs.steam
       pkgs.tldr
