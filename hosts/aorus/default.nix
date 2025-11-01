@@ -22,16 +22,16 @@
 
   services = {
     # Enable the X11 windowing system
-    xserver = {
-      enable = true;
-      videoDrivers = [ "amdgpu" ];
-      wacom.enable = true;
-
-      # Enable xorg xinit
-      displayManager = {
-        startx.enable = true;
-      };
-
+    # xserver = {
+    #   enable = true;
+    #   videoDrivers = [ "amdgpu" ];
+    #   wacom.enable = true;
+    #
+    #   # Enable xorg xinit
+    #   displayManager = {
+    #     startx.enable = true;
+    #   };
+    #
     #   # Enable the GNOME desktop environment
     #   # desktopManager = {
     #   #   gnome = {
@@ -55,7 +55,7 @@
     #   #     enable = true;
     #   #   };
     #   # };
-    };
+    # };
 
     udev.extraRules = ''
       KERNEL=="hidraw*", KERNELS=="*054C:0CE6*", MODE="0660", TAG+="uaccess"
