@@ -20,8 +20,8 @@
     ./eza
     ./fish
     ./git
+    ./i3wm
     ./mangohud
-    ./niri
     ./qutebrowser
     ./rofi
     ./starship

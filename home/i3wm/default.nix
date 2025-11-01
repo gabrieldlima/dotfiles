@@ -35,7 +35,7 @@
 
     extraConfig = ''
       # Reading colors from resources
-      set_from_resource $background i3wm.background #0f0f0f
+      set_from_resource $background i3wm.background #000000
       set_from_resource $foreground i3wm.foreground #ebdbb2
 
       set_from_resource $red     i3wm.color1     #cc241d
