@@ -20,8 +20,8 @@
     ./eza
     ./fish
     ./git
+    ./i3wm
     ./mangohud
-    ./niri
     ./qutebrowser
     ./rofi
     ./starship
@@ -36,7 +36,7 @@
     homeDirectory = "/home/gabriel";
 
     packages = [
-      inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
+      # inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
 
       pkgs._1password-gui
       pkgs.atuin
