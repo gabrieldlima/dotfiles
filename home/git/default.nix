@@ -12,9 +12,9 @@
 }: {
   programs.git = {
     enable = true;
-    userName = "Gabriel Lima";
-    userEmail = "gabrielgsdlima@gmail.com";
-    extraConfig = {
+    settings = {
+      user.name = "Gabriel Lima";
+      user.email = "gabrielgsdlima@gmail.com";
       core = {
         askPass = "";
       };
