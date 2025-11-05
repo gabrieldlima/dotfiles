@@ -62,9 +62,9 @@
       workspaceAutoBackAndForth = false;
 
       fonts = {
-        names = [ "JetBrains Mono" ];
+        names = [ "Iosevka" ];
         style = "Bold";
-        size = 10.0;
+        size = 11.0;
       };
 
       window = {
@@ -177,9 +177,9 @@
           statusCommand = "${bar_cmd} ${bar_cfg}";
 
           fonts = {
-            names = [ "JetBrains Mono" "FiraCode Nerd Font" ];
+            names = [ "Iosevka" "FiraCode Nerd Font" ];
             style = "Bold";
-            size = 10.0;
+            size = 11.0;
           };
 
           colors = {
