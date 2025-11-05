@@ -33,22 +33,22 @@
       # FONT
       font = {
         normal = {
-          family = "Fira Code";
+          family = "Iosevka";
           style = "Regular";
         };
         bold = {
-          family = "Fira Code";
+          family = "Iosevka";
           style = "Bold";
         };
         italic = {
-          family = "Fira Code";
+          family = "Iosevka";
           style = "Italic";
         };
         bold_italic = {
-          family = "Fira Code";
+          family = "Iosevka";
           style = "Bold Italic";
         };
-        size = 10;
+        size = 11;
       };
 
       # COLORS
