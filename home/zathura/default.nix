@@ -13,7 +13,7 @@
   programs.zathura = {
     enable = true;
     options = {
-      font = "Iosevka 12";
+      font = "Iosevka 11";
       default-bg = "#000000";
       default-fg = "#ebdbb2";
       recolor-darkcolor = "#ebdbb2";
