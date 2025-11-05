@@ -15,7 +15,7 @@
   programs.rofi = {
     enable = true;
 
-    font = "Iosevka 12";
+    font = "Iosevka 11";
 
     extraConfig = {
       modi = "drun,run,window";
