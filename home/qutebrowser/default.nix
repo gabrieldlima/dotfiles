@@ -52,7 +52,7 @@ in {
       };
 
       fonts = {
-        default_family = "Fira Code";
+        default_family = "Iosevka";
         default_size   = "11pt";
       };
 
