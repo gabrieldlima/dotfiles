@@ -32,29 +32,29 @@
         startx.enable = true;
       };
 
-    #   # Enable the GNOME desktop environment
-    #   # desktopManager = {
-    #   #   gnome = {
-    #   #     enable = true;
-    #   #   };
-    #   # };
-    #   # displayManager = {
-    #   #   gdm = {
-    #   #     enable = true;
-    #   #   };
-    #   # };
-    #
-    #   # Enable the COSMIC desktop environment
-    #   # desktopManager = {
-    #   #   cosmic = {
-    #   #     enable = true;
-    #   #   };
-    #   # };
-    #   # displayManager = {
-    #   #   cosmic-greeter = {
-    #   #     enable = true;
-    #   #   };
-    #   # };
+    # Enable the GNOME desktop environment
+    # desktopManager = {
+    #   gnome = {
+    #     enable = true;
+    #   };
+    # };
+    # displayManager = {
+    #   gdm = {
+    #     enable = true;
+    #   };
+    # };
+
+    # Enable the COSMIC desktop environment
+    # desktopManager = {
+    #   cosmic = {
+    #     enable = true;
+    #   };
+    # };
+    # displayManager = {
+    #   cosmic-greeter = {
+    #     enable = true;
+    #   };
+    # };
     };
 
     udev.extraRules = ''
@@ -72,7 +72,11 @@
     };
 
     ratbagd = {
-        enable = true;
+      enable = true;
+    };
+
+    lact = {
+      enable = true;
     };
   };
 
@@ -93,6 +97,8 @@
       enable = false;
       powerOnBoot = true;
     };
+
+    amdgpu.overdrive.enable = true;
   };
 
   # Additional user accounts to be created automatically by the system
