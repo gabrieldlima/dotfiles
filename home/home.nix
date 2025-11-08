@@ -46,6 +46,7 @@
       pkgs.emacs-gtk
       pkgs.fd
       pkgs.file
+      pkgs.gamemode
       pkgs.gamescope
       pkgs.gcc
       pkgs.gimp3
@@ -71,7 +72,7 @@
     sessionVariables = {
       # Shell
       BROWSER = "qutebrowser";
-      EDITOR = "nvim";
+      EDITOR = "emacs";
       TERMINAL = "alacritty";
       TERM = "xterm-256color";
       HISTFILE = "$XDG_DATA_HOME/history";
