@@ -13,13 +13,13 @@
   programs.mangohud = {
     enable = true;
     settings = {
-      fps_limit = 60;
-      preset = 3;
-      gpu_stats = true;
       cpu_stats = true;
       fps = true;
-      frametime = true;
+      fps_limit = 60;
       frame_timing = true;
+      frametime = true;
+      gpu_stats = true;
+      preset = 4;
       text_outline = true;
     };
   };
