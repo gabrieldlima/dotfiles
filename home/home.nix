@@ -50,8 +50,10 @@
       pkgs.gamescope
       pkgs.gcc
       pkgs.gimp3
+      pkgs.glibcInfo
       pkgs.gnumake
       pkgs.jq
+      pkgs.man-pages
       pkgs.nixd
       pkgs.pavucontrol
       pkgs.piper
