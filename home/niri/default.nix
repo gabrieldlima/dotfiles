@@ -11,6 +11,7 @@
     packages = [
       pkgs.niri
       pkgs.swww
+      pkgs.xdg-desktop-portal-gtk
       pkgs.xwayland-satellite
     ];
 

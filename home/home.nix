@@ -62,7 +62,6 @@
       pkgs.tldr
       pkgs.unzip
       pkgs.wget
-      pkgs.xdg-desktop-portal-gtk
       pkgs.zoxide
     ];
 
