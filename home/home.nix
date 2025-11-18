@@ -63,7 +63,6 @@
       pkgs.unzip
       pkgs.wget
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xwayland-satellite
       pkgs.zoxide
     ];
 

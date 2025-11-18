@@ -11,6 +11,7 @@
     packages = [
       pkgs.niri
       pkgs.swww
+      pkgs.xwayland-satellite
     ];
 
     file = {
