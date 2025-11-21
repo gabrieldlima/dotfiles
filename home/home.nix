@@ -36,7 +36,7 @@
     homeDirectory = "/home/gabriel";
 
     packages = [
-      # inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
+      inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
 
       pkgs._1password-gui
       pkgs.aseprite
@@ -44,7 +44,6 @@
       pkgs.clang-tools
       pkgs.discord
       pkgs.duf
-      pkgs.emacs-gtk
       pkgs.fd
       pkgs.file
       pkgs.gamemode
@@ -73,7 +72,7 @@
     sessionVariables = {
       # Shell
       BROWSER = "qutebrowser";
-      EDITOR = "emacs";
+      EDITOR = "nvim";
       TERMINAL = "alacritty";
       TERM = "xterm-256color";
       HISTFILE = "$XDG_DATA_HOME/history";
