@@ -52,8 +52,8 @@
         { command = "picom"; notification = false; }
         { command = "xwallpaper --stretch ${config.home.homeDirectory}/pictures/wallpapers/wallpaper.jpg"; notification = false; }
         { command = "xrdb -load ${config.home.homeDirectory}/.Xresources"; notification = false; }
-        { command = "setxkbmap -option ctrl:nocaps"; notification = false; }
-        # { command = "setxkbmap -option caps:escape"; notification = false; }
+        # { command = "setxkbmap -option ctrl:nocaps"; notification = false; }
+        { command = "setxkbmap -option caps:escape"; notification = false; }
         { command = "dunst"; notification = false; }
       ];
 
@@ -215,7 +215,7 @@
 
       keybindings = let
         # My default apps
-        terminal    = "alacritty";
+        terminal    = "kitty";
         web_browser = "qutebrowser";
         launcher    = "rofi -show drun";
 
