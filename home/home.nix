@@ -39,6 +39,7 @@
       # inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
 
       pkgs._1password-gui
+      pkgs.aseprite
       pkgs.atuin
       pkgs.clang-tools
       pkgs.discord
