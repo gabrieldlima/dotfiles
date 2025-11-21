@@ -1,9 +1,6 @@
 .PHONY: all home aorus
 
-all:
-	sudo nixos-rebuild switch --flake .#aorus && home-manager switch --flake .#gabriel@aorus
-
-home:
+default:
 	home-manager switch --flake .#gabriel@aorus
 
 aorus:
