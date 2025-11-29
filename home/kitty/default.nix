@@ -18,7 +18,9 @@
       bold_font        auto
       italic_font      auto
       bold_italic_font auto
-      font_size 11.0
+      font_size 12.0
+
+      scrollback_pager nvim --cmd "set eventignore=FileType" +'"nnoremap q ZQ"' +'nnoremap i <Nop>' +'nnoremap a <Nop>' +'nnoremap I <Nop>' +'nnoremap A <Nop>' +'nnoremap o <Nop>' +'nnoremap O <Nop>' +'call nvim_open_term(0, {})' +'set nomodified nolist' +'$' -
     '';
 
     settings = {
