@@ -24,6 +24,8 @@
 
       # WINDOW
       window = {
+        dimensions.columns = 130;
+        dimensions.lines = 35;
         padding.x = 10;
         padding.y = 10;
         decorations = "None";
