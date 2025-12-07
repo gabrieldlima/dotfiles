@@ -46,6 +46,7 @@
       pkgs.clang-tools
       pkgs.discord
       pkgs.duf
+      pkgs.fastfetch
       pkgs.fd
       pkgs.file
       pkgs.gamemode
