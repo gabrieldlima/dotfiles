@@ -26,6 +26,7 @@
     ./rofi
     ./starship
     ./stylix
+    ./tmux
     ./xdg
     ./yazi
     ./zathura
