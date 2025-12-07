@@ -13,9 +13,10 @@
   ...
 }: {
   imports = [
-    ./alacrrity
+    ./alacritty
     ./bash
     ./bat
+    ./btop
     ./dunst
     ./eza
     ./fish
