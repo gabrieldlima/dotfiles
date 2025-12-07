@@ -215,7 +215,7 @@
 
       keybindings = let
         # My default apps
-        terminal    = "kitty";
+        terminal    = "alacritty";
         web_browser = "qutebrowser";
         launcher    = "rofi -show drun";
 
