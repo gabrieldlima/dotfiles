@@ -13,6 +13,7 @@
   ...
 }: {
   imports = [
+    ./alacrrity
     ./bash
     ./bat
     ./dunst
@@ -20,7 +21,6 @@
     ./fish
     ./git
     ./i3wm
-    ./kitty
     ./mangohud
     ./qutebrowser
     ./rofi
