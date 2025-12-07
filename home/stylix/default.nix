@@ -45,7 +45,7 @@
     cursor = {
       name = "GoogleDot-White";
       package = pkgs.google-cursor;
-      size = 48;
+      size = 64;
     };
 
     icons = {
