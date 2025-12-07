@@ -41,6 +41,7 @@
       inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
 
       pkgs._1password-gui
+      pkgs.ascii
       pkgs.aseprite
       pkgs.atuin
       pkgs.bc
