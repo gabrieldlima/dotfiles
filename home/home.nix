@@ -24,7 +24,6 @@
     ./i3wm
     ./mangohud
     ./qutebrowser
-    ./rofi
     ./starship
     ./stylix
     ./tmux
@@ -47,6 +46,7 @@
       pkgs.bc
       pkgs.clang-tools
       pkgs.discord
+      pkgs.dmenu
       pkgs.duf
       pkgs.fastfetch
       pkgs.fd
