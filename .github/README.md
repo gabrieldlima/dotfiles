@@ -1,12 +1,10 @@
 <h1 align="center">
- <img src="https://user-images.githubusercontent.com/45159366/128645103-795eebbd-f853-47cc-8087-916dfd98347b.png">
+ <img src="https://logospng.org/download/windows-11/logo-windows-11-icon-1024.png", height = 100>
   <br />
-   NixOS & Home Manager
+   Windows
 </h1>
 
 ### Install:
-```bash
-git clone https://github.com/gabrieldlima/dotfiles ~/.dotfiles
-cd ~/.dotfiles
-make
+```cmd
+.\deploy.cmd
 ```
