@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+local home = os.getenv("USERPROFILE")
 
 local M = {}
 
@@ -63,6 +64,30 @@ M.colors = {
             bg_color = "#000000",
             fg_color = "#ebdbb2",
             intensity = "Bold",
+        },
+    },
+}
+
+-- Launcher
+-- =============================================================================
+M.launch_menu = {
+    {
+        label = "MSVC - Command Prompt",
+        cwd = home .. "\\Source",
+        args = {
+            "cmd",
+            "/k",
+            "C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\Common7\\Tools\\VsDevCmd.bat"
+        },
+    },
+    {
+        label = "MSVC - Powershell",
+        cwd = home .. "\\Source",
+        args = {
+            "pwsh",
+            "-NoExit",
+            "-Command",
+            "& { Import-Module 'C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\Common7\\Tools\\Microsoft.VisualStudio.DevShell.dll'; Enter-VsDevShell 2700ce5b }"
         },
     },
 }
