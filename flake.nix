@@ -13,6 +13,11 @@
 
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
+    wezterm-nightly = {
+      url = "github:wez/wezterm?dir=nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # quickshell = {
     #   url = "github:quickshell-mirror/quickshell";
     #   inputs.nixpkgs.follows = "nixpkgs";
