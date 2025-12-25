@@ -1,0 +1,9 @@
+[user]
+	name = Gabriel Lima
+	email = gabrielgsdlima@gmail.com
+[init]
+	defaultBranch = main
+[core]
+    autocrlf = true
+    eol = crlf
+    safecrlf = false
