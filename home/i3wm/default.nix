@@ -70,7 +70,7 @@
       window = {
         titlebar = false;
         border = 3;
-        hideEdgeBorders = "smart";
+        hideEdgeBorders = "none";
 
         commands = [
           {
@@ -86,15 +86,15 @@
             criteria = { class = "^Sxiv$"; };
           }
           {
-            command = "border pixel 2";
+            command = "border pixel 3";
             criteria = { class = "com.mitchellh.ghostty"; };
           }
           {
-            command = "border pixel 2";
+            command = "border pixel 3";
             criteria = { class = "Alacritty"; };
           }
           {
-            command = "border pixel 2";
+            command = "border pixel 3";
             criteria = { class = "steam"; };
           }
         ];
@@ -102,7 +102,7 @@
 
       floating = {
         titlebar = false;
-        border = 2;
+        border = 3;
       };
 
       gaps = {
@@ -215,7 +215,7 @@
 
       keybindings = let
         # My default apps
-        terminal    = "alacritty";
+        terminal    = "wezterm";
         web_browser = "qutebrowser";
         launcher    = "dmenu_run -l 8 -fn 'Iosevka-11' -nb '#000000' -nf '#ebdbb2' -sb '#458588' -sf '#000000'";
 
