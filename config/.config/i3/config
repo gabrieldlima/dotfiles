@@ -1,0 +1,166 @@
+# === Autostart ================================================================
+exec --no-startup-id xrandr --output DP-2 --mode 2560x1440 --rate 170
+exec --no-startup-id xrdb -load /home/gabriel/.config/x11/xresources
+exec --no-startup-id xsetroot -cursor_name left_ptr
+exec --no-startup-id setxkbmap -option ctrl:nocaps
+exec --no-startup-id sh -c ~/.fehbg
+exec --no-startup-id picom
+exec --no-startup-id dunst
+
+
+# === Theme ====================================================================
+set_from_resource $background i3wm.background #000000
+set_from_resource $foreground i3wm.foreground #ebdbb2
+
+set_from_resource $red     i3wm.color1     #cc241d
+set_from_resource $green   i3wm.color2     #98971a
+set_from_resource $yellow  i3wm.color3     #d79921
+set_from_resource $blue    i3wm.color4     #458588
+set_from_resource $magenta i3wm.color5     #b16286
+set_from_resource $cyan    i3wm.color6     #689d6a
+
+client.background       $background
+client.focused          $blue $blue $background $blue $blue
+client.focused_inactive $background $background $foreground $background $background
+client.unfocused        $background $background $foreground $blue $background
+client.urgent           $blue $blue $foreground $blue $red
+client.placeholder      $blue $blue $foreground $blue $green
+
+font pango:Iosevka 11
+
+gaps bottom 1
+gaps inner 10
+gaps left 1
+gaps right 1
+gaps top 1
+
+
+# === Status bar ===============================================================
+bar {
+  status_command i3status -c ~/.config/i3/i3status.conf
+  font pango:Iosevka 11
+  position bottom
+
+  colors {
+    background         $background
+    statusline         $foreground
+    separator          $blue
+    focused_workspace  $background $blue $background
+    active_workspace   $background $yellow $foreground
+    inactive_workspace $background $background $foreground
+    urgent_workspace   $background $red $background
+  }
+}
+
+
+# === Rules ====================================================================
+assign [class="^qutebrowser$"] 2
+assign [class="^Brave-browser"] 2
+assign [class="^obsidian$"] 3
+assign [class="^discord"] 3
+assign [class="^.virt-manager-wrapped$"] 8
+assign [class="^steam$"] 9
+
+for_window [class="^steam$"] floating enable
+for_window [class="^1Password$"] floating enable
+for_window [class="^Sxiv$"] floating enable
+for_window [class="com.mitchellh.ghostty"] border pixel 3
+for_window [class="Alacritty"] border pixel 3
+for_window [class="steam"] border pixel 3
+
+
+# === Misc =====================================================================
+default_border pixel 3
+default_floating_border pixel 3
+floating_modifier Mod4
+focus_follows_mouse yes
+focus_on_window_activation smart
+focus_wrapping yes
+hide_edge_borders none
+mouse_warping output
+workspace_auto_back_and_forth yes
+workspace_layout default
+
+
+# === Keybinds =================================================================
+set $terminal alacritty
+set $browser qutebrowser
+set $launcher dmenu_run -l 8 -fn 'Iosevka-11' -nb '#000000' -nf '#ebdbb2' -sb '#458588' -sf '#000000'
+
+# open apps
+bindsym Mod4+Return exec --no-startup-id $terminal
+bindsym Mod4+b exec --no-startup-id $browser
+bindsym Mod4+p exec --no-startup-id $launcher
+
+bindsym Mod4+Shift+c kill
+
+bindsym Mod4+Shift+f fullscreen toggle
+bindsym Mod4+Shift+space floating toggle
+
+bindsym Mod4+d split h
+bindsym Mod4+Shift+d split v
+
+bindsym Mod4+comma scratchpad show
+bindsym Mod4+Shift+comma move scratchpad
+
+bindsym Mod4+r mode resize
+
+bindsym Mod4+space focus mode_toggle
+bindsym Mod4+a focus parent
+
+# change focus
+bindsym Mod4+h focus left
+bindsym Mod4+j focus down
+bindsym Mod4+k focus up
+bindsym Mod4+l focus right
+
+# move focused window
+bindsym Mod4+Shift+h move left
+bindsym Mod4+Shift+j move down
+bindsym Mod4+Shift+k move up
+bindsym Mod4+Shift+l move right
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym Mod4+e layout toggle split
+bindsym Mod4+s layout stacking
+bindsym Mod4+w layout tabbed
+
+# switch to workspace
+bindsym Mod4+1 workspace number 1
+bindsym Mod4+2 workspace number 2
+bindsym Mod4+3 workspace number 3
+bindsym Mod4+4 workspace number 4
+bindsym Mod4+5 workspace number 5
+bindsym Mod4+6 workspace number 6
+bindsym Mod4+7 workspace number 7
+bindsym Mod4+8 workspace number 8
+bindsym Mod4+9 workspace number 9
+
+# move focused container to workspace
+bindsym Mod4+Shift+1 move container to workspace number 1
+bindsym Mod4+Shift+2 move container to workspace number 2
+bindsym Mod4+Shift+3 move container to workspace number 3
+bindsym Mod4+Shift+4 move container to workspace number 4
+bindsym Mod4+Shift+5 move container to workspace number 5
+bindsym Mod4+Shift+6 move container to workspace number 6
+bindsym Mod4+Shift+7 move container to workspace number 7
+bindsym Mod4+Shift+8 move container to workspace number 8
+bindsym Mod4+Shift+9 move container to workspace number 9
+
+# restart i3
+bindsym Mod4+Shift+r restart
+
+# exit i3 (logs you out of your X session)
+bindsym Mod4+Shift+q exec i3-nagbar -t warning -m 'Do you want to exit i3?' -b 'Yes' 'i3-msg exit'
+
+# resize window
+mode "resize" {
+  bindsym h resize shrink width 10 px or 10 ppt
+  bindsym j resize grow height 10 px or 10 ppt
+  bindsym k resize shrink height 10 px or 10 ppt
+  bindsym l resize grow width 10 px or 10 ppt
+
+  # back to normal: Enter or Escape
+  bindsym Escape mode default
+  bindsym Return mode default
+}

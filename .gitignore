@@ -1,0 +1,7 @@
+config/.config/qutebrowser/bookmarks/
+config/.config/qutebrowser/greasemonkey/
+config/.config/qutebrowser/autoconfig.yml
+
+config/.config/x11/xauthority
+
+*~*

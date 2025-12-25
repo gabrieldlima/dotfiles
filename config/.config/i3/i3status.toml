@@ -1,0 +1,37 @@
+[[block]]
+block = "scratchpad"
+format = " PAD:$count "
+
+[[block]]
+block = "sound"
+format = " VOL: $volume "
+format_alt = " VOL: $active_port "
+headphones_indicator = true
+max_vol = 100
+show_volume_when_muted = true
+
+[[block]]
+block = "time"
+format = " $timestamp.datetime(f:'%a %b %d') $timestamp.datetime(f:'%I:%M %p') "
+interval = 60
+
+[icons]
+icons = "material-nf"
+
+[theme]
+theme = "plain"
+
+[theme.overrides]
+critical_bg = "#cc241d"
+critical_fg = "#ebdbb2"
+good_bg = "#98971a"
+good_fg = "#ebdbb2"
+idle_bg = "#000000"
+idle_fg = "#ebdbb2"
+info_bg = "#458588"
+info_fg = "#ebdbb2"
+separator = "|"
+separator_bg = "#000000"
+separator_fg = "#ebdbb2"
+warning_bg = "#d79921"
+warning_fg = "#ebdbb2"

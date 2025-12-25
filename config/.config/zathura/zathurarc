@@ -1,0 +1,5 @@
+set default-bg	"#000000"
+set default-fg	"#ebdbb2"
+set font	"Iosevka 11"
+set recolor-darkcolor	"#ebdbb2"
+set recolor-lightcolor	"#000000"
