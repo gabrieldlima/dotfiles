@@ -5,7 +5,7 @@ local M = {}
 
 -- Config
 -- =============================================================================
-M.default_prog = { "pwsh" }
+M.default_prog = { "pwsh", "-nologo" }
 M.font = wezterm.font_with_fallback { "JetBrains Mono", "Cascadia Code" }
 M.font_size = 11
 M.check_for_updates = false
