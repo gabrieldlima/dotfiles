@@ -72,7 +72,7 @@ M.colors = {
 -- =============================================================================
 M.launch_menu = {
     {
-        label = "MSVC - Command Prompt",
+        label = "MSVC Insiders - Command Prompt",
         cwd = home .. "\\Source",
         args = {
             "cmd",
@@ -81,13 +81,13 @@ M.launch_menu = {
         },
     },
     {
-        label = "MSVC - Powershell",
+        label = "MSVC Insiders - Powershell",
         cwd = home .. "\\Source",
         args = {
             "pwsh",
             "-NoExit",
             "-Command",
-            "& { Import-Module 'C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\Common7\\Tools\\Microsoft.VisualStudio.DevShell.dll'; Enter-VsDevShell 2700ce5b }"
+            "& 'C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\Common7\\Tools\\Launch-VsDevShell.ps1'"
         },
     },
 }
