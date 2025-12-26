@@ -69,6 +69,7 @@ def winget(package):
 
 winget("AgileBits.1Password")
 winget("Discord.Discord")
+winget("Kitware.CMake")
 winget("Logitech.GHUB")
 winget("Microsoft.PowerShell")
 winget("Microsoft.PowerToys")
