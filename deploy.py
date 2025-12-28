@@ -67,8 +67,10 @@ def winget(package):
     cmd = ["winget", "install", "--exact", f"--id={package}"]
     subprocess.run(cmd)
 
+winget("7zip.7zip")
 winget("AgileBits.1Password")
 winget("Discord.Discord")
+winget("Guru3D.RTSS")
 winget("Kitware.CMake")
 winget("Logitech.GHUB")
 winget("Microsoft.PowerShell")
