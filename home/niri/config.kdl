@@ -101,7 +101,7 @@ input {
     keyboard {
         xkb {
             layout "us"
-            options "caps:swapescape"
+            options "caps:ctrl_modifier"
         }
         numlock
     }
