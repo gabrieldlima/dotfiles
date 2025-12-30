@@ -28,7 +28,7 @@ layout {
     }
     border {
         width 3
-        active-color "#ebdbb2"
+        active-color "#458588"
         inactive-color "#000000"
         urgent-color "#cc241d"
     }
@@ -58,7 +58,7 @@ overview {
 
 cursor {
     xcursor-theme "GoogleDot-White"
-    xcursor-size 64
+    xcursor-size 72
 }
 
 
@@ -111,7 +111,7 @@ input {
 binds {
     Mod+S { show-hotkey-overlay; }
 
-    Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: wezterm" { spawn "wezterm"; }
     Mod+P hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
     Mod+O repeat=false { toggle-overview; }
     Mod+B hotkey-overlay-title="Open a Browser: qutebrowser" { spawn "qutebrowser"; }
