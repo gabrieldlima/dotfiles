@@ -13,7 +13,6 @@
   ...
 }: {
   imports = [
-    ./alacritty
     ./bash
     ./bat
     ./btop
@@ -28,6 +27,7 @@
     ./starship
     ./stylix
     ./tmux
+    ./wezterm
     ./xdg
     ./yazi
     ./zathura
@@ -78,7 +78,7 @@
       # Shell
       BROWSER = "qutebrowser";
       EDITOR = "nvim";
-      TERMINAL = "alacritty";
+      TERMINAL = "wezterm";
       TERM = "xterm-256color";
       HISTFILE = "$XDG_DATA_HOME/history";
       HISTSIZE = 10000;
