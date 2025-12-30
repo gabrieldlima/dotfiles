@@ -22,7 +22,9 @@
     ./fish
     ./git
     ./mangohud
+    ./niri
     ./qutebrowser
+    ./rofi
     ./starship
     ./stylix
     ./tmux
