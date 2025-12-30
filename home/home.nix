@@ -21,13 +21,11 @@
     ./eza
     ./fish
     ./git
-    ./i3wm
     ./mangohud
     ./qutebrowser
     ./starship
     ./stylix
     ./tmux
-    ./wezterm
     ./xdg
     ./yazi
     ./zathura
@@ -42,7 +40,6 @@
 
       pkgs._1password-gui
       pkgs.ascii
-      pkgs.aseprite
       pkgs.atuin
       pkgs.bc
       pkgs.clang-tools
@@ -79,7 +76,7 @@
       # Shell
       BROWSER = "qutebrowser";
       EDITOR = "nvim";
-      TERMINAL = "wezterm";
+      TERMINAL = "alacritty";
       TERM = "xterm-256color";
       HISTFILE = "$XDG_DATA_HOME/history";
       HISTSIZE = 10000;
