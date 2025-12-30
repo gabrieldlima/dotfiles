@@ -58,7 +58,7 @@ overview {
 
 cursor {
     xcursor-theme "GoogleDot-White"
-    xcursor-size 48
+    xcursor-size 64
 }
 
 
