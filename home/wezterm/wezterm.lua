@@ -11,7 +11,7 @@ M.check_for_updates = false
 M.window_close_confirmation = "NeverPrompt"
 M.initial_cols = 120
 M.initial_rows = 30
-M.enable_wayland = false
+M.enable_wayland = true
 M.window_background_opacity = 1
 M.enable_tab_bar = true
 M.use_fancy_tab_bar = false
@@ -65,5 +65,11 @@ M.colors = {
     },
   },
 }
+
+M.command_palette_bg_color = "#000000"
+M.command_palette_fg_color = "#ebdbb2"
+M.command_palette_font = wezterm.font "Iosevka"
+M.command_palette_font_size = 11
+M.command_palette_rows = 14
 
 return M
