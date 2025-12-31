@@ -1,3 +1,5 @@
+workspace "games"
+
 spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
 
@@ -93,6 +95,13 @@ animations {
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     // slowdown 3.0
+}
+
+
+window-rule {
+    match app-id="steam"
+    match title="Steam"
+    open-on-workspace "games"
 }
 
 
