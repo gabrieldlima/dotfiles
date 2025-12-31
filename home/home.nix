@@ -19,11 +19,11 @@
     ./dunst
     ./eza
     ./fish
+    ./fuzzel
     ./git
     ./mangohud
     ./niri
     ./qutebrowser
-    ./rofi
     ./starship
     ./stylix
     ./tmux
