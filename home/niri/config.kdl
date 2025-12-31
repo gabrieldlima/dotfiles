@@ -102,6 +102,16 @@ window-rule {
     match app-id="steam"
     match title="Steam"
     open-on-workspace "games"
+    open-maximized true
+}
+
+
+window-rule {
+    match title="Steam Settings"
+    match title="Friends List"
+    match title="Sign in to Steam"
+    open-floating true
+    open-on-workspace "games"
 }
 
 
