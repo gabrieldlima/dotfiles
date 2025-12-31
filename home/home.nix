@@ -21,6 +21,7 @@
     ./fish
     ./fuzzel
     ./git
+    ./i3wm
     ./mangohud
     ./niri
     ./qutebrowser
