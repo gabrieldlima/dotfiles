@@ -6,6 +6,15 @@
         {
             "command": 
             {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878"
+        },
+        {
+            "command": 
+            {
                 "action": "swapPane",
                 "direction": "up"
             },
@@ -34,6 +43,10 @@
                 "direction": "right"
             },
             "id": "User.swapPane.87C324ED"
+        },
+        {
+            "command": "duplicateTab",
+            "id": "User.duplicateTab"
         }
     ],
     "alwaysShowTabs": true,
@@ -75,16 +88,16 @@
             "keys": "ctrl+shift+2"
         },
         {
+            "id": null,
+            "keys": "alt+shift+right"
+        },
+        {
             "id": "Terminal.CopyToClipboard",
             "keys": "ctrl+shift+c"
         },
         {
             "id": null,
             "keys": "ctrl+alt+5"
-        },
-        {
-            "id": null,
-            "keys": "alt+shift+right"
         },
         {
             "id": "Terminal.MoveFocusUp",
@@ -193,6 +206,10 @@
         {
             "id": null,
             "keys": "ctrl+shift+1"
+        },
+        {
+            "id": "User.duplicateTab",
+            "keys": "alt+shift+d"
         },
         {
             "id": null,
@@ -305,13 +322,14 @@
         "list": 
         [
             {
+                "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -noLogo",
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe /noLogo",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
