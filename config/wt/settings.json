@@ -6,19 +6,19 @@
         {
             "command": 
             {
+                "action": "swapPane",
+                "direction": "up"
+            },
+            "id": "User.swapPane.6CD791B"
+        },
+        {
+            "command": 
+            {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
             },
             "id": "User.splitPane.A6751878"
-        },
-        {
-            "command": 
-            {
-                "action": "swapPane",
-                "direction": "up"
-            },
-            "id": "User.swapPane.6CD791B"
         },
         {
             "command": 
@@ -53,7 +53,7 @@
     "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "defaultProfile": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
     "disableAnimations": true,
     "disabledProfileSources": 
     [
@@ -64,20 +64,16 @@
     "keybindings": 
     [
         {
-            "id": null,
-            "keys": "menu"
-        },
-        {
             "id": "Terminal.MoveFocusDown",
             "keys": "alt+j"
         },
         {
             "id": null,
-            "keys": "ctrl+shift+5"
+            "keys": "menu"
         },
         {
             "id": null,
-            "keys": "ctrl+shift+comma"
+            "keys": "ctrl+shift+2"
         },
         {
             "id": "Terminal.MoveFocusLeft",
@@ -85,11 +81,19 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+2"
+            "keys": "ctrl+shift+comma"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+5"
         },
         {
             "id": null,
             "keys": "alt+shift+right"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+5"
         },
         {
             "id": "Terminal.CopyToClipboard",
@@ -97,27 +101,23 @@
         },
         {
             "id": null,
-            "keys": "ctrl+alt+5"
+            "keys": "ctrl+numpad_plus"
         },
         {
             "id": "Terminal.MoveFocusUp",
             "keys": "alt+k"
         },
         {
-            "id": null,
-            "keys": "ctrl+numpad_plus"
-        },
-        {
             "id": "Terminal.MoveFocusRight",
             "keys": "alt+l"
         },
         {
-            "id": null,
-            "keys": "ctrl+alt+8"
-        },
-        {
             "id": "Terminal.PasteFromClipboard",
             "keys": "ctrl+shift+v"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+8"
         },
         {
             "id": "Terminal.FindText",
@@ -129,11 +129,15 @@
         },
         {
             "id": null,
+            "keys": "alt+shift+left"
+        },
+        {
+            "id": null,
             "keys": "ctrl+alt+1"
         },
         {
             "id": null,
-            "keys": "alt+shift+left"
+            "keys": "ctrl+shift+8"
         },
         {
             "id": "User.swapPane.6CD791B",
@@ -141,23 +145,7 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+8"
-        },
-        {
-            "id": null,
             "keys": "alt+shift+up"
-        },
-        {
-            "id": "Terminal.ResizePaneUp",
-            "keys": "ctrl+alt+k"
-        },
-        {
-            "id": "Terminal.ResizePaneRight",
-            "keys": "ctrl+alt+l"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+4"
         },
         {
             "id": null,
@@ -165,11 +153,23 @@
         },
         {
             "id": null,
-            "keys": "ctrl+numpad_minus"
+            "keys": "ctrl+shift+4"
+        },
+        {
+            "id": "Terminal.ResizePaneRight",
+            "keys": "ctrl+alt+l"
+        },
+        {
+            "id": "Terminal.ResizePaneUp",
+            "keys": "ctrl+alt+k"
         },
         {
             "id": null,
             "keys": "alt+right"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+numpad_minus"
         },
         {
             "id": null,
@@ -181,11 +181,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+d"
+            "keys": "ctrl+shift+k"
         },
         {
             "id": null,
-            "keys": "ctrl+shift+k"
+            "keys": "ctrl+shift+d"
         },
         {
             "id": null,
@@ -193,7 +193,7 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+period"
+            "keys": "ctrl+numpad0"
         },
         {
             "id": null,
@@ -201,19 +201,19 @@
         },
         {
             "id": null,
-            "keys": "ctrl+numpad0"
+            "keys": "ctrl+shift+period"
         },
         {
             "id": null,
             "keys": "ctrl+shift+1"
         },
         {
-            "id": "User.duplicateTab",
-            "keys": "alt+shift+d"
-        },
-        {
             "id": null,
             "keys": "ctrl+shift+3"
+        },
+        {
+            "id": "User.duplicateTab",
+            "keys": "alt+shift+d"
         },
         {
             "id": null,
@@ -232,36 +232,36 @@
             "keys": "alt+shift+1"
         },
         {
-            "id": null,
-            "keys": "ctrl+alt+7"
+            "id": "Terminal.SwitchToTab1",
+            "keys": "alt+shift+2"
         },
         {
             "id": null,
             "keys": "ctrl+alt+4"
         },
         {
-            "id": "Terminal.SwitchToTab1",
-            "keys": "alt+shift+2"
-        },
-        {
             "id": null,
-            "keys": "ctrl+alt+9"
+            "keys": "ctrl+alt+7"
         },
         {
             "id": null,
             "keys": "ctrl+alt+2"
         },
         {
+            "id": null,
+            "keys": "ctrl+alt+9"
+        },
+        {
             "id": "Terminal.SwitchToTab2",
             "keys": "alt+shift+3"
         },
         {
-            "id": "Terminal.SwitchToTab3",
-            "keys": "alt+shift+4"
-        },
-        {
             "id": null,
             "keys": "ctrl+alt+3"
+        },
+        {
+            "id": "Terminal.SwitchToTab3",
+            "keys": "alt+shift+4"
         },
         {
             "id": null,
@@ -314,7 +314,7 @@
             "colorScheme": "GruvboxDarkHard",
             "font": 
             {
-                "face": "Cascadia Code",
+                "face": "Iosevka Nerd Font",
                 "size": 12
             },
             "scrollbarState": "hidden"
@@ -353,6 +353,12 @@
                 "name": "Developer PowerShell for VS 18 [Preview]",
                 "source": "Windows.Terminal.VisualStudio",
                 "startingDirectory": "C:\\Users\\gabrielgl\\Source"
+            },
+            {
+                "guid": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
+                "hidden": false,
+                "name": "Nushell",
+                "source": "nu"
             }
         ]
     },
