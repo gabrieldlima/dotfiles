@@ -1,5 +1,6 @@
 import os
 import subprocess
+import shutil
 
 home = os.environ['USERPROFILE']
 
@@ -10,6 +11,12 @@ home = os.environ['USERPROFILE']
 if not os.path.exists(fr"{home}\Documents\Powershell"):
     os.mkdir(fr"{home}\Documents\Powershell")
 
+if not os.path.exists(fr"{home}\.config"):
+    os.mkdir(fr"{home}\.config");
+
+if not os.path.exists(fr"{home}\.local"):
+    os.mkdir(fr"{home}\.local");
+
 
 # ==============================================================================
 # Symlink farm definition
@@ -17,10 +24,16 @@ if not os.path.exists(fr"{home}\Documents\Powershell"):
 git_src = fr"{home}\.dotfiles\config\git\config"
 git_dst = fr"{home}\.gitconfig"
 
+nushell_src = fr"{home}\.dotfiles\config\nushell"
+nushell_dst = fr"{home}\AppData\Roaming\nushell"
+
 powershell_src = fr"{home}\.dotfiles\config\powershell\profile.ps1"
 powershell_dst = fr"{home}\Documents\Powershell\Microsoft.PowerShell_profile.ps1"
 
-vsvim_src = fr"{home}\.dotfiles\config\vsvim\vsvimrc"
+starship_src = fr"{home}\.dotfiles\config\starship\starship.toml"
+starship_dst = fr"{home}\.config\starship.toml"
+
+vsvim_src = fr"{home}\.dotfiles\config\vim\.vimrc"
 vsvim_dst = fr"{home}\.vsvimrc"
 
 wezterm_src = fr"{home}\.dotfiles\config\wezterm\config.lua"
@@ -53,7 +66,9 @@ def symlink(destination, source):
     subprocess.run(cmd, check=True)
 
 symlink(git_dst, git_src)
+symlink(nushell_dst, nushell_src)
 symlink(powershell_dst, powershell_src)
+symlink(starship_dst, starship_src)
 symlink(vsvim_dst, vsvim_src)
 symlink(wezterm_dst, wezterm_src)
 symlink(wt_dst, wt_src)
@@ -69,16 +84,19 @@ def winget(package):
 
 winget("7zip.7zip")
 winget("AgileBits.1Password")
+winget("BurntSushi.ripgrep.MSVC")
 winget("Discord.Discord")
+winget("Fastfetch-cli.Fastfetch")
 winget("Guru3D.RTSS")
 winget("Kitware.CMake")
 winget("Logitech.GHUB")
 winget("Microsoft.PowerShell")
 winget("Microsoft.PowerToys")
 winget("Microsoft.VisualStudio.Community.Insiders")
+winget("Nushell.Nushell")
 winget("RamenSoftware.Windhawk")
+winget("Starship.Starship")
+winget("Sxyazi.yazi")
 winget("Valve.Steam")
 winget("Wacom.WacomTabletDriver")
 winget("Zen-Team.Zen-Browser")
-winget("fastfetch")
-winget("sxyazi.yazi")
