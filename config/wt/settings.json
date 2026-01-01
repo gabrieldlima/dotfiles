@@ -45,39 +45,18 @@
     "disabledProfileSources": 
     [
         "Windows.Terminal.Azure",
-        "Windows.Terminal.Wsl",
-        "Windows.Terminal.VisualStudio"
+        "Windows.Terminal.Wsl"
     ],
     "experimental.enableColorSelection": false,
     "keybindings": 
     [
         {
-            "id": "Terminal.MoveFocusDown",
-            "keys": "alt+j"
-        },
-        {
             "id": null,
             "keys": "menu"
         },
         {
-            "id": null,
-            "keys": "alt+shift+right"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+alt+5"
-        },
-        {
-            "id": "Terminal.CopyToClipboard",
-            "keys": "ctrl+shift+c"
-        },
-        {
-            "id": "Terminal.MoveFocusLeft",
-            "keys": "alt+h"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+comma"
+            "id": "Terminal.MoveFocusDown",
+            "keys": "alt+j"
         },
         {
             "id": null,
@@ -85,7 +64,27 @@
         },
         {
             "id": null,
+            "keys": "ctrl+shift+comma"
+        },
+        {
+            "id": "Terminal.MoveFocusLeft",
+            "keys": "alt+h"
+        },
+        {
+            "id": null,
             "keys": "ctrl+shift+2"
+        },
+        {
+            "id": "Terminal.CopyToClipboard",
+            "keys": "ctrl+shift+c"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+5"
+        },
+        {
+            "id": null,
+            "keys": "alt+shift+right"
         },
         {
             "id": "Terminal.MoveFocusUp",
@@ -322,6 +321,20 @@
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
+            },
+            {
+                "guid": "{b91318cf-30f6-578b-9b0e-72d4a9c80526}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 18 [Preview]",
+                "source": "Windows.Terminal.VisualStudio",
+                "startingDirectory": "C:\\Users\\gabrielgl\\Source"
+            },
+            {
+                "guid": "{541d49ca-a4b1-5b4e-8de7-2c0748a26fc5}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 18 [Preview]",
+                "source": "Windows.Terminal.VisualStudio",
+                "startingDirectory": "C:\\Users\\gabrielgl\\Source"
             }
         ]
     },
