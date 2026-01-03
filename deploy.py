@@ -21,6 +21,9 @@ if not os.path.exists(fr"{home}\.local"):
 # ==============================================================================
 # Symlink farm definition
 # ==============================================================================
+bat_src = fr"{home}\.dotfiles\config\bat"
+bat_dst = fr"{home}\AppData\Roaming\bat"
+
 git_src = fr"{home}\.dotfiles\config\git\config"
 git_dst = fr"{home}\.gitconfig"
 
@@ -65,6 +68,7 @@ def symlink(destination, source):
 
     subprocess.run(cmd, check=True)
 
+symlink(bat_dst, bat_src)
 symlink(git_dst, git_src)
 symlink(nushell_dst, nushell_src)
 symlink(powershell_dst, powershell_src)
