@@ -88,7 +88,9 @@ def winget(package):
 
 winget("7zip.7zip")
 winget("AgileBits.1Password")
+winget("Ajeetdsouza.zoxide")
 winget("BurntSushi.ripgrep.MSVC")
+winget("CloudFlare.warp")
 winget("Discord.Discord")
 winget("Fastfetch-cli.Fastfetch")
 winget("Guru3D.RTSS")
