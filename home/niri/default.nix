@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    ../fuzzel
     ../waybar
   ];
 
