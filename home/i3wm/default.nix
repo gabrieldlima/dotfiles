@@ -215,7 +215,7 @@
 
       keybindings = let
         # My default apps
-        terminal    = "wezterm";
+        terminal    = "alacritty";
         web_browser = "qutebrowser";
         launcher    = "dmenu_run -l 8 -fn 'Iosevka-11' -nb '#000000' -nf '#ebdbb2' -sb '#458588' -sf '#000000'";
 
