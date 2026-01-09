@@ -6,19 +6,19 @@
         {
             "command": 
             {
-                "action": "swapPane",
-                "direction": "up"
-            },
-            "id": "User.swapPane.6CD791B"
-        },
-        {
-            "command": 
-            {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
             },
             "id": "User.splitPane.A6751878"
+        },
+        {
+            "command": 
+            {
+                "action": "swapPane",
+                "direction": "up"
+            },
+            "id": "User.swapPane.6CD791B"
         },
         {
             "command": 
@@ -72,6 +72,18 @@
             "keys": "menu"
         },
         {
+            "id": "Terminal.CopyToClipboard",
+            "keys": "ctrl+shift+c"
+        },
+        {
+            "id": null,
+            "keys": "alt+shift+right"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+5"
+        },
+        {
             "id": null,
             "keys": "ctrl+shift+2"
         },
@@ -88,36 +100,24 @@
             "keys": "ctrl+shift+5"
         },
         {
-            "id": null,
-            "keys": "alt+shift+right"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+alt+5"
-        },
-        {
-            "id": "Terminal.CopyToClipboard",
-            "keys": "ctrl+shift+c"
+            "id": "Terminal.MoveFocusUp",
+            "keys": "alt+k"
         },
         {
             "id": null,
             "keys": "ctrl+numpad_plus"
         },
         {
-            "id": "Terminal.MoveFocusUp",
-            "keys": "alt+k"
-        },
-        {
             "id": "Terminal.MoveFocusRight",
             "keys": "alt+l"
         },
         {
-            "id": "Terminal.PasteFromClipboard",
-            "keys": "ctrl+shift+v"
-        },
-        {
             "id": null,
             "keys": "ctrl+alt+8"
+        },
+        {
+            "id": "Terminal.PasteFromClipboard",
+            "keys": "ctrl+shift+v"
         },
         {
             "id": "Terminal.FindText",
@@ -129,15 +129,11 @@
         },
         {
             "id": null,
-            "keys": "alt+shift+left"
-        },
-        {
-            "id": null,
             "keys": "ctrl+alt+1"
         },
         {
             "id": null,
-            "keys": "ctrl+shift+8"
+            "keys": "alt+shift+left"
         },
         {
             "id": "User.swapPane.6CD791B",
@@ -145,7 +141,23 @@
         },
         {
             "id": null,
+            "keys": "ctrl+shift+8"
+        },
+        {
+            "id": null,
             "keys": "alt+shift+up"
+        },
+        {
+            "id": "Terminal.ResizePaneUp",
+            "keys": "ctrl+alt+k"
+        },
+        {
+            "id": "Terminal.ResizePaneRight",
+            "keys": "ctrl+alt+l"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+4"
         },
         {
             "id": null,
@@ -153,23 +165,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+4"
-        },
-        {
-            "id": "Terminal.ResizePaneRight",
-            "keys": "ctrl+alt+l"
-        },
-        {
-            "id": "Terminal.ResizePaneUp",
-            "keys": "ctrl+alt+k"
+            "keys": "ctrl+numpad_minus"
         },
         {
             "id": null,
             "keys": "alt+right"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+numpad_minus"
         },
         {
             "id": null,
@@ -181,11 +181,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+k"
+            "keys": "ctrl+shift+d"
         },
         {
             "id": null,
-            "keys": "ctrl+shift+d"
+            "keys": "ctrl+shift+k"
         },
         {
             "id": null,
@@ -193,7 +193,7 @@
         },
         {
             "id": null,
-            "keys": "ctrl+numpad0"
+            "keys": "ctrl+shift+period"
         },
         {
             "id": null,
@@ -201,19 +201,19 @@
         },
         {
             "id": null,
-            "keys": "ctrl+shift+period"
+            "keys": "ctrl+numpad0"
         },
         {
             "id": null,
             "keys": "ctrl+shift+1"
         },
         {
-            "id": null,
-            "keys": "ctrl+shift+3"
-        },
-        {
             "id": "User.duplicateTab",
             "keys": "alt+shift+d"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+3"
         },
         {
             "id": null,
@@ -232,36 +232,36 @@
             "keys": "alt+shift+1"
         },
         {
-            "id": "Terminal.SwitchToTab1",
-            "keys": "alt+shift+2"
+            "id": null,
+            "keys": "ctrl+alt+7"
         },
         {
             "id": null,
             "keys": "ctrl+alt+4"
         },
         {
-            "id": null,
-            "keys": "ctrl+alt+7"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+alt+2"
+            "id": "Terminal.SwitchToTab1",
+            "keys": "alt+shift+2"
         },
         {
             "id": null,
             "keys": "ctrl+alt+9"
         },
         {
+            "id": null,
+            "keys": "ctrl+alt+2"
+        },
+        {
             "id": "Terminal.SwitchToTab2",
             "keys": "alt+shift+3"
         },
         {
-            "id": null,
-            "keys": "ctrl+alt+3"
-        },
-        {
             "id": "Terminal.SwitchToTab3",
             "keys": "alt+shift+4"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+3"
         },
         {
             "id": null,
@@ -359,6 +359,18 @@
                 "hidden": false,
                 "name": "Nushell",
                 "source": "nu"
+            },
+            {
+                "guid": "{e657e25f-cfd5-5acc-8120-9502ebd68dc1}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 18",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{b173aba5-6072-5619-8c38-377be6f21675}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 18",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
