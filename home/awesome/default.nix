@@ -9,6 +9,7 @@
 
 {
   pkgs,
+  config,
   ...
 }:
 let
@@ -43,6 +44,12 @@ in {
       pkgs.xsel
       pkgs.xwallpaper
     ];
+
+    file = {
+      ".config/awesome" = {
+        source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/home/awesome";
+      };
+    };
   };
 
   xsession.windowManager.awesome = {
