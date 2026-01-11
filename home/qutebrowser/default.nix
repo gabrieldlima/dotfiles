@@ -22,6 +22,7 @@ in {
     enable = true;
 
     quickmarks = {
+      awesomewm    = "https://awesomewm.org/apidoc";
       chatgpt      = "https://chat.openai.com";
       drive        = "https://drive.google.com/drive/my-drive";
       github       = "https://github.com/dashboard";
@@ -29,7 +30,6 @@ in {
       google       = "https://www.google.com";
       hacker_news  = "https://news.ycombinator.com";
       home-manager = "https://nix-community.github.io/home-manager/options.xhtml";
-      hyprland     = "https://wiki.hyprland.org";
       nixpkgs      = "https://search.nixos.org/packages";
       translate    = "https://translate.google.com";
       twitch       = "https://www.twitch.tv";
@@ -37,12 +37,12 @@ in {
     };
 
     extraConfig = ''
-        c.url.searchengines = {
-            "DEFAULT": "https://duckduckgo.com/?ia=web&q={}",
-            "!g": "https://google.com/search?hl=en&q={}",
-            "!d": "https://duckduckgo.com/?ia=web&q={}",
-            "!b": "https://search.brave.com/search?q={}&source=web",
-        }
+      c.url.searchengines = {
+        "DEFAULT": "https://duckduckgo.com/?ia=web&q={}",
+        "!g": "https://google.com/search?hl=en&q={}",
+        "!d": "https://duckduckgo.com/?ia=web&q={}",
+        "!b": "https://search.brave.com/search?q={}&source=web",
+      }
     '';
 
     settings = {
