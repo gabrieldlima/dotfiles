@@ -14,6 +14,7 @@
 }: {
   imports = [
     ./alacritty
+    ./awesome
     ./bash
     ./bat
     ./btop
@@ -21,7 +22,6 @@
     ./eza
     ./fish
     ./git
-    ./i3wm
     ./mangohud
     ./qutebrowser
     ./starship
