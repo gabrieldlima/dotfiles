@@ -60,7 +60,9 @@
       pkgs.man-pages
       pkgs.nixd
       pkgs.pavucontrol
+      pkgs.pcsx2
       pkgs.piper
+      pkgs.ppsspp
       pkgs.ripgrep
       pkgs.steam
       pkgs.tldr
