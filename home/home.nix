@@ -66,6 +66,7 @@
       pkgs.ripgrep
       pkgs.steam
       pkgs.tldr
+      pkgs.tree-sitter
       pkgs.unzip
       pkgs.wget
       pkgs.zoxide
