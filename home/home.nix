@@ -13,8 +13,6 @@
   ...
 }: {
   imports = [
-    ./alacritty
-    ./awesome
     ./bash
     ./bat
     ./btop
@@ -22,6 +20,8 @@
     ./eza
     ./fish
     ./git
+    ./hyprland
+    ./kitty
     ./mangohud
     ./qutebrowser
     ./starship
