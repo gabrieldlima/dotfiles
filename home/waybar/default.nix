@@ -32,13 +32,13 @@
         fixed-center = true;
         reload_style_on_change = true;
 
-        modules-left = [ "custom/logo" "niri/workspaces" ];
+        modules-left = [ "custom/logo" "hyprland/workspaces" ];
         modules-center = [ "clock" ];
         modules-right = [ "group/systray" "network" "pulseaudio" ];
 
         "custom/logo" = {
           format = "󱄅 ";
-          on-click = "rofi -show drun";
+          on-click = "fuzzel";
         };
 
         "niri/workspaces" = {
@@ -161,7 +161,7 @@
         window#waybar > box {
           color: #ebdbb2;
           background-color: #000000;
-          font-family: "Fira Code";
+          font-family: "Iosevka";
           font-weight: bold;
           font-size: 14px;
           margin: 0px 0px 0px 0px;
@@ -181,7 +181,7 @@
         tooltip label {
           color: #ebdbb2;
           background-color: #000000;
-          font-family: "Fira Code";
+          font-family: "Iosevka";
           font-weight: bold;
           font-size: 14px;
         }
