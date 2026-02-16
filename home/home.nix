@@ -20,7 +20,7 @@
     ./eza
     ./fish
     ./git
-    ./hyprland
+    ./i3wm
     ./kitty
     ./mangohud
     ./qutebrowser
