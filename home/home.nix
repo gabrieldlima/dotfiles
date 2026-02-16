@@ -57,6 +57,7 @@
       pkgs.glibcInfo
       pkgs.gnumake
       pkgs.jq
+      pkgs.lua-language-server
       pkgs.man-pages
       pkgs.nixd
       pkgs.pavucontrol
