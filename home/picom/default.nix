@@ -21,8 +21,8 @@
       detect-rounded-corners = true;
       detect-client-opacity = true;
       detect-transient = true;
-      glx-no-stencil = true;
-      glx-no-rebind-pixmap = false;
+      # glx-no-stencil = true;
+      # glx-no-rebind-pixmap = false;
       use-damage = true;
       log-level = "warn";
 
