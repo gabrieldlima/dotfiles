@@ -19,14 +19,13 @@
     ./dunst
     ./eza
     ./fish
+    ./foot
     ./git
-    ./i3wm
-    ./kitty
     ./mangohud
+    ./niri
     ./qutebrowser
     ./starship
     ./stylix
-    ./tmux
     ./xdg
     ./yazi
     ./zathura

@@ -130,7 +130,7 @@ input {
 binds {
     Mod+S { show-hotkey-overlay; }
 
-    Mod+Return hotkey-overlay-title="Open a Terminal: wezterm" { spawn "wezterm"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
     Mod+P hotkey-overlay-title="Run an Application: fuzzel" { spawn-sh "fuzzel"; }
     Mod+O repeat=false { toggle-overview; }
     Mod+B hotkey-overlay-title="Open a Browser: qutebrowser" { spawn "qutebrowser"; }
