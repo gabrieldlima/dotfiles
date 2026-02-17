@@ -32,7 +32,7 @@
         fixed-center = true;
         reload_style_on_change = true;
 
-        modules-left = [ "custom/logo" "hyprland/workspaces" ];
+        modules-left = [ "custom/logo" "niri/workspaces" ];
         modules-center = [ "clock" ];
         modules-right = [ "group/systray" "network" "pulseaudio" ];
 
@@ -257,7 +257,7 @@
         =================================================================================
         */
         #custom-logo {
-          font-size: 20px;
+          font-size: 22px;
         }
 
         /*
