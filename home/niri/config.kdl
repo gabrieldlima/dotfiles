@@ -120,7 +120,8 @@ input {
     keyboard {
         xkb {
             layout "us"
-            options "caps:ctrl_modifier"
+            // options "caps:ctrl_modifier"
+            options "caps:swapescape"
         }
         numlock
     }
