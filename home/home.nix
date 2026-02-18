@@ -81,7 +81,7 @@
       # Shell
       BROWSER = "qutebrowser";
       EDITOR = "nvim";
-      TERMINAL = "kitty";
+      TERMINAL = "foot";
       TERM = "xterm-256color";
       HISTFILE = "$XDG_DATA_HOME/history";
       HISTSIZE = 10000;
