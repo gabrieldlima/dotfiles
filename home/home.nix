@@ -29,6 +29,7 @@
     ./xdg
     ./yazi
     ./zathura
+    ./zellij
   ];
 
   home = {
