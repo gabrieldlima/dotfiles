@@ -12,6 +12,10 @@
         pad = "5x5";
       };
 
+      mouse = {
+        hide-when-typing = true;
+      };
+
       colors = {
         background = "000000";
         foreground = "ebdbb2";
