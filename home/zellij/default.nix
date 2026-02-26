@@ -7,6 +7,7 @@
     settings = {
       default_shell = "fish";
       show_startup_tips = false;
+      show_release_notes = false;
       theme = "gruvbox-dark-hard";
       themes.gruvbox-dark-hard.bg = "#282828";
       themes.gruvbox-dark-hard.fg = "#D5C4A1";
