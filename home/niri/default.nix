@@ -12,6 +12,7 @@
     packages = [
       pkgs.niri
       pkgs.swww
+      pkgs.wl-clipboard-rs
       pkgs.xdg-desktop-portal-gtk
       pkgs.xwayland-satellite
     ];
