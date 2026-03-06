@@ -43,10 +43,10 @@
     };
 
     cursor = {
-      name = "GoogleDot-White";
-      package = pkgs.google-cursor;
-      # name = "Bibata-Modern-Ice-Right";
-      # package = pkgs.bibata-cursors;
+      # name = "GoogleDot-White";
+      # package = pkgs.google-cursor;
+      name = "Bibata-Modern-Ice-Right";
+      package = pkgs.bibata-cursors;
       size = 62;
     };
 
