@@ -38,7 +38,6 @@
 
     packages = [
       inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
-
       pkgs._1password-gui
       pkgs.ascii
       pkgs.atuin
@@ -70,6 +69,7 @@
       pkgs.tree-sitter
       pkgs.unzip
       pkgs.wget
+      pkgs.xdg-utils
       pkgs.zoxide
     ];
 
