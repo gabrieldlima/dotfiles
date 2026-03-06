@@ -43,6 +43,7 @@
       pkgs.atuin
       pkgs.bc
       pkgs.clang-tools
+      pkgs.cmake
       pkgs.discord
       pkgs.dmenu
       pkgs.duf
@@ -52,6 +53,7 @@
       pkgs.gamemode
       pkgs.gamescope
       pkgs.gcc
+      pkgs.gdb
       pkgs.gimp3
       pkgs.glibcInfo
       pkgs.gnumake
