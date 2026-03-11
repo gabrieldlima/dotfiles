@@ -16,7 +16,7 @@
         hide-when-typing = true;
       };
 
-      colors = {
+      colors-dark = {
         background = "000000";
         foreground = "ebdbb2";
         regular0 = "282828";
