@@ -26,10 +26,10 @@
     ./qutebrowser
     ./starship
     ./stylix
+    ./tmux
     ./xdg
     ./yazi
     ./zathura
-    ./zellij
   ];
 
   home = {
