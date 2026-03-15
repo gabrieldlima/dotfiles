@@ -7,7 +7,7 @@
 
     settings = {
       main = {
-        shell = "fish";
+        shell = "bash";
         font = "Iosevka:size=12";
         pad = "5x5";
       };
