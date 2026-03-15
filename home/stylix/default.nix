@@ -47,7 +47,7 @@
       # package = pkgs.google-cursor;
       name = "Bibata-Modern-Ice-Right";
       package = pkgs.bibata-cursors;
-      size = 62;
+      size = 32;
     };
 
     icons = {
