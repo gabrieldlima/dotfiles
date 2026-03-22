@@ -13,16 +13,16 @@
   ...
 }: {
   imports = [
+    ./alacritty
     ./bash
     ./bat
     ./btop
     ./dunst
     ./eza
     ./fish
-    ./foot
     ./git
+    ./i3wm
     ./mangohud
-    ./niri
     ./qutebrowser
     ./starship
     ./stylix
@@ -83,7 +83,7 @@
       # Shell
       BROWSER = "qutebrowser";
       EDITOR = "nvim";
-      TERMINAL = "foot";
+      TERMINAL = "alacritty";
       TERM = "xterm-256color";
       HISTFILE = "$XDG_DATA_HOME/history";
       HISTSIZE = 10000;
