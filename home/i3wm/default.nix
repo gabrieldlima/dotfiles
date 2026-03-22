@@ -106,8 +106,8 @@
       };
 
       gaps = {
-        smartBorders = "off";
-        smartGaps = false;
+        smartBorders = "on";
+        smartGaps = true;
         inner = 10;
         left = 1;
         right = 1;
@@ -215,7 +215,7 @@
 
       keybindings = let
         # My default apps
-        terminal    = "kitty";
+        terminal    = "alacritty";
         web_browser = "qutebrowser";
         launcher    = "dmenu_run -l 8 -fn 'Iosevka-11' -nb '#000000' -nf '#ebdbb2' -sb '#458588' -sf '#000000'";
 
