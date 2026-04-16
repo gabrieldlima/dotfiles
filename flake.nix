@@ -11,7 +11,7 @@
 
     stylix.url = "github:danth/stylix";
 
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    # neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
     # wezterm-nightly = {
     #   url = "github:wez/wezterm?dir=nix";

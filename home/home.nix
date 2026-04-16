@@ -36,7 +36,7 @@
     homeDirectory = "/home/gabriel";
 
     packages = [
-      inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
+      # inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
       pkgs._1password-gui
       pkgs.ascii
       pkgs.atuin
@@ -59,6 +59,7 @@
       pkgs.jq
       pkgs.lua-language-server
       pkgs.man-pages
+      pkgs.neovim
       pkgs.nixd
       pkgs.pavucontrol
       pkgs.pcsx2
