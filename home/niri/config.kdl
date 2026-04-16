@@ -1,7 +1,7 @@
 workspace "games"
 
 spawn-at-startup "waybar"
-spawn-at-startup "swww-daemon"
+spawn-at-startup "awww-daemon"
 
 environment {
     ZED_WINDOW_DECORATIONS "server"
@@ -59,7 +59,7 @@ overview {
 
 
 cursor {
-    xcursor-theme "Bibata-Modern-Ice-Right"
+    xcursor-theme "GoogleDot-White"
     xcursor-size 32
 }
 

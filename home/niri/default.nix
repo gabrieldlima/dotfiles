@@ -4,14 +4,15 @@
   ...
 }: {
   imports = [
+    ../foot
     ../fuzzel
     ../waybar
   ];
 
   home = {
     packages = [
+      pkgs.awww
       pkgs.niri
-      pkgs.swww
       pkgs.wl-clipboard-rs
       pkgs.xdg-desktop-portal-gtk
       pkgs.xwayland-satellite
