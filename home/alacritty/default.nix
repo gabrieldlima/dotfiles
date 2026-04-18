@@ -14,12 +14,12 @@
     enable = true;
     settings = {
       # GENERAL
-      terminal.shell = "fish";
+      terminal.shell = "bash";
 
       # ENV
       env = {
         TERM = "xterm-256color";
-        SHELL = "fish";
+        SHELL = "bash";
       };
 
       # WINDOW
