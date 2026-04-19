@@ -22,7 +22,6 @@ in {
     enable = true;
 
     quickmarks = {
-      awesomewm    = "https://awesomewm.org/apidoc";
       chatgpt      = "https://chat.openai.com";
       drive        = "https://drive.google.com/drive/my-drive";
       github       = "https://github.com/dashboard";
