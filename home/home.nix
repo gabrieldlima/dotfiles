@@ -66,6 +66,7 @@
       pkgs.pcsx2
       pkgs.piper
       pkgs.ppsspp
+      pkgs.renderdoc
       pkgs.ripgrep
       pkgs.steam
       pkgs.tldr
