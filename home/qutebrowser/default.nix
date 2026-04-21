@@ -23,6 +23,7 @@ in {
 
     quickmarks = {
       chatgpt      = "https://chat.openai.com";
+      cppreference = "https://en.cppreference.com/";
       drive        = "https://drive.google.com/drive/my-drive";
       github       = "https://github.com/dashboard";
       gmail        = "https://mail.google.com/mail";
