@@ -2,6 +2,7 @@ workspace "games"
 
 spawn-at-startup "waybar"
 spawn-at-startup "awww-daemon"
+spawn-at-startup "vicinae" "server"
 
 environment {
     ZED_WINDOW_DECORATIONS "server"
@@ -29,8 +30,8 @@ layout {
         inactive-color "#000000"
     }
     border {
-        width 3
-        active-color "#458588"
+        width 4
+        active-color "#3c3836"
         inactive-color "#000000"
         urgent-color "#cc241d"
     }
@@ -59,13 +60,27 @@ overview {
 
 
 cursor {
-    xcursor-theme "GoogleDot-White"
-    xcursor-size 32
+    xcursor-theme "GoogleDot-Black"
+    xcursor-size 40
 }
 
 
 layer-rule {
     match namespace="waybar"
+    match at-startup=true
+    shadow {
+        on
+        softness 10
+        spread 2
+        offset x=0 y=0
+        draw-behind-window true
+        color "#000000ff"
+    }
+}
+
+
+layer-rule {
+    match namespace="vicinae"
     match at-startup=true
     shadow {
         on
@@ -132,7 +147,7 @@ binds {
     Mod+S { show-hotkey-overlay; }
 
     Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
-    Mod+P hotkey-overlay-title="Run an Application: fuzzel" { spawn-sh "fuzzel"; }
+    Mod+P hotkey-overlay-title="Run an Application: vicinae" { spawn "vicinae" "toggle"; }
     Mod+O repeat=false { toggle-overview; }
     Mod+B hotkey-overlay-title="Open a Browser: qutebrowser" { spawn "qutebrowser"; }
 
