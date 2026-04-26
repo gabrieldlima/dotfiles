@@ -5,7 +5,7 @@
 }: {
   imports = [
     ../foot
-    ../fuzzel
+    ../vicinae
     ../waybar
   ];
 

@@ -1,0 +1,26 @@
+[meta]
+version = 1
+name = "gruvbox-dark-hard"
+description = "best theme <3"
+variant = "dark"
+
+[colors.core]
+background = "#000000"
+foreground = "#EBDBB2"
+secondary_background = "#000000"
+border = "#504945"
+accent = "#458588"
+
+[colors.accents]
+blue = "#458588"
+green = "#98971A"
+magenta = "#D3869B"
+orange = "#D65D0E"
+purple = "#B16286"
+red = "#CC241D"
+yellow = "#D79921"
+cyan = "#83A598"
+
+[colors.list.item.selection]
+background = "#3c3836"
+secondary_background = "#665C54"
