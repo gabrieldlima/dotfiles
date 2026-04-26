@@ -12,7 +12,7 @@
 }: let
   red        = "#cc241d";
   green      = "#98971a";
-  blue       = "#458588";
+  blue       = "#3c3836";
   yellow     = "#d79921";
   black      = "#282828";
   background = "#000000";
@@ -85,7 +85,7 @@ in {
 
           category = {
             bg = "${background}";
-            fg = "${blue}";
+            fg = "${foreground}";
             border = {
               top    = "${black}";
               bottom = "${black}";
@@ -94,7 +94,7 @@ in {
 
           item.selected = {
             bg       = "${blue}";
-            fg       = "${background}";
+            fg       = "${foreground}";
             match.fg = "${red}";
             border = {
               top    = "${black}";
@@ -255,11 +255,11 @@ in {
           selected = {
             even = {
               bg = "${blue}";
-              fg = "${background}";
+              fg = "${foreground}";
             };
             odd = {
               bg = "${blue}";
-              fg = "${background}";
+              fg = "${foreground}";
             };
           };
 
@@ -275,11 +275,11 @@ in {
             selected = {
               odd = {
                 bg = "${blue}";
-                fg = "${background}";
+                fg = "${foreground}";
               };
               even = {
                 bg = "${blue}";
-                fg = "${background}";
+                fg = "${foreground}";
               };
             };
           };
@@ -299,7 +299,7 @@ in {
 
           selected = {
             bg = "${blue}";
-            fg = "${background}";
+            fg = "${foreground}";
           };
         };
       };
