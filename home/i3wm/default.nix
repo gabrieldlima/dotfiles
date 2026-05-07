@@ -55,7 +55,6 @@
         { command = "setxkbmap -option ctrl:nocaps"; notification = false; }
         # { command = "setxkbmap -option caps:escape"; notification = false; }
         { command = "dunst"; notification = false; }
-        { command = "vicinae server"; notification = false; }
       ];
 
       defaultWorkspace = "1";
@@ -217,9 +216,8 @@
       keybindings = let
         # My default apps
         terminal    = "alacritty";
-        web_browser = "zen-beta";
-        # launcher    = "dmenu_run -l 8 -fn 'Iosevka-11' -nb '#000000' -nf '#ebdbb2' -sb '#458588' -sf '#000000'";
-        launcher    = "vicinae toggle";
+        web_browser = "qutebrowser";
+        launcher    = "dmenu_run -l 8 -fn 'Iosevka-11' -nb '#000000' -nf '#ebdbb2' -sb '#458588' -sf '#000000'";
 
         # Define names for default workspaces for which we configure key bindings later on.
         # We use variables to avoid repeating the names in multiple places.
