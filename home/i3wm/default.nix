@@ -124,7 +124,7 @@
       };
 
       assigns = {
-        "2" = [{ class = "^qutebrowser$"; } { class = "^Brave-browser"; }];
+        "2" = [{ class = "^qutebrowser$"; } { class = "^Brave-browser"; }  { class = "^zen-beta"; } ];
         "3" = [{ class = "^obsidian$";} { class = "^discord"; } ];
         "8" = [{ class = "^.virt-manager-wrapped$"; }];
         "9" = [{ class = "^steam$"; }];
@@ -217,7 +217,7 @@
       keybindings = let
         # My default apps
         terminal    = "alacritty";
-        web_browser = "qutebrowser";
+        web_browser = "zen-beta";
         # launcher    = "dmenu_run -l 8 -fn 'Iosevka-11' -nb '#000000' -nf '#ebdbb2' -sb '#458588' -sf '#000000'";
         launcher    = "vicinae toggle";
 
