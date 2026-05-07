@@ -19,7 +19,6 @@
     ./btop
     ./dunst
     ./eza
-    ./fish
     ./git
     ./i3wm
     ./mangohud
