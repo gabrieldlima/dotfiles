@@ -27,7 +27,6 @@
     ./starship
     ./stylix
     ./tmux
-    ./vicinae
     ./xdg
     ./yazi
     ./zathura
