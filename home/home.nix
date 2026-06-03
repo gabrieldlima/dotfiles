@@ -14,6 +14,7 @@
 }: {
   imports = [
     ./alacritty
+    ./atuin
     ./bash
     ./bat
     ./btop
@@ -39,7 +40,6 @@
       # inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
       pkgs._1password-gui
       pkgs.ascii
-      pkgs.atuin
       pkgs.bc
       pkgs.clang-tools
       pkgs.cmake
