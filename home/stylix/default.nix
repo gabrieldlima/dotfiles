@@ -42,14 +42,14 @@
       emoji = config.stylix.fonts.monospace;
     };
 
-    cursor = {
-      # name = "GoogleDot-White";
-      # package = pkgs.google-cursor;
-      name = "Bibata-Modern-Ice-Right";
-      package = pkgs.bibata-cursors;
-      # Sizes: 16 20 22 24 28 32 40 48 56 64 72 80 88 96
-      size = 20;
-    };
+    # cursor = {
+    #   # name = "GoogleDot-White";
+    #   # package = pkgs.google-cursor;
+    #   name = "Bibata-Modern-Ice-Right";
+    #   package = pkgs.bibata-cursors;
+    #   # Sizes: 16 20 22 24 28 32 40 48 56 64 72 80 88 96
+    #   size = 80;
+    # };
 
     icons = {
       enable = true;

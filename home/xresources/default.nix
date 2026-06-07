@@ -45,6 +45,9 @@
       ! LightGrey + White
       *color7:  #a89984
       *color15: #ebdbb2
+
+      Xcursor.theme: Bibata-Modern-Ice-Right
+      Xcursor.size: 80
     '';
   };
 }
