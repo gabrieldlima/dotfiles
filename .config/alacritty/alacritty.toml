@@ -1,0 +1,64 @@
+[terminal]
+shell = "bash"
+
+[env]
+TERM = "xterm-256color"
+SHELL = "bash"
+
+[window]
+decorations = "None"
+opacity = 1.0
+
+[window.dimensions]
+columns = 130
+lines = 35
+
+[window.padding]
+x = 10
+y = 10
+
+[font]
+size = 11
+
+[font.normal]
+family = "Iosevka"
+style = "Regular"
+
+[font.bold]
+family = "Iosevka"
+style = "Bold"
+
+[font.italic]
+family = "Iosevka"
+style = "Italic"
+
+[font.bold_italic]
+family = "Iosevka"
+style = "Bold Italic"
+
+[colors.primary]
+background = "#000000"
+foreground = "#ebdbb2"
+
+[colors.normal]
+black   = "#282828"
+red     = "#cc241d"
+green   = "#98971a"
+yellow  = "#d79921"
+blue    = "#458588"
+magenta = "#b16286"
+cyan    = "#689d6a"
+white   = "#a89984"
+
+[colors.bright]
+black   = "#928374"
+red     = "#fb4934"
+green   = "#b8bb26"
+yellow  = "#fabd2f"
+blue    = "#83a598"
+magenta = "#d3869b"
+cyan    = "#8ec07c"
+white   = "#ebdbb2"
+
+[mouse]
+hide_when_typing = true
