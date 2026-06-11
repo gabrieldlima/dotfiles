@@ -58,18 +58,15 @@ assign [class="^qutebrowser$"] 2
 assign [class="^discord"] 3
 assign [class="^steam$"] 9
 
-for_window [class="Alacritty"] border pixel 3
-for_window [class="^1Password$"] floating enable
-for_window [class="^Sxiv$"] floating enable
-for_window [class="^steam$"] floating enable
-for_window [class="steam"] border pixel 3
+for_window [class="^.*"] border pixel 3
+for_window [class="steam"] floating enable
 
 
 # === Keybinds =================================================================
 set $mod Mod4
 set $terminal alacritty
 set $browser qutebrowser
-set $launcher rofi -show drun
+set $launcher dmenu_run -l 8 -fn 'Iosevka-11' -nb '#000000' -nf '#ebdbb2' -sb '#458588' -sf '#000000'
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
