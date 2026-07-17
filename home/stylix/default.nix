@@ -36,7 +36,7 @@
     };
 
     fonts = {
-      monospace = { name = "FiraCode"; };
+      monospace = { name = "Iosevka"; };
       serif = config.stylix.fonts.monospace;
       sansSerif = config.stylix.fonts.monospace;
       emoji = config.stylix.fonts.monospace;
