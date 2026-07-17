@@ -5,9 +5,9 @@ description = "best theme <3"
 variant = "dark"
 
 [colors.core]
-background = "#000000"
+background = "#0f0f0f"
 foreground = "#EBDBB2"
-secondary_background = "#000000"
+secondary_background = "#0f0f0f"
 border = "#504945"
 accent = "#458588"
 
