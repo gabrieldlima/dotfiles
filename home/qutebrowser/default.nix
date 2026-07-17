@@ -15,7 +15,7 @@
   blue       = "#458588";
   yellow     = "#d79921";
   black      = "#282828";
-  background = "#000000";
+  background = "#0f0f0f";
   foreground = "#ebdbb2";
 in {
   programs.qutebrowser = {
