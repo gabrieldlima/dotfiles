@@ -48,7 +48,7 @@ layout {
 
 overview {
     zoom 0.5
-    backdrop-color "#0f0f0f"
+    backdrop-color "#282828"
 
     workspace-shadow {
         softness 10
@@ -60,8 +60,8 @@ overview {
 
 
 cursor {
-    xcursor-theme "GoogleDot-Black"
-    xcursor-size 40
+    xcursor-theme "Bibata-Modern-Ice-Right"
+    xcursor-size 80
 }
 
 
@@ -146,7 +146,7 @@ input {
 binds {
     Mod+S { show-hotkey-overlay; }
 
-    Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+P hotkey-overlay-title="Run an Application: vicinae" { spawn "vicinae" "toggle"; }
     Mod+O repeat=false { toggle-overview; }
     Mod+B hotkey-overlay-title="Open a Browser: qutebrowser" { spawn "qutebrowser"; }
