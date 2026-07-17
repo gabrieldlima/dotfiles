@@ -50,13 +50,13 @@
           family = "Iosevka";
           style = "Bold Italic";
         };
-        size = 11;
+        size = 12;
       };
 
       # COLORS
       colors = {
         primary = {
-          background = "#000000";
+          background = "#0f0f0f";
           foreground = "#ebdbb2";
         };
         normal = {
