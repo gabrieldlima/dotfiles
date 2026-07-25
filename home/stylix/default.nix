@@ -17,7 +17,7 @@
     autoEnable = false;
 
     base16Scheme = {
-      base00 = "#0f0f0f"; # ----
+      base00 = "#0c0c0c"; # ----
       base01 = "#1d2021"; # ---
       base02 = "#504945"; # --
       base03 = "#665c54"; # -
