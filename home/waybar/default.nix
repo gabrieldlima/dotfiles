@@ -32,7 +32,7 @@
         fixed-center = true;
         reload_style_on_change = true;
 
-        modules-left = [ "custom/logo" "niri/workspaces" ];
+        modules-left = [ "custom/logo" "hyprland/workspaces" ];
         modules-center = [ "clock" ];
         modules-right = [ "group/systray" "network" "pulseaudio" ];
 
@@ -160,12 +160,12 @@
 
         window#waybar > box {
           color: #ebdbb2;
-          background-color: #000000;
+          background-color: #0c0c0c;
           font-family: "Iosevka";
           font-weight: bold;
           font-size: 14px;
           margin: 0px 0px 0px 0px;
-          box-shadow: 0px 0px 0px 0px #000000;
+          box-shadow: 0px 0px 0px 0px #0c0c0c;
         }
 
         /*
@@ -174,13 +174,13 @@
         =================================================================================
         */
         tooltip {
-          background-color: #000000;
+          background-color: #0c0c0c;
           border: 0px;
           border-radius: 0px;
         }
         tooltip label {
           color: #ebdbb2;
-          background-color: #000000;
+          background-color: #0c0c0c;
           font-family: "Iosevka";
           font-weight: bold;
           font-size: 14px;
@@ -222,13 +222,13 @@
 
         #tray menu {
           color: #ebdbb2;
-          background: #000000;
+          background: #0c0c0c;
           border: 0px solid #458588;
           border-radius: 0px;
         }
 
         #tray menu menuitem:hover {
-          color: #000000;
+          color: #0c0c0c;
           background: #458588;
           border-radius: 0px;
         }
