@@ -23,13 +23,13 @@
     ./git
     ./i3wm
     ./mangohud
-    ./qutebrowser
     ./starship
     ./stylix
     ./tmux
     ./xdg
     ./yazi
     ./zathura
+    ./zen
   ];
 
   home = {
@@ -82,7 +82,7 @@
 
     sessionVariables = {
       # Shell
-      BROWSER = "qutebrowser";
+      BROWSER = "zen-beta";
       EDITOR = "nvim";
       TERMINAL = "alacritty";
       TERM = "xterm-256color";
