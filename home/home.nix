@@ -21,8 +21,8 @@
     ./dunst
     ./eza
     ./git
-    ./hyprland
     ./mangohud
+    ./niri
     ./starship
     ./stylix
     ./tmux
