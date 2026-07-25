@@ -21,7 +21,7 @@
     ./dunst
     ./eza
     ./git
-    ./i3wm
+    ./hyprland
     ./mangohud
     ./starship
     ./stylix
