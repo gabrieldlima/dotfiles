@@ -8,10 +8,25 @@
 # ╚═══════════════════════════════════════════════════════════════════╝
 
 {
+  config,
   ...
 }: { 
   wayland.windowManager.hyprland = {
     enable = true;
     extraConfig = builtins.readFile ./hyprland.lua; 
+  };
+
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      splash = false;
+      wallpaper = [
+        {
+          fit_mode = "cover";
+          monitor = "DP-2";
+          path = "${config.home.homeDirectory}/pictures/wallpapers/wallpaper.png";
+        }
+      ];
+    };
   };
 }
