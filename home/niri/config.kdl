@@ -149,7 +149,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+P hotkey-overlay-title="Run an Application: vicinae" { spawn "vicinae" "toggle"; }
     Mod+O repeat=false { toggle-overview; }
-    Mod+B hotkey-overlay-title="Open a Browser: qutebrowser" { spawn "qutebrowser"; }
+    Mod+B hotkey-overlay-title="Open a Browser: zen" { spawn "zen-beta"; }
 
     Mod+Shift+C repeat=false { close-window; }
 
