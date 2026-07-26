@@ -21,11 +21,11 @@
     ./dunst
     ./eza
     ./git
+    ./gtk
     ./lutris
     ./mangohud
     ./niri
     ./starship
-    ./stylix
     ./tmux
     ./xdg
     ./yazi
