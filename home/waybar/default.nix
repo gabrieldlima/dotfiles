@@ -32,7 +32,7 @@
         fixed-center = true;
         reload_style_on_change = true;
 
-        modules-left = [ "custom/logo" "niri/workspaces" ];
+        modules-left = [ "custom/logo" "hyprland/workspaces" ];
         modules-center = [ "clock" ];
         modules-right = [ "group/systray" "network" "pulseaudio" ];
 
@@ -164,8 +164,8 @@
           font-family: "Iosevka";
           font-weight: bold;
           font-size: 14px;
-          margin: 0px 0px 0px 0px;
-          box-shadow: 0px 0px 0px 0px #0c0c0c;
+          margin: 0px 0px 3px 0px;
+          box-shadow: 0px 2px 2px 0px #0c0c0c;
         }
 
         /*
