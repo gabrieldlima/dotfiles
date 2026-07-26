@@ -21,6 +21,7 @@
     ./dunst
     ./eza
     ./git
+    ./lutris
     ./mangohud
     ./niri
     ./starship
