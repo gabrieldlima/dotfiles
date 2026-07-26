@@ -22,9 +22,9 @@
     ./eza
     ./git
     ./gtk
+    ./hyprland
     ./lutris
     ./mangohud
-    ./niri
     ./starship
     ./tmux
     ./xdg
