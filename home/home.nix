@@ -22,15 +22,15 @@
     ./eza
     ./git
     ./gtk
-    ./hyprland
+    ./i3wm
     ./lutris
     ./mangohud
+    ./qutebrowser
     ./starship
     ./tmux
     ./xdg
     ./yazi
     ./zathura
-    ./zen
   ];
 
   home = {
@@ -47,6 +47,7 @@
       pkgs.discord
       pkgs.dmenu
       pkgs.duf
+      pkgs.emacs-gtk
       pkgs.fastfetch
       pkgs.fd
       pkgs.file
@@ -60,7 +61,6 @@
       pkgs.jq
       pkgs.lua-language-server
       pkgs.man-pages
-      pkgs.neovim
       pkgs.nixd
       pkgs.pavucontrol
       pkgs.pcsx2
@@ -83,8 +83,8 @@
 
     sessionVariables = {
       # Shell
-      BROWSER = "zen-beta";
-      EDITOR = "nvim";
+      BROWSER = "qutebrowser";
+      EDITOR = "emacs";
       TERMINAL = "alacritty";
       TERM = "xterm-256color";
       HISTFILE = "$XDG_DATA_HOME/history";
