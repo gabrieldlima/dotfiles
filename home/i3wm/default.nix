@@ -35,7 +35,7 @@
 
     extraConfig = ''
       # Reading colors from resources
-      set_from_resource $background i3wm.background #000000
+      set_from_resource $background i3wm.background #0c0c0c
       set_from_resource $foreground i3wm.foreground #ebdbb2
 
       set_from_resource $red     i3wm.color1     #cc241d
@@ -217,7 +217,7 @@
         # My default apps
         terminal    = "alacritty";
         web_browser = "qutebrowser";
-        launcher    = "dmenu_run -l 8 -fn 'Iosevka-11' -nb '#0f0f0f' -nf '#ebdbb2' -sb '#458588' -sf '#0f0f0f'";
+        launcher    = "dmenu_run -l 8 -fn 'Iosevka-11' -nb '#0c0c0c' -nf '#ebdbb2' -sb '#458588' -sf '#0c0c0c'";
 
         # Define names for default workspaces for which we configure key bindings later on.
         # We use variables to avoid repeating the names in multiple places.
