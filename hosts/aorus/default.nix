@@ -76,7 +76,7 @@
     };
 
     lact = {
-      enable = false;
+      enable = true;
     };
   };
 
