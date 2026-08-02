@@ -47,7 +47,6 @@
       pkgs.discord
       pkgs.dmenu
       pkgs.duf
-      pkgs.emacs-gtk
       pkgs.fastfetch
       pkgs.fd
       pkgs.file
@@ -61,6 +60,7 @@
       pkgs.jq
       pkgs.lua-language-server
       pkgs.man-pages
+      pkgs.neovim
       pkgs.nixd
       pkgs.pavucontrol
       pkgs.pcsx2
@@ -84,7 +84,7 @@
     sessionVariables = {
       # Shell
       BROWSER = "qutebrowser";
-      EDITOR = "emacs";
+      EDITOR = "nvim";
       TERMINAL = "alacritty";
       TERM = "xterm-256color";
       HISTFILE = "$XDG_DATA_HOME/history";
