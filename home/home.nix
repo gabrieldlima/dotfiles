@@ -60,6 +60,7 @@
       pkgs.jq
       pkgs.lua-language-server
       pkgs.man-pages
+      pkgs.mpv
       pkgs.neovim
       pkgs.nixd
       pkgs.pavucontrol
