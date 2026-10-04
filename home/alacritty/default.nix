@@ -50,7 +50,7 @@
           family = "Iosevka";
           style = "Bold Italic";
         };
-        size = 11;
+        size = 12;
       };
 
       # COLORS
