@@ -22,9 +22,9 @@
     ./eza
     ./git
     ./gtk
-    ./i3wm
     ./lutris
     ./mangohud
+    ./niri
     ./qutebrowser
     ./starship
     ./tmux
