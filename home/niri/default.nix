@@ -13,7 +13,7 @@
   ...
 }: {
   imports = [
-    ../vicinae
+    ../fuzzel
     ../waybar
   ];
 

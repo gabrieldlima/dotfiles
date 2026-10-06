@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       main = {
-        terminal = "wezterm start";
+        terminal = "alacritty start";
         font = "Iosevka:size=13";
         prompt = "\"$ \" ";
         icons-enabled = false;
@@ -27,7 +27,7 @@
         text = "#ebdbb2ff";
         selection = "#458588ff";
         selection-text = "#000000ff";
-        border = "#458588ff";
+        border = "#3c3836ff";
         prompt = "#ebdbb2ff";
       };
       key-bindings = {
