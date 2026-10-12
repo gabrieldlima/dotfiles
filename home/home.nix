@@ -57,20 +57,15 @@
       pkgs.gimp3
       pkgs.glibcInfo
       pkgs.gnumake
-      pkgs.jq
       pkgs.lua-language-server
       pkgs.man-pages
       pkgs.mpv
       pkgs.neovim
       pkgs.nixd
       pkgs.pavucontrol
-      pkgs.pcsx2
       pkgs.piper
-      pkgs.ppsspp
-      pkgs.renderdoc
       pkgs.ripgrep
       pkgs.steam
-      pkgs.tldr
       pkgs.tree-sitter
       pkgs.unzip
       pkgs.wget
