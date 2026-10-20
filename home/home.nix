@@ -23,7 +23,6 @@
     ./git
     ./gtk
     ./i3wm
-    ./lutris
     ./mangohud
     ./qutebrowser
     ./starship
