@@ -68,7 +68,7 @@
       };
 
       window = {
-        titlebar = false;
+        titlebar = true;
         border = 3;
         hideEdgeBorders = "none";
 
@@ -79,29 +79,21 @@
           }
           {
             command = "floating enable";
-            criteria = { class = "^1Password$"; };
-          }
-          {
-            command = "floating enable";
             criteria = { class = "^Sxiv$"; };
           }
           {
-            command = "border pixel 3";
-            criteria = { class = "com.mitchellh.ghostty"; };
-          }
-          {
-            command = "border pixel 3";
+            command = "border normal 3";
             criteria = { class = "Alacritty"; };
           }
           {
-            command = "border pixel 3";
+            command = "border normal 3";
             criteria = { class = "steam"; };
           }
         ];
       };
 
       floating = {
-        titlebar = false;
+        titlebar = true;
         border = 3;
       };
 
