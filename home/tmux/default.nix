@@ -8,12 +8,15 @@
     focusEvents = true;
     terminal = "tmux-256color";
     extraConfig = ''
-      set-window-option -g mode-keys vi
+      set -g status-style "bg=green,fg=#0c0c0c"
+      set -g pane-active-border-style fg=green
 
-      bind -r k select-pane -U
-      bind -r j select-pane -D
-      bind -r h select-pane -L
-      bind -r l select-pane -R
+      set -g mode-keys vi
+
+      bind -n M-h select-pane -L
+      bind -n M-j select-pane -D
+      bind -n M-k select-pane -U
+      bind -n M-l select-pane -R
     '';
   };
 }
