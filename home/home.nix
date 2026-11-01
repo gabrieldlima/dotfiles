@@ -25,7 +25,6 @@
     ./i3wm
     ./mangohud
     ./qutebrowser
-    ./starship
     ./tmux
     ./xdg
     ./yazi
