@@ -8,7 +8,7 @@
     settings = {
       main = {
         shell = "bash";
-        font = "Iosevka:size=12";
+        font = "Iosevka:size=13";
         pad = "5x5";
       };
 
