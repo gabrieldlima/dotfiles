@@ -13,17 +13,17 @@
   ...
 }: {
   imports = [
-    ./alacritty
     ./atuin
     ./bash
     ./bat
     ./btop
     ./dunst
     ./eza
+    ./foot
     ./git
     ./gtk
-    ./i3wm
     ./mangohud
+    ./niri
     ./qutebrowser
     ./tmux
     ./xdg
