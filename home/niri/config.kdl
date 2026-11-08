@@ -1,8 +1,5 @@
-workspace "games"
-
 spawn-at-startup "waybar"
 spawn-at-startup "awww-daemon"
-spawn-at-startup "vicinae" "server"
 
 environment {
     ZED_WINDOW_DECORATIONS "server"
@@ -113,30 +110,12 @@ animations {
 }
 
 
-window-rule {
-    match app-id="steam"
-    match title="Steam"
-    open-on-workspace "games"
-    open-maximized true
-}
-
-
-window-rule {
-    match title="Steam Settings"
-    match title="Friends List"
-    match title="Sign in to Steam"
-    open-floating true
-    open-on-workspace "games"
-}
-
-
 input {
     focus-follows-mouse
     keyboard {
         xkb {
             layout "us"
             options "caps:ctrl_modifier"
-            // options "caps:swapescape"
         }
         numlock
     }
@@ -146,7 +125,7 @@ input {
 binds {
     Mod+S { show-hotkey-overlay; }
 
-    Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
     Mod+P hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+O repeat=false { toggle-overview; }
     Mod+B hotkey-overlay-title="Open a Browser: qutebrower" { spawn "qutebrowser"; }
