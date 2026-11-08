@@ -160,12 +160,12 @@
 
         window#waybar > box {
           color: #ebdbb2;
-          background-color: #0c0c0c;
+          background-color: #000000;
           font-family: "Iosevka";
           font-weight: bold;
           font-size: 14px;
           margin: 0px 0px 3px 0px;
-          box-shadow: 0px 2px 2px 0px #0c0c0c;
+          box-shadow: 0px 2px 2px 0px #000000;
         }
 
         /*
@@ -174,13 +174,13 @@
         =================================================================================
         */
         tooltip {
-          background-color: #0c0c0c;
+          background-color: #000000;
           border: 0px;
           border-radius: 0px;
         }
         tooltip label {
           color: #ebdbb2;
-          background-color: #0c0c0c;
+          background-color: #000000;
           font-family: "Iosevka";
           font-weight: bold;
           font-size: 14px;
@@ -222,13 +222,13 @@
 
         #tray menu {
           color: #ebdbb2;
-          background: #0c0c0c;
+          background: #000000;
           border: 0px solid #458588;
           border-radius: 0px;
         }
 
         #tray menu menuitem:hover {
-          color: #0c0c0c;
+          color: #000000;
           background: #458588;
           border-radius: 0px;
         }
